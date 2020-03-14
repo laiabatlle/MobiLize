@@ -1,5 +1,7 @@
 package com.app.mobilize;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -8,19 +10,21 @@ public class Usuari {
     String username;
     String password;
     String email;
-    List<Integer> peso;
     String gender;
     int height;
-    Date dateNaixement;
+    Double weight;
+    String dateNaixement;
+
+    public Usuari (){};
 
     public Usuari (String username, String password, String email ) {
         this.username = username;
         this.password = password;
         this.email = email;
-        peso = new ArrayList<Integer>();
         gender = "";
         height = 0;
-        dateNaixement = null;
+        weight = 0.0;
+        dateNaixement = "mm/dd/aaaa";
     }
 
     public String getUsername() {
@@ -47,12 +51,12 @@ public class Usuari {
         this.email = email;
     }
 
-    public List<Integer> getPeso() {
-        return peso;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setPeso(List<Integer> peso) {
-        this.peso = peso;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public String getGender() {
@@ -71,11 +75,16 @@ public class Usuari {
         this.height = height;
     }
 
-    public Date getDateNaixement() {
+    public String getDateNaixement() {
         return dateNaixement;
     }
 
-    public void setDateNaixement(Date dateNaixement) {
+    public void setDateNaixement(String dateNaixement) {
         this.dateNaixement = dateNaixement;
+    }
+
+    @Override
+    public String toString() {
+        return username;
     }
 }
