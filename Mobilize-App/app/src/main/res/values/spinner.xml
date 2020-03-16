@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="duracio">
+        <item>1 Setmana</item>
+        <item>15 dies</item>
+        <item>1 Mes</item>
+        <item>2 Mesos</item>
+        <item>3 Mesos</item>
+    </string-array>
+</resources>

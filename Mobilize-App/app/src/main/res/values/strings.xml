@@ -1,10 +1,29 @@
 <resources>
-    <string name="app_name">Mobilize</string>
     <string name="user">Username</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="gotologin">Go To Login</string>
     <string name="login_title">Login</string>
-
+    <string name="app_name">planning</string>
+    <string name="masa_muscular">Ganar Músculo</string>
+    <string name="adelgazar">Adelgazar</string>
+    <string name="enforma">En Forma</string>
+    <string name="planes">Planes disponibles:</string>
+    <string name="misplanes">Mis Planes</string>
+    <string name="disciplines">Selecciona quines disciplines vols al planning:</string>
+    <string name="config">Configuració</string>
+    <string name="dificultat">Dificultat</string>
+    <string name="duracio">Duració</string>
+    <string name="enrere">Enrere</string>
+    <string name="ok">OK</string>
+    <string name="running">Running</string>
+    <string name="ciclisme">Ciclisme</string>
+    <string name="workout">Workout</string>
+    <string name="facil">Fàcil</string>
+    <string name="mitjana">Mitjana</string>
+    <string name="dificil">Difícil</string>
+    <string name="planning">PLANNING</string>
+    <string name="nom">Nom:</string>
+    <string name="descripcio">Descripció:</string>
 </resources>
