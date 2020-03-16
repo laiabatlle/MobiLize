@@ -2,6 +2,7 @@ package com.app.mobilize;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -54,12 +55,6 @@ public class MainActivity extends AppCompatActivity {
         db.collection("users").whereEqualTo("email", email).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        /*if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-
-                               // Log.d("user", user.getUsername());
-                            }
-                        }*/
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 user.setEmail(email);
@@ -68,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
                                 user.setDateNaixement(document.getData().get("dateNaixement").toString());
                                 String altura = document.getData().get("height").toString();
                                 String peso = document.getData().get("weight").toString();
-                                user.setHeight(Integer.parseInt(altura));
-                                user.setWeight(Double.parseDouble(peso));
+                                user.setHeight(altura);
+                                user.setWeight(peso);
+                               // user.setImage(Uri.parse(document.getData().get("image").toString()));
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());

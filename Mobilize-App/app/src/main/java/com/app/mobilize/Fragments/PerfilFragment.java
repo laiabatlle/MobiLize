@@ -1,0 +1,237 @@
+package com.app.mobilize.Fragments;
+
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
+import com.app.mobilize.R;
+import com.app.mobilize.Usuari;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Calendar;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+
+    private FirebaseFirestore db;
+    private Usuari user;
+    private EditText peso, altura, dateNaixement;
+    private Button options;
+    private Spinner genero;
+    private ImageView avatar;
+    private static final int PICK_IMAGE = 100;
+    private String gendre;
+    private Uri imageUri;
+
+    public PerfilFragment(Usuari user) {
+        this.user = user;
+        db = FirebaseFirestore.getInstance();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        //Imatge de l'avatar de l'usuari:
+        avatar = (ImageView)view.findViewById(R.id.AvatarIV);
+/*        if (user.getImage().toString().equals("")) avatar.setImageURI(Uri.parse("android.resource://com.app.mobilize/drawable/ic_user"));
+        else if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) {
+            avatar.setImageURI(user.getImage());
+        }
+        // avatar.setImageResource(R.drawable.ic_user);
+        avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });*/
+
+        //TextView de l'username:
+        TextView username = (TextView) view.findViewById(R.id.usernameTV);
+        username.setText(user.getUsername());
+
+        //Spinner del genere de l'usuari:
+        genero = (Spinner)view.findViewById(R.id.generoSpin);
+        String [] generos = {"","Hombre", "Mujer", "Otro"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, generos);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genero.setAdapter(adapter);
+        genero.setSelection(obtenerPosicion(user.getGender()));
+        genero.setOnItemSelectedListener(this);
+
+        //EditText de la dataNaixement de l'usuari:
+        dateNaixement = (EditText)view.findViewById(R.id.dataCumpleañosTV);
+        dateNaixement.setText(user.getDateNaixement());
+        dateNaixement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDatePickerDialog();
+            }
+        });
+
+        //EditText del pes de l'usuari:
+        peso = (EditText) view.findViewById(R.id.pesoET);
+        peso.setText(user.getWeight());
+
+        //EditText del altura de l'usuari:
+        altura = (EditText) view.findViewById(R.id.alturaET);
+        altura.setText(user.getHeight());
+
+        //Boto de guardar canvis. S'actualitza la Base de Dades amb els parametres seleccionats als diferents widgets:
+        Button guardar_cambios = (Button) view.findViewById(R.id.guardar);
+        guardar_cambios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user.setWeight(peso.getText().toString());
+                user.setHeight(altura.getText().toString());
+                user.setGender(gendre);
+                user.setDateNaixement(dateNaixement.getText().toString());
+                user.setImage(imageUri);
+                db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
+                db.collection("users").document(user.getUsername()).update("height", user.getHeight());
+                db.collection("users").document(user.getUsername()).update("gender", gendre);
+                db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
+//                db.collection("users").document(user.getUsername()).update("image",user.getImage().toString());
+            }
+        });
+        return view;
+    }
+
+    //Funcio per retornar l'element corresponent a l'string "gendre" de l'spinner per seleccionar el genere de l'usuari:
+    private int obtenerPosicion(String gendre) {
+        int posicion = 0;
+        for (int i = 0; i < genero.getCount(); i++) {
+            if (genero.getItemAtPosition(i).toString().equalsIgnoreCase(gendre)) {
+                posicion = i;
+            }
+        }
+        return posicion;
+    }
+    //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        gendre = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    //Funcio per obrir la galeria i seleccionar la nova imatge d'acatar de l'usuari:
+    private void openGallery() {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        gallery.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        startActivityForResult(gallery, PICK_IMAGE);
+    }
+
+    @Override
+    //Funcio que assigna la imatge seleccionada com a nova imatge d'acatar de l'usuari:
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE){
+            imageUri = data.getData();
+            avatar.setImageURI(imageUri);
+        }
+    }
+
+    //Funcio que mostra el calendari per a poder seleccionar la data de naixement de l'usuari:
+    private void showDatePickerDialog() {
+        final Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int month = calendar.get(Calendar.MONTH);
+        int years = calendar.get(Calendar.YEAR);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                // +1 because January is zero
+                final String selectedDate = twoDigits(dayOfMonth) + "/" + twoDigits(monthOfYear+1) + "/" + twoDigits(year);
+                dateNaixement.setText(selectedDate);
+            }
+        }, day, month, years);
+        datePickerDialog.show();
+    }
+
+    //Funcio per passar la data en format de dos digits
+    private String twoDigits(int n) {
+        return (n<=9) ? ("0"+n) : String.valueOf(n);
+    }
+
+    //Codi per demanar permis a l'usuari
+    public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
+
+    public boolean checkPermissionREAD_EXTERNAL_STORAGE(
+            final Context context) {
+        int currentAPIVersion = Build.VERSION.SDK_INT;
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(context,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        (Activity) context,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    showDialog("External storage", context,
+                            Manifest.permission.READ_EXTERNAL_STORAGE);
+
+                } else {
+                    ActivityCompat
+                            .requestPermissions(
+                                    (Activity) context,
+                                    new String[] { Manifest.permission.READ_EXTERNAL_STORAGE },
+                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                }
+                return false;
+            } else {
+                return true;
+            }
+
+        } else {
+            return true;
+        }
+    }
+
+    public void showDialog(final String msg, final Context context,
+                           final String permission) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+        alertBuilder.setCancelable(true);
+        alertBuilder.setTitle("Permission necessary");
+        alertBuilder.setMessage(msg + " permission is necessary");
+        alertBuilder.setPositiveButton(android.R.string.yes,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        ActivityCompat.requestPermissions((Activity) context,
+                                new String[] { permission },
+                                MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                    }
+                });
+        AlertDialog alert = alertBuilder.create();
+        alert.show();
+    }
+}

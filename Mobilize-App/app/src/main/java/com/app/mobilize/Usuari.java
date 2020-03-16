@@ -1,5 +1,8 @@
 package com.app.mobilize;
 
+import android.content.ContentResolver;
+import android.net.Uri;
+
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
@@ -7,13 +10,15 @@ import java.util.Date;
 import java.util.List;
 
 public class Usuari {
-    String username;
-    String password;
-    String email;
-    String gender;
-    int height;
-    Double weight;
-    String dateNaixement;
+    private String username;
+    private String password;
+    private String email;
+    private String gender;
+    private String height;
+    private String weight;
+    private String dateNaixement;
+    private Uri URLavatar;
+
 
     public Usuari (){};
 
@@ -22,9 +27,10 @@ public class Usuari {
         this.password = password;
         this.email = email;
         gender = "";
-        height = 0;
-        weight = 0.0;
+        height = "0";
+        weight = "0";
         dateNaixement = "mm/dd/aaaa";
+       // URLavatar = Uri.parse("android.resource://com.app.mobilize/drawable/ic_user");
     }
 
     public String getUsername() {
@@ -51,11 +57,11 @@ public class Usuari {
         this.email = email;
     }
 
-    public double getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
@@ -67,11 +73,11 @@ public class Usuari {
         this.gender = gender;
     }
 
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -86,5 +92,13 @@ public class Usuari {
     @Override
     public String toString() {
         return username;
+    }
+
+    public Uri getImage() {
+        return URLavatar;
+    }
+
+    public void setImage(Uri imageUri) {
+        this.URLavatar = imageUri;
     }
 }

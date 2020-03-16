@@ -115,8 +115,6 @@ public class RegisterActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     // Getting the id of the current user
 
-                    List<Integer> peso = new ArrayList<Integer>();
-
                     Usuari user = new Usuari(username, password, mail);
 
                     db.collection("users").document(username).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
