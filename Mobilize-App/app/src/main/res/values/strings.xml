@@ -26,4 +26,11 @@
     <string name="planning">PLANNING</string>
     <string name="nom">Nom:</string>
     <string name="descripcio">Descripció:</string>
+    <string name="entrenamiento_libre">Entrenamiento libre</string>
+    <string name="cycling">Cycling</string>
+    <string name="seleccionar_modalidad">Seleccione una modalidad:</string>
+    <string name="rutina">Rutina</string>
+    <string name="libre">Libre</string>
+    <string name="entrenamientos">Entrenamientos disponibles:</string>
+    <string name="mis_entrenamientos">Mis entrenamientos</string>
 </resources>
