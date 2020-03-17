@@ -7,28 +7,32 @@
     tools:context=".NivellEntrenament">
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="140dp"
         android:layout_height="272dp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="206dp">
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/rbFacil"
-            android:layout_width="137dp"
-            android:layout_height="80dp"
-            android:text="FÀCIL" />
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="@string/facil" />
 
         <RadioButton
             android:id="@+id/rbMitjana"
-            android:layout_width="136dp"
-            android:layout_height="91dp"
-            android:text="MITJANA" />
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="@string/mitjana" />
 
         <RadioButton
             android:id="@+id/rbDificil"
-            android:layout_width="134dp"
+            android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:text="DIFIÍCIL" />
+            android:text="@string/dificil" />
 
     </RadioGroup>
 
@@ -36,48 +40,65 @@
         android:id="@+id/button2"
         android:layout_width="122dp"
         android:layout_height="63dp"
-        android:text="CONTINUA"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="586dp" />
+        android:text="@string/continua"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        app:srcCompat="@drawable/mitja"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="317dp" />
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:srcCompat="@drawable/mitja" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="169dp"
-        android:layout_height="44dp"
-        app:srcCompat="@drawable/faccc"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="225dp" />
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.542"
+        app:srcCompat="@drawable/faccc" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="175dp"
-        android:layout_height="57dp"
-        app:srcCompat="@drawable/dificil"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="402dp" />
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.515"
+        app:srcCompat="@drawable/dificil" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="239dp"
         android:layout_height="25dp"
-        android:text="ESCOLLEIX EL NIVELL DE LA RUTINA"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="124dp" />
+        android:gravity="center_horizontal"
+        android:text="@string/nivellrutina"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/MULTIESPORTS"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="450dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/multiesports" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

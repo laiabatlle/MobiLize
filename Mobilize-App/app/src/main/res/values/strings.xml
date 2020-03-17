@@ -33,4 +33,6 @@
     <string name="libre">Libre</string>
     <string name="entrenamientos">Entrenamientos disponibles:</string>
     <string name="mis_entrenamientos">Mis entrenamientos</string>
+    <string name="nivellrutina">Escull el nivell de la teva rutina</string>
+    <string name="continua">Continua</string>
 </resources>
