@@ -1,7 +1,0 @@
-<application>
-  <component name="GithubAccounts">
-    <account id="ecda2f99-924f-4cd0-9b05-f94626a64e17" name="emili.bellot@est.fib.upc.edu">
-      <server host="github.com" />
-    </account>
-  </component>
-</application>
