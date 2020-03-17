@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NivellEntrenament">
+
+    <RadioGroup
+        android:layout_width="140dp"
+        android:layout_height="272dp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="206dp">
+
+        <RadioButton
+            android:id="@+id/rbFacil"
+            android:layout_width="137dp"
+            android:layout_height="80dp"
+            android:text="FÀCIL" />
+
+        <RadioButton
+            android:id="@+id/rbMitjana"
+            android:layout_width="136dp"
+            android:layout_height="91dp"
+            android:text="MITJANA" />
+
+        <RadioButton
+            android:id="@+id/rbDificil"
+            android:layout_width="134dp"
+            android:layout_height="90dp"
+            android:text="DIFIÍCIL" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="122dp"
+        android:layout_height="63dp"
+        android:text="CONTINUA"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="586dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        app:srcCompat="@drawable/mitja"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="169dp"
+        android:layout_height="44dp"
+        app:srcCompat="@drawable/faccc"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="175dp"
+        android:layout_height="57dp"
+        app:srcCompat="@drawable/dificil"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="239dp"
+        android:layout_height="25dp"
+        android:text="ESCOLLEIX EL NIVELL DE LA RUTINA"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/MULTIESPORTS"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="450dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
