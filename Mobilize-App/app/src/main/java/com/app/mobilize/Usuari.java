@@ -17,8 +17,8 @@ public class Usuari {
     private String height;
     private String weight;
     private String dateNaixement;
-    private Uri URLavatar;
-
+    private String URLavatar;
+//
 
     public Usuari (){};
 
@@ -94,11 +94,11 @@ public class Usuari {
         return username;
     }
 
-    public Uri getImage() {
+    public String getImage() {
         return URLavatar;
     }
 
-    public void setImage(Uri imageUri) {
+    public void setImage(String imageUri) {
         this.URLavatar = imageUri;
     }
 }

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                 String peso = document.getData().get("weight").toString();
                                 user.setHeight(altura);
                                 user.setWeight(peso);
-                               // user.setImage(Uri.parse(document.getData().get("image").toString()));
+                                user.setImage(document.getData().get("image").toString());
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());
