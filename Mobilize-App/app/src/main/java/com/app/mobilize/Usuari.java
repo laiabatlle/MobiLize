@@ -1,5 +1,14 @@
 package com.app.mobilize;
 
+import android.content.ContentResolver;
+import android.net.Uri;
+
+import androidx.annotation.NonNull;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class Usuari {
     private String username;
     private String password;
@@ -9,6 +18,7 @@ public class Usuari {
     private String weight;
     private String dateNaixement;
     private String URLavatar;
+//
 
     public Usuari (){};
 
@@ -20,7 +30,7 @@ public class Usuari {
         height = "0";
         weight = "0";
         dateNaixement = "mm/dd/aaaa";
-        URLavatar = "https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/profileImages%2Fic_perfil.png?alt=media&token=740a1705-983a-4080-8642-0b50e3695322";
+       // URLavatar = Uri.parse("android.resource://com.app.mobilize/drawable/ic_user");
     }
 
     public String getUsername() {
