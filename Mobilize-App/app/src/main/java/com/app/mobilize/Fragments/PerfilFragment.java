@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +20,33 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.app.mobilize.R;
 import com.app.mobilize.Usuari;
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,14 +54,21 @@ import java.util.Calendar;
 public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private FirebaseFirestore db;
+    private StorageReference st;
+    private FirebaseUser fu;
+    private DatabaseReference dr;
+    private static final int GALLERY_INTENT = 1;
     private Usuari user;
     private EditText peso, altura, dateNaixement;
     private Button options;
     private Spinner genero;
-    private ImageView avatar;
-    private static final int PICK_IMAGE = 100;
     private String gendre;
-    private Uri imageUri;
+    private ImageView avatar;
+    private String imageUri;
+    private SearchView buscadorAmigos;
+    ArrayList<String> usernameList;
+    ArrayList<String> imageuserList;
+
 
     public PerfilFragment(Usuari user) {
         this.user = user;
@@ -59,24 +80,31 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        st = FirebaseStorage.getInstance().getReference();
+        fu = FirebaseAuth.getInstance().getCurrentUser();
+        dr = FirebaseDatabase.getInstance().getReference();
 
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
-/*        if (user.getImage().toString().equals("")) avatar.setImageURI(Uri.parse("android.resource://com.app.mobilize/drawable/ic_user"));
+        imageUri = user.getImage();
+        Glide.with(getActivity()).load(Uri.parse(user.getImage())).into(avatar);
+        /*if (user.getImage().toString().equals("")) avatar.setImageURI(Uri.parse("android.resource://com.app.mobilize/drawable/ic_user"));
         else if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) {
-            avatar.setImageURI(user.getImage());
-        }
+        }*/
         // avatar.setImageResource(R.drawable.ic_user);
         avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
             }
-        });*/
+        });
 
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);
         username.setText(user.getUsername());
+
+        //Buscador de Amics per a l'ususari:
+        buscadorAmigos = (SearchView) view.findViewById(R.id.cearchFriendsSV);
 
         //Spinner del genere de l'usuari:
         genero = (Spinner)view.findViewById(R.id.generoSpin);
@@ -119,7 +147,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 db.collection("users").document(user.getUsername()).update("height", user.getHeight());
                 db.collection("users").document(user.getUsername()).update("gender", gendre);
                 db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
-//                db.collection("users").document(user.getUsername()).update("image",user.getImage().toString());
+                db.collection("users").document(user.getUsername()).update("image",user.getImage());
             }
         });
         return view;
@@ -148,18 +176,42 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
 
     //Funcio per obrir la galeria i seleccionar la nova imatge d'acatar de l'usuari:
     private void openGallery() {
-        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        Intent gallery = new Intent(Intent.ACTION_PICK);
+        gallery.setType("image/*");
         gallery.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        startActivityForResult(gallery, PICK_IMAGE);
+        startActivityForResult(gallery, GALLERY_INTENT);
     }
 
     @Override
     //Funcio que assigna la imatge seleccionada com a nova imatge d'acatar de l'usuari:
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE){
-            imageUri = data.getData();
-            avatar.setImageURI(imageUri);
+        if (requestCode == GALLERY_INTENT && resultCode == Activity.RESULT_OK){
+            Uri uri = data.getData();
+            final StorageReference filePath = st.child("profileImages").child(uri.getLastPathSegment());
+            UploadTask uploadTask = filePath.putFile(uri);
+            Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                @Override
+                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                    if (!task.isSuccessful()) {
+                        throw task.getException();
+                    }
+                    return filePath.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if (task.isSuccessful()) {
+                        Uri downloadUri = task.getResult();
+                        imageUri = downloadUri.toString();
+                        Glide.with(getActivity()).load(downloadUri).into(avatar);
+                        avatar.setImageURI(Uri.parse(imageUri));
+                    } else {
+                        // Handle failures
+                        // ...
+                    }
+                }
+            });
         }
     }
 
