@@ -18,7 +18,7 @@ public class Usuari {
     private String weight;
     private String dateNaixement;
     private String URLavatar;
-
+//
 
     public Usuari (){};
 
