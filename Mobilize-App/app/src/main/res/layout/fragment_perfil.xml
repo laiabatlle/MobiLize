@@ -22,6 +22,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:background="@null"
+            android:contentDescription="@string/GuardarCambiosButton"
             android:src="@mipmap/ic_settings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +31,7 @@
             android:id="@+id/AvatarIV"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="@color/white"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toTopOf="@+id/usernameTV"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,12 +43,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="1.5"
+            android:shadowRadius="1.8"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -85,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Género"
+            android:text="@string/GeneroTV"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Cumpleaños"
+            android:text="@string/Fecha_NacimientoTV"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +130,7 @@
             android:layout_marginEnd="10dp"
             android:clickable="true"
             android:focusable="false"
-            android:hint="dd/mm/aaaa"
+            android:hint="@string/Fecha_NacimientoHint"
             android:inputType="date"
             android:maxLines="1"
             android:textAlignment="textEnd"
@@ -133,7 +138,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toEndOf="@+id/cumpleañosTV"
-            app:layout_constraintTop_toBottomOf="@+id/generoSpin" />
+            app:layout_constraintTop_toBottomOf="@+id/generoSpin"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/pesoTV"
@@ -141,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Peso"
+            android:text="@string/PesoTV"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -149,21 +155,22 @@
 
         <EditText
             android:id="@+id/pesoET"
-            android:layout_width="75sp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:ems="10"
             android:gravity="end"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/dataCumpleañosTV" />
+            app:layout_constraintTop_toBottomOf="@+id/dataCumpleañosTV"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Kg"
+            android:text="@string/kg"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,7 +182,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Altura"
+            android:text="@string/AlturaTV"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -184,14 +191,15 @@
 
         <EditText
             android:id="@+id/alturaET"
-            android:layout_width="75sp"
+            android:layout_width="70sp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:ems="10"
             android:gravity="end"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/pesoET" />
+            app:layout_constraintTop_toBottomOf="@+id/pesoET"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/textView3"
@@ -199,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="7dp"
-            android:text="cm"
+            android:text="@string/cm"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -210,7 +218,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="GUARDAR CAMBIOS"
+            android:text="@string/GuardarCambiosButton"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"

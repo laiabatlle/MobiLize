@@ -8,13 +8,13 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="140dp"
-        android:layout_height="272dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        android:layout_width="135dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <RadioButton
             android:id="@+id/rbFacil"
@@ -40,65 +40,74 @@
         android:id="@+id/button2"
         android:layout_width="122dp"
         android:layout_height="63dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/continua"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
-        app:layout_constraintEnd_toEndOf="@+id/imageView12"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:srcCompat="@drawable/mitja" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.542"
-        app:srcCompat="@drawable/faccc" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.515"
-        app:srcCompat="@drawable/dificil" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.515" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="239dp"
-        android:layout_height="25dp"
+        android:layout_width="303dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal"
         android:text="@string/nivellrutina"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/multiesports" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/barrad" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="178dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:srcCompat="@drawable/barraf" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/barram" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="348dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/grup" /><![CDATA[
+
+
+
+    60dip"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

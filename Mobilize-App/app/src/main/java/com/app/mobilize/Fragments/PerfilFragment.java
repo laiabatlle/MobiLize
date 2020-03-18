@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -35,10 +36,6 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -51,12 +48,10 @@ import java.util.Calendar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener  {
 
     private FirebaseFirestore db;
     private StorageReference st;
-    private FirebaseUser fu;
-    private DatabaseReference dr;
     private static final int GALLERY_INTENT = 1;
     private Usuari user;
     private EditText peso, altura, dateNaixement;
@@ -81,21 +76,15 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_perfil, container, false);
         st = FirebaseStorage.getInstance().getReference();
-        fu = FirebaseAuth.getInstance().getCurrentUser();
-        dr = FirebaseDatabase.getInstance().getReference();
 
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
         imageUri = user.getImage();
         Glide.with(getActivity()).load(Uri.parse(user.getImage())).into(avatar);
-        /*if (user.getImage().toString().equals("")) avatar.setImageURI(Uri.parse("android.resource://com.app.mobilize/drawable/ic_user"));
-        else if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) {
-        }*/
-        // avatar.setImageResource(R.drawable.ic_user);
         avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGallery();
+                if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) openGallery();
             }
         });
 
@@ -148,6 +137,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 db.collection("users").document(user.getUsername()).update("gender", gendre);
                 db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
                 db.collection("users").document(user.getUsername()).update("image",user.getImage());
+                Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
             }
         });
         return view;
@@ -224,7 +214,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                // +1 because January is zero
+                // +1 perque Gener = 0;
                 final String selectedDate = twoDigits(dayOfMonth) + "/" + twoDigits(monthOfYear+1) + "/" + twoDigits(year);
                 dateNaixement.setText(selectedDate);
             }
@@ -246,18 +236,11 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(context,
                     Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                        (Activity) context,
-                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    showDialog("External storage", context,
-                            Manifest.permission.READ_EXTERNAL_STORAGE);
+                if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    showDialog("Permiso necesario", context, Manifest.permission.READ_EXTERNAL_STORAGE);
 
                 } else {
-                    ActivityCompat
-                            .requestPermissions(
-                                    (Activity) context,
-                                    new String[] { Manifest.permission.READ_EXTERNAL_STORAGE },
-                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                    ActivityCompat.requestPermissions((Activity) context, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
                 }
                 return false;
             } else {
@@ -273,8 +256,8 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                            final String permission) {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
         alertBuilder.setCancelable(true);
-        alertBuilder.setTitle("Permission necessary");
-        alertBuilder.setMessage(msg + " permission is necessary");
+        alertBuilder.setTitle(msg);
+        alertBuilder.setMessage("Se requiere su permiso para acceder a la galería de imágenes.");
         alertBuilder.setPositiveButton(android.R.string.yes,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

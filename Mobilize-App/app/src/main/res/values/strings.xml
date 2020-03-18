@@ -35,4 +35,16 @@
     <string name="mis_entrenamientos">Mis entrenamientos</string>
     <string name="nivellrutina">Escull el nivell de la teva rutina</string>
     <string name="continua">Continua</string>
+    <string name="GeneroTV">Género</string>
+    <string name="Fecha_NacimientoTV">Fecha nacimiento</string>
+    <string name="Fecha_NacimientoHint">dd/mm/aaaa</string>
+    <string name="PesoTV">Peso</string>
+    <string name="AlturaTV">Altura</string>
+    <string name="Darse_de_Baja">Darse de baja</string>
+    <string name="OpcionesButton">Botón de Opciones</string>
+    <string name="GuardarCambiosButton">Guardar Cambios</string>
+    <string name="kg">Kg</string>
+    <string name="cm">cm</string>
+
+
 </resources>

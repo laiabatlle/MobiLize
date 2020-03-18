@@ -96,8 +96,6 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         progressDialog.dismiss();
-                        uid = mAuth.getCurrentUser().getUid();
-                        Toast.makeText(getApplicationContext(), uid, Toast.LENGTH_SHORT).show();
                         sig2Intent();
                     } else {
                         progressDialog.dismiss();
