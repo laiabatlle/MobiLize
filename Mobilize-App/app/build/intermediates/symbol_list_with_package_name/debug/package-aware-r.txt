@@ -1386,13 +1386,16 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable cycling
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dificil
 drawable enforma_bueno
+drawable faccc
 drawable funcionamiento
 drawable ganar_masa_bueno
 drawable gimnasio
@@ -1418,6 +1421,7 @@ drawable ic_progress
 drawable ic_running
 drawable ic_settings
 drawable ic_user
+drawable mitja
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1427,6 +1431,7 @@ drawable mtrl_ic_error
 drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
+drawable multiesports
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -1440,6 +1445,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable running
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1523,8 +1529,12 @@ id always
 id async
 id auto
 id bAdelgazar
+id bCycling
 id bForma
+id bLibre
 id bMasa
+id bRunning
+id bRutina
 id barrier
 id beginning
 id blocking
@@ -1533,6 +1543,7 @@ id bottomNavigation
 id butEnrere
 id butOk
 id button
+id button2
 id buttonPanel
 id cancel_button
 id cbCiclisme
@@ -1582,6 +1593,7 @@ id email
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id entrenamiento_libre
 id etDialog
 id etPassword
 id etUser
@@ -1615,9 +1627,13 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView10
+id imageView11
+id imageView12
 id imageView5
 id imageView6
 id imageView7
+id imageView9
 id info
 id invisible
 id italic
@@ -1638,6 +1654,7 @@ id masked
 id message
 id middle
 id mini
+id misentrenamientos
 id misplanes
 id month_grid
 id month_navigation_bar
@@ -1694,6 +1711,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
 id rbDificil
 id rbFacil
 id rbMitjana
@@ -1772,6 +1790,8 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
+id textView9
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1869,6 +1889,8 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_crear_plan
 layout activity_mis_planes
+layout activity_modalitat_exercici
+layout activity_nivell_entrenament
 layout activity_tipus_plan
 layout alert_dialog
 layout custom_dialog
@@ -1951,6 +1973,14 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap ic_settings
 plurals mtrl_badge_content_description
+string AlturaTV
+string Darse_de_Baja
+string Fecha_NacimientoHint
+string Fecha_NacimientoTV
+string GeneroTV
+string GuardarCambiosButton
+string OpcionesButton
+string PesoTV
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1988,6 +2018,7 @@ string character_counter_pattern
 string chip_text
 string ciclisme
 string clear_text_end_icon_content_description
+string cm
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -2007,6 +2038,8 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string config
+string continua
+string cycling
 string default_web_client_id
 string descripcio
 string dificil
@@ -2016,6 +2049,8 @@ string duracio
 string email
 string enforma
 string enrere
+string entrenamiento_libre
+string entrenamientos
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2030,8 +2065,11 @@ string google_storage_bucket
 string gotologin
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string kg
+string libre
 string login_title
 string masa_muscular
+string mis_entrenamientos
 string misplanes
 string mitjana
 string mtrl_badge_numberless_content_description
@@ -2068,6 +2106,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string nivellrutina
 string nom
 string ok
 string password
@@ -2081,7 +2120,9 @@ string planning
 string project_id
 string register
 string running
+string rutina
 string search_menu_title
+string seleccionar_modalidad
 string status_bar_notification_info_overflow
 string user
 string workout

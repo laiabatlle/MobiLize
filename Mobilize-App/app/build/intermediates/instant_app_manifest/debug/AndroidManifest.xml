@@ -30,6 +30,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.app.mobilize.ModalitatExercici" />
+        <activity android:name="com.app.mobilize.NivellEntrenament" />
         <activity android:name="com.app.mobilize.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.MainActivity" />
         <activity android:name="com.app.mobilize.RegisterActivity" />
