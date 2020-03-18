@@ -1,11 +1,12 @@
 <resources>
+    <string name="app_name">MobiLize</string>
+    <string name="logoMobiLize">Logo MobiLize</string>
     <string name="user">Username</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="gotologin">Go To Login</string>
     <string name="login_title">Login</string>
-    <string name="app_name">planning</string>
     <string name="masa_muscular">Ganar Músculo</string>
     <string name="adelgazar">Adelgazar</string>
     <string name="enforma">En Forma</string>

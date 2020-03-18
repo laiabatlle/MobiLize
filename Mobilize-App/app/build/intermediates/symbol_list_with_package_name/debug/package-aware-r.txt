@@ -839,6 +839,7 @@ color gradEnd
 color gradStart
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_logo2_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1416,6 +1417,7 @@ drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_logo
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
 drawable ic_mtrl_checked_circle
@@ -1426,6 +1428,7 @@ drawable ic_progress
 drawable ic_running
 drawable ic_settings
 drawable ic_user
+drawable logo_mobilize
 drawable mitja
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1657,6 +1660,7 @@ id listMode
 id listView
 id list_item
 id loginButton
+id logo
 id masked
 id message
 id middle
@@ -1962,6 +1966,7 @@ layout register_message_activity
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout splash_activity
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_design_checkbox
@@ -1978,6 +1983,9 @@ layout text_view_without_line_height
 menu main_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_logo2
+mipmap ic_logo2_foreground
+mipmap ic_logo2_round
 mipmap ic_settings
 plurals mtrl_badge_content_description
 string AlturaTV
@@ -2075,6 +2083,7 @@ string icon_content_description
 string kg
 string libre
 string login_title
+string logoMobiLize
 string masa_muscular
 string mis_entrenamientos
 string misplanes
