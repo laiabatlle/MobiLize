@@ -48,7 +48,7 @@ import java.util.Calendar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener  {
+public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener  {
 
     private FirebaseFirestore db;
     private StorageReference st;
@@ -80,13 +80,8 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
         imageUri = user.getImage();
-        Glide.with(getActivity()).load(Uri.parse(user.getImage())).into(avatar);
-        avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) openGallery();
-            }
-        });
+        Glide.with(this).load(Uri.parse(user.getImage())).into(avatar);
+        avatar.setOnClickListener(this);
 
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);
@@ -107,12 +102,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         //EditText de la dataNaixement de l'usuari:
         dateNaixement = (EditText)view.findViewById(R.id.dataCumpleañosTV);
         dateNaixement.setText(user.getDateNaixement());
-        dateNaixement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDatePickerDialog();
-            }
-        });
+        dateNaixement.setOnClickListener(this);
 
         //EditText del pes de l'usuari:
         peso = (EditText) view.findViewById(R.id.pesoET);
@@ -124,22 +114,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
 
         //Boto de guardar canvis. S'actualitza la Base de Dades amb els parametres seleccionats als diferents widgets:
         Button guardar_cambios = (Button) view.findViewById(R.id.guardar);
-        guardar_cambios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                user.setWeight(peso.getText().toString());
-                user.setHeight(altura.getText().toString());
-                user.setGender(gendre);
-                user.setDateNaixement(dateNaixement.getText().toString());
-                user.setImage(imageUri);
-                db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
-                db.collection("users").document(user.getUsername()).update("height", user.getHeight());
-                db.collection("users").document(user.getUsername()).update("gender", gendre);
-                db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
-                db.collection("users").document(user.getUsername()).update("image",user.getImage());
-                Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        guardar_cambios.setOnClickListener(this);
         return view;
     }
 
@@ -268,5 +243,34 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 });
         AlertDialog alert = alertBuilder.create();
         alert.show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.AvatarIV:
+                if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) openGallery();
+                break;
+
+            case R.id.dataCumpleañosTV:
+                showDatePickerDialog();
+                break;
+
+            case R.id.guardar:
+                user.setWeight(peso.getText().toString());
+                user.setHeight(altura.getText().toString());
+                user.setGender(gendre);
+                user.setDateNaixement(dateNaixement.getText().toString());
+                user.setImage(imageUri);
+                db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
+                db.collection("users").document(user.getUsername()).update("height", user.getHeight());
+                db.collection("users").document(user.getUsername()).update("gender", gendre);
+                db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
+                db.collection("users").document(user.getUsername()).update("image",user.getImage());
+                Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
     }
 }
