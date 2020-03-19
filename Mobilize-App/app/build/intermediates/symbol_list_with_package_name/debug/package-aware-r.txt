@@ -761,6 +761,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1550,6 +1551,7 @@ id beginning
 id blocking
 id bottom
 id bottomNavigation
+id busquedaUserTV
 id butEnrere
 id butOk
 id button
@@ -1727,12 +1729,12 @@ id rbDificil
 id rbFacil
 id rbMitjana
 id registerButton
-id relativeLayout
 id rellay
 id right
 id right_icon
 id right_side
 id rounded
+id rv
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -1742,6 +1744,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -1925,6 +1928,7 @@ layout fragment_eventos
 layout fragment_perfil
 layout fragment_plan
 layout fragment_progreso
+layout listausers_fragment
 layout login_activity
 layout main_activity
 layout mtrl_alert_dialog
@@ -1963,6 +1967,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout register_activity
 layout register_message_activity
+layout row_usuarios
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\faccc.JPG"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_activity.xml.flat",
-        "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\splash_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_activity.xml.flat",
+        "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\splash_activity.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_logo2_foreground.png.flat",
@@ -128,6 +128,10 @@
         "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\funcionamiento.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_listausers_fragment.xml.flat",
+        "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\listausers_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_logo2_round.png.flat",
         "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_logo2_round.png"
     },
@@ -218,6 +222,10 @@
     {
         "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_logo2_round.png.flat",
         "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_logo2_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_usuarios.xml.flat",
+        "source": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\row_usuarios.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_calendar.xml.flat",

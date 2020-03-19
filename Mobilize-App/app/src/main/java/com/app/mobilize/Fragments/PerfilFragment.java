@@ -29,9 +29,10 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.app.mobilize.R;
-import com.app.mobilize.Usuari;
+import com.app.mobilize.Pojo.Usuari;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,7 +42,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -61,8 +61,6 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
     private ImageView avatar;
     private String imageUri;
     private SearchView buscadorAmigos;
-    ArrayList<String> usernameList;
-    ArrayList<String> imageuserList;
 
 
     public PerfilFragment(Usuari user) {
@@ -89,6 +87,22 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
 
         //Buscador de Amics per a l'ususari:
         buscadorAmigos = (SearchView) view.findViewById(R.id.cearchFriendsSV);
+        buscadorAmigos.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ListaUsersFragment(/*user,*/ buscadorAmigos.getQuery().toString()))
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                //    adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
 
         //Spinner del genere de l'usuari:
         genero = (Spinner)view.findViewById(R.id.generoSpin);
@@ -269,6 +283,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 db.collection("users").document(user.getUsername()).update("image",user.getImage());
                 Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
                 break;
+
             default:
                 break;
         }

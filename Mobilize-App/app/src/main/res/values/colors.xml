@@ -8,4 +8,6 @@
     <color name="gradEnd">#A451D55B</color>
     <color name="gradStart">#ADBFFCAE</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
 </resources>
