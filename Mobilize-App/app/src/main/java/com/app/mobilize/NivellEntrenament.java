@@ -2,9 +2,12 @@ package com.app.mobilize;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class NivellEntrenament extends AppCompatActivity {
 
@@ -19,15 +22,21 @@ public class NivellEntrenament extends AppCompatActivity {
         rbFacil = (RadioButton) findViewById(R.id.rbFacil);
         rbMitjana = (RadioButton) findViewById(R.id.rbMitjana);
         rbDificil = (RadioButton) findViewById(R.id.rbDificil);
-    }
 
-    public void onclick(View view) {
-        if(view.getId()==R.id.button2) {
-            Continuar();
-        }
-    }
+        Button continua;
 
-    private void Continuar() {
-
+        continua = findViewById(R.id.button2);
+        continua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( rbFacil.isChecked() == false && rbMitjana.isChecked() == false && rbDificil.isChecked() == false ){
+                    Toast.makeText(getApplicationContext(), R.string.escollirDificultat, Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent intent = new Intent(v.getContext(), ModalitatEntrenament.class);
+                    startActivityForResult(intent, 0);
+                }
+            }
+        });
     }
 }

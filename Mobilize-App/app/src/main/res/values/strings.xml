@@ -46,6 +46,8 @@
     <string name="GuardarCambiosButton">Guardar Cambios</string>
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
+    <string name="rutinaEntrenamiento">Rutina de entrenamiento</string>
+    <string name="escollirDificultat">Seleccioni una dificultat!</string>
 
 
 </resources>

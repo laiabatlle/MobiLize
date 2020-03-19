@@ -20,6 +20,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ModalitatExercici" />
+        <activity android:name=".ModalitatEntrenament" />
         <activity android:name=".NivellEntrenament" />
         <activity android:name=".RegisterMessageActivity" />
     </application>
