@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Spinner;
@@ -33,6 +34,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.app.mobilize.R;
 import com.app.mobilize.Pojo.Usuari;
+import com.app.mobilize.optionsActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -62,6 +64,8 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
     private String imageUri;
     private SearchView buscadorAmigos;
 
+    private ImageButton opcions;
+
 
     public PerfilFragment(Usuari user) {
         this.user = user;
@@ -80,6 +84,14 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         imageUri = user.getImage();
         Glide.with(this).load(Uri.parse(user.getImage())).into(avatar);
         avatar.setOnClickListener(this);
+
+        opcions = view.findViewById(R.id.opciones);
+        opcions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivity();
+            }
+        });
 
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);
@@ -130,6 +142,11 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         Button guardar_cambios = (Button) view.findViewById(R.id.guardar);
         guardar_cambios.setOnClickListener(this);
         return view;
+    }
+
+    private void goToActivity () {
+        Intent intent = new Intent(getActivity(), optionsActivity.class);
+        startActivity(intent);
     }
 
     //Funcio per retornar l'element corresponent a l'string "gendre" de l'spinner per seleccionar el genere de l'usuari:

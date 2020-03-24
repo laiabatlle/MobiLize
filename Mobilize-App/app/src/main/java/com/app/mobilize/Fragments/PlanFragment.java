@@ -73,8 +73,8 @@ public class PlanFragment extends Fragment {
     }
 
     public void tipusPlan(String tipus) {
-      //  Intent sigIntent = new Intent (this, TipusPlan.class);
-      //  sigIntent.putExtra("tipus", tipus); // li paso a la seguent activity el tipus de plan
-      //  startActivity(sigIntent);
+      Intent sigIntent = new Intent (getActivity(), TipusPlan.class);
+      sigIntent.putExtra("tipus", tipus); // li paso a la seguent activity el tipus de plan
+      startActivity(sigIntent);
     }
 }

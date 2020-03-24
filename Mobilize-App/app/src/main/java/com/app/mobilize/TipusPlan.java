@@ -85,8 +85,6 @@ public class TipusPlan extends AppCompatActivity {
     }
 
     public void backActivity () {
-        Intent back = new Intent(this, MainActivity.class);
-        startActivity(back);
         finish();
     }
 }
