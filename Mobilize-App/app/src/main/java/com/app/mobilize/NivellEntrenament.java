@@ -1,18 +1,18 @@
 package com.app.mobilize;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class NivellEntrenament extends AppCompatActivity {
 
     RadioButton rbDificil, rbMitjana, rbFacil;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +23,20 @@ public class NivellEntrenament extends AppCompatActivity {
         rbMitjana = (RadioButton) findViewById(R.id.rbMitjana);
         rbDificil = (RadioButton) findViewById(R.id.rbDificil);
 
+        Button continua;
+
+        continua = findViewById(R.id.button2);
+        continua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( rbFacil.isChecked() == false && rbMitjana.isChecked() == false && rbDificil.isChecked() == false ){
+                    Toast.makeText(getApplicationContext(), R.string.escollirDificultat, Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent intent = new Intent(v.getContext(), ModalitatEntrenament.class);
+                    startActivityForResult(intent, 0);
+                }
+            }
+        });
     }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public void Continua(View view) {
-        Intent i = new Intent(this, Seleccionar_rutina.class);
-        i.putExtra("facil",rbFacil.getAutofillValue());
-       // i.putExtra("mitja", rbMitjana.getAutofillValue());
-        // i.putExtra("dificl", rbDificil.getAutofillValue());
-        startActivity(i);
-
-    }
-
-
 }
