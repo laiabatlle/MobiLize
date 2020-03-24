@@ -48,6 +48,8 @@
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina de entrenamiento</string>
     <string name="escollirDificultat">Seleccioni una dificultat!</string>
+    <string name="tit"></string>
+    <string name="desc"></string>
 
 
 </resources>

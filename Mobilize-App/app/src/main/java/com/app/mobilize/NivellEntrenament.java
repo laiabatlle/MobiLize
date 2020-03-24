@@ -34,6 +34,9 @@ public class NivellEntrenament extends AppCompatActivity {
                 }
                 else {
                     Intent intent = new Intent(v.getContext(), ModalitatEntrenament.class);
+                    intent.putExtra("facil", rbFacil.isChecked());
+                    intent.putExtra("mitja", rbMitjana.isChecked());
+                    intent.putExtra("dificil", rbDificil.isChecked());
                     startActivityForResult(intent, 0);
                 }
             }
