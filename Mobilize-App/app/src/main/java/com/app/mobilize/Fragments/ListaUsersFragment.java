@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -43,6 +44,12 @@ public class ListaUsersFragment extends Fragment {
     public ListaUsersFragment(/*Usuari user,*/ String busqueda) {
         //this.user = user;
         this.username = busqueda;
+    }
+
+    public void onDestroy() {
+
+        super.onDestroy();
+        Toast.makeText(getContext(), "BUG", Toast.LENGTH_LONG).show();
     }
 
     @Override
