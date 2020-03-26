@@ -7,10 +7,12 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +41,11 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -65,7 +71,6 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
     private SearchView buscadorAmigos;
 
     private ImageButton opcions;
-
 
     public PerfilFragment(Usuari user) {
         this.user = user;
@@ -146,6 +151,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
 
     private void goToActivity () {
         Intent intent = new Intent(getActivity(), optionsActivity.class);
+        intent.putExtra("username", user.getUsername());
         startActivity(intent);
     }
 
