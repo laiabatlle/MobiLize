@@ -224,7 +224,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 final String selectedDate = twoDigits(dayOfMonth) + "/" + twoDigits(monthOfYear+1) + "/" + twoDigits(year);
                 dateNaixement.setText(selectedDate);
             }
-        }, day, month, years);
+        }, years, month, day);
         datePickerDialog.show();
     }
 
