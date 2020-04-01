@@ -32,6 +32,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.app.mobilize.Presentador.Interface.PerfilInterface;
+import com.app.mobilize.Presentador.PerfilPresenter;
 import com.app.mobilize.R;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Vista.Activities.optionsActivity;
@@ -50,7 +52,7 @@ import java.util.Calendar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PerfilFragment extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener  {
+public class PerfilFragment extends Fragment implements PerfilInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener  {
 
     private FirebaseFirestore db;
     private StorageReference st;
@@ -66,6 +68,9 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
 
     private ImageButton opcions;
 
+    private PerfilInterface.Presenter presenter;
+
+
     public PerfilFragment(Usuari user) {
         this.user = user;
         db = FirebaseFirestore.getInstance();
@@ -76,6 +81,12 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        setViews(view);
+        return view;
+    }
+
+    private void setViews(View view) {
+        presenter = new PerfilPresenter(this);
         st = FirebaseStorage.getInstance().getReference();
 
         //Imatge de l'avatar de l'usuari:
@@ -85,12 +96,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         avatar.setOnClickListener(this);
 
         opcions = view.findViewById(R.id.opciones);
-        opcions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToActivity();
-            }
-        });
+        opcions.setOnClickListener(this);
 
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);
@@ -140,13 +146,6 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         //Boto de guardar canvis. S'actualitza la Base de Dades amb els parametres seleccionats als diferents widgets:
         Button guardar_cambios = (Button) view.findViewById(R.id.guardar);
         guardar_cambios.setOnClickListener(this);
-        return view;
-    }
-
-    private void goToActivity () {
-        Intent intent = new Intent(getActivity(), optionsActivity.class);
-        intent.putExtra("username", user.getUsername());
-        startActivity(intent);
     }
 
     //Funcio per retornar l'element corresponent a l'string "gendre" de l'spinner per seleccionar el genere de l'usuari:
@@ -159,6 +158,7 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
         }
         return posicion;
     }
+
     //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -288,21 +288,48 @@ public class PerfilFragment extends Fragment implements AdapterView.OnItemSelect
                 break;
 
             case R.id.guardar:
-                user.setWeight(peso.getText().toString());
-                user.setHeight(altura.getText().toString());
-                user.setGender(gendre);
-                user.setDateNaixement(dateNaixement.getText().toString());
-                user.setImage(imageUri);
-                db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
-                db.collection("users").document(user.getUsername()).update("height", user.getHeight());
-                db.collection("users").document(user.getUsername()).update("gender", gendre);
-                db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
-                db.collection("users").document(user.getUsername()).update("image",user.getImage());
-                Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
+                handleGuardarCambios();
+                break;
+
+            case R.id.opciones:
+                handleOptions();
                 break;
 
             default:
                 break;
         }
+    }
+
+    @Override
+    public void disableInputs() {
+
+    }
+
+    @Override
+    public void enableInputs() {
+
+    }
+
+    @Override
+    public void handleOptions() {
+        Intent intent = new Intent(getActivity(), optionsActivity.class);
+        intent.putExtra("username", user.getUsername());
+        startActivity(intent);
+    }
+
+    @Override
+    public void handleGuardarCambios() {
+        user.setWeight(peso.getText().toString());
+        user.setHeight(altura.getText().toString());
+        user.setGender(gendre);
+        user.setDateNaixement(dateNaixement.getText().toString());
+        user.setImage(imageUri);
+        presenter.toGuardarCambios(user.getUsername(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage());
+        db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
+        db.collection("users").document(user.getUsername()).update("height", user.getHeight());
+        db.collection("users").document(user.getUsername()).update("gender", gendre);
+        db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
+        db.collection("users").document(user.getUsername()).update("image",user.getImage());
+        Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
     }
 }
