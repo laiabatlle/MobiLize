@@ -30,19 +30,26 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.app.mobilize.SplashActivity" >
+        <activity android:name="com.app.mobilize.Vista.Activities.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.app.mobilize.LoginActivity" />
-        <activity android:name="com.app.mobilize.RegisterActivity" />
-        <activity android:name="com.app.mobilize.MainActivity" />
-        <activity android:name="com.app.mobilize.ModalitatExercici" />
-        <activity android:name="com.app.mobilize.NivellEntrenament" />
-        <activity android:name="com.app.mobilize.RegisterMessageActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.LoginActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.RegisterActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.MainActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatExercici" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatEntrenament" />
+        <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
+        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
+        <activity android:name="com.app.mobilize.Vista.Activities.optionsActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

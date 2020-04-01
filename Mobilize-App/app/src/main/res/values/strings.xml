@@ -6,7 +6,10 @@
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="gotologin">Go To Login</string>
+    <string name="gotoregister">Don’t have an account?</string>
+    <string name="confirmationEmailText">Don’t have an account?</string>
     <string name="login_title">Login</string>
+    <string name="loginConfirmationButton">Login</string>
     <string name="masa_muscular">Ganar Músculo</string>
     <string name="adelgazar">Adelgazar</string>
     <string name="enforma">En Forma</string>
@@ -48,6 +51,8 @@
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina de entrenamiento</string>
     <string name="escollirDificultat">Seleccioni una dificultat!</string>
+    <string name="tit"></string>
+    <string name="desc"></string>
 
 
 </resources>
