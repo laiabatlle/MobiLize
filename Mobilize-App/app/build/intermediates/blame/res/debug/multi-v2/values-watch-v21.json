@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "C:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\deae1025afce5eec85ff8ccbcc9e7c1f\\appcompat-1.1.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-2\\files-2.1\\deae1025afce5eec85ff8ccbcc9e7c1f\\appcompat-1.1.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

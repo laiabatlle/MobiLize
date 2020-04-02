@@ -54,12 +54,9 @@ import java.util.Calendar;
  */
 public class PerfilFragment extends Fragment implements PerfilInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener  {
 
-    private FirebaseFirestore db;
-    private StorageReference st;
     private static final int GALLERY_INTENT = 1;
     private Usuari user;
     private EditText peso, altura, dateNaixement;
-    private Button options;
     private Spinner genero;
     private String gendre;
     private ImageView avatar;
@@ -73,7 +70,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     public PerfilFragment(Usuari user) {
         this.user = user;
-        db = FirebaseFirestore.getInstance();
     }
 
     @Override
@@ -87,7 +83,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     private void setViews(View view) {
         presenter = new PerfilPresenter(this);
-        st = FirebaseStorage.getInstance().getReference();
 
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
@@ -182,32 +177,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     //Funcio que assigna la imatge seleccionada com a nova imatge d'acatar de l'usuari:
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == GALLERY_INTENT && resultCode == Activity.RESULT_OK){
+        if (requestCode == GALLERY_INTENT && resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
-            final StorageReference filePath = st.child("profileImages").child(uri.getLastPathSegment());
-            UploadTask uploadTask = filePath.putFile(uri);
-            Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                @Override
-                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                    if (!task.isSuccessful()) {
-                        throw task.getException();
-                    }
-                    return filePath.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                @Override
-                public void onComplete(@NonNull Task<Uri> task) {
-                    if (task.isSuccessful()) {
-                        Uri downloadUri = task.getResult();
-                        imageUri = downloadUri.toString();
-                        Glide.with(getActivity()).load(downloadUri).into(avatar);
-                        avatar.setImageURI(Uri.parse(imageUri));
-                    } else {
-                        // Handle failures
-                        // ...
-                    }
-                }
-            });
+            handleImage(uri);
         }
     }
 
@@ -300,14 +272,29 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         }
     }
 
+    private void setInputs(boolean enable){
+        peso.setEnabled(enable);
+        altura.setEnabled(enable);
+        dateNaixement.setEnabled(enable);
+        avatar.setEnabled(enable);
+        genero.setEnabled(enable);
+        opcions.setEnabled(enable);
+        buscadorAmigos.setEnabled(enable);
+    }
+
     @Override
     public void disableInputs() {
-
+        setInputs(false);
     }
 
     @Override
     public void enableInputs() {
+        setInputs(true);
+    }
 
+    @Override
+    public void handleImage(Uri image) {
+        presenter.toImageChange(image);
     }
 
     @Override
@@ -325,11 +312,17 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         user.setDateNaixement(dateNaixement.getText().toString());
         user.setImage(imageUri);
         presenter.toGuardarCambios(user.getUsername(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage());
-        db.collection("users").document(user.getUsername()).update("weight", user.getWeight());
-        db.collection("users").document(user.getUsername()).update("height", user.getHeight());
-        db.collection("users").document(user.getUsername()).update("gender", gendre);
-        db.collection("users").document(user.getUsername()).update("dateNaixement", user.getDateNaixement());
-        db.collection("users").document(user.getUsername()).update("image",user.getImage());
-        Toast.makeText(getContext(), "Sus datos se han actualizado correctamente.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onSuccess(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onSuccesImageChange(Uri uriImage) {
+        imageUri = uriImage.toString();
+        Glide.with(getActivity()).load(uriImage).into(avatar);
+        avatar.setImageURI(Uri.parse(imageUri));
     }
 }
