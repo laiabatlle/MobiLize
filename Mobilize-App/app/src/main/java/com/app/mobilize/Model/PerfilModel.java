@@ -5,7 +5,6 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 
 import com.app.mobilize.Presentador.Interface.PerfilInterface;
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

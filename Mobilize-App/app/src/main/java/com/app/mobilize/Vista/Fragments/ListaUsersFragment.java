@@ -26,12 +26,12 @@ import java.util.ArrayList;
 public class ListaUsersFragment extends Fragment {
 
     //private final Usuari user;
-    String username;
-    RecyclerView lista;
-    SearchView buscador;
-    AdapterUsuarios adapterUsuarios;
-    LinearLayoutManager lm;
-    ArrayList<Usuari> listaUsuarios;
+    private String username;
+    private RecyclerView lista;
+    private SearchView buscador;
+    private AdapterUsuarios adapterUsuarios;
+    private LinearLayoutManager lm;
+    private ArrayList<Usuari> listaUsuarios;
     private FirebaseFirestore ref;
 
     public ListaUsersFragment(/*Usuari user,*/ String busqueda) {

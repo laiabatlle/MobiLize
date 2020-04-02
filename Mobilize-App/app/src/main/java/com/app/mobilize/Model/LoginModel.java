@@ -1,7 +1,5 @@
 package com.app.mobilize.Model;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.app.mobilize.Presentador.Interface.LoginInterface;
