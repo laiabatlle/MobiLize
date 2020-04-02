@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-
+        mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);
         mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

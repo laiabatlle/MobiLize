@@ -1465,6 +1465,7 @@ drawable trainer
 drawable yoga
 id ALT
 id AvatarIV
+id AvatarIV_Cercador
 id BOTTOM_END
 id BOTTOM_START
 id CTRL

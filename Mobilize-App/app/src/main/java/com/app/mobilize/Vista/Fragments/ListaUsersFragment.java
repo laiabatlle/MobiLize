@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,25 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;
 import com.app.mobilize.Model.Usuari;
+import com.app.mobilize.Presentador.BuscadorUserPresenter;
+import com.app.mobilize.Presentador.Interface.BuscadorUserInterface;
 import com.app.mobilize.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
-
-public class ListaUsersFragment extends Fragment {
+public class ListaUsersFragment extends Fragment implements BuscadorUserInterface.View {
 
     //private final Usuari user;
     private String username;
     private RecyclerView lista;
     private SearchView buscador;
-    private AdapterUsuarios adapterUsuarios;
     private LinearLayoutManager lm;
-    private ArrayList<Usuari> listaUsuarios;
-    private FirebaseFirestore ref;
+    private BuscadorUserInterface.Presenter presenter;
 
     public ListaUsersFragment(/*Usuari user,*/ String busqueda) {
         //this.user = user;
@@ -44,34 +36,19 @@ public class ListaUsersFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.listausers_fragment, container, false);
-        ref = FirebaseFirestore.getInstance();
+        setViews(view);
+        return view;
+    }
+
+    private void setViews(View view) {
+        presenter = new BuscadorUserPresenter(this);
 
         lista = (RecyclerView) view.findViewById(R.id.rv);
         buscador = (SearchView) view.findViewById(R.id.searchView);
         lm = new LinearLayoutManager(getContext());
         lista.setLayoutManager(lm);
 
-        listaUsuarios = new ArrayList<>();
-        adapterUsuarios = new AdapterUsuarios(listaUsuarios);
-        lista.setAdapter(adapterUsuarios);
-
-        ref.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        Usuari u = new Usuari();
-                        u.setUsername(document.getData().get("username").toString());
-                        u.setImage(document.getData().get("image").toString());
-                        listaUsuarios.add(u);
-                    }
-                    adapterUsuarios.notifyDataSetChanged();
-                    buscador.setQuery(username,true);
-                } else {
-                    Toast.makeText(getContext(), "No se ha encontrado ningún usuario con ese nombre.", Toast.LENGTH_SHORT).show();
-               }
-            }
-        });
+        handleChargeUserList();
 
         buscador.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -81,23 +58,48 @@ public class ListaUsersFragment extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                buscar(s);
+                handleSearchUser(s);
                 return true;
             }
         });
-        return view;
     }
 
-    private void buscar(String s) {
-        ArrayList<Usuari> miLista = new ArrayList<>();
-        for (Usuari u : listaUsuarios) {
-            if (u.getUsername().toLowerCase().contains(s.toLowerCase())) {
-                miLista.add(u);
-            }
-        }
-        if (miLista.isEmpty())
-            Toast.makeText(getContext(), "No se ha encontrado ningún usuario con ese nombre.", Toast.LENGTH_SHORT).show();
-            AdapterUsuarios ad = new AdapterUsuarios(miLista);
-            lista.setAdapter(ad);
+    private void setInputs(boolean enable){
+        buscador.setEnabled(enable);
+    }
+
+    @Override
+    public void disableInputs() {
+        setInputs(false);
+    }
+
+    @Override
+    public void enableInputs() {
+        setInputs(true);
+    }
+
+    @Override
+    public void handleChargeUserList() {
+        presenter.toGetUserList();
+    }
+
+    @Override
+    public void handleSearchUser(String s) {
+        presenter.toSearchUser(s);
+    }
+
+    @Override
+    public void setBuscador() {
+        buscador.setQuery(username,true);
+    }
+
+    @Override
+    public void onError(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void setAdapterList(AdapterUsuarios adapterUsuarios) {
+        lista.setAdapter(adapterUsuarios);
     }
 }
