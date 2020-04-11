@@ -1,5 +1,7 @@
 package com.app.mobilize.Presentador.Interface;
 
+import com.google.firebase.auth.FirebaseUser;
+
 public interface LoginInterface {
     interface View {
         void disableInputs();

@@ -95,7 +95,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
             @Override
             public boolean onQueryTextSubmit(String query) {
 
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ListaUsersFragment(/*user,*/ buscadorAmigos.getQuery().toString()))
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ListaUsersFragment(user, buscadorAmigos.getQuery().toString()))
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
                 return false;
             }

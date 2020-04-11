@@ -757,6 +757,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color add_friend_icon
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1361,6 +1362,7 @@ drawable barrad
 drawable barraf
 drawable barram
 drawable bicicleta
+drawable border_layout
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1409,6 +1411,8 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable grad
 drawable grup
+drawable ic_add_friend
+drawable ic_add_friends_foreground
 drawable ic_calendar
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
@@ -1428,6 +1432,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_progress
 drawable ic_running
 drawable ic_settings
+drawable ic_unfriend
 drawable ic_user
 drawable libre
 drawable logo_mobilize
@@ -1534,6 +1539,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addButton
+id addFriendButton
 id adjust_height
 id adjust_width
 id alertTitle
@@ -2010,6 +2016,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu main_menu
+mipmap ic_add_friends
+mipmap ic_add_friends_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap ic_logo2

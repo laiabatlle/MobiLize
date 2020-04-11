@@ -11,23 +11,23 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;
 import com.app.mobilize.Model.Usuari;
+import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;
 import com.app.mobilize.Presentador.BuscadorUserPresenter;
 import com.app.mobilize.Presentador.Interface.BuscadorUserInterface;
 import com.app.mobilize.R;
 
 public class ListaUsersFragment extends Fragment implements BuscadorUserInterface.View {
 
-    //private final Usuari user;
+    private Usuari user;
     private String username;
     private RecyclerView lista;
     private SearchView buscador;
     private LinearLayoutManager lm;
     private BuscadorUserInterface.Presenter presenter;
 
-    public ListaUsersFragment(/*Usuari user,*/ String busqueda) {
-        //this.user = user;
+    public ListaUsersFragment( Usuari user, String busqueda) {
+        this.user = user;
         this.username = busqueda;
     }
 
@@ -41,7 +41,7 @@ public class ListaUsersFragment extends Fragment implements BuscadorUserInterfac
     }
 
     private void setViews(View view) {
-        presenter = new BuscadorUserPresenter(this);
+        presenter = new BuscadorUserPresenter(this, user);
 
         lista = (RecyclerView) view.findViewById(R.id.rv);
         buscador = (SearchView) view.findViewById(R.id.searchView);

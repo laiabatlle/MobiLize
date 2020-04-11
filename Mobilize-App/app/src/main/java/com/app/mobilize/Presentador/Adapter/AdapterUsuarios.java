@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,8 +20,10 @@ import java.util.List;
 public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewholderusuarios> {
 
     private List<Usuari> userList;
+    private Usuari currentUser;
 
-    public AdapterUsuarios(List<Usuari> userList){
+    public AdapterUsuarios(Usuari currentUser, List<Usuari> userList){
+        this.currentUser = currentUser;
         this.userList = userList;
     }
 
@@ -36,6 +39,15 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         Usuari us = userList.get(position);
         holder.username.setText(us.getUsername());
         Glide.with(holder.itemView).load(Uri.parse(us.getImage())).into(holder.avatar);
+        if(currentUser.getFriendsList().contains(us.getUsername())){
+            holder.addfriend.setImageResource(R.drawable.ic_unfriend);
+        }
+        holder.addfriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -47,13 +59,14 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
 
         ImageView avatar;
         TextView username;
+        ImageButton addfriend;
 
         viewholderusuarios(@NonNull View itemView) {
             super(itemView);
 
             username = (TextView) itemView.findViewById(R.id.busquedaUserTV);
             avatar = (ImageView) itemView.findViewById(R.id.AvatarIV_Cercador);
-
+            addfriend = (ImageButton) itemView.findViewById(R.id.addFriendButton);
         }
     }
 }

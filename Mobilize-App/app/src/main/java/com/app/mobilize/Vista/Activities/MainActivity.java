@@ -19,11 +19,14 @@ import com.app.mobilize.Model.Usuari;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                 user.setHeight(altura);
                                 user.setWeight(peso);
                                 user.setImage(document.getData().get("image").toString());
+                                user.setFriendsList((ArrayList<String>) document.get("friendsList"));
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());

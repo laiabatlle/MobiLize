@@ -11,16 +11,18 @@ import java.util.ArrayList;
 
 public class BuscadorUserPresenter implements BuscadorUserInterface.Presenter, BuscadorUserInterface.TaskListener{
 
+    private Usuari currentUser;
     private BuscadorUserInterface.View view;
     private BuscadorUserInterface.Model model;
     private AdapterUsuarios adapterUsuarios;
     private ArrayList<Usuari> listaUsuarios;
 
-    public BuscadorUserPresenter(BuscadorUserInterface.View view) {
+    public BuscadorUserPresenter(BuscadorUserInterface.View view, Usuari currentUser) {
         this.view = view;
+        this.currentUser = currentUser;
         model = new BuscadorUserModel(this);
         listaUsuarios = new ArrayList<>();
-        adapterUsuarios = new AdapterUsuarios(listaUsuarios);
+        adapterUsuarios = new AdapterUsuarios(this.currentUser, listaUsuarios);
     }
 
     @Override
@@ -40,7 +42,7 @@ public class BuscadorUserPresenter implements BuscadorUserInterface.Presenter, B
         if (miLista.isEmpty()){
             view.onError("No se ha encontrado ningún usuario con ese nombre.");
         }
-        AdapterUsuarios ad = new AdapterUsuarios(miLista);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, miLista);
         view.setAdapterList(ad);
     }
 
