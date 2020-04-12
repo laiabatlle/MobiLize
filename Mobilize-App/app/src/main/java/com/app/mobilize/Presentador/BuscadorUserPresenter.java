@@ -28,7 +28,7 @@ public class BuscadorUserPresenter implements BuscadorUserInterface.Presenter, B
     @Override
     public void toGetUserList() {
         view.setAdapterList(adapterUsuarios);
-        model.doGetUserList();
+        model.doGetUserList(this.currentUser);
     }
 
     @Override

@@ -68,11 +68,12 @@
                 android:gravity="end">
 
                 <ImageButton
-                    android:id="@+id/addFriendButton"
+                    android:id="@+id/actionRequestButton"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@null"
                     android:src="@drawable/ic_add_friend"/>
+
             </LinearLayout>
 
         </LinearLayout>

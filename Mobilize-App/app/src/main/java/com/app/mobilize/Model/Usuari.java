@@ -1,6 +1,6 @@
 package com.app.mobilize.Model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Usuari {
     private String username;
@@ -11,7 +11,7 @@ public class Usuari {
     private String weight;
     private String dateNaixement;
     private String URLavatar;
-    private ArrayList<String> friendsList;
+    private List<String> friendsList;
 
     public Usuari(){};
 
@@ -91,11 +91,11 @@ public class Usuari {
         this.URLavatar = imageUri;
     }
 
-    public ArrayList<String> getFriendsList() {
+    public List<String> getFriendsList() {
         return this.friendsList;
     }
 
-    public void setFriendsList(ArrayList<String> friendsList) {
+    public void setFriendsList(List<String> friendsList) {
         this.friendsList = friendsList;
     }
 
