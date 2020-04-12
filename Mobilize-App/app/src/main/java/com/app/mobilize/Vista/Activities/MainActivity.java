@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                                 user.setHeight(altura);
                                 user.setWeight(peso);
                                 user.setImage(document.getData().get("image").toString());
-                                user.setFriendsList((List<String>) document.get("friendsList"));
+                                user.setFriendsList((List<String>) document.getData().get("friendsList"));
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());
