@@ -91,9 +91,9 @@
 46        <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
 46-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:9-64
 46-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:19-61
-47        <activity android:name="com.app.mobilize.Vista.OptionsActivity" />
-47-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-58
-47-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-56
+47        <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
+47-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-69
+47-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-67
 48        <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
 48-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:9-73
 48-->C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:19-70

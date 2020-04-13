@@ -202,10 +202,10 @@ activity#com.app.mobilize.Vista.Activities.TipusPlan
 ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:9-64
 	android:name
 		ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:19-61
-activity#com.app.mobilize.Vista.OptionsActivity
-ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-58
+activity#com.app.mobilize.Vista.Activities.OptionsActivity
+ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-69
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-56
+		ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-67
 activity#com.app.mobilize.Vista.Activities.Seleccionar_rutina
 ADDED from C:\Users\Usuario\Desktop\GithubDesk\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:9-73
 	android:name
