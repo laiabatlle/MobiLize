@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterInter
         register = findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(RegisterActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Autentificando...");
+        progressDialog.setMessage(getResources().getString(R.string.auth));
         progressDialog.setCancelable(false);
     }
 

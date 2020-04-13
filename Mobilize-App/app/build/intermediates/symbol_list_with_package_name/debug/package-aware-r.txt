@@ -2086,6 +2086,7 @@ string adelgazar
 string alerts
 string app_name
 string appbar_scrolling_view_behavior
+string auth
 string bottom_sheet_behavior
 string catalan
 string character_counter_content_description

@@ -31,10 +31,10 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Interface.PerfilInterface;
 import com.app.mobilize.Presentador.PerfilPresenter;
 import com.app.mobilize.R;
-import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Vista.Activities.OptionsActivity;
 import com.bumptech.glide.Glide;
 

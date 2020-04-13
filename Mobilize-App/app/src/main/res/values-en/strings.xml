@@ -74,4 +74,5 @@
     <string name="training">Training</string>
     <string name="progress">Progress</string>
     <string name="profile">Profile</string>
+    <string name="auth">Authenticating…</string>
 </resources>
