@@ -9,44 +9,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.app.mobilize.Presentador.Interface.OptionsInterface;
+import com.app.mobilize.Presentador.OptionsPresenter;
 import com.app.mobilize.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-public class optionsActivity extends AppCompatActivity {
+public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
-    FirebaseAuth mAuth;
-    Button logout, deleteUser;
-    String username;
+    private Button logout, deleteUser, idiom;
+    private String username;
+    private OptionsInterface.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
+        presenter = new OptionsPresenter(this);
+
         username = this.getIntent().getStringExtra("username");
 
         deleteUser = findViewById(R.id.deleteUser);
-        deleteUser.setText("Delete account");
-        deleteUser.setTextSize(18.f);
         deleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                    showAlertDialog();
-
             }
         });
 
         logout = findViewById(R.id.logOut);
-        logout.setText("LogOut");
-        logout.setTextSize(18.f);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth = FirebaseAuth.getInstance();
-                mAuth.getCurrentUser().reload();
-                mAuth.signOut();
+                presenter.toLogout();
                 goToLogin();
+            }
+        });
+
+        idiom = findViewById(R.id.idiom);
+        idiom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToIdiom();
             }
         });
     }
@@ -54,23 +57,18 @@ public class optionsActivity extends AppCompatActivity {
     public void showAlertDialog(){
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setCancelable(true);
-        alertBuilder.setMessage("Esta seguro de que quiere eliminar su cuenta? Se perderán todos sus datos.");
-        alertBuilder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+        alertBuilder.setMessage(R.string.confirmationDelete);
+        alertBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                mAuth = FirebaseAuth.getInstance();
-                mAuth.getCurrentUser().delete();
 
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
-                db.collection("users").document(username).delete();
-
-                goToLogin();
             }
         });
-        alertBuilder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        alertBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                presenter.toDelete(username);
+                goToLogin();
             }
         });
         AlertDialog alert = alertBuilder.create();
@@ -79,8 +77,30 @@ public class optionsActivity extends AppCompatActivity {
 
     public void goToLogin () {
         Intent intent = new Intent( this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         this.finish();
         finishAffinity();
+    }
+
+    public void goToIdiom () {
+        Intent intent = new Intent( this, IdiomActivity.class);
+        startActivity(intent);
+    }
+
+    private void setInputs(boolean enable){
+        logout.setEnabled(enable);
+        deleteUser.setEnabled(enable);
+        idiom.setEnabled(enable);
+    }
+
+    @Override
+    public void disableInputs() {
+        setInputs(false);
+    }
+
+    @Override
+    public void enableInputs() {
+        setInputs(true);
     }
 }

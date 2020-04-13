@@ -3,6 +3,7 @@ package com.app.mobilize.Model;
 import androidx.annotation.NonNull;
 
 import com.app.mobilize.Presentador.Interface.LoginInterface;
+import com.app.mobilize.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,18 +22,17 @@ public class LoginModel implements LoginInterface.Model {
 
     @Override
     public void doLogin(String email, String password) {
-        mAuth.getCurrentUser().reload();
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     if (!mAuth.getCurrentUser().isEmailVerified()) {
-                        listener.onError("Confirma primero tu dirección de correo electrónico.");
+                        listener.onError("confirmEmail");
                     } else{
                         listener.onSuccess();
                     }
                 } else {
-                    listener.onError("Error en el correo electrónico o contraseña");
+                    listener.onError("errorEmail");
                 }
             }
         });

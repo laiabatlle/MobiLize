@@ -25,7 +25,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -49,17 +51,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
+                            for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
                                 user.setEmail(email);
-                                user.setUsername(document.getData().get("username").toString());
-                                user.setGender(document.getData().get("gender").toString());
-                                user.setDateNaixement(document.getData().get("dateNaixement").toString());
-                                String altura = document.getData().get("height").toString();
-                                String peso = document.getData().get("weight").toString();
+                                user.setUsername(Objects.requireNonNull(document.getData().get("username")).toString());
+                                user.setGender(Objects.requireNonNull(document.getData().get("gender")).toString());
+                                user.setDateNaixement(Objects.requireNonNull(document.getData().get("dateNaixement")).toString());
+                                String altura = Objects.requireNonNull(document.getData().get("height")).toString();
+                                String peso = Objects.requireNonNull(document.getData().get("weight")).toString();
                                 user.setHeight(altura);
                                 user.setWeight(peso);
-                                user.setImage(document.getData().get("image").toString());
-                                user.setFriendsList((List<String>) document.getData().get("friendsList"));
+
+                                user.setImage(Objects.requireNonNull(document.getData().get("image")).toString());
+                                user.setFriendsList((List<String>) document.get("friendsList"));
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());

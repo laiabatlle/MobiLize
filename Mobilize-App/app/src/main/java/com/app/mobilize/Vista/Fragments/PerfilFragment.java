@@ -35,7 +35,7 @@ import com.app.mobilize.Presentador.Interface.PerfilInterface;
 import com.app.mobilize.Presentador.PerfilPresenter;
 import com.app.mobilize.R;
 import com.app.mobilize.Model.Usuari;
-import com.app.mobilize.Vista.Activities.optionsActivity;
+import com.app.mobilize.Vista.Activities.OptionsActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.Calendar;
@@ -50,6 +50,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private Usuari user;
     private EditText peso, altura, dateNaixement;
     private Spinner genero;
+    private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
     private String gendre;
     private ImageView avatar;
     private String imageUri;
@@ -79,7 +80,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
         imageUri = user.getImage();
-        Glide.with(this).load(Uri.parse(user.getImage())).into(avatar);
+        Glide.with(this).load(Uri.parse(imageUri)).into(avatar);
         avatar.setOnClickListener(this);
 
         opcions = view.findViewById(R.id.opciones);
@@ -107,10 +108,8 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
             }
         });
 
-
         //Spinner del genere de l'usuari:
         genero = (Spinner)view.findViewById(R.id.generoSpin);
-        String [] generos = {"","Hombre", "Mujer", "Otro"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, generos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genero.setAdapter(adapter);
@@ -149,7 +148,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        gendre = parent.getItemAtPosition(position).toString();
+        if(parent.getId() == R.id.generoSpin) {
+            gendre = parent.getItemAtPosition(position).toString();
+        }
     }
 
     @Override
@@ -291,7 +292,8 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void handleOptions() {
-        Intent intent = new Intent(getActivity(), optionsActivity.class);
+
+        Intent intent = new Intent(getActivity(), OptionsActivity.class);
         intent.putExtra("username", user.getUsername());
         startActivity(intent);
     }
