@@ -238,7 +238,6 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
 
             CURRENT_STATE = "not_friends";
 
-            Log.d("title", "No entenc ressss de resssss");
         }
     }
 }
