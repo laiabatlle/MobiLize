@@ -25,7 +25,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                 user.setHeight(altura);
                                 user.setWeight(peso);
                                 user.setImage(Objects.requireNonNull(document.getData().get("image")).toString());
-                                user.setFriendsList((ArrayList<String>) document.get("friendsList"));
+                                user.setFriendsList((List<String>) document.get("friendsList"));
                             }
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());

@@ -1,6 +1,7 @@
 package com.app.mobilize.Presentador.Adapter;
 
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,6 +63,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         final Usuari us = userList.get(position);
         holder.username.setText(us.getUsername());
         Glide.with(holder.itemView).load(Uri.parse(us.getImage())).into(holder.avatar);
+
         MaintanceofButtons(holder, currentUser.getUsername(), us.getUsername());
 
         holder.action.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +84,12 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                     user_ref.document(currentUser.getUsername()).update("friendsList", FieldValue.arrayUnion(us.getUsername()));
                     user_ref.document(us.getUsername()).update("friendsList", FieldValue.arrayUnion(currentUser.getUsername()));
                 }
+
+                if(holder.CURRENT_STATE.equals("friends")) {
+                    DeleteFriendRequest(v, holder, currentUser.getUsername(), us.getUsername());
+                    user_ref.document(currentUser.getUsername()).update("friendsList", FieldValue.arrayRemove(us.getUsername()));
+                    user_ref.document(us.getUsername()).update("friendsList", FieldValue.arrayRemove(currentUser.getUsername()));
+                }
             }
         });
     }
@@ -92,20 +101,22 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        if(document.getData().get("receiver").toString().equals(receiverUser)) {
+                        if(document.getData().get("user").toString().equals(receiverUser)) {
                             String request_type = document.getData().get("request_type").toString();
 
                             if (request_type.equals("sent")) {
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "request_sent";
                                 holder.action.setImageResource(R.drawable.ic_cancel_req);
+                                holder.action.setVisibility(View.VISIBLE);
                                 holder.action.setEnabled(true);
                             }
 
-                            else if (request_type.equals("recieved")) {
+                            else if (request_type.equals("received")) {
                                 holder.action.setEnabled(false);
-                                holder.CURRENT_STATE = "request_recieved";
+                                holder.CURRENT_STATE = "request_received";
                                 holder.action.setImageResource(R.drawable.ic_accept);
+                                holder.action.setVisibility(View.VISIBLE);
                                 holder.action.setEnabled(true);
                             }
                         }
@@ -113,19 +124,36 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                 }
             }
         });
-    }
 
+        user_ref.whereEqualTo("username", currentUser.getUsername()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    List<String> friendList = (List<String>) task.getResult().getDocuments().get(0).getData().get("friendsList");
+                    if (friendList.contains(receiverUser)) {
+                        holder.action.setEnabled(false);
+                        holder.CURRENT_STATE = "friends";
+                        holder.action.setImageResource(R.drawable.ic_unfriend);
+                        holder.action.setVisibility(View.VISIBLE);
+                        holder.action.setEnabled(true);
+                        Log.d("title", friendList.get(0));
+                    }
+                }
+            }
+        });
+        holder.action.setVisibility(View.VISIBLE);
+    }
 
     private void SendFriendRequest(final View v, @NonNull final viewholderusuarios holder, final String senderUser, final String receiverUser) {
         Map<String, Object> request = new HashMap<>();
-        request.put("receiver", receiverUser);
+        request.put("user", receiverUser);
         request.put("request_type", "sent");
         req_ref.document(senderUser).collection("request").document(receiverUser).set(request).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Map<String, Object> request = new HashMap<>();
-                    request.put("sender", senderUser);
+                    request.put("user", senderUser);
                     request.put("request_type", "received");
                     req_ref.document(receiverUser).collection("request").document(senderUser).set(request).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -188,6 +216,13 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         });
     }
 
+    private void DeleteFriendRequest(View v, viewholderusuarios holder, String senderUser, String receiverUser) {
+        holder.action.setEnabled(false);
+        holder.CURRENT_STATE = "not_friends";
+        holder.action.setImageResource(R.drawable.ic_add_friend);
+        holder.action.setEnabled(true);
+    }
+
     @Override
     public int getItemCount() {
         return userList.size();
@@ -208,9 +243,10 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
             avatar = (ImageView) itemView.findViewById(R.id.AvatarIV_Cercador);
             action = (ImageButton) itemView.findViewById(R.id.actionRequestButton);
 
+            action.setVisibility(View.INVISIBLE);
+
             CURRENT_STATE = "not_friends";
 
-            action.setImageResource(R.drawable.ic_add_friend);
         }
     }
 }
