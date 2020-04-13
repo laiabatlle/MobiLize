@@ -24,7 +24,7 @@ public interface BuscadorUserInterface {
     }
 
     interface Model{
-        void doGetUserList();
+        void doGetUserList(Usuari currentUser);
     }
 
     interface TaskListener{

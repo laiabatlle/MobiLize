@@ -1421,10 +1421,12 @@ drawable googleg_standard_color_18
 drawable grad
 drawable grad_selected
 drawable grup
+drawable ic_accept
 drawable ic_add_friend
 drawable ic_add_friends_foreground
 drawable ic_calendar
 drawable ic_calendar_black_24dp
+drawable ic_cancel_req
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
 drawable ic_events
@@ -1528,6 +1530,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id actionRequestButton
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1549,7 +1552,6 @@ id actions
 id activity_chooser_view_content
 id add
 id addButton
-id addFriendButton
 id adjust_height
 id adjust_width
 id alertTitle

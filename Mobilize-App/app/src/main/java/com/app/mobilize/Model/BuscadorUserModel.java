@@ -22,16 +22,18 @@ public class BuscadorUserModel implements BuscadorUserInterface.Model {
     }
 
     @Override
-    public void doGetUserList() {
+    public void doGetUserList(final Usuari currentUser) {
         ref.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        Usuari u = new Usuari();
-                        u.setUsername(document.getData().get("username").toString());
-                        u.setImage(document.getData().get("image").toString());
-                        listener.addLista(u);
+                        if (!document.getData().get("username").toString().equals(currentUser.getUsername())) {
+                            Usuari u = new Usuari();
+                            u.setUsername(document.getData().get("username").toString());
+                            u.setImage(document.getData().get("image").toString());
+                            listener.addLista(u);
+                        }
                     }
                     listener.onSuccess();
                 } else {
