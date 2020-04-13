@@ -45,11 +45,12 @@
         <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
         <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
-        <activity android:name="com.app.mobilize.Vista.Activities.optionsActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
         <activity
             android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

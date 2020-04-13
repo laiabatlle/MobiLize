@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/Evento"
-        android:title="Eventos"
+        android:title="@string/event"
         android:icon="@drawable/ic_events"/>
     <item
         android:id="@+id/Plan"
-        android:title="Plan"
+        android:title="@string/plan"
         android:icon="@drawable/ic_calendar"/>
     <item
         android:id="@+id/Entrenamiento"
-        android:title="Entrenamiento"
+        android:title="@string/training"
         android:icon="@drawable/ic_running"/>
     <item
         android:id="@+id/Progreso"
-        android:title="Progreso"
+        android:title="@string/progress"
         android:icon="@drawable/ic_progress"/>
     <item
         android:id="@+id/Perfil"
-        android:title="Perfil"
+        android:title="@string/profile"
         android:icon="@drawable/ic_user"/>
 </menu>

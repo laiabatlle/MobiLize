@@ -24,6 +24,7 @@ public interface PerfilInterface {
     interface Model{
         void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image);
         void doImageChange(Uri uri);
+
     }
 
     interface TaskListener{

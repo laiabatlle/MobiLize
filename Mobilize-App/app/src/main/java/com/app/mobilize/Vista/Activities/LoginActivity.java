@@ -79,11 +79,11 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
     @Override
     public void handleLogin() {
         if(!isValidEmail()){
-            Toast.makeText(this, "Por favor, introduce un email válido.", Toast.LENGTH_SHORT).show();
-            email.setError("Email incorrecto.");
+            Toast.makeText(this, getResources().getString(R.string.introduceValidEmail), Toast.LENGTH_SHORT).show();
+            email.setError(getResources().getString(R.string.incorrectEmail));
         }
         if (!isValidPassword()){
-            password.setError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 caracteres alfanuméricos.");
+            password.setError(getResources().getString(R.string.incorrectPassword));
         }else{
             presenter.toLogin(email.getText().toString().trim(), password.getText().toString().trim());
         }
@@ -103,8 +103,8 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
     public void onError(String error) {
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(this);
-        builder.setMessage(error).setTitle("Error").setCancelable(true);
-
+        if(error.equals("confirmEmail")) builder.setMessage(getResources().getString(R.string.confirmEmail)).setTitle("Error").setCancelable(true);
+        else builder.setMessage(getResources().getString(R.string.errorEmail)).setTitle("Error").setCancelable(true);
         AlertDialog alert = builder.create();
 
         alert.setTitle("Error");

@@ -7,7 +7,11 @@
     <color name="circleBorder">#30FFFFFF</color>
     <color name="gradEnd">#A451D55B</color>
     <color name="gradStart">#ADBFFCAE</color>
+    <color name="gradEnd_selected">#A4156454</color>
+    <color name="gradStart_selected">#AD056515</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="red">#b10f0f</color>
+    <color name="black_red">#240505</color>
 
 </resources>

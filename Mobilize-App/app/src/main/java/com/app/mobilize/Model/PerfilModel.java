@@ -8,6 +8,7 @@ import com.app.mobilize.Presentador.Interface.PerfilInterface;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -16,12 +17,14 @@ import com.google.firebase.storage.UploadTask;
 public class PerfilModel implements PerfilInterface.Model {
 
     private PerfilInterface.TaskListener listener;
+    private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private StorageReference st;
 
 
     public PerfilModel(PerfilInterface.TaskListener taskListener) {
         this.listener = taskListener;
+        mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
         st = FirebaseStorage.getInstance().getReference();
     }
