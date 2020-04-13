@@ -27,7 +27,7 @@
         <activity android:name=".Vista.Activities.NivellEntrenament" />
         <activity android:name=".Vista.Activities.RegisterMessageActivity" />
         <activity android:name=".Vista.Activities.TipusPlan" />
-        <activity android:name=".Vista.Activities.OptionsActivity"/>
+        <activity android:name=".Vista.OptionsActivity"/>
         <activity android:name=".Vista.Activities.Seleccionar_rutina" />
         <activity
             android:name=".Vista.Activities.PopUpRutina"
