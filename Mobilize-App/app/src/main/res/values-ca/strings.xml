@@ -75,4 +75,6 @@
     <string name="progress">Progrés</string>
     <string name="profile">Perfil</string>
     <string name="auth">Autentificant…</string>
+    <string name="incorrectUsername">Usuari incorrecte.</string>
+    <string name="confirmation">S\'ha enviat un correu de confirmació al teu compte de correu electrònic: </string>
 </resources>

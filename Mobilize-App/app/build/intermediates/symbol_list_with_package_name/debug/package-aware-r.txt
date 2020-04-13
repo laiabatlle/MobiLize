@@ -2116,6 +2116,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string config
 string confirmEmail
+string confirmation
 string confirmationDelete
 string confirmationEmailText
 string continua
@@ -2156,6 +2157,7 @@ string idiom
 string idiomChanged
 string incorrectEmail
 string incorrectPassword
+string incorrectUsername
 string information
 string introduceValidEmail
 string kg

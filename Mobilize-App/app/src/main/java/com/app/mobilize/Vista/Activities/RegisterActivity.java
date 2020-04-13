@@ -77,13 +77,13 @@ public class RegisterActivity extends AppCompatActivity implements RegisterInter
     public void handleRegister () {
         // Create the user with the email and password introduced
         if(!isValidUsername()){
-            username.setError("Username incorrecto.");
+            username.setError(getResources().getString(R.string.incorrectUsername));
         }
         if(!isValidEmail()){
-            email.setError("Email incorrecto.");
+            email.setError(getResources().getString(R.string.incorrectEmail));
         }
         if(!isValidPassword()){
-            password.setError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 caracteres alfanuméricos.");
+            password.setError(getResources().getString(R.string.incorrectPassword));
         }
         else {
             presenter.toRegister(username.getText().toString().trim(), email.getText().toString().trim(), password.getText().toString().trim());
@@ -120,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterInter
     @Override
     public void goConfirmation() {
         Intent sig = new Intent(RegisterActivity.this, RegisterMessageActivity.class);
-        String confirm = "Se ha enviado un correo de confirmación a tu cuenta de correo electrónico: " + e + ".";
+        String confirm = getResources().getString(R.string.confirmation) + e;
         sig.putExtra("text", confirm);
         startActivity(sig);
         finish();
