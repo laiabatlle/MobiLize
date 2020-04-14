@@ -50,6 +50,8 @@
     <string name="escollirDificultat">Seleccioni una dificultat!</string>
     <string name="tit"></string>
     <string name="desc"></string>
+    <string name="ultima_semana">Última setmana</string>
+
 
 
 </resources>
