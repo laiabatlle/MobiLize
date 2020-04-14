@@ -33,9 +33,11 @@ public class ProgresoFragment extends Fragment {
     ProgressBar pbWorkout, pbCycling, pbRunning;
     RadioButton rbMensual, rbSemanal, rbPeso, rbCalorias, rbPasos;
     LineChart chart;
+    Usuari user;
+    Button activitatsFinalitzades;
 
-    public ProgresoFragment() {
-        // Required empty public constructor
+    public ProgresoFragment(Usuari user) {
+        this.user = user;
     }
 
 
@@ -45,6 +47,14 @@ public class ProgresoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_progreso, container, false);
 
+        activitatsFinalitzades = view.findViewById(R.id.buttonActivitats);
+        activitatsFinalitzades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivitats();
+            }
+        });
+        
         tvWorkout = view.findViewById(R.id.tvWorkout);
         tvCycling = view.findViewById(R.id.tvCycling);
         tvRunning = view.findViewById(R.id.tvRunning);
@@ -143,5 +153,11 @@ public class ProgresoFragment extends Fragment {
         chart.setData(data);
 
         return view;
+    }
+    
+    public void goToActivitats(){
+        Intent sigIntent = new Intent (getActivity(), activitatsUser.class);
+        sigIntent.putExtra("user", user.getUsername());
+        startActivity(sigIntent);
     }
 }
