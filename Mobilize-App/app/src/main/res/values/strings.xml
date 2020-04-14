@@ -50,7 +50,13 @@
     <string name="escollirDificultat">Seleccioni una dificultat!</string>
     <string name="tit"></string>
     <string name="desc"></string>
-    <string name="ultima_semana">Última setmana</string>
+    <string name="ultima_semana"> Última semana</string>
+    <string name="seguimiento"> Seguimiento </string>
+    <string name="rb_semanal"> Semanal </string>
+    <string name="rb_mensual"> Mensual </string>
+    <string name="rb_peso"> peso </string>
+    <string name="rb_calorias"> calorias </string>
+    <string name="rb_pasos"> pasos </string>
 
 
 
