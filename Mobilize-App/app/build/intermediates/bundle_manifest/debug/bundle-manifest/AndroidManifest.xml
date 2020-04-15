@@ -49,6 +49,7 @@
         <activity android:name="com.app.mobilize.NivellEntrenament" />
         <activity android:name="com.app.mobilize.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.TipusPlan" />
+        <activity android:name="com.app.mobilize.activitatsUser" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

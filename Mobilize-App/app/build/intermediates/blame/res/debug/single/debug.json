@@ -36,6 +36,10 @@
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_activitats_user.xml.flat",
+        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_activitats_user.xml"
+    },
+    {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_usuarios.xml.flat",
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\row_usuarios.xml"
     },
@@ -100,12 +104,12 @@
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_settings.png.flat",
-        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_settings.png"
-    },
-    {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo.xml.flat",
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_logo.xml"
+    },
+    {
+        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_settings.png.flat",
+        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_settings.png"
     },
     {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_activity.xml.flat",
@@ -270,6 +274,10 @@
     {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_mobilize.png.flat",
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\logo_mobilize.png"
+    },
+    {
+        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fila_activitat.xml.flat",
+        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\fila_activitat.xml"
     },
     {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_calendar.xml.flat",

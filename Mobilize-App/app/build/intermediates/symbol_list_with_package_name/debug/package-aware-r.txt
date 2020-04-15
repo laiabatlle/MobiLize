@@ -1564,7 +1564,7 @@ id button2
 id button3
 id button4
 id button5
-id button6
+id buttonActivitats
 id buttonPanel
 id cancel_button
 id cbCiclisme
@@ -1664,6 +1664,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivRunningCycling
 id labeled
 id largeLabel
 id left
@@ -1674,6 +1675,7 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id listMode
+id listViewActivitats
 id list_item
 id logOut
 id loginButton
@@ -1857,7 +1859,11 @@ id transition_transform
 id tvAlert
 id tvAlert2
 id tvCycling
+id tvData
+id tvDistancia
+id tvRitmo
 id tvRunning
+id tvTemps
 id tvTempsTotal
 id tvWorkout
 id unchecked
@@ -1934,6 +1940,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_activitats_user
 layout activity_crear_plan
 layout activity_modalitat_entrenament
 layout activity_modalitat_exercici
@@ -1959,6 +1966,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fila_activitat
 layout fragment_entrenamineto
 layout fragment_eventos
 layout fragment_perfil

@@ -33,6 +33,7 @@
         <activity android:name=".NivellEntrenament" />
         <activity android:name=".RegisterMessageActivity" />
         <activity android:name=".TipusPlan" />
+        <activity android:name=".activitatsUser"/>
     </application>
 
 </manifest>
