@@ -83,4 +83,7 @@
     <string name="SendFriendReqMes">The friend request has been sent.</string>
     <string name="SendFriendReq">"   Send  friend  request   "</string>
     <string name="Unfriend">"   Stop  being  friends   "</string>
+    <string name="auth">Authenticating…</string>
+    <string name="incorrectUsername">Incorrect username.</string>
+    <string name="confirmation">A confirmation email has been sent to your email account: </string>
 </resources>

@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
         register = findViewById(R.id.registerButton);
         progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Autentificando...");
+        progressDialog.setMessage(getResources().getString(R.string.auth));
         progressDialog.setCancelable(false);
     }
 
