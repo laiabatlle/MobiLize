@@ -40,8 +40,7 @@ public class ProgresoFragment extends Fragment {
     Usuari user;
     Button activitatsFinalitzades;
 
-    public ProgresoFragment(Usuari user) {
-        this.user = user;
+    public ProgresoFragment( ) {
     }
 
 
@@ -158,10 +157,11 @@ public class ProgresoFragment extends Fragment {
 
         return view;
     }
-    
+
     public void goToActivitats(){
         Intent sigIntent = new Intent (getActivity(), activitatsUser.class);
-        sigIntent.putExtra("user", user.getUsername());
+        //sigIntent.putExtra("user", user.getUsername());
         startActivity(sigIntent);
     }
+
 }
