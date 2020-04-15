@@ -37,9 +37,9 @@ class ActivitatListAdapter extends ArrayAdapter<ActivitatFinalitzada> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Double distancia = getItem(position).getDistancia();
         Calendar data = getItem(position).getData();
-        int temps = getItem(position).getTempsEmprat();
+        int temps = getItem(position).getTemps();
         String username = getItem(position).getUsername();
-        int tipus = getItem(position).isTipus();
+        int tipus = getItem(position).getTipus();
         double kcal = getItem(position).getKcalCremades();
 
 
