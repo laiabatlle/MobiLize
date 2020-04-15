@@ -104,12 +104,12 @@
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo.xml.flat",
-        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_logo.xml"
-    },
-    {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_settings.png.flat",
         "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_settings.png"
+    },
+    {
+        "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo.xml.flat",
+        "source": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_logo.xml"
     },
     {
         "merged": "D:\\UNI\\ACTUAL\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_activity.xml.flat",

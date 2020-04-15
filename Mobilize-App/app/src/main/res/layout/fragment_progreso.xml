@@ -157,7 +157,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <RadioButton
                 android:id="@+id/rbSemanal"
@@ -167,7 +167,8 @@
                 android:buttonTint="#0C6C01"
                 android:text="@string/rb_semanal"
                 android:textAlignment="textStart"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textSize="12sp" />
 
             <RadioButton
                 android:id="@+id/rbMensual"
@@ -177,7 +178,8 @@
                 android:buttonTint="#0C6C01"
                 android:text="@string/rb_mensual"
                 android:textAlignment="textStart"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -201,7 +203,8 @@
                     android:buttonTint="#0C6C01"
                     android:text="@string/rb_peso"
                     android:textAlignment="textStart"
-                    android:textAllCaps="true" />
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbCalorias"
@@ -211,7 +214,8 @@
                     android:buttonTint="#0C6C01"
                     android:text="@string/rb_calorias"
                     android:textAlignment="textStart"
-                    android:textAllCaps="true" />
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbPasos"
@@ -221,7 +225,8 @@
                     android:buttonTint="#0C6C01"
                     android:text="@string/rb_pasos"
                     android:textAlignment="textStart"
-                    android:textAllCaps="true" />
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 

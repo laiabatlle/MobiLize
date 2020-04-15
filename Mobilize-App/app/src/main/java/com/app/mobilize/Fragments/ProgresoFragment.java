@@ -1,6 +1,8 @@
 package com.app.mobilize.Fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import com.app.mobilize.R;
 import com.app.mobilize.activitatsUser;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -40,6 +43,7 @@ public class ProgresoFragment extends Fragment {
     Usuari user;
     Button activitatsFinalitzades;
 
+
     public ProgresoFragment( ) {
     }
 
@@ -57,7 +61,9 @@ public class ProgresoFragment extends Fragment {
                 goToActivitats();
             }
         });
-        
+
+        chart = view.findViewById(R.id.grafic);
+
         tvWorkout = view.findViewById(R.id.tvWorkout);
         tvCycling = view.findViewById(R.id.tvCycling);
         tvRunning = view.findViewById(R.id.tvRunning);
@@ -89,12 +95,38 @@ public class ProgresoFragment extends Fragment {
         pbRunning.setProgress(minRunning*100/minTotals);
 
 
+
         rbPeso.setChecked(true);
         rbSemanal.setChecked(true);
+
+        final ArrayList<Entry> valors_mensuals = new ArrayList<>();
+        //valors per definicio de Pes i Setmanal
+        valors_mensuals.add(new Entry(0, 5f));
+        valors_mensuals.add(new Entry(1, 3f));
+        valors_mensuals.add(new Entry(2, 4f));
+        valors_mensuals.add(new Entry(3, 6f));
+        final LineDataSet setM = new LineDataSet(valors_mensuals, null);
+
+        final ArrayList<Entry> valors_setmanals = new ArrayList<>();
+        //valors per definicio de Pes i Setmanal
+        valors_setmanals.add(new Entry(0, 3f));
+        valors_setmanals.add(new Entry(1, 4f));
+        valors_setmanals.add(new Entry(2, 1f));
+        valors_setmanals.add(new Entry(3, 5f));
+        valors_setmanals.add(new Entry(4, 3f));
+        valors_setmanals.add(new Entry(5, 2f));
+        valors_setmanals.add(new Entry(6, 2f));
+        final LineDataSet setS = new LineDataSet(valors_setmanals, null);
+        DrawGraph(setS);
 
         rbSemanal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(rbMensual.isChecked()){
+                    DrawGraph(setS);
+                    chart.notifyDataSetChanged();
+                    chart.invalidate();
+                }
                 rbSemanal.setChecked(true);
                 rbMensual.setChecked(false);
             }
@@ -103,6 +135,11 @@ public class ProgresoFragment extends Fragment {
         rbMensual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(rbSemanal.isChecked()){
+                    DrawGraph(setM);
+                    chart.notifyDataSetChanged();
+                    chart.invalidate();
+                }
                 rbSemanal.setChecked(false);
                 rbMensual.setChecked(true);
             }
@@ -135,26 +172,6 @@ public class ProgresoFragment extends Fragment {
             }
         });
 
-
-        chart = view.findViewById(R.id.grafic);
-        ArrayList<Entry> valors = new ArrayList<>();
-
-        valors.add(new Entry(0, 2f));
-        valors.add(new Entry(1, 3f));
-        valors.add(new Entry(2, 2f));
-        valors.add(new Entry(3, 5f));
-        valors.add(new Entry(4, 6f));
-        valors.add(new Entry(5, 4f));
-
-        LineDataSet set1 = new LineDataSet(valors, "Set 1");
-        set1.setFillAlpha(110);
-
-        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1);
-
-        LineData data = new LineData(dataSets);
-        chart.setData(data);
-
         return view;
     }
 
@@ -164,4 +181,23 @@ public class ProgresoFragment extends Fragment {
         startActivity(sigIntent);
     }
 
+    public void DrawGraph(LineDataSet set1){
+
+        set1.setFillAlpha(110);
+        set1.setLineWidth(2f);
+        set1.setColor(Color.parseColor("#00690a"));
+        set1.setValueTextColor(Color.BLACK);
+        set1.setValueTextSize(6f);
+
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1);
+
+        Description desc = new Description();
+        desc.setText("Peso - KG");
+        desc.setTextSize(9f);
+        LineData data = new LineData(dataSets);
+        chart.setData(data);
+        chart.setDescription(desc);
+        chart.setBorderColor(Color.GREEN);
+    }
 }
