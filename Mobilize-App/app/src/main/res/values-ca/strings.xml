@@ -74,4 +74,13 @@
     <string name="training">Entrenament</string>
     <string name="progress">Progrés</string>
     <string name="profile">Perfil</string>
+    <string name="CancelFriendReq">"   Cancel·lar  sol·licitud   "</string>
+    <string name="AcceptFriendReq">"   Acceptar  sol·licitud   "</string>
+    <string name="DeclineFriendReq">"   Denegar  sol·licitud   "</string>
+    <string name="CancelFriendReqMes">S\'ha cancel·lat la sol·licitud.</string>
+    <string name="UnfriendMes">" i tu ja no sou amics."</string>
+    <string name="NewFriendMes">" i tu ara sou amics."</string>
+    <string name="SendFriendReqMes">S\'ha enviat la sol·licitud d\'amistat.</string>
+    <string name="SendFriendReq">"   Enviar  sol·licitud  d'amistat   "</string>
+    <string name="Unfriend">"   Deixar  de  ser  amics   "</string>
 </resources>

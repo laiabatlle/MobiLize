@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.app.mobilize.Presentador.Interface.LoginInterface;
 import com.app.mobilize.Presentador.LoginPresenter;
 import com.app.mobilize.R;
-import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements LoginInterface.View, View.OnClickListener {
 

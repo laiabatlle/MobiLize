@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        showSelectedFragment(new EntrenaminetoFragment());
         mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);
         mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

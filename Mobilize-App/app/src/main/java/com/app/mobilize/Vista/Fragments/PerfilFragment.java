@@ -292,7 +292,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void handleOptions() {
-
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
         intent.putExtra("username", user.getUsername());
         startActivity(intent);

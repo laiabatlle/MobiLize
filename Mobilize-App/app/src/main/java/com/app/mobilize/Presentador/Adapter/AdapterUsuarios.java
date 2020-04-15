@@ -11,10 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Fragments.UserFragment;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -56,7 +59,18 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         Glide.with(holder.itemView).load(Uri.parse(us.getImage())).into(holder.avatar);
 
         MaintanceofButtons(holder, currentUser.getUsername(), us.getUsername());
-
+        holder.username.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUserProfile(v, us.getUsername(), us.getImage(), holder.CURRENT_STATE);
+            }
+        });
+        holder.avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUserProfile(v, us.getUsername(), us.getImage(), holder.CURRENT_STATE);
+            }
+        });
         holder.action.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +97,12 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                 }
             }
         });
+    }
+
+    private void goToUserProfile(View v, String username, String avatar, String current_state) {
+        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+        Fragment myFragment = new UserFragment(currentUser, username, avatar, current_state);
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, myFragment).addToBackStack(null).commit();
     }
 
     private void MaintanceofButtons(final viewholderusuarios holder, String senderUser, final String receiverUser) {
@@ -127,7 +147,6 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                         holder.action.setImageResource(R.drawable.ic_unfriend);
                         holder.action.setVisibility(View.VISIBLE);
                         holder.action.setEnabled(true);
-                        Log.d("title", friendList.get(0));
                     }
                 }
             }
@@ -237,7 +256,6 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
             action.setVisibility(View.INVISIBLE);
 
             CURRENT_STATE = "not_friends";
-
         }
     }
 }
