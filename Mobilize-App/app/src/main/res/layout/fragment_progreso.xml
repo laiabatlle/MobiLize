@@ -24,7 +24,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@color/gradStart"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,7 +134,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +200,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:buttonTint="#0C6C01"
+                    android:buttonTint="#139E03"
                     android:text="@string/rb_peso"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
@@ -211,7 +211,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:buttonTint="#0C6C01"
+                    android:buttonTint="#139E03"
                     android:text="@string/rb_calorias"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
@@ -222,7 +222,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:buttonTint="#0C6C01"
+                    android:buttonTint="#139E03"
                     android:text="@string/rb_pasos"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
@@ -237,9 +237,9 @@
                 android:orientation="vertical">
 
                 <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/grafic"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/grafic"></com.github.mikephil.charting.charts.LineChart>
+                    android:layout_height="match_parent"></com.github.mikephil.charting.charts.LineChart>
 
             </LinearLayout>
 
