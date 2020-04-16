@@ -1,7 +1,5 @@
 package com.app.mobilize.Presentador;
 
-import android.util.Log;
-
 import com.app.mobilize.Model.FriendsListModel;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;
@@ -14,38 +12,57 @@ public class FriendListPresenter implements FriendsListInterface.Presenter, Frie
     private Usuari currentUser;
     private FriendsListInterface.View view;
     private FriendsListInterface.Model model;
-    private AdapterUsuarios adapterUsuarios;
-    private ArrayList<Usuari> listaUsuarios;
+    private AdapterUsuarios adapterReq;
+    private AdapterUsuarios adapterFriends;
+    private ArrayList<Usuari> listaFriends;
+    private ArrayList<Usuari> listaReq;
 
     public FriendListPresenter(FriendsListInterface.View view, Usuari currentUser) {
         this.view = view;
         this.currentUser = currentUser;
         model = new FriendsListModel(this);
-        listaUsuarios = new ArrayList<>();
-        adapterUsuarios = new AdapterUsuarios(this.currentUser, listaUsuarios);
+        listaReq = new ArrayList<>();
+        listaFriends = new ArrayList<>();
+        adapterReq = new AdapterUsuarios(this.currentUser, listaFriends);
+        adapterFriends = new AdapterUsuarios(this.currentUser, listaFriends);
+    }
+
+    @Override
+    public void toGetFriendReq(String username) {
+        view.setAdapterReqList(adapterReq);
+        model.doGetFriendReq(username);
     }
 
     @Override
     public void toGetFriendList(String username) {
-        view.setAdapterList(adapterUsuarios);
+        view.setAdapterFriendList(adapterFriends);
         model.doGetFriendList(username);
     }
 
     @Override
-    public void addLista(Usuari u) {
-        listaUsuarios.add(u);
-        for (Usuari us : listaUsuarios){
-            Log.d("PresenterAddLlista", us.getUsername());
-        }
-        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaUsuarios);
-        view.setAdapterList(ad);
+    public void addListaReq(Usuari u) {
+        listaReq.add(u);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq);
+        view.setAdapterReqList(ad);
     }
 
     @Override
-    public void onSuccess() {
-        if (listaUsuarios.isEmpty()) Log.d("PresenterSuccess", "emptyyyy");
-        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaUsuarios);
-        view.setAdapterList(ad);
+    public void addListaFriends(Usuari u) {
+        listaFriends.add(u);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends);
+        view.setAdapterFriendList(ad);
+    }
+
+    @Override
+    public void onSuccess(String type) {
+        if (type.equals("req")){
+            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq);
+            view.setAdapterReqList(ad);
+        }
+        else{
+            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends);
+            view.setAdapterFriendList(ad);
+        }
     }
 
     @Override

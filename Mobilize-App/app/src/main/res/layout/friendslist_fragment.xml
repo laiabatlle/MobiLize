@@ -7,9 +7,11 @@
     tools:context=".Vista.Fragments.FriendsListFragment">
 
     <LinearLayout
+        android:id="@+id/ReqListLL"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/grad">
+        android:layout_height="40dp"
+        android:background="@drawable/grad"
+        android:orientation="vertical">
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -17,5 +19,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:id="@+id/friendsListLL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/grad"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>
