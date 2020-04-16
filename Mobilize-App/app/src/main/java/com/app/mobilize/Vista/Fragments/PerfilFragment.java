@@ -56,7 +56,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private String imageUri;
     private SearchView buscadorAmigos;
 
-    private ImageButton opcions;
+    private ImageButton friendList, opcions;
 
     private PerfilInterface.Presenter presenter;
 
@@ -82,6 +82,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         imageUri = user.getImage();
         Glide.with(this).load(Uri.parse(imageUri)).into(avatar);
         avatar.setOnClickListener(this);
+
+        friendList = view.findViewById(R.id.friendsList);
+        friendList.setOnClickListener(this);
 
         opcions = view.findViewById(R.id.opciones);
         opcions.setOnClickListener(this);
@@ -255,6 +258,10 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
             case R.id.guardar:
                 handleGuardarCambios();
                 break;
+                
+            case R.id.friendsList:
+                handleFriendList();
+                break;
 
             case R.id.opciones:
                 handleOptions();
@@ -295,6 +302,12 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
         intent.putExtra("username", user.getUsername());
         startActivity(intent);
+    }
+
+    @Override
+    public void handleFriendList() {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FriendsListFragment(user))
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
     @Override

@@ -9,6 +9,7 @@ public interface PerfilInterface {
 
         void handleImage(Uri image);
         void handleOptions();
+        void handleFriendList();
         void handleGuardarCambios();
 
         void onSuccess(String message);

@@ -14,17 +14,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/opciones"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/buttonslayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@null"
-            android:contentDescription="@string/GuardarCambiosButton"
-            android:src="@mipmap/ic_settings"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/friendsList"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:contentDescription="@string/GuardarCambiosButton"
+                android:src="@drawable/ic_add_friend"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/buttonslayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded">
+
+                <ImageButton
+                    android:id="@+id/opciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@null"
+                    android:contentDescription="@string/GuardarCambiosButton"
+                    android:src="@mipmap/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/AvatarIV"
@@ -35,7 +71,7 @@
             app:layout_constraintBottom_toTopOf="@+id/usernameTV"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/opciones" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonslayout1" />
 
         <TextView
             android:id="@+id/usernameTV"
@@ -54,7 +90,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <SearchView
         android:id="@+id/cearchFriendsSV"

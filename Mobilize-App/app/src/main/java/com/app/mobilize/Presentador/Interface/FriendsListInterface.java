@@ -3,15 +3,9 @@ package com.app.mobilize.Presentador.Interface;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;
 
-public interface BuscadorUserInterface {
+public interface FriendsListInterface {
     interface View {
-        void disableInputs();
-        void enableInputs();
-
-        void handleChargeUserList();
-        void handleSearchUser(String username);
-
-        void setBuscador();
+        void handleChargeFriendList();
 
         void onError(String message);
 
@@ -19,17 +13,18 @@ public interface BuscadorUserInterface {
     }
 
     interface Presenter{
-        void toGetUserList();
-        void toSearchUser(String username);
+        void toGetFriendList(String user);
     }
 
     interface Model{
-        void doGetUserList(Usuari currentUser);
+        void doGetFriendList(String username);
     }
 
     interface TaskListener{
         void addLista(Usuari u);
         void onSuccess();
         void onError(String error);
+
+
     }
 }

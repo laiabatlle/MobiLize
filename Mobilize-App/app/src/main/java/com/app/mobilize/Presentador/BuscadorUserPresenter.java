@@ -1,7 +1,5 @@
 package com.app.mobilize.Presentador;
 
-import android.widget.Toast;
-
 import com.app.mobilize.Model.BuscadorUserModel;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Adapter.AdapterUsuarios;

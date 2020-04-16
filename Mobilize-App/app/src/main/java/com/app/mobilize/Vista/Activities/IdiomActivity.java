@@ -62,7 +62,6 @@ public class IdiomActivity extends AppCompatActivity {
         alertBuilder.setCancelable(false);
         alertBuilder.setPositiveButton(R.string.ok,
                 new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(IdiomActivity.this, MainActivity.class);
