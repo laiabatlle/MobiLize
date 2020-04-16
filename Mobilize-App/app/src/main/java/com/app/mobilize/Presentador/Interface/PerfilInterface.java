@@ -15,14 +15,18 @@ public interface PerfilInterface {
         void onSuccess(String message);
 
         void onSuccesImageChange(Uri uriImage);
+        void setReq(boolean b);
     }
 
     interface Presenter{
         void toGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image);
         void toImageChange(Uri uri);
+
+        void haveAnyFriendReq(String username);
     }
 
     interface Model{
+        void haveAnyFriendReq(String username);
         void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image);
         void doImageChange(Uri uri);
 
@@ -33,5 +37,7 @@ public interface PerfilInterface {
         void onError(String error);
 
         void OnSuccesImageChange(Uri uriImage);
+
+        void setReq(boolean b);
     }
 }

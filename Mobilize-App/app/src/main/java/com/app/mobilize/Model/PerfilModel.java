@@ -1,6 +1,7 @@
 package com.app.mobilize.Model;
 
 import android.net.Uri;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -9,7 +10,10 @@ import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -18,24 +22,47 @@ public class PerfilModel implements PerfilInterface.Model {
 
     private PerfilInterface.TaskListener listener;
     private FirebaseAuth mAuth;
+    private CollectionReference user_ref;
     private FirebaseFirestore db;
     private StorageReference st;
+    private boolean request;
 
 
     public PerfilModel(PerfilInterface.TaskListener taskListener) {
         this.listener = taskListener;
         mAuth = FirebaseAuth.getInstance();
+        user_ref = FirebaseFirestore.getInstance().collection("users");
         db = FirebaseFirestore.getInstance();
         st = FirebaseStorage.getInstance().getReference();
+        request = false;
+    }
+
+    @Override
+    public void haveAnyFriendReq(String username) {
+        db.collection("FriendRequests").document(username).collection("request").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        if(!request) {
+                            if (document.getData().get("request_type").toString().equals("received")) {
+                                Log.d("Model", document.getData().get("request_type").toString());
+                                listener.setReq(true);
+                            }
+                        }
+                    }
+                }
+            }
+        });
     }
 
     @Override
     public void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image) {
-        db.collection("users").document(username).update("weight", weight);
-        db.collection("users").document(username).update("height", height);
-        db.collection("users").document(username).update("gender", gendre);
-        db.collection("users").document(username).update("dateNaixement", dateNaixement);
-        db.collection("users").document(username).update("image", image);
+        user_ref.document(username).update("weight", weight);
+        user_ref.document(username).update("height", height);
+        user_ref.document(username).update("gender", gendre);
+        user_ref.document(username).update("dateNaixement", dateNaixement);
+        user_ref.document(username).update("image", image);
         listener.onSuccess("Sus datos se han actualizado correctamente.");
     }
 

@@ -9,10 +9,12 @@ public class PerfilPresenter implements PerfilInterface.Presenter, PerfilInterfa
 
     private PerfilInterface.View view;
     private PerfilInterface.Model model;
+    private boolean haveAnyFriendReq;
 
     public PerfilPresenter(PerfilInterface.View view) {
         this.view = view;
         model = new PerfilModel(this);
+        haveAnyFriendReq = false;
     }
 
     @Override
@@ -29,6 +31,11 @@ public class PerfilPresenter implements PerfilInterface.Presenter, PerfilInterfa
             view.disableInputs();
         }
         model.doImageChange(uri);
+    }
+
+    @Override
+    public void haveAnyFriendReq(String username) {
+        model.haveAnyFriendReq(username);
     }
 
     @Override
@@ -50,5 +57,10 @@ public class PerfilPresenter implements PerfilInterface.Presenter, PerfilInterfa
             view.enableInputs();
             view.onSuccesImageChange(uriImage);
         }
+    }
+
+    @Override
+    public void setReq(boolean b) {
+        view.setReq(b);
     }
 }

@@ -25,13 +25,12 @@
 
             <ImageButton
                 android:id="@+id/friendsList"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:background="@null"
                 android:contentDescription="@string/GuardarCambiosButton"
-                android:src="@drawable/ic_add_friend"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
