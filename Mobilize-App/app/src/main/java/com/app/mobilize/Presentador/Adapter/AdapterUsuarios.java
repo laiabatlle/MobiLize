@@ -118,7 +118,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                             if (request_type.equals("sent")) {
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "request_sent";
-                                holder.action.setImageResource(R.drawable.ic_cancel_req);
+                                holder.action.setImageResource(R.mipmap.ic_cancelreq);
                                 holder.action.setVisibility(View.VISIBLE);
                                 holder.action.setEnabled(true);
                             }
@@ -126,7 +126,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                             else if (request_type.equals("received")) {
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "request_received";
-                                holder.action.setImageResource(R.drawable.ic_accept);
+                                holder.action.setImageResource(R.mipmap.ic_acceptreq);
                                 holder.action.setVisibility(View.VISIBLE);
                                 holder.action.setEnabled(true);
                             }
@@ -144,7 +144,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                     if (friendList.contains(receiverUser)) {
                         holder.action.setEnabled(false);
                         holder.CURRENT_STATE = "friends";
-                        holder.action.setImageResource(R.drawable.ic_unfriend);
+                        holder.action.setImageResource(R.mipmap.ic_unfriend);
                         holder.action.setVisibility(View.VISIBLE);
                         holder.action.setEnabled(true);
                     }
@@ -171,7 +171,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                             if(task.isSuccessful()){
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "request_sent";
-                                holder.action.setImageResource(R.drawable.ic_cancel_req);
+                                holder.action.setImageResource(R.mipmap.ic_cancelreq);
                                 holder.action.setEnabled(true);
                             }
                             Toast.makeText(v.getContext(), "Se ha enviado una solicitud de amistad.", Toast.LENGTH_SHORT).show();
@@ -193,7 +193,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                             if(task.isSuccessful()){
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "not_friends";
-                                holder.action.setImageResource(R.drawable.ic_add_friend);
+                                holder.action.setImageResource(R.mipmap.ic_addfriend);
                                 holder.action.setEnabled(true);
                             }
                             Toast.makeText(v.getContext(), "Se ha cancelado su solicitud.", Toast.LENGTH_SHORT).show();
@@ -215,7 +215,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                             if(task.isSuccessful()){
                                 holder.action.setEnabled(false);
                                 holder.CURRENT_STATE = "friends";
-                                holder.action.setImageResource(R.drawable.ic_unfriend);
+                                holder.action.setImageResource(R.mipmap.ic_unfriend);
                                 holder.action.setEnabled(true);
                             }
                             Toast.makeText(v.getContext(), senderUser + " y tu ahora soys amigos.", Toast.LENGTH_SHORT).show();
@@ -229,7 +229,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
     private void DeleteFriendRequest(View v, viewholderusuarios holder, String senderUser, String receiverUser) {
         holder.action.setEnabled(false);
         holder.CURRENT_STATE = "not_friends";
-        holder.action.setImageResource(R.drawable.ic_add_friend);
+        holder.action.setImageResource(R.mipmap.ic_addfriend);
         holder.action.setEnabled(true);
     }
 
