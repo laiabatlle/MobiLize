@@ -80,6 +80,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
         imageUri = user.getImage();
+        //TODO
         Glide.with(this).load(Uri.parse(imageUri)).into(avatar);
         avatar.setOnClickListener(this);
 
