@@ -56,7 +56,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private String imageUri;
     private SearchView buscadorAmigos;
 
-    private ImageButton opcions;
+    private ImageButton friendList, opcions;
 
     private PerfilInterface.Presenter presenter;
 
@@ -83,6 +83,12 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         //TODO
         Glide.with(this).load(Uri.parse(imageUri)).into(avatar);
         avatar.setOnClickListener(this);
+
+        friendList = view.findViewById(R.id.friendsList);
+        friendList.setImageResource(R.mipmap.ic_friendslist);
+        presenter.haveAnyFriendReq(user.getUsername());
+
+        friendList.setOnClickListener(this);
 
         opcions = view.findViewById(R.id.opciones);
         opcions.setOnClickListener(this);
@@ -114,7 +120,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, generos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genero.setAdapter(adapter);
-        genero.setSelection(obtenerPosicion(user.getGender()));
+        genero.setSelection(getPosition(user.getGender()));
         genero.setOnItemSelectedListener(this);
 
         //EditText de la dataNaixement de l'usuari:
@@ -136,7 +142,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     }
 
     //Funcio per retornar l'element corresponent a l'string "gendre" de l'spinner per seleccionar el genere de l'usuari:
-    private int obtenerPosicion(String gendre) {
+    private int getPosition(String gendre) {
         int posicion = 0;
         for (int i = 0; i < genero.getCount(); i++) {
             if (genero.getItemAtPosition(i).toString().equalsIgnoreCase(gendre)) {
@@ -257,6 +263,10 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
                 handleGuardarCambios();
                 break;
 
+            case R.id.friendsList:
+                handleFriendList();
+                break;
+
             case R.id.opciones:
                 handleOptions();
                 break;
@@ -299,6 +309,12 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     }
 
     @Override
+    public void handleFriendList() {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FriendsListFragment(user))
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+    }
+
+    @Override
     public void handleGuardarCambios() {
         user.setWeight(peso.getText().toString());
         user.setHeight(altura.getText().toString());
@@ -318,5 +334,11 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         imageUri = uriImage.toString();
         Glide.with(getActivity()).load(uriImage).into(avatar);
         avatar.setImageURI(Uri.parse(imageUri));
+    }
+
+    @Override
+    public void setReq(boolean b) {
+        if (b) friendList.setImageResource(R.mipmap.ic_reqfriend);
+        friendList.setVisibility(View.VISIBLE);
     }
 }

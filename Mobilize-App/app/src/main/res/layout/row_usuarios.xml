@@ -72,7 +72,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@null"
-                    android:src="@drawable/ic_add_friend"/>
+                    android:src="@mipmap/ic_addfriend"/>
 
             </LinearLayout>
 

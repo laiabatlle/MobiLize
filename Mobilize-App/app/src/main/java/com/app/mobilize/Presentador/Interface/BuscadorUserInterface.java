@@ -31,7 +31,5 @@ public interface BuscadorUserInterface {
         void addLista(Usuari u);
         void onSuccess();
         void onError(String error);
-
-
     }
 }

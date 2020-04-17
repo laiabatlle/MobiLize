@@ -84,7 +84,6 @@ public class RegisterModel implements RegisterInterface.Model {
         });
     }
 
-
     @Override
     public void ConfirmationEmail() {
         if (!mAuth.getCurrentUser().isEmailVerified()) {
