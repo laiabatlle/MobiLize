@@ -57,6 +57,29 @@
     <string name="rb_peso"> peso </string>
     <string name="rb_calorias"> calorias </string>
     <string name="rb_pasos"> pasos </string>
+    <string-array name="dias_semana">
+        <item>lun</item>
+        <item>mar</item>
+        <item>mie</item>
+        <item>jue</item>
+        <item>vie</item>
+        <item>sab</item>
+        <item>dom</item>
+    </string-array>
+    <string-array name="meses_año">
+        <item>ENE</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>ABR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AGO</item>
+        <item>SET</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DIC</item>
+    </string-array>
 
 
 </resources>

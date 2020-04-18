@@ -1,8 +1,11 @@
 package com.app.mobilize.Fragments;
 
+import android.app.Application;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.ColorSpace;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.app.mobilize.Pojo.Usuari;
@@ -32,7 +36,11 @@ import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.security.KeyStore;
+import java.text.DateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 import java.time.*;
 
@@ -48,8 +56,8 @@ public class ProgresoFragment extends Fragment {
     Usuari user;
     Button activitatsFinalitzades;
 
-    private String[] eixXsemana = new String[] {"lun", "mar", "mie", "jue", "vie", "sab", "dom"};
-    private String[] eixXmes = new String[] {"ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL"};
+    Calendar data_actual = Calendar.getInstance();
+    //Date d = data_actual.getTime();
 
     public ProgresoFragment( ) {
     }
@@ -105,7 +113,14 @@ public class ProgresoFragment extends Fragment {
         rbPeso.setChecked(true);
         rbSemanal.setChecked(true);
 
-        //https://github.com/PhilJay/MPAndroidChart/wiki/The-Axis
+
+        int dia_actual = data_actual.get(Calendar.DAY_OF_WEEK);
+
+        final String[] eixXsemana = getResources().getStringArray(R.array.dias_semana);
+        //final String[] eixXsemana = new String[] {"lun", "mar", "mie", "jue", "vie", "sab", "dom"};
+        final String[] eixXmes = getResources().getStringArray(R.array.meses_año);
+        //final String[] eixXmes = new String[] {"ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL"};
+
         final YAxis Yleft = chart.getAxisLeft();
         YAxis yRight = chart.getAxisRight();
         final XAxis xAxis = chart.getXAxis();
@@ -305,6 +320,7 @@ public class ProgresoFragment extends Fragment {
         private String[] valuesX;
 
         public FormatterEixXSemanal(String[] values) {
+            
             this.valuesX = values;
         }
 

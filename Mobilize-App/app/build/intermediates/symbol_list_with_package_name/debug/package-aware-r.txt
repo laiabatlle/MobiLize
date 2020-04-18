@@ -45,7 +45,9 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array dias_semana
 array duracio
+array meses_año
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
