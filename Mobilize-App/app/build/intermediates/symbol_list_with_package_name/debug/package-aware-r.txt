@@ -1378,6 +1378,7 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable button_bg
 drawable button_bg_delete
 drawable button_bg_rounded_corners
+drawable button_bg_rounded_corners_red
 drawable button_normal
 drawable button_selected
 drawable button_selected_delete
@@ -1621,6 +1622,7 @@ id cut
 id dark
 id dataCumpleañosTV
 id date_picker_actions
+id declineRequestButton
 id decor_content_parent
 id default_activity_button
 id deleteUser
@@ -1982,6 +1984,7 @@ layout fragment_eventos
 layout fragment_perfil
 layout fragment_plan
 layout fragment_progreso
+layout fragment_user
 layout listausers_fragment
 layout login_activity
 layout main_activity
@@ -2049,12 +2052,21 @@ mipmap ic_logo2_foreground
 mipmap ic_logo2_round
 mipmap ic_settings
 plurals mtrl_badge_content_description
+string AcceptFriendReq
 string AlturaTV
+string CancelFriendReq
+string CancelFriendReqMes
+string DeclineFriendReq
 string Fecha_NacimientoHint
 string Fecha_NacimientoTV
 string GeneroTV
 string GuardarCambiosButton
+string NewFriendMes
 string PesoTV
+string SendFriendReq
+string SendFriendReqMes
+string Unfriend
+string UnfriendMes
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
