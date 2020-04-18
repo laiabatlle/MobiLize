@@ -26,12 +26,15 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.*;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.Map;
-
+import java.time.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,6 +48,8 @@ public class ProgresoFragment extends Fragment {
     Usuari user;
     Button activitatsFinalitzades;
 
+    private String[] eixXsemana = new String[] {"lun", "mar", "mie", "jue", "vie", "sab", "dom"};
+    private String[] eixXmes = new String[] {"ENE", "FEB", "MAR", "ABR"};
 
     public ProgresoFragment( ) {
     }
@@ -97,23 +102,26 @@ public class ProgresoFragment extends Fragment {
         pbRunning.setProgress(minRunning*100/minTotals);
 
 
-
         rbPeso.setChecked(true);
         rbSemanal.setChecked(true);
 
         //https://github.com/PhilJay/MPAndroidChart/wiki/The-Axis
-        YAxis left = chart.getAxisLeft();
-        left.setDrawLabels(false); // no axis labels
+        YAxis Yleft = chart.getAxisLeft();
+        YAxis yRight = chart.getAxisRight();
+        final XAxis xAxis = chart.getXAxis();
+
+        yRight.setDrawLabels(false); // no axis labels
         //left.setDrawAxisLine(false); // no axis line
-        left.setDrawGridLines(false); // no grid lines
+        Yleft.setDrawGridLines(false); // no grid lines
+        xAxis.setValueFormatter(new FormatterEixYSemanal(eixXsemana));
         chart.getAxisRight().setEnabled(false); // no right axis
 
         final ArrayList<Entry> valors_mensuals = new ArrayList<>();
         //valors per definicio de Pes i Setmanal
         valors_mensuals.add(new Entry(0, 78f));
         valors_mensuals.add(new Entry(1, 76.5f));
-        valors_mensuals.add(new Entry(2, 77f));
-        valors_mensuals.add(new Entry(3, 74f));
+        valors_mensuals.add(new Entry(2, 0f));
+        //valors_mensuals.add(new Entry(4, 0f));
         final LineDataSet setM = new LineDataSet(valors_mensuals, "Mensual");
 
         final ArrayList<Entry> valors_setmanals = new ArrayList<>();
@@ -132,6 +140,7 @@ public class ProgresoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(rbMensual.isChecked()){
+                    xAxis.setValueFormatter(new FormatterEixYSemanal(eixXsemana));
                     if(rbPeso.isChecked()){
                         DrawGraph(setS, "peso", "semanal");
                     }
@@ -153,6 +162,7 @@ public class ProgresoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(rbSemanal.isChecked()){
+                    xAxis.setValueFormatter(new FormatterEixYMensual(eixXmes));
                     if(rbPeso.isChecked()){
                         DrawGraph(setM, "peso", "mensual");
                     }
@@ -256,12 +266,55 @@ public class ProgresoFragment extends Fragment {
         else  if(tipusdades == "pasos"){
             desc.setText("Pasos - m");
         }
-        desc.setTextSize(12f);
+        desc.setTextSize(10f);
 
         LineData data = new LineData(dataSets);
-        data.setValueTextSize(11f);
+        data.setValueTextSize(9f);
         chart.setData(data);
         chart.setDescription(desc);
         chart.setBorderColor(Color.GREEN);
+    }
+
+    private class valformatter implements IValueFormatter{
+        @Override
+        public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+            return value + " kg";
+        }
+    }
+
+    private class FormatterEixYSemanal implements IAxisValueFormatter{
+        private String[] valuesX;
+
+        public FormatterEixYSemanal(String[] values) {
+            this.valuesX = eixXsemana;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return valuesX[(int)value];
+        }
+
+        @Override
+        public int getDecimalDigits() {
+            return 0;
+        }
+    }
+
+    private class FormatterEixYMensual implements IAxisValueFormatter{
+        private String[] valuesX;
+
+        public FormatterEixYMensual(String[] values) {
+            this.valuesX = eixXmes;
+        }
+
+        @Override
+        public String getFormattedValue(float value, AxisBase axis) {
+            return valuesX[(int)value];
+        }
+
+        @Override
+        public int getDecimalDigits() {
+            return 0;
+        }
     }
 }
