@@ -53,7 +53,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
     private String gendre;
     private ImageView avatar;
-    private String imageUri;
+    private String imageUri, friendListIcon;
     private SearchView buscadorAmigos;
 
     private ImageButton friendList, opcions;
@@ -85,6 +85,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
         friendList = view.findViewById(R.id.friendsList);
         friendList.setImageResource(R.mipmap.ic_friendslist);
+        friendListIcon = "friends";
         presenter.haveAnyFriendReq(user.getUsername());
 
         friendList.setOnClickListener(this);
@@ -309,7 +310,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void handleFriendList() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FriendsListFragment(user))
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FriendsListFragment(user, friendListIcon))
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
@@ -337,7 +338,10 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void setReq(boolean b) {
-        if (b) friendList.setImageResource(R.mipmap.ic_reqfriend);
+        if (b){
+            friendList.setImageResource(R.mipmap.ic_reqfriend);
+            friendListIcon = "req";
+        }
         friendList.setVisibility(View.VISIBLE);
     }
 }

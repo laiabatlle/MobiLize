@@ -20,7 +20,7 @@ public class BuscadorUserPresenter implements BuscadorUserInterface.Presenter, B
         this.currentUser = currentUser;
         model = new BuscadorUserModel(this);
         listaUsuarios = new ArrayList<>();
-        adapterUsuarios = new AdapterUsuarios(this.currentUser, listaUsuarios);
+        adapterUsuarios = new AdapterUsuarios(this.currentUser, listaUsuarios, "users");
     }
 
     @Override
@@ -40,7 +40,7 @@ public class BuscadorUserPresenter implements BuscadorUserInterface.Presenter, B
         if (miLista.isEmpty()){
             view.onError("No se ha encontrado ningún usuario con ese nombre.");
         }
-        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, miLista);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, miLista, "users");
         view.setAdapterList(ad);
     }
 

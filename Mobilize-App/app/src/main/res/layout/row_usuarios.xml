@@ -1,83 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+tools:context=".Vista.Fragments.ListaUsersFragment">
+
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".Vista.Fragments.ListaUsersFragment">
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:backgroundTint="@color/gradStart"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/AvatarIV_Cercador"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/usernameTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/busquedaUserTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:shadowColor="@color/gradStart"
+                android:shadowDx="2"
+                android:shadowDy="1.5"
+                android:shadowRadius="1.8"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:gravity="end">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/AvatarIV_Cercador"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="5dp"
-                app:civ_border_color="@color/white"
-                app:civ_border_width="2dp"
-                app:layout_constraintBottom_toTopOf="@+id/usernameTV"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/busquedaUserTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="sans-serif-light"
-                    android:shadowColor="@color/white"
-                    android:shadowDx="2"
-                    android:shadowDy="1.5"
-                    android:shadowRadius="1.8"
-                    android:textColor="@color/black"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="vertical"
-                android:gravity="end">
-
-                <ImageButton
-                    android:id="@+id/actionRequestButton"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@null"
-                    android:src="@mipmap/ic_addfriend"/>
-
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/actionRequestButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:src="@mipmap/ic_addfriend"/>
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
 
 </LinearLayout>

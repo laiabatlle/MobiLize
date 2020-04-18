@@ -23,8 +23,8 @@ public class FriendListPresenter implements FriendsListInterface.Presenter, Frie
         model = new FriendsListModel(this);
         listaReq = new ArrayList<>();
         listaFriends = new ArrayList<>();
-        adapterReq = new AdapterUsuarios(this.currentUser, listaFriends);
-        adapterFriends = new AdapterUsuarios(this.currentUser, listaFriends);
+        adapterReq = new AdapterUsuarios(this.currentUser, listaFriends, "req");
+        adapterFriends = new AdapterUsuarios(this.currentUser, listaFriends, "users");
     }
 
     @Override
@@ -42,25 +42,25 @@ public class FriendListPresenter implements FriendsListInterface.Presenter, Frie
     @Override
     public void addListaReq(Usuari u) {
         listaReq.add(u);
-        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq, "req");
         view.setAdapterReqList(ad);
     }
 
     @Override
     public void addListaFriends(Usuari u) {
         listaFriends.add(u);
-        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends);
+        AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends, "users");
         view.setAdapterFriendList(ad);
     }
 
     @Override
     public void onSuccess(String type) {
         if (type.equals("req")){
-            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq);
+            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaReq, "req");
             view.setAdapterReqList(ad);
         }
         else{
-            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends);
+            AdapterUsuarios ad = new AdapterUsuarios(this.currentUser, listaFriends, "users");
             view.setAdapterFriendList(ad);
         }
     }

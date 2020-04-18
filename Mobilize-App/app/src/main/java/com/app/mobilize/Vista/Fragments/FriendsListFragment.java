@@ -1,13 +1,16 @@
 package com.app.mobilize.Vista.Fragments;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,12 +24,15 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
 
     private Usuari user;
     private RecyclerView reqFriends, listaFriends;
-    private LinearLayout req, friends;
-    private LinearLayoutManager lm1, lm2;
+    private LinearLayout req;
+    private ImageView imageView;
+    private String iconoFriends;
+
     private FriendsListInterface.Presenter presenter;
 
-    public FriendsListFragment(Usuari user) {
+    public FriendsListFragment(Usuari user, String iconoFriends) {
         this.user = user;
+        this.iconoFriends = iconoFriends;
     }
 
     @Override
@@ -42,12 +48,15 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
         presenter = new FriendListPresenter(this, user);
 
         req = (LinearLayout) view.findViewById(R.id.ReqListLL);
-        friends = (LinearLayout) view.findViewById(R.id.friendsListLL);
+        imageView = (ImageView) view.findViewById(R.id.iconoFriends);
+        if (iconoFriends.equals("req")) imageView.setImageResource(R.mipmap.ic_reqfriend);
+        else imageView.setImageResource(R.mipmap.ic_friendslist);
 
         reqFriends = (RecyclerView) view.findViewById(R.id.rv1);
         listaFriends = (RecyclerView) view.findViewById(R.id.rv2);
-        lm1 = new LinearLayoutManager(getContext());
-        lm2 = new LinearLayoutManager(getContext());
+        listaFriends.addItemDecoration(new DividerItemDecoration(listaFriends.getContext(), DividerItemDecoration.VERTICAL));
+        LinearLayoutManager lm1 = new LinearLayoutManager(getContext());
+        LinearLayoutManager lm2 = new LinearLayoutManager(getContext());
         reqFriends.setLayoutManager(lm1);
         listaFriends.setLayoutManager(lm2);
 
@@ -69,7 +78,6 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
     @Override
     public void onError(String message) {
         if (message.equals("¡Encuentra nuevos amigos!")){
-            friends.setVisibility(View.INVISIBLE);
             listaFriends.setVisibility(View.INVISIBLE);
             Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
         }

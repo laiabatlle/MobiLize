@@ -37,18 +37,26 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
     private Usuari currentUser;
     private CollectionReference user_ref;
     private CollectionReference req_ref;
+    private String type;
 
-    public AdapterUsuarios(Usuari currentUser, List<Usuari> userList){
+    public AdapterUsuarios(Usuari currentUser, List<Usuari> userList, String type){
         this.currentUser = currentUser;
         this.userList = userList;
         user_ref = FirebaseFirestore.getInstance().collection("users");
         req_ref = FirebaseFirestore.getInstance().collection("FriendRequests");
+        this.type = type;
     }
 
     @NonNull
     @Override
     public viewholderusuarios onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_usuarios, parent,false);
+        View v;
+        if (type.equals("req")) {
+            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_req, parent,false);
+        }
+        else {
+            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_usuarios, parent,false);
+        }
         return new viewholderusuarios(v);
     }
 
