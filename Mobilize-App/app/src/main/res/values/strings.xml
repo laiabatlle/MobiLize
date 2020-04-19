@@ -86,5 +86,10 @@
     <string name="auth">Autentificando…</string>
     <string name="incorrectUsername">Usuario incorrecto.</string>
     <string name="confirmation">Se ha enviado un correo de confirmación a tu cuenta de correo electrónico: </string>
-    <string name="friendList"> Lista de amigos</string>
+    <string name="friendList">Lista de amigos</string>
+    <string name="DescripcionEventTV">Descripción:</string>
+    <string name="DateEventTV">Data del evento:</string>
+    <string name="Max_partEventTV">Número máximo de participantes:</string>
+    <string name="Min_partEventTV">Número mínimo de participantes:</string>
+    <string name="CrearEventoButton">Crear evento</string>
 </resources>

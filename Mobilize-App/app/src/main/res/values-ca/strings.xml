@@ -87,4 +87,9 @@
     <string name="incorrectUsername">Usuari incorrecte.</string>
     <string name="confirmation">S\'ha enviat un correu de confirmació al teu compte de correu electrònic: </string>
     <string name="friendList"> Llista d\'amics </string>
+    <string name="DescripcionEventTV">Descripció</string>
+    <string name="DateEventTV">Data de l\'esdeveniment:</string>
+    <string name="Max_partEventTV">Nombre màxim de participants:</string>
+    <string name="Min_partEventTV">Nombre mínim de participants:</string>
+    <string name="CrearEventoButton">Crear esdeveniment</string>
 </resources>

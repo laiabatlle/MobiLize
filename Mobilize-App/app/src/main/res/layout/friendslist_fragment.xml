@@ -50,13 +50,13 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv1"
+        android:id="@+id/rv_req"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv2"
+        android:id="@+id/rv_friends"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"/>

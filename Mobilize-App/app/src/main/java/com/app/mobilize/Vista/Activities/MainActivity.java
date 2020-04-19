@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.Evento){
-                    showSelectedFragment(new EventosFragment());
+                    showSelectedFragment(new EventosFragment(user));
                 }
                 if (menuItem.getItemId() == R.id.Plan){
                     showSelectedFragment(new PlanFragment());

@@ -87,4 +87,9 @@
     <string name="incorrectUsername">Incorrect username.</string>
     <string name="confirmation">A confirmation email has been sent to your email account: </string>
     <string name="friendList">Friends list </string>
+    <string name="DescripcionEventTV">Description</string>
+    <string name="DateEventTV">Event date:</string>
+    <string name="CrearEventoButton">Create event</string>
+    <string name="Max_partEventTV">Maximum number of participants:</string>
+    <string name="Min_partEventTV">" Minimum number of participants:"</string>
 </resources>

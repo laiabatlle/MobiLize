@@ -52,8 +52,8 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
         if (iconoFriends.equals("req")) imageView.setImageResource(R.mipmap.ic_reqfriend);
         else imageView.setImageResource(R.mipmap.ic_friendslist);
 
-        reqFriends = (RecyclerView) view.findViewById(R.id.rv1);
-        listaFriends = (RecyclerView) view.findViewById(R.id.rv2);
+        reqFriends = (RecyclerView) view.findViewById(R.id.rv_req);
+        listaFriends = (RecyclerView) view.findViewById(R.id.rv_friends);
         listaFriends.addItemDecoration(new DividerItemDecoration(listaFriends.getContext(), DividerItemDecoration.VERTICAL));
         LinearLayoutManager lm1 = new LinearLayoutManager(getContext());
         LinearLayoutManager lm2 = new LinearLayoutManager(getContext());
@@ -74,7 +74,6 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
         presenter.toGetFriendList(user.getUsername());
     }
 
-    //TODO arreglar això perque quan no hi hagi req, no aparegui el layout ni la recycleList
     @Override
     public void onError(String message) {
         if (message.equals("¡Encuentra nuevos amigos!")){

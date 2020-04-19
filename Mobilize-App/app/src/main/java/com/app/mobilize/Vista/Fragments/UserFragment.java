@@ -50,7 +50,7 @@ public class UserFragment extends Fragment implements UserInterface.View, View.O
 
         //Imatge de l'avatar de l'usuari:
         ImageView avatar = (ImageView) view.findViewById(R.id.AvatarIV);
-        Glide.with(this).load(Uri.parse(imageUri)).into(avatar);
+        Glide.with(this).load(Uri.parse(imageUri)).error(R.drawable.ic_user).into(avatar);
 
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);

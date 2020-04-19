@@ -9,12 +9,10 @@ public class PerfilPresenter implements PerfilInterface.Presenter, PerfilInterfa
 
     private PerfilInterface.View view;
     private PerfilInterface.Model model;
-    private boolean haveAnyFriendReq;
 
     public PerfilPresenter(PerfilInterface.View view) {
         this.view = view;
-        model = new PerfilModel(this);
-        haveAnyFriendReq = false;
+        this.model = new PerfilModel(this);
     }
 
     @Override
