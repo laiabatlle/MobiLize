@@ -33,6 +33,7 @@
             android:name=".Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Vista.Activities.IdiomActivity" />
+        <activity android:name=".Vista.Activities.InfoActivity" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

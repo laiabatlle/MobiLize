@@ -1443,6 +1443,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_progress
+drawable ic_req
 drawable ic_running
 drawable ic_settings
 drawable ic_unfriend
@@ -1494,6 +1495,7 @@ id META
 id Perfil
 id Plan
 id Progreso
+id ReqListLL
 id SHIFT
 id SYM
 id TOP_END
@@ -1574,8 +1576,6 @@ id bRunning2
 id bRutina
 id bWorkout
 id barrier
-id barrier2
-id barrier3
 id beginning
 id blocking
 id bottom
@@ -1589,6 +1589,8 @@ id button4
 id button5
 id buttonPanel
 id buttonRegister
+id buttonslayout1
+id buttonslayout2
 id cancel_button
 id catalan
 id cbCiclisme
@@ -1610,6 +1612,7 @@ id clip_vertical
 id collapseActionView
 id confirm_button
 id constraintLayout1
+id contact
 id container
 id content
 id contentConfirmationText
@@ -1659,6 +1662,7 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
+id friendsList
 id generoSpin
 id generoTV
 id ghost_view
@@ -1666,7 +1670,6 @@ id ghost_view_holder
 id glide_custom_view_target_tag
 id goToLogin
 id gone
-id group
 id group_divider
 id groups
 id guardar
@@ -1676,6 +1679,7 @@ id homeAsUp
 id icon
 id icon_group
 id icon_only
+id iconoFriends
 id idiom
 id idioma
 id ifRoom
@@ -1765,6 +1769,7 @@ id percent
 id pesoET
 id pesoTV
 id pin
+id privacity
 id progress_circular
 id progress_horizontal
 id radio
@@ -1774,12 +1779,15 @@ id rbFacil
 id rbMitjana
 id registerButton
 id rellay
+id resp
 id right
 id right_icon
 id right_side
 id rounded
 id rutinaEntrenamiento
 id rv
+id rv1
+id rv2
 id save_non_transition_alpha
 id save_overlay_view
 id scale
@@ -1954,6 +1962,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_crear_plan
 layout activity_idiom
+layout activity_info
 layout activity_mis_planes
 layout activity_modalitat_entrenament
 layout activity_modalitat_exercici
@@ -1985,6 +1994,7 @@ layout fragment_perfil
 layout fragment_plan
 layout fragment_progreso
 layout fragment_user
+layout friendslist_fragment
 layout listausers_fragment
 layout login_activity
 layout main_activity
@@ -2024,6 +2034,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout register_activity
 layout register_message_activity
+layout row_req
 layout row_usuarios
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -2043,14 +2054,18 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu main_menu
-mipmap ic_add_friends
-mipmap ic_add_friends_round
+mipmap ic_acceptreq
+mipmap ic_addfriend
+mipmap ic_cancelreq
+mipmap ic_friendslist
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap ic_logo2
 mipmap ic_logo2_foreground
 mipmap ic_logo2_round
+mipmap ic_reqfriend
 mipmap ic_settings
+mipmap ic_unfriend
 plurals mtrl_badge_content_description
 string AcceptFriendReq
 string AlturaTV
@@ -2094,6 +2109,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string accept
 string adelgazar
 string alerts
 string app_name
@@ -2131,6 +2147,7 @@ string confirmEmail
 string confirmation
 string confirmationDelete
 string confirmationEmailText
+string contact
 string continua
 string cycling
 string default_web_client_id
@@ -2156,6 +2173,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string facil
 string firebase_database_url
+string friendList
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -2230,10 +2248,14 @@ string path_password_strike_through
 string plan
 string planes
 string planning
+string privacity
+string privacityMessage
 string profile
 string progress
 string project_id
 string register
+string resp
+string respMessage
 string running
 string rutina
 string rutinaEntrenamiento
@@ -2244,6 +2266,7 @@ string status_bar_notification_info_overflow
 string tit
 string training
 string user
+string version
 string workout
 string yes
 style AlertDialog_AppCompat
