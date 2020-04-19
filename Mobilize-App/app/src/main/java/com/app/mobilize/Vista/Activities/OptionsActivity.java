@@ -84,6 +84,7 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
     }
 
     public void goToLogin () {
+        SaveSharedPreference.clearEmail(this);
         Intent intent = new Intent( this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

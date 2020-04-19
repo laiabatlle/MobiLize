@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         user = new Usuari();
-        email = this.getIntent().getStringExtra("email");
+        email = SaveSharedPreference.getEmail(this);
         db = FirebaseFirestore.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         // Create a reference to the cities collection

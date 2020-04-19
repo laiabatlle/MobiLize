@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -34,6 +35,10 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
         setViews();
         login.setOnClickListener(this);
         register.setOnClickListener(this);
+        if(SaveSharedPreference.getEmail(this).length() != 0) {
+            Intent sig = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(sig);
+        }
     }
 
     public void setViews() {
@@ -112,6 +117,7 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
 
     @Override
     public void goMainMenu() {
+        SaveSharedPreference.setEmail(this, email.getText().toString());
         Intent sig = new Intent(LoginActivity.this, MainActivity.class);
         sig.putExtra("email", email.getText().toString());
         startActivity(sig);
