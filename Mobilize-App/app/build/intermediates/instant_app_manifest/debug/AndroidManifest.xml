@@ -51,6 +51,7 @@
             android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
