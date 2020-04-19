@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
         if(SaveSharedPreference.getEmail(this).length() != 0) {
             Intent sig = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(sig);
+            finish();
         }
     }
 
@@ -121,6 +122,7 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
         Intent sig = new Intent(LoginActivity.this, MainActivity.class);
         sig.putExtra("email", email.getText().toString());
         startActivity(sig);
+        finish();
     }
 
     public void goRegister() {
