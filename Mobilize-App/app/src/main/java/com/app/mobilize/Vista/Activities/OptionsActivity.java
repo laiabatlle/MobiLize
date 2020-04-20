@@ -66,13 +66,12 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setCancelable(true);
         alertBuilder.setMessage(R.string.confirmationDelete);
-        alertBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+        alertBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
             }
         });
-        alertBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+        alertBuilder.setPositiveButton(R.string.erase, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 presenter.toDelete(username);
