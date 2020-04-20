@@ -58,13 +58,13 @@
     <string name="rb_calorias"> calorias </string>
     <string name="rb_pasos"> pasos </string>
     <string-array name="dias_semana">
+        <item>dom</item>
         <item>lun</item>
         <item>mar</item>
         <item>mie</item>
         <item>jue</item>
         <item>vie</item>
         <item>sab</item>
-        <item>dom</item>
     </string-array>
     <string-array name="meses_año">
         <item>ENE</item>

@@ -114,7 +114,7 @@ public class ProgresoFragment extends Fragment {
         rbSemanal.setChecked(true);
 
 
-        int dia_actual = data_actual.get(Calendar.DAY_OF_WEEK);
+        final int dia_semana = data_actual.get(Calendar.DAY_OF_WEEK);
 
         final String[] eixXsemana = getResources().getStringArray(R.array.dias_semana);
         //final String[] eixXsemana = new String[] {"lun", "mar", "mie", "jue", "vie", "sab", "dom"};
@@ -131,7 +131,7 @@ public class ProgresoFragment extends Fragment {
         Yleft.setValueFormatter(new FormatterEixYDades("peso")); //Perque surti "kg" al costat dels valors de l'eix
         Yleft.setXOffset(2f);
         xAxis.setYOffset(1f);
-        xAxis.setValueFormatter(new FormatterEixXSemanal(eixXsemana));
+        xAxis.setValueFormatter(new FormatterEixXSemanal(eixXsemana, dia_semana));
         chart.getAxisRight().setEnabled(false); // no right axis
 
         final ArrayList<Entry> valors_mensuals = new ArrayList<>();
@@ -161,7 +161,7 @@ public class ProgresoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(rbMensual.isChecked()){
-                    xAxis.setValueFormatter(new FormatterEixXSemanal(eixXsemana));
+                    xAxis.setValueFormatter(new FormatterEixXSemanal(eixXsemana, dia_semana));
                     if(rbPeso.isChecked()){
                         DrawGraph(setS, "peso", "semanal");
                     }
@@ -318,9 +318,31 @@ public class ProgresoFragment extends Fragment {
 
     private class FormatterEixXSemanal implements IAxisValueFormatter{
         private String[] valuesX;
+        int dia_actual;
 
-        public FormatterEixXSemanal(String[] values) {
-            
+        public FormatterEixXSemanal(String[] values, int dia) {
+            valuesX = new String[7];
+            /*String[] aux = values;
+            String[] primers = new String[4];
+            String[] segons = new String[3];
+            int iterador_today = 0;
+            int cont = 0;
+
+            for (int i = 0; i < 7; ++i){
+                if(dia == i+1){
+                    iterador_today = i;
+                    //segons[0] = aux[i];
+                }
+            }
+
+            for (int i = 0; i < 7; ++i){
+                if(i < iterador_today){
+
+                }
+                else{
+
+                }
+            }*/
             this.valuesX = values;
         }
 
