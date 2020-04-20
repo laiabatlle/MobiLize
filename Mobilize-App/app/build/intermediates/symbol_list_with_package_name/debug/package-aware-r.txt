@@ -1429,6 +1429,7 @@ drawable ic_progress
 drawable ic_running
 drawable ic_settings
 drawable ic_user
+drawable libre
 drawable logo_mobilize
 drawable mitja
 drawable mtrl_dialog_background
@@ -1460,6 +1461,8 @@ drawable running
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trainer
+drawable yoga
 id ALT
 id AvatarIV
 id BOTTOM_END
@@ -1468,6 +1471,7 @@ id CTRL
 id Entrenamiento
 id Evento
 id FUNCTION
+id Items
 id META
 id Perfil
 id Plan
@@ -1529,7 +1533,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addButton
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1541,11 +1544,14 @@ id async
 id auto
 id bAdelgazar
 id bCycling
+id bCycling2
 id bForma
 id bLibre
 id bMasa
 id bRunning
+id bRunning2
 id bRutina
+id bWorkout
 id barrier
 id beginning
 id blocking
@@ -1556,6 +1562,10 @@ id butEnrere
 id butOk
 id button
 id button2
+id button3
+id button4
+id button5
+id button7
 id buttonPanel
 id cancel_button
 id cbCiclisme
@@ -1589,6 +1599,7 @@ id dataCumpleañosTV
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
+id deleteUser
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1600,6 +1611,12 @@ id direct
 id disableHome
 id dropdown_menu
 id edAlert2
+id editText
+id editText2
+id editText3
+id editText4
+id editText5
+id editText6
 id edit_query
 id email
 id end
@@ -1658,9 +1675,10 @@ id line1
 id line3
 id linearLayout
 id linearLayout2
+id linearLayout4
 id listMode
-id listView
 id list_item
+id logOut
 id loginButton
 id logo
 id masked
@@ -1734,6 +1752,7 @@ id right
 id right_icon
 id right_side
 id rounded
+id rutinaEntrenamiento
 id rv
 id save_non_transition_alpha
 id save_overlay_view
@@ -1800,11 +1819,13 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView11
 id textView2
 id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id textView9
 id text_input_end_icon
 id text_input_start_icon
@@ -1826,7 +1847,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tvAlert
 id tvAlert2
-id tvMisPlanes
 id unchecked
 id uniform
 id unlabeled
@@ -1901,10 +1921,14 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_afegir_rutina
 layout activity_crear_plan
-layout activity_mis_planes
+layout activity_modalitat_entrenament
 layout activity_modalitat_exercici
 layout activity_nivell_entrenament
+layout activity_options
+layout activity_pop_up_rutina
+layout activity_seleccionar_rutina
 layout activity_tipus_plan
 layout alert_dialog
 layout custom_dialog
@@ -1928,6 +1952,7 @@ layout fragment_eventos
 layout fragment_perfil
 layout fragment_plan
 layout fragment_progreso
+layout item
 layout listausers_fragment
 layout login_activity
 layout main_activity
@@ -2061,6 +2086,7 @@ string config
 string continua
 string cycling
 string default_web_client_id
+string desc
 string descripcio
 string dificil
 string dificultat
@@ -2072,6 +2098,7 @@ string enrere
 string entrenamiento_libre
 string entrenamientos
 string error_icon_content_description
+string escollirDificultat
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -2142,9 +2169,11 @@ string project_id
 string register
 string running
 string rutina
+string rutinaEntrenamiento
 string search_menu_title
 string seleccionar_modalidad
 string status_bar_notification_info_overflow
+string tit
 string user
 string workout
 style AlertDialog_AppCompat
@@ -2155,6 +2184,7 @@ style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme
+style AppTheme_CustomTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
