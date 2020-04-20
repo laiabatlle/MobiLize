@@ -37,11 +37,6 @@ public class CreateEventPresenter implements CreateEventInterface.Presenter, Cre
     }
 
     @Override
-    public void onError(String error) {
-
-    }
-
-    @Override
     public void OnSuccesImageChange(Uri downloadUri) {
         if(view!=null){
             view.enableInputs();

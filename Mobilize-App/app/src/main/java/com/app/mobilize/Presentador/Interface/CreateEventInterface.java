@@ -4,12 +4,14 @@ import android.net.Uri;
 
 import com.app.mobilize.Model.Events;
 
+import java.text.ParseException;
+
 public interface CreateEventInterface {
     interface View {
         void disableInputs();
         void enableInputs();
 
-        void handleCreateEvent();
+        void handleCreateEvent() throws ParseException;
         void handleImage(Uri image);
 
         void onSuccesImageChange(Uri uriImage);
@@ -29,7 +31,6 @@ public interface CreateEventInterface {
 
     interface TaskListener{
         void onSuccess(String message);
-        void onError(String error);
 
         void OnSuccesImageChange(Uri downloadUri);
     }

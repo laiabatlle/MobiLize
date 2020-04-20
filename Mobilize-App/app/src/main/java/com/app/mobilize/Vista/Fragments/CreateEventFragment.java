@@ -31,6 +31,8 @@ import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 import com.app.mobilize.R;
 import com.bumptech.glide.Glide;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -62,22 +64,22 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
     private void setViews(View view) {
         presenter = new CreateEventPresenter(this, user);
 
-        eventImage = (ImageView)view.findViewById(R.id.EventoIV);
+        eventImage = view.findViewById(R.id.EventoIV);
         eventImage.setOnClickListener(this);
 
-        description = (EditText) view.findViewById(R.id.descriptionEvent);
+        description = view.findViewById(R.id.descriptionEvent);
 
         //EditText de la dataNaixement de l'usuari:
-        dateEvent = (EditText)view.findViewById(R.id.dateEvent);
+        dateEvent = view.findViewById(R.id.dateEvent);
         dateEvent.setOnClickListener(this);
 
         //EditText del pes de l'usuari:
-        max_part = (EditText) view.findViewById(R.id.max_partEvent);
+        max_part = view.findViewById(R.id.max_partEvent);
 
         //EditText del altura de l'usuari:
-        min_part = (EditText) view.findViewById(R.id.min_partEvent);
+        min_part = view.findViewById(R.id.min_partEvent);
 
-        createEvent = (Button) view.findViewById(R.id.crearEvento);
+        createEvent = view.findViewById(R.id.crearEvento);
         createEvent.setOnClickListener(this);
     }
 
@@ -181,24 +183,47 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
     }
 
     @Override
-    public void handleCreateEvent() {
+    public void handleCreateEvent() throws ParseException {
         // Create the user with the email and password introduced
+        if(imageUri == null){
+            AlertDialog.Builder builder;
+            builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage(getResources().getString(R.string.ImageEventError)).setTitle("Error").setCancelable(true);
+
+            AlertDialog alert = builder.create();
+
+            alert.setTitle("Error");
+            alert.show();
+        }
+
         if(!isValidDescription()){
-            description.setError(getResources().getString(R.string.incorrectUsername));
+            description.setError(getResources().getString(R.string.incorrectDescriptionEvent));
         }
         if(!isValidDate()){
-            dateEvent.setError(getResources().getString(R.string.incorrectEmail));
+            AlertDialog.Builder builder;
+            builder = new AlertDialog.Builder(getActivity());
+            if(dateEvent.getText().toString().equals(getResources().getString(R.string.Fecha_NacimientoHint))){
+                builder.setMessage(getResources().getString(R.string.emptyDateEvent)).setTitle("Error").setCancelable(true);
+            }
+            else{
+                builder.setMessage(getResources().getString(R.string.incorrectDateEvent)).setTitle("Error").setCancelable(true);
+            }
+            AlertDialog alert = builder.create();
+
+            alert.setTitle("Error");
+            alert.show();
+            dateEvent.setError(getResources().getString(R.string.incorrectDateEvent));
         }
         if(!isValidParticipantRestriccions1()){
             if (TextUtils.isEmpty(max_part.getText().toString())){
-                max_part.setError(getResources().getString(R.string.incorrectPassword));
+                max_part.setError(getResources().getString(R.string.incorrectMax_partEvent));
             }
             if (TextUtils.isEmpty(min_part.getText().toString())){
-                min_part.setError(getResources().getString(R.string.incorrectPassword));
+                min_part.setError(getResources().getString(R.string.incorrectMin_partEvent));
             }
         }
         else if(!isValidParticipantRestriccions2()){
-            max_part.setError(getResources().getString(R.string.incorrectPassword));
+            max_part.setError(getResources().getString(R.string.incorrectRest_Part_Event));
         }
         else {
             presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), max_part.getText().toString(), min_part.getText().toString());
@@ -216,8 +241,18 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
     }
 
     //TODO control that dateEvent is posterior than the current time.
-    private boolean isValidDate() {
-        return  true;
+    private boolean isValidDate() throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date date = formatter.parse(dateEvent.getText().toString());
+            if (new Date().after(date)) {
+                return false;
+            }
+            else return true;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return true;
+        }
     }
 
     private boolean isValidDescription() {
@@ -237,8 +272,9 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
 
     @Override
     public void onSuccess(String message) {
-        if (message.equals("Evento creado correctamente")){
-            Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+        if (message.equals("SuccesEventCreate")){
+            String mess = getResources().getString(R.string.SuccesEventCreate);
+            Toast.makeText(getContext(), mess, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -254,7 +290,11 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
                 break;
 
             case R.id.crearEvento:
-                handleCreateEvent();
+                try {
+                    handleCreateEvent();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 break;
 
             default:
