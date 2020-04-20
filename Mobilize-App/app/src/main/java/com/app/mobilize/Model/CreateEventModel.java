@@ -36,7 +36,8 @@ public class CreateEventModel implements CreateEventInterface.Model {
 
     @Override
     public void doCreateEvent(Uri imageUri, String desciption, String dateEvent, String max_part, String min_part) {
-        event.setImage(imageUri.toString());
+        if (imageUri == null) event.setImage("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Fevent.png?alt=media&token=e481b240-6bb2-4484-81c7-62d516c5a7c8");
+        else event.setImage(imageUri.toString());
         event.setDescription(desciption);
         event.setDateEvent(dateEvent);
         event.setMax_part(max_part);

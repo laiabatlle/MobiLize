@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ import com.app.mobilize.R;
 import com.bumptech.glide.Glide;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class CreateEventFragment extends Fragment implements CreateEventInterface.View, View.OnClickListener {
 
@@ -180,7 +182,46 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
 
     @Override
     public void handleCreateEvent() {
-        presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), max_part.getText().toString(), min_part.getText().toString());
+        // Create the user with the email and password introduced
+        if(!isValidDescription()){
+            description.setError(getResources().getString(R.string.incorrectUsername));
+        }
+        if(!isValidDate()){
+            dateEvent.setError(getResources().getString(R.string.incorrectEmail));
+        }
+        if(!isValidParticipantRestriccions1()){
+            if (TextUtils.isEmpty(max_part.getText().toString())){
+                max_part.setError(getResources().getString(R.string.incorrectPassword));
+            }
+            if (TextUtils.isEmpty(min_part.getText().toString())){
+                min_part.setError(getResources().getString(R.string.incorrectPassword));
+            }
+        }
+        else if(!isValidParticipantRestriccions2()){
+            max_part.setError(getResources().getString(R.string.incorrectPassword));
+        }
+        else {
+            presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), max_part.getText().toString(), min_part.getText().toString());
+        }
+    }
+
+    private boolean isValidParticipantRestriccions1() {
+        return !TextUtils.isEmpty(max_part.getText().toString()) && !TextUtils.isEmpty(min_part.getText().toString());
+    }
+
+    private boolean isValidParticipantRestriccions2() {
+        int max = Integer.parseInt(max_part.getText().toString());
+        int min = Integer.parseInt(min_part.getText().toString());
+        return max >= min;
+    }
+
+    //TODO control that dateEvent is posterior than the current time.
+    private boolean isValidDate() {
+        return  true;
+    }
+
+    private boolean isValidDescription() {
+        return !TextUtils.isEmpty(description.getText().toString());
     }
 
     @Override
