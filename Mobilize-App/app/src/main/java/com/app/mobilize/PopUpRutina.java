@@ -34,8 +34,10 @@ public class PopUpRutina extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
         Rutina item = (Rutina) getIntent().getSerializableExtra("rutina");
-        TextView tv11 = (TextView)findViewById(R.id.textView11);
-        tv11.setText(item.getNom());
+        EditText ed1 = (EditText) findViewById(R.id.editText6);
+        EditText ed2 = (EditText) findViewById(R.id.editText7);
+        ed1.setText(item.getNom());
+        ed2.setText(item.getInfo());
 
 
 
@@ -50,6 +52,35 @@ public class PopUpRutina extends AppCompatActivity {
 
         String[] args = new String[] {item.getNom()};
         BaseDeDatos.delete("Rutines", "nom=?", args);
+
+
+        BaseDeDatos.close();
+
+
+
+
+
+
+        //Toast.makeText(this, "Borrado Exitoso", Toast.LENGTH_SHORT).show();
+
+    }
+
+
+    public void Modifica(View view) {
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+
+        EditText ed1 = (EditText) findViewById(R.id.editText6);
+        EditText ed2 = (EditText) findViewById(R.id.editText7);
+
+        ContentValues registro = new ContentValues();
+        registro.put("nom", String.valueOf(ed1.getText()));
+        registro.put("info", String.valueOf(ed2.getText()));
+
+        Rutina item = (Rutina) getIntent().getSerializableExtra("rutina");
+
+        String[] args = new String[] {item.getNom()};
+        BaseDeDatos.update("Rutines", registro, "nom=?", args);
 
 
         BaseDeDatos.close();
