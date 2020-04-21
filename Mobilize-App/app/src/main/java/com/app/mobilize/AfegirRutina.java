@@ -3,6 +3,7 @@ package com.app.mobilize;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +47,9 @@ public class AfegirRutina extends AppCompatActivity {
 
         nomedx.setText("Nom");
         infoedx.setText("Info");
+
+        Intent intent = new Intent(view.getContext(), ModalitatEntrenament.class);
+        startActivityForResult(intent, 0);
 
         Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
 

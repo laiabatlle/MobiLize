@@ -58,10 +58,12 @@ public class PopUpRutina extends AppCompatActivity {
 
 
 
+        Intent intent = new Intent(view.getContext(),  ModalitatEntrenament.class);
+        startActivityForResult(intent, 0);
 
 
 
-        //Toast.makeText(this, "Borrado Exitoso", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Borrado Exitoso", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -85,12 +87,15 @@ public class PopUpRutina extends AppCompatActivity {
 
         BaseDeDatos.close();
 
+        Intent intent = new Intent(view.getContext(), ModalitatEntrenament.class);
+        startActivityForResult(intent, 0);
 
 
 
 
 
-        //Toast.makeText(this, "Borrado Exitoso", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this, "Modificado Exitoso", Toast.LENGTH_SHORT).show();
 
     }
 
