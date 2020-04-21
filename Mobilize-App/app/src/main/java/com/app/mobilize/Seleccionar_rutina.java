@@ -50,13 +50,14 @@ public class Seleccionar_rutina extends AppCompatActivity  {
 
         //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
 
-        Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines where modalitat=? AND nivell =" + dificultat, args);
+        Cursor fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
 
         RutinaArrayList = new ArrayList<>();
         while (fila.moveToNext()) {
             String nom = fila.getString(0);
             String info = fila.getString(1);
-            Rutina r = new Rutina(nom, info, dificultat, modalitat);
+            String exercicis = fila.getString(2);
+            Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
             RutinaArrayList.add(r);
         }
 

@@ -1,18 +1,21 @@
 package com.app.sqliteopenhelper;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Rutina implements Serializable {
     private String nom;
     private String info;
     private int nivell;
     private String modalitat;
+    private String exercicis;
 
-    public Rutina(String nom, String info,int nivell, String modalitat) {
+    public Rutina(String nom, String info,int nivell, String modalitat, String exercicis) {
         this.nom = nom;
         this.info = info;
         this.nivell = nivell;
         this.modalitat = modalitat;
+        this.exercicis = exercicis;
     }
 
     public String getNom() {
@@ -48,4 +51,8 @@ public class Rutina implements Serializable {
         this.modalitat = modalitat;
     }
 
+    public String getExercicis() {
+        return exercicis;
+
+    }
 }

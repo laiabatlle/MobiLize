@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
-    String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT)";
+    String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT, exercicis TEXT)";
     String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN)";
 
     private ArrayList<Rutina> cjtRutines;
@@ -25,6 +25,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(sqlCreate);
         insertAllRutines();
+        insertAllExercicis();
         for ( int i=0; i<cjtRutines.size(); i++ ){
             ContentValues contentValues = new ContentValues();
 
@@ -32,12 +33,13 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             contentValues.put("info", cjtRutines.get(i).getInfo());
             contentValues.put("nivell", cjtRutines.get(i).getNivell());
             contentValues.put("modalitat", cjtRutines.get(i).getModalitat());
+            contentValues.put("exercicis", cjtRutines.get(i).getExercicis());
 
             db.insert("Rutines", null, contentValues);
         }
 
         db.execSQL(sqlCreate1);
-        insertAllExercicis();
+
         for ( int i=0; i<cjtExercicis.size(); i++ ){
             ContentValues contentValues = new ContentValues();
 
@@ -60,10 +62,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllRutines () {
         cjtRutines = new ArrayList<>();
-        cjtRutines.add(new Rutina("Abdominals", "Abdominals per ...", 0, "cycling"));
-        cjtRutines.add(new Rutina("Flexions", "Flexions per ...", 1, "workout"));
-        cjtRutines.add(new Rutina("Flexions2", "Flexions per ...", 2, "running"));
-        cjtRutines.add(new Rutina("Flexions3", "Flexions per ...", 0, "workout"));
+        cjtRutines.add(new Rutina("Abdominals", "Abdominals per ...", 0, "cycling", "global"));
+        cjtRutines.add(new Rutina("Flexions", "Flexions per ...", 1, "workout","global"));
+        cjtRutines.add(new Rutina("Flexions2", "Flexions per ...", 2, "running", "global"));
+        cjtRutines.add(new Rutina("Flexions3", "Flexions per ...", 0, "workout",  "global"));
 
     }
 

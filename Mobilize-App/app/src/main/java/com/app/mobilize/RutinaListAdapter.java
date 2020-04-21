@@ -41,7 +41,7 @@ public class RutinaListAdapter extends ArrayAdapter<Rutina> {
         int nivell = getItem(position).getNivell();
         String modalitat = getItem(position).getModalitat();
 
-        final Rutina rutina = new Rutina(nom,info,nivell,modalitat);
+        final Rutina rutina = new Rutina(nom,info,nivell,modalitat, "global");
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource,parent,false);

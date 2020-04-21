@@ -96,6 +96,8 @@ public class AfegirRutina extends AppCompatActivity {
         String nom = nomedx.getText().toString();
         String info = infoedx.getText().toString();
 
+        String exer = transformaArray(eaux);
+
 
 
 
@@ -106,6 +108,7 @@ public class AfegirRutina extends AppCompatActivity {
         registro.put("info", info);
         registro.put("nivell", dificultat);
         registro.put("modalitat", modalitat);
+        registro.put("exercicis", exer);
 
         BaseDeDatos.insert("Rutines", null, registro);
 
@@ -115,11 +118,21 @@ public class AfegirRutina extends AppCompatActivity {
         nomedx.setText("Nom");
         infoedx.setText("Info");
 
+
+
         Intent intent = new Intent(view.getContext(), ModalitatEntrenament.class);
         startActivityForResult(intent, 0);
 
         Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
+    }
+
+    private String transformaArray(ArrayList<Exercici> eaux) {
+        String s = "";
+        for (int i = 0; i < eaux.size(); ++i) {
+            s = s + eaux.get(i).getNom() + ",";
+        }
+        return s;
     }
 
     public static void setExercici(Exercici e) {
