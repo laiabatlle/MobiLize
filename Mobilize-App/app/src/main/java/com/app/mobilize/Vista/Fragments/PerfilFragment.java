@@ -48,7 +48,8 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     private static final int GALLERY_INTENT = 1;
     private Usuari user;
-    private EditText peso, altura, dateNaixement;
+    private EditText peso, altura;
+    private TextView dateNaixement;
     private Spinner genero;
     private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
     private String gendre;
@@ -56,7 +57,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private String imageUri, friendListIcon;
     private SearchView buscadorAmigos;
 
-    private ImageButton friendList, opcions;
+    private ImageButton friendList, pick_date, opcions;
 
     private PerfilInterface.Presenter presenter;
 
@@ -124,9 +125,11 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         genero.setOnItemSelectedListener(this);
 
         //EditText de la dataNaixement de l'usuari:
-        dateNaixement = (EditText)view.findViewById(R.id.dataCumpleañosTV);
+        dateNaixement = (TextView) view.findViewById(R.id.dateBirthday);
         dateNaixement.setText(user.getDateNaixement());
-        dateNaixement.setOnClickListener(this);
+
+        pick_date = (ImageButton) view.findViewById(R.id.dateBirthdayCalendar);
+        pick_date.setOnClickListener(this);
 
         //EditText del pes de l'usuari:
         peso = (EditText) view.findViewById(R.id.pesoET);
@@ -255,7 +258,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
                 if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) openGallery();
                 break;
 
-            case R.id.dataCumpleañosTV:
+            case R.id.dateBirthdayCalendar:
                 showDatePickerDialog();
                 break;
 

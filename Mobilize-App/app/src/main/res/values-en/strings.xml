@@ -40,7 +40,7 @@
     <string name="nivellrutina">Choose the level of your routine</string>
     <string name="continua">Continue</string>
     <string name="GeneroTV">Genre</string>
-    <string name="Fecha_NacimientoTV">Date of birth</string>
+    <string name="Fecha_NacimientoTV">Birthday</string>
     <string name="Fecha_NacimientoHint">dd/mm/yyyy</string>
     <string name="PesoTV">Weight</string>
     <string name="AlturaTV">Height</string>
@@ -87,10 +87,11 @@
     <string name="incorrectUsername">Incorrect username.</string>
     <string name="confirmation">A confirmation email has been sent to your email account: </string>
     <string name="friendList">Friends list </string>
+    <string name="TitleEventTV">Title</string>
     <string name="DescripcionEventTV">Description</string>
-    <string name="DateEventTV">Event date:</string>
+    <string name="DateEventTV">Date:</string>
     <string name="SportEventTV">Sport:</string>
-    <string name="hourEventTV">Event schedule:</string>
+    <string name="hourEventTV">Schedule:</string>
     <string name="CrearEventoButton">Create event</string>
     <string name="Max_partEventTV">Maximum number of participants:</string>
     <string name="Min_partEventTV">" Minimum number of participants:"</string>
@@ -104,6 +105,7 @@
     <string name="respMessage">All information provided within the app is of a general nature and is supposed to be used only for educational/entertainment purposes. No information can be taken as medical or other health advice. You agree that use of this information is at your own risk and hold MobiLize harmless from any and all losses, liabilities, injuries or damages resulting from any and all claims.</string>
     <string name="privacityMessage">This Privacy Policy establishes the terms in which MobiLize uses and protects the information that is provided by its users when using the application. This company is committed to the security of its users\' data. When we ask you to fill in the personal information fields with which you can be identified, we do so ensuring that it will only be used in accordance with the terms of this document. However, this Privacy Policy may change over time or be updated so we recommend and we emphasize continually reviewing this page to ensure that you agree with such changes.\n\n<b>Information that is collected</b>\n\nOur application may collect personal information such as: Name, contact information such as your email address and demographic information. Likewise, when necessary, specific information may be required to process an order or make a delivery or billing.\n\n<b>Use of collected information</b>\n\nOur application uses the information in order to provide the best possible service, particularly to keep a record of users, of orders if applicable, and to improve our products and services. It is possible that emails may be sent periodically through our site with special offers, new products and other advertising information that we consider relevant to you or that may provide you with benefits, these emails will be sent to the address that you provide and may be canceled at any time.\n\nMobiLize is highly committed to fulfilling the commitment to keep your information secure. We use the most advanced systems and constantly update them to ensure that there is no unauthorized access.\n\n<b>Cookies</b>\n\nA cookie refers to a file that is sent with the purpose of requesting permission to be stored on your computer. By accepting this file, it is created and the cookie then serves to have information regarding the traffic of the application.\n\nOur application uses cookies to identify the windows that are visited and their frequency. This information is used only for statistical analysis and then the information is permanently removed. You can delete cookies at any time. However, cookies help to provide a better service for the application, they do not give access to information from your mobile or from you, unless you want it and provide it directly. You can accept or deny the use of cookies, however most browsers accept cookies automatically as it serves to have a better service. You can also change the settings of your mobile to decline cookies. If declined you may not be able to use some of our services.\n\n<b>Links to Third Parties</b>\n\nThis app may contain links to other sites that may be of interest to you. Once you click on these links and leave our app, we no longer have control over the site to which you are redirected and therefore we are not responsible for the terms or privacy or the protection of your data on those other third party sites. These sites are subject to their own privacy policies, so it is recommended that you consult them to confirm that you agree with them.\n\n<b>Control of your personal information</b>\n\nAt any time you can restrict the collection or use of personal information that is provided to our application.\n\nThis company will not sell, transfer or distribute the personal information that is collected without your consent, unless required by a judge with a court order.\n\nMobiLize reserves the right to change the terms of this Privacy Policy at any time.</string>
     <string name="ImageEventError">Please, introduce an image that characterizes the event.</string>
+    <string name="incorrectTitleEvent">Please enter a title that identifies the event.</string>
     <string name="incorrectDescriptionEvent">Please enter a description that describes the event.</string>
     <string name="incorrectDateEvent">You cannot enter an event that has already ended.</string>
     <string name="incorrectMax_partEvent">Please indicate the maximum number of participants of the event you wish to create.</string>
@@ -111,4 +113,6 @@
     <string name="incorrectRest_Part_Event">The minimum number of participants cannot exceed the maximum established.</string>
     <string name="SuccesEventCreate">The event was created successfully.</string>
     <string name="emptyDateEvent">Please enter the date of the event you want to create.</string>
+    <string name="HourEvent_Hint">hh:mm a.m</string>
+
 </resources>

@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showSelectedFragment(Fragment fragment){
+    public void showSelectedFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }

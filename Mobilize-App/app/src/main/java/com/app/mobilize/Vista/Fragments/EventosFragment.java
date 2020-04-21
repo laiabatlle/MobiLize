@@ -1,27 +1,25 @@
 package com.app.mobilize.Vista.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.app.mobilize.Model.Events;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Adapter.AdapterEventos;
 import com.app.mobilize.Presentador.EventsPresenter;
-import com.app.mobilize.Presentador.FriendListPresenter;
 import com.app.mobilize.Presentador.Interface.EventsInterface;
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Activities.CreateEventActivity;
 
 
 /**
@@ -32,14 +30,16 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     private Usuari user;
     private RecyclerView events;
     private ImageButton createEvent;
+    private SearchView buscadorEventos;
 
     private EventsInterface.Presenter presenter;
 
+    public EventosFragment() {
+    }
 
     public EventosFragment(Usuari user) {
         this.user = user;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,6 +58,20 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
         events.setLayoutManager(lm);
         handleChargeEvents();
 
+        buscadorEventos = view.findViewById(R.id.cearchEventsSV);
+        buscadorEventos.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String search) {
+                handleSearchEvents(search);
+                return true;
+            }
+        });
+
         createEvent = (ImageButton) view.findViewById(R.id.createEvent);
         createEvent.setOnClickListener(this);
     }
@@ -65,6 +79,11 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     @Override
     public void handleChargeEvents() {
         presenter.toGetEvents();
+    }
+
+    @Override
+    public void handleSearchEvents(String search) {
+        presenter.toSearchEvents(search);
     }
 
     @Override
@@ -78,8 +97,9 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     private void gotoCreateEvent() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new CreateEventFragment(user))
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+        Intent intent = new Intent(getActivity(), CreateEventActivity.class);
+        intent.putExtra("username", user.getUsername());
+        startActivity(intent);
     }
 
     @Override
@@ -93,6 +113,4 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
                 break;
         }
     }
-
-
 }

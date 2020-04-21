@@ -35,8 +35,9 @@ public class CreateEventModel implements CreateEventInterface.Model {
     }
 
     @Override
-    public void doCreateEvent(Uri imageUri, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
+    public void doCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
         event.setImage(imageUri.toString());
+        event.setTitle(title);
         event.setDescription(desciption);
         event.setDateEvent(dateEvent);
         event.setHourEvent(hourEvent);

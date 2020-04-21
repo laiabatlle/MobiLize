@@ -40,7 +40,7 @@
     <string name="nivellrutina">Escull el nivell de la teva rutina</string>
     <string name="continua">Continua</string>
     <string name="GeneroTV">Gènere</string>
-    <string name="Fecha_NacimientoTV">Data de naixement</string>
+    <string name="Fecha_NacimientoTV">Data naixement</string>
     <string name="Fecha_NacimientoHint">dd/mm/aaaa</string>
     <string name="PesoTV">Pes</string>
     <string name="AlturaTV">Alçada</string>
@@ -87,9 +87,10 @@
     <string name="incorrectUsername">Usuari incorrecte.</string>
     <string name="confirmation">S\'ha enviat un correu de confirmació al teu compte de correu electrònic: </string>
     <string name="friendList"> Llista d\'amics </string>
+    <string name="TitleEventTV">Títol</string>
     <string name="DescripcionEventTV">Descripció</string>
-    <string name="DateEventTV">Data de l\'esdeveniment:</string>
-    <string name="hourEventTV">Hora de l\'esdeveniment:</string>
+    <string name="DateEventTV">Data:</string>
+    <string name="hourEventTV">Hora:</string>
     <string name="SportEventTV">Esport:</string>
     <string name="Max_partEventTV">Nombre màxim de participants:</string>
     <string name="Min_partEventTV">Nombre mínim de participants:</string>
@@ -104,6 +105,7 @@
     <string name="respMessage">Tota la informació proporcionada dins de l\'aplicació té un caràcter general i se suposa que només s\'ha d\'utilitzar amb finalitats educatives o d\'entreteniment. No es pot obtenir cap informació com a consell mèdic o d’altres consells sanitaris. Vostè accepta que l’ús d’aquesta informació està sobre el seu propi risc i manté MobiLize inofensiu de qualsevol pèrdua, passiu, lesió o danys derivats de qualsevol reclamació.</string>
     <string name="privacityMessage">La present Política de Privacitat estableix els termes en què MobiLize usa i protegeix la informació que és proporcionada pels seus usuaris a l\'hora d\'utilitzar l\'aplicació. Aquesta companyia està compromesa amb la seguretat de les dades dels seus usuaris. Quan li demanem omplir els camps d\'informació personal amb la qual vostè pugui ser identificat, ho fem assegurant que només es farà servir d\'acord amb els termes d\'aquest document. No obstant això aquesta política de privacitat pot canviar amb el temps o ser actualitzada pel que li recomanem i emfatitzem revisar contínuament aquesta pàgina per assegurar-se que està d\'acord amb aquests canvis.\n\n<b>Informació que és recollida</b>\n\nLa nostra aplicació podrà recollir informació personal per exemple: Nom, informació de contacte com la seva adreça de correu electrònica i informació demogràfica. Així mateix quan sigui necessari podrà ser requerida informació específica per processar alguna comanda o realitzar un lliurament o facturació.\n\n<b>Ús de la informació recollida</b>\n\nLa nostra aplicació fa servir la informació per tal de proporcionar el millor servei possible, particularment per mantenir un registre d\'usuaris, de comandes en cas que apliqui, i millorar els nostres productes i serveis. És possible que siguin enviats correus electrònics periòdicament a través del nostre lloc amb ofertes especials, nous productes i altra informació publicitària que considerem rellevant per a vostè o que pugui brindar algun benefici, aquests correus electrònics seran enviats a l\'adreça que vostè proporcioni i podran ser cancel·lats en qualsevol moment.\n\nMobiLize està altament compromès per complir amb el compromís de mantenir la seva informació segura. Fem servir els sistemes més avançats i els actualitzem constantment per assegurar-nos que no hi hagi cap accés no autoritzat.\n\n<b>Cookies</b>\n\nUna cookie es refereix a un fitxer que és enviat amb la finalitat de sol·licitar permís per emmagatzemar al seu ordinador, a l\'acceptar aquest fitxer es crea i la cookie serveix llavors per tenir informació respecte el trànsit de l\'aplicació.\n\nLa nostra aplicació fa servir les cookies per a poder identificar les finestres que són visitades i la seva freqüència. Aquesta informació és emprada únicament per a anàlisi estadística i després la informació s\'elimina de forma permanent. Vostè pot eliminar les cookies en qualsevol moment. No obstant això les cookies ajuden a proporcionar un millor servei de l\'aplicació, aquestes no donen accés a informació del seu mòbil ni de vostè, a menys que vostè així ho vulgui i la proporcioni directament. Vostè pot acceptar o negar l\'ús de cookies, però la majoria de navegadors accepten cookies automàticament ja que serveix per tenir un millor servei. També vostè pot canviar la configuració del seu mòbil per declinar les cookies . Si es declinen és possible que no pugui utilitzar alguns dels nostres serveis.\n\n<b>Enllaços a Tercers</b>\n\nAquesta aplicació pot contenir enllaços a altres llocs que poden ser del seu interès. Una vegada que vostè de clic en aquests enllaços i abandoni la nostra aplicació, ja no tenim control sobre a el lloc a què és redirigit i per tant no som responsables dels termes o privacitat ni de la protecció de les seves dades en aquests altres llocs tercers. Aquests llocs estan subjectes a les seves pròpies polítiques de privacitat per la qual cosa és recomanable que els consulti per confirmar que vostè està d\'acord amb aquestes.\n\n<b>Control de la seva informació personal</b>\n\nEn qualsevol moment vostè pot restringir la recopilació o l\'ús de la informació personal que es proporciona a la nostra aplicació.\n\nAquesta companyia no vendrà, cedirà o distribuirà la informació personal que és recopilada sense el seu consentiment, llevat que sigui requerit per un jutge amb un ordre judicial.\n\nMobiLize es reserva el dret de canviar els termes de la present Política de Privacitat en qualsevol moment.</string>
     <string name="ImageEventError">Si us plau, introdueix una imatge que caracteritzi l\'esdeveniment.</string>
+    <string name="incorrectTitleEvent">Si us plau, introdueix un títol que identifiqui l\'esdeveniment.</string>
     <string name="incorrectDescriptionEvent">Si us plau, introdueix una descripció que descrigui l\'esdeveniment.</string>
     <string name="incorrectDateEvent">" No pot introduir un esdeveniment que ja hagi conclòs."</string>
     <string name="incorrectMax_partEvent">" Si us plau, indiqueu el nombre màxim de participants de l\'esdeveniment que voleu crear."</string>
@@ -111,4 +113,6 @@
     <string name="incorrectRest_Part_Event">" El nombre mínim de participants no pot ser superior a l\'màxim establert."</string>
     <string name="SuccesEventCreate">L\'esdeveniment s\'ha creat correctament.</string>
     <string name="emptyDateEvent">" Si us plau, introdueix la data de l'esdeveniment que voleu crear."</string>
+    <string name="HourEvent_Hint">hh:mm a.m</string>
+
 </resources>

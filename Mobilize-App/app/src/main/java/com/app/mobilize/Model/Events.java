@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Events {
     private String image;
+    private String title;
     private String description;
     private String min_part;
     private String max_part;
@@ -20,6 +21,14 @@ public class Events {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {

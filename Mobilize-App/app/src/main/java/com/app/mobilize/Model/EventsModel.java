@@ -31,12 +31,13 @@ public class EventsModel implements EventsInterface.Model {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         Events e = new Events();
                         e.setImage(document.getData().get("image").toString());
+                        e.setTitle(document.getData().get("title").toString());
                         e.setDescription(document.getData().get("description").toString());
                         e.setDateEvent(document.getData().get("dateEvent").toString());
                         e.setHourEvent(document.getData().get("hourEvent").toString());
                         e.setMax_part(document.getData().get("max_part").toString());
                         e.setMin_part(document.getData().get("min_part").toString());
-                        e.setSportEvent(document.getData().get("sport").toString());
+                        e.setSportEvent(document.getData().get("sportEvent").toString());
                         e.setInscripcionsList((List<String>) document.get("inscripcionsList"));
                         listener.addEventsList(e);
                     }
