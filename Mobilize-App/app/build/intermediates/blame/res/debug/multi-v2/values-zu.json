@@ -4,7 +4,7 @@
             "outputFile": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zu\\values-zu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\37be93d88503de7454be5a5f96957cac\\jetified-play-services-base-17.0.0\\res\\values-zu\\values.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\c5ea4bf2c42c4bff2c7194317004e737\\jetified-play-services-base-17.1.0\\res\\values-zu\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,6 +38,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\184c09e4cf94b5b7c190a06d7165bebf\\jetified-materialdatetimepicker-1.2.1\\res\\values-zu\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "263,375,489,572,693,815,941,1037,1128,1224,1313",
+                        "endColumns": "111,113,82,120,121,125,95,90,95,88,99",
+                        "endOffsets": "370,484,567,688,810,936,1032,1123,1219,1308,1408"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54,55,56,57",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5565,5677,5791,5874,5995,6117,6243,6339,6430,6526,6615",
+                        "endColumns": "111,113,82,120,121,125,95,90,95,88,99",
+                        "endOffsets": "5672,5786,5869,5990,6112,6238,6334,6425,6521,6610,6710"
+                    }
+                },
+                {
                     "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\deae1025afce5eec85ff8ccbcc9e7c1f\\appcompat-1.1.0\\res\\values-zu\\values-zu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
@@ -47,11 +64,11 @@
                         "endOffsets": "208,315,427,515,618,733,812,890,981,1073,1168,1262,1363,1456,1551,1645,1736,1829,1909,2013,2116,2214,2321,2428,2533,2690,2786,2867"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,47",
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,58",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,320,432,520,623,738,817,895,986,1078,1173,1267,1368,1461,1556,1650,1741,1834,1914,2018,2121,2219,2326,2433,2538,2695,5565",
+                        "startOffsets": "105,213,320,432,520,623,738,817,895,986,1078,1173,1267,1368,1461,1556,1650,1741,1834,1914,2018,2121,2219,2326,2433,2538,2695,6715",
                         "endColumns": "107,106,111,87,102,114,78,77,90,91,94,93,100,92,94,93,90,92,79,103,102,97,106,106,104,156,95,80",
-                        "endOffsets": "208,315,427,515,618,733,812,890,981,1073,1168,1262,1363,1456,1551,1645,1736,1829,1909,2013,2116,2214,2321,2428,2533,2690,2786,5641"
+                        "endOffsets": "208,315,427,515,618,733,812,890,981,1073,1168,1262,1363,1456,1551,1645,1736,1829,1909,2013,2116,2214,2321,2428,2533,2690,2786,6791"
                     }
                 },
                 {
@@ -64,11 +81,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "48",
+                        "startLines": "59",
                         "startColumns": "4",
-                        "startOffsets": "5646",
+                        "startOffsets": "6796",
                         "endColumns": "100",
-                        "endOffsets": "5742"
+                        "endOffsets": "6892"
                     }
                 }
             ]

@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.mobilize">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo2"
@@ -35,10 +42,25 @@
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Vista.Activities.IdiomActivity" />
         <activity android:name=".Vista.Activities.InfoActivity" />
+        <activity android:name=".Vista.Activities.AlertsActivity">
+        </activity>
+        <activity android:name=".Vista.Activities.AddAlertActivity"
+            android:label="@string/addReminder"
+            android:parentActivityName=".Vista.Activities.AlertsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Vista.Activities.AlertsActivity"
+                />
+        </activity>
+        <provider android:name=".Vista.Activities.Data.AlarmReminderProvider"
+            android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
+            android:exported="false"/>
+        <service
+            android:name=".Vista.Activities.Reminder.ReminderAlarmService"
+            android:exported="false" />
+        <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler"/>
+        <receiver android:name=".Vista.Activities.AddAlertActivity"/>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
