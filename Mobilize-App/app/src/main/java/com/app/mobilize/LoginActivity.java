@@ -115,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
     public void sig2Intent () {
         Intent sig = new Intent(LoginActivity.this, MainActivity.class);
         sig.putExtra("email", email.getText().toString());
+        sig.putExtra("sessionOpened", 1);
         startActivity(sig);
         finish();
     }

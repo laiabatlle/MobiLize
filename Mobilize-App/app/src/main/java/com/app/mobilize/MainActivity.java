@@ -1,5 +1,7 @@
 package com.app.mobilize;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     String email;
     BottomNavigationView mBottomNavigation;
 
+    SharedPreferences sharedPreferences;
+
     FirebaseFirestore db;
     DatabaseReference databaseReference;
 
@@ -38,7 +42,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         user = new Usuari();
+
         email = this.getIntent().getStringExtra("email");
+
+        int currentSessionOpen = this.getIntent().getIntExtra("sessionOpened", -1);
+        if ( currentSessionOpen == 1 ) {
+            sharedPreferences = this.getSharedPreferences("myShared", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("email", email);
+            editor.commit();
+        }
+
         db = FirebaseFirestore.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         // Create a reference to the cities collection
