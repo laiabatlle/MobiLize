@@ -29,7 +29,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             contentValues.put("nom",cjtRutines.get(i).getNom());
             contentValues.put("info", cjtRutines.get(i).getInfo());
             contentValues.put("nivell", cjtRutines.get(i).getNivell());
-            contentValues.put("kcal", cjtRutines.get(i).getModalitat());
+            contentValues.put("modalitat", cjtRutines.get(i).getModalitat());
 
             db.insert("Rutines", null, contentValues);
         }

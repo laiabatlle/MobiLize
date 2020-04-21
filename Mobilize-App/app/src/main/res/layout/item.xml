@@ -6,16 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="60dp"
-        android:layout_height="52dp"
-        android:onClick="vermas"
-        android:text="VER MÁS"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
-
     <EditText
         android:id="@+id/editText"
         android:layout_width="81dp"
@@ -36,7 +26,7 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
         app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
 
     <LinearLayout
@@ -49,5 +39,5 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146"></LinearLayout>
+        app:layout_constraintVertical_bias="0.428"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

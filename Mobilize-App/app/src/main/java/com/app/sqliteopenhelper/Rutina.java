@@ -1,6 +1,8 @@
 package com.app.sqliteopenhelper;
 
-public class Rutina {
+import java.io.Serializable;
+
+public class Rutina implements Serializable {
     private String nom;
     private String info;
     private int nivell;
@@ -45,4 +47,5 @@ public class Rutina {
     public void setModalitat(String Modalitat) {
         this.modalitat = modalitat;
     }
+
 }
