@@ -1622,6 +1622,7 @@ id CTRL
 id Entrenamiento
 id Evento
 id EventoIV
+id EventoTV
 id FUNCTION
 id META
 id Max_partEventLayout
@@ -1701,6 +1702,8 @@ id alertTitle
 id alerts
 id all
 id alturaET
+id alturaLayout
+id alturaLayoutText
 id alturaTV
 id always
 id ampm_hitspace
@@ -1741,6 +1744,7 @@ id catalan
 id cbCiclisme
 id cbRunning
 id cbWorkout
+id cearchEventsSV
 id cearchFriendsSV
 id center
 id center_horizontal
@@ -1766,15 +1770,20 @@ id contentPanel
 id coordinator
 id crearEvento
 id createEvent
-id cumpleañosTV
 id custom
 id customPanel
 id cut
 id dark
-id dataCumpleañosTV
 id date
+id dateBirthday
+id dateBirthdayCalendar
+id dateBirthdayLayout
+id dateBirthdayLayoutCalendar
+id dateBirthdayTV
 id dateEvent
+id dateEventCalendar
 id dateEventLayout
+id dateEventLayoutCalendar
 id dateEventLayoutText
 id dateEventTV
 id date_icon
@@ -1790,7 +1799,7 @@ id declineRequestButton
 id decor_content_parent
 id default_activity_button
 id deleteUser
-id descriptionEvent
+id descriptionEventET
 id descriptionEventLayout
 id descriptionEventLayoutText
 id descriptionEventTV
@@ -1839,6 +1848,8 @@ id fixed
 id forever
 id friendsList
 id friendslayout
+id generoLayout
+id generoLayoutSpin
 id generoSpin
 id generoTV
 id ghost_view
@@ -1853,7 +1864,9 @@ id hideable
 id home
 id homeAsUp
 id hourEvent
+id hourEventClock
 id hourEventLayout
+id hourEventLayoutClock
 id hourEventLayoutText
 id hourEventTV
 id hour_space
@@ -1866,6 +1879,7 @@ id idiom
 id idioma
 id ifRoom
 id image
+id imageEventLayout
 id imageView
 id imageView10
 id imageView2
@@ -1963,6 +1977,8 @@ id password_toggle
 id peekHeight
 id percent
 id pesoET
+id pesoLayout
+id pesoLayoutText
 id pesoTV
 id pin
 id privacity
@@ -2010,6 +2026,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchEventsLayout
 id searchView
 id search_badge
 id search_bar
@@ -2106,6 +2123,8 @@ id time_picker_dialog
 id time_text
 id title
 id titleDividerNoCustom
+id titleEventET
+id titleEventLayout
 id title_template
 id titlelogin
 id toolbar
@@ -2198,6 +2217,7 @@ layout abc_tooltip
 layout activity_addalert
 layout activity_alerts
 layout activity_crear_plan
+layout activity_create_event
 layout activity_idiom
 layout activity_info
 layout activity_mis_planes
@@ -2226,7 +2246,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_create_event
 layout fragment_entrenamineto
 layout fragment_eventos
 layout fragment_perfil
@@ -2316,7 +2335,9 @@ mipmap ic_acceptreq
 mipmap ic_addfriend
 mipmap ic_addimage
 mipmap ic_cancelreq
+mipmap ic_clock
 mipmap ic_create_event
+mipmap ic_date
 mipmap ic_friendslist
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -2339,6 +2360,7 @@ string Fecha_NacimientoHint
 string Fecha_NacimientoTV
 string GeneroTV
 string GuardarCambiosButton
+string HourEvent_Hint
 string ImageEventError
 string Max_partEventTV
 string Min_partEventTV
@@ -2348,6 +2370,7 @@ string SendFriendReq
 string SendFriendReqMes
 string SportEventTV
 string SuccesEventCreate
+string TitleEventTV
 string Unfriend
 string UnfriendMes
 string abc_action_bar_home_description
@@ -2480,6 +2503,7 @@ string incorrectMax_partEvent
 string incorrectMin_partEvent
 string incorrectPassword
 string incorrectRest_Part_Event
+string incorrectTitleEvent
 string incorrectUsername
 string information
 string insertReminderFailed

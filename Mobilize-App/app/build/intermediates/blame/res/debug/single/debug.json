@@ -148,6 +148,10 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_user.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_date.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_date.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_foreground.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_foreground.png"
     },
@@ -170,6 +174,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_friendslist.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_friendslist.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_clock.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_faccc.JPG.flat",
@@ -332,8 +340,16 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\fragment_plan.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_date.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_date.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_date.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_date.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_cancelreq.png.flat",
@@ -364,12 +380,24 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\toolbar_dropshadow.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_event.xml.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_create_event.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_clock.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_cancelreq.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_cancelreq.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_alert_dialog.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\alert_dialog.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_date.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_date.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_friendslist.png.flat",
@@ -428,6 +456,10 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_logo2_foreground.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_clock.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_addimage.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_addimage.png"
     },
@@ -458,6 +490,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_logo2_foreground.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_logo2_foreground.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_clock.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_bg_rounded_corners.xml.flat",
@@ -548,6 +584,10 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\alarm_items.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_clock.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_bg_rounded_corners_red.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\button_bg_rounded_corners_red.xml"
     },
@@ -570,10 +610,6 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_create_event.xml.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\fragment_create_event.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_activity.xml.flat",
@@ -658,6 +694,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_addfriend.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_addfriend.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_date.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_date.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_create_event.png.flat",

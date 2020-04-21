@@ -136,7 +136,7 @@
                 android:layout_margin="10dp"
                 android:text="@string/GeneroTV"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:id="@+id/generoLayoutSpin"
@@ -151,7 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -178,8 +178,8 @@
                 android:id="@+id/dateBirthdayTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="10dp"
 
                 android:text="@string/Fecha_NacimientoTV"
                 android:textColor="@color/colorPrimaryDark"
@@ -197,18 +197,18 @@
                     android:id="@+id/dateBirthday"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:hint="@string/Fecha_NacimientoHint"
                     android:importantForAutofill="no"
                     android:textAlignment="gravity"
-                    android:gravity="center"
                     android:textSize="16sp" />
 
                 <LinearLayout
                     android:id="@+id/dateEventLayoutCalendar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:layout_marginStart="10dp">
+                    android:layout_marginStart="10dp"
+                    android:gravity="end">
 
                     <ImageButton
                         android:id="@+id/dateBirthdayCalendar"
@@ -236,11 +236,11 @@
                 android:id="@+id/pesoTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:text="@string/PesoTV"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:id="@+id/pesoLayoutText"
@@ -257,14 +257,14 @@
                     android:layout_marginEnd="5dp"
                     android:ems="10"
                     android:gravity="end"
-                    android:inputType="numberDecimal"
-                    android:importantForAutofill="no" />
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_marginStart="10dp"
+                    android:gravity="end"
                     app:layout_constraintStart_toStartOf="@+id/dateEventTV"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -275,7 +275,7 @@
                         android:layout_margin="10dp"
                         android:text="@string/kg"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -296,11 +296,11 @@
                 android:id="@+id/alturaTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:text="@string/AlturaTV"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:id="@+id/alturaLayoutText"
@@ -316,14 +316,14 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:gravity="end"
-                    android:inputType="numberDecimal"
-                    android:importantForAutofill="no" />
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
                     android:layout_marginStart="10dp"
+                    android:gravity="end"
                     app:layout_constraintStart_toStartOf="@+id/dateEventTV"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -334,7 +334,7 @@
                         android:layout_margin="10dp"
                         android:text="@string/cm"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -352,7 +352,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alturaTV"/>
+            app:layout_constraintTop_toTopOf="@+id/generoLayout" />
 
         <Spinner
             android:id="@+id/privacitySpin"
@@ -363,7 +363,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toEndOf="@+id/privacityTV"
-            app:layout_constraintTop_toBottomOf="@+id/alturaET"/>
+            app:layout_constraintTop_toTopOf="@+id/generoLayout" />
 
         <Button
             android:id="@+id/guardar"

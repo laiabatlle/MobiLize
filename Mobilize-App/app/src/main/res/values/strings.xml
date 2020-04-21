@@ -40,7 +40,7 @@
     <string name="nivellrutina">Escoje el nivel de tu rutina</string>
     <string name="continua">Continua</string>
     <string name="GeneroTV">Género</string>
-    <string name="Fecha_NacimientoTV">Fecha nacimiento</string>
+    <string name="Fecha_NacimientoTV">Fecha de nacimiento</string>
     <string name="Fecha_NacimientoHint">dd/mm/aaaa</string>
     <string name="PesoTV">Peso</string>
     <string name="AlturaTV">Altura</string>
