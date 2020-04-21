@@ -89,6 +89,8 @@
     <string name="friendList">Friends list </string>
     <string name="DescripcionEventTV">Description</string>
     <string name="DateEventTV">Event date:</string>
+    <string name="SportEventTV">Sport:</string>
+    <string name="hourEventTV">Event schedule:</string>
     <string name="CrearEventoButton">Create event</string>
     <string name="Max_partEventTV">Maximum number of participants:</string>
     <string name="Min_partEventTV">" Minimum number of participants:"</string>
@@ -107,6 +109,6 @@
     <string name="incorrectMax_partEvent">Please indicate the maximum number of participants of the event you wish to create.</string>
     <string name="incorrectMin_partEvent">Please indicate the minimum number of participants of the event you wish to create.</string>
     <string name="incorrectRest_Part_Event">The minimum number of participants cannot exceed the maximum established.</string>
-    <string name="SuccesEventCreate">L\'esdeveniment s\'ha creat correctament.</string>
+    <string name="SuccesEventCreate">The event was created successfully.</string>
     <string name="emptyDateEvent">Please enter the date of the event you want to create.</string>
 </resources>

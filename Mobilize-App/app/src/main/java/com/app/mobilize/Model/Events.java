@@ -8,6 +8,8 @@ public class Events {
     private String min_part;
     private String max_part;
     private String dateEvent;
+    private String hourEvent;
+    private String sportEvent;
     private List<String> inscripcionsList;
 
     public Events(){};
@@ -50,6 +52,22 @@ public class Events {
 
     public void setDateEvent(String dateEvent) {
         this.dateEvent = dateEvent;
+    }
+
+    public String getHourEvent() {
+        return hourEvent;
+    }
+
+    public void setHourEvent(String hourEvent) {
+        this.hourEvent = hourEvent;
+    }
+
+    public String getSportEvent() {
+        return sportEvent;
+    }
+
+    public void setSportEvent(String sportEvent) {
+        this.sportEvent = sportEvent;
     }
 
     public List<String> getInscripcionsList() {

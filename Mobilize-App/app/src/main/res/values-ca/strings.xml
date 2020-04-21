@@ -89,6 +89,8 @@
     <string name="friendList"> Llista d\'amics </string>
     <string name="DescripcionEventTV">Descripció</string>
     <string name="DateEventTV">Data de l\'esdeveniment:</string>
+    <string name="hourEventTV">Hora de l\'esdeveniment:</string>
+    <string name="SportEventTV">Esport:</string>
     <string name="Max_partEventTV">Nombre màxim de participants:</string>
     <string name="Min_partEventTV">Nombre mínim de participants:</string>
     <string name="CrearEventoButton">Crear esdeveniment</string>

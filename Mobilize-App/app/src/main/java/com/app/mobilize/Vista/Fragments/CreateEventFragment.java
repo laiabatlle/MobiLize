@@ -15,10 +15,13 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -36,12 +39,15 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class CreateEventFragment extends Fragment implements CreateEventInterface.View, View.OnClickListener {
+public class CreateEventFragment extends Fragment implements CreateEventInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private static final int GALLERY_INTENT = 1;
 
     private Usuari user;
-    private EditText description, dateEvent, max_part, min_part;
+    private EditText description, dateEvent, hourEvent, max_part, min_part;
+    private Spinner sportEvent;
+    private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball"};
+    private String sport;
     private ImageView eventImage;
     private Uri imageUri;
     private Button createEvent;
@@ -68,19 +74,48 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
         eventImage.setOnClickListener(this);
 
         description = view.findViewById(R.id.descriptionEvent);
-
-        //EditText de la dataNaixement de l'usuari:
         dateEvent = view.findViewById(R.id.dateEvent);
         dateEvent.setOnClickListener(this);
 
-        //EditText del pes de l'usuari:
+        hourEvent = view.findViewById(R.id.hourEvent);
+        hourEvent.setOnClickListener(this);
+
+        sportEvent = (Spinner)view.findViewById(R.id.sportSpin);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, sports);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sportEvent.setAdapter(adapter);
+        sportEvent.setSelection(getPosition(sport));
+        sportEvent.setOnItemSelectedListener(this);
+
         max_part = view.findViewById(R.id.max_partEvent);
 
-        //EditText del altura de l'usuari:
         min_part = view.findViewById(R.id.min_partEvent);
 
         createEvent = view.findViewById(R.id.crearEvento);
         createEvent.setOnClickListener(this);
+    }
+
+    private int getPosition(String gendre) {
+        int posicion = 0;
+        for (int i = 0; i < sportEvent.getCount(); i++) {
+            if (sportEvent.getItemAtPosition(i).toString().equalsIgnoreCase(gendre)) {
+                posicion = i;
+            }
+        }
+        return posicion;
+    }
+
+    //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(parent.getId() == R.id.sportSpin) {
+            sport = parent.getItemAtPosition(position).toString();
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
     private void showDatePickerDialog() {
@@ -226,7 +261,7 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
             max_part.setError(getResources().getString(R.string.incorrectRest_Part_Event));
         }
         else {
-            presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), max_part.getText().toString(), min_part.getText().toString());
+            presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
         }
     }
 

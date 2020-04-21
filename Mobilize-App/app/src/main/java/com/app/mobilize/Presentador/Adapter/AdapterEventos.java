@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,7 +43,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
     @Override
     public void onBindViewHolder(@NonNull final viewholdereventos holder, int position) {
         final Events e = eventsList.get(position);
-        Log.d("evento", e.getImage());
+        holder.title.setText(e.getDescription());
         Glide.with(holder.itemView).load(Uri.parse(e.getImage())).into(holder.event);
     }
 
@@ -54,11 +55,13 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
     static class viewholdereventos extends RecyclerView.ViewHolder {
 
         ImageView event;
+        TextView title;
 
         viewholdereventos(@NonNull View itemView) {
             super(itemView);
 
-            this.event = itemView.findViewById(R.id.eventImage);
+            this.event = (ImageView) itemView.findViewById(R.id.eventImage);
+            this.title = (TextView) itemView.findViewById(R.id.eventTitle);
         }
     }
 }

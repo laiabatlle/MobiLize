@@ -19,13 +19,13 @@ public interface CreateEventInterface {
     }
 
     interface Presenter{
-        void toCreateEvent(Uri imageUri, String s, String toString, String string, String s1);
+        void toCreateEvent(Uri imageUri, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part);
 
         void toImageChange(Uri image);
     }
 
     interface Model{
-        void doCreateEvent(Uri imageUri, String desciption, String dateEvent, String max_part, String min_part);
+        void doCreateEvent(Uri imageUri, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part);
         void doImageChange(Uri uri);
     }
 

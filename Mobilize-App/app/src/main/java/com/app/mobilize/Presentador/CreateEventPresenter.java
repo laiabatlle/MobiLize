@@ -19,8 +19,8 @@ public class CreateEventPresenter implements CreateEventInterface.Presenter, Cre
     }
 
     @Override
-    public void toCreateEvent(Uri imageUri, String desciption, String dateEvent, String max_part, String min_part) {
-        model.doCreateEvent(imageUri, desciption, dateEvent, max_part, min_part);
+    public void toCreateEvent(Uri imageUri, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
+        model.doCreateEvent(imageUri, desciption, dateEvent, hourEvent, sportEvent, max_part, min_part);
     }
 
     @Override
