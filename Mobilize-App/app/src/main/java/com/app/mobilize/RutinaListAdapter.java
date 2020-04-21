@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,8 +46,8 @@ public class RutinaListAdapter extends ArrayAdapter<Rutina> {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource,parent,false);
 
-        EditText nomed = (EditText) convertView.findViewById(R.id.editText);
-        EditText infoed = (EditText) convertView.findViewById(R.id.editText2);
+        final TextView infoed = (TextView)convertView.findViewById(R.id.textView8);
+        final TextView nomed = (TextView)convertView.findViewById(R.id.textView10);
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override

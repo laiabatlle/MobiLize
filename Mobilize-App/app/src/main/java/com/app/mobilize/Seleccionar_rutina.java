@@ -33,8 +33,7 @@ public class Seleccionar_rutina extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_rutina);
 
-        //final  TextView tv8 = (TextView)findViewById(R.id.textView8);
-        //final TextView tv10 = (TextView)findViewById(R.id.textView10);
+
 
         int dificultat = getIntent().getIntExtra("dificultat", 0);
         String modalitat = getIntent().getStringExtra("modalitat");
