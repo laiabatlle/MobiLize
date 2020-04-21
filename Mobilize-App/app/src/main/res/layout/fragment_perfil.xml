@@ -137,7 +137,7 @@
             android:id="@+id/generoSpin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12.5dp"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
@@ -165,7 +165,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:focusable="false"
+            android:focusable="true"
             android:hint="@string/Fecha_NacimientoHint"
             android:inputType="date"
             android:maxLines="1"
@@ -249,6 +249,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pesoET" />
 
+        <TextView
+            android:id="@+id/privacityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/privacityTV"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alturaTV"/>
+
+        <Spinner
+            android:id="@+id/privacitySpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.5dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/privacityTV"
+            app:layout_constraintTop_toBottomOf="@+id/alturaET"/>
+
         <Button
             android:id="@+id/guardar"
             android:layout_width="wrap_content"
@@ -260,7 +283,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alturaET" />
+            app:layout_constraintTop_toBottomOf="@+id/privacityTV" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

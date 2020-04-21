@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
     <application
         android:allowBackup="true"
@@ -60,6 +61,12 @@
             android:exported="false" />
         <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler"/>
         <receiver android:name=".Vista.Activities.AddAlertActivity"/>
+        <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider"/>
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider"/>
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderContract"/>
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper"/>
+        <receiver android:name=".Vista.Activities.AlarmCursorAdapter"/>
+        <receiver android:name=".Vista.Activities.AlertsActivity"/>
     </application>
 
 </manifest>

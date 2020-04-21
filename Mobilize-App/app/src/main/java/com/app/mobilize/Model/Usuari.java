@@ -11,6 +11,7 @@ public class Usuari {
     private String weight;
     private String dateNaixement;
     private String URLavatar;
+    private String privacity;
     private List<String> friendsList;
 
     public Usuari(){};
@@ -23,6 +24,7 @@ public class Usuari {
         height = "0";
         weight = "0";
         dateNaixement = "mm/dd/aaaa";
+        privacity = "Pública";
         URLavatar = "https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/profileImages%2Fic_perfil.png?alt=media&token=740a1705-983a-4080-8642-0b50e3695322";
         friendsList = null;
 }
@@ -81,6 +83,14 @@ public class Usuari {
 
     public void setDateNaixement(String dateNaixement) {
         this.dateNaixement = dateNaixement;
+    }
+
+    public String getPrivacity() {
+        return privacity;
+    }
+
+    public void setPrivacity(String privacity) {
+        this.privacity = privacity;
     }
 
     public String getImage() {

@@ -1966,6 +1966,8 @@ id pesoET
 id pesoTV
 id pin
 id privacity
+id privacitySpin
+id privacityTV
 id progress_circular
 id progress_horizontal
 id radio
@@ -2385,6 +2387,7 @@ string auth
 string bottom_sheet_behavior
 string cancel
 string catalan
+string changesSaved
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2419,6 +2422,7 @@ string contact
 string continua
 string cycling
 string date
+string dateNotSet
 string day
 string default_web_client_id
 string delete
@@ -2574,13 +2578,17 @@ string planes
 string planning
 string privacity
 string privacityMessage
+string privacityTV
+string privatetext
 string profile
 string progress
 string project_id
+string publictext
 string register
 string reminder
 string reminderError
 string repeat
+string repeatNotSet
 string repeatOff
 string repeat_no
 string repeat_type

@@ -149,4 +149,10 @@
     <string name="reminderError">El títol de l\'alerta no pot estar buit!</string>
     <string name="deleteReminderYes">Eliminar Alerta</string>
     <string name="saved">Alarma guardada</string>
+    <string name="dateNotSet">Data no definida</string>
+    <string name="repeatNotSet">Repetir no definit</string>
+    <string name="privacityTV">Privadesa del compte</string>
+    <string name="publictext">Pública</string>
+    <string name="privatetext">Privada</string>
+    <string name="changesSaved">Les dades s\'han actualitzat correctament</string>
 </resources>

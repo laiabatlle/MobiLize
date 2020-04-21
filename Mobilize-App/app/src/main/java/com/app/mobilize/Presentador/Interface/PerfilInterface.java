@@ -19,7 +19,7 @@ public interface PerfilInterface {
     }
 
     interface Presenter{
-        void toGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image);
+        void toGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image, String privacity);
         void toImageChange(Uri uri);
 
         void haveAnyFriendReq(String username);
@@ -27,7 +27,7 @@ public interface PerfilInterface {
 
     interface Model{
         void haveAnyFriendReq(String username);
-        void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image);
+        void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image, String privacity);
         void doImageChange(Uri uri);
 
     }

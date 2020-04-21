@@ -16,11 +16,11 @@ public class PerfilPresenter implements PerfilInterface.Presenter, PerfilInterfa
     }
 
     @Override
-    public void toGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image) {
+    public void toGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image, String privacity) {
         if(view!=null){
             view.disableInputs();
         }
-        model.doGuardarCambios(username, dateNaixement, gendre, weight, height, image);
+        model.doGuardarCambios(username, dateNaixement, gendre, weight, height, image, privacity);
     }
 
     @Override

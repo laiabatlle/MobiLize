@@ -49,9 +49,11 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private static final int GALLERY_INTENT = 1;
     private Usuari user;
     private EditText peso, altura, dateNaixement;
-    private Spinner genero;
+    private Spinner genero, privacity;
     private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
+    private final String [] privates = {"Pública","Privada"};
     private String gendre;
+    private String privacy;
     private ImageView avatar;
     private String imageUri, friendListIcon;
     private SearchView buscadorAmigos;
@@ -123,6 +125,14 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         genero.setSelection(getPosition(user.getGender()));
         genero.setOnItemSelectedListener(this);
 
+        //Spinner de la privacitat de l'usuari:
+        privacity = (Spinner)view.findViewById(R.id.privacitySpin);
+        ArrayAdapter<String> adapterp = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, privates);
+        adapterp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        privacity.setAdapter(adapterp);
+        privacity.setSelection(getPositionPrivacy(user.getPrivacity()));
+        privacity.setOnItemSelectedListener(this);
+
         //EditText de la dataNaixement de l'usuari:
         dateNaixement = (EditText)view.findViewById(R.id.dataCumpleañosTV);
         dateNaixement.setText(user.getDateNaixement());
@@ -152,11 +162,24 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         return posicion;
     }
 
+    private int getPositionPrivacy(String privacy) {
+        int posicion = 0;
+        for (int i = 0; i < privacity.getCount(); i++) {
+            if (privacity.getItemAtPosition(i).toString().equalsIgnoreCase(privacy)) {
+                posicion = i;
+            }
+        }
+        return posicion;
+    }
+
     //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if(parent.getId() == R.id.generoSpin) {
             gendre = parent.getItemAtPosition(position).toString();
+        }
+        else if(parent.getId() == R.id.privacitySpin) {
+            privacy = parent.getItemAtPosition(position).toString();
         }
     }
 
@@ -282,6 +305,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         dateNaixement.setEnabled(enable);
         avatar.setEnabled(enable);
         genero.setEnabled(enable);
+        privacity.setEnabled(enable);
         opcions.setEnabled(enable);
         buscadorAmigos.setEnabled(enable);
     }
@@ -319,14 +343,15 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         user.setWeight(peso.getText().toString());
         user.setHeight(altura.getText().toString());
         user.setGender(gendre);
+        user.setPrivacity(privacy);
         user.setDateNaixement(dateNaixement.getText().toString());
         user.setImage(imageUri);
-        presenter.toGuardarCambios(user.getUsername(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage());
+        presenter.toGuardarCambios(user.getUsername(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage(), user.getPrivacity());
     }
 
     @Override
     public void onSuccess(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), getResources().getString(R.string.changesSaved), Toast.LENGTH_SHORT).show();
     }
 
     @Override

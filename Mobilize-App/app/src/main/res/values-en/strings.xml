@@ -149,4 +149,11 @@
     <string name="reminderError">Reminder title cannot be blank!</string>
     <string name="deleteReminderYes">Delete Reminder</string>
     <string name="saved">Reminder saved</string>
+    <string name="dateNotSet">Date not set</string>
+    <string name="repeatNotSet">Repeat not set</string>
+    <string name="privacityTV">Account privacity</string>
+    <string name="publictext">Public</string>
+    <string name="privatetext">Private</string>
+    <string name="changesSaved">Your data has been successfully updated</string>
+
 </resources>

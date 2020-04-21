@@ -28,284 +28,305 @@
 16    <uses-permission android:name="android.permission.WAKE_LOCK" />
 16-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:10:5-67
 16-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:10:22-65
-17    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-17-->[com.wdullaer:materialdatetimepicker:1.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\184c09e4cf94b5b7c190a06d7165bebf\jetified-materialdatetimepicker-1.2.1\AndroidManifest.xml:26:5-66
-17-->[com.wdullaer:materialdatetimepicker:1.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\184c09e4cf94b5b7c190a06d7165bebf\jetified-materialdatetimepicker-1.2.1\AndroidManifest.xml:26:22-63
-18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-18-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
-18-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
-19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-19-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:5-110
-19-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:22-107
-20
-21    <application
-21-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:12:5-63:19
-22        android:allowBackup="true"
-22-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:13:9-35
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\64cddd45e89bc3894cf7e46e3178d8e4\core-1.1.0\AndroidManifest.xml:24:18-86
-24        android:debuggable="true"
-25        android:icon="@mipmap/ic_logo2"
-25-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:14:9-40
-26        android:label="@string/app_name"
-26-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:15:9-41
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:16:9-54
-28        android:supportsRtl="true"
-28-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:17:9-35
-29        android:testOnly="true"
-30        android:theme="@style/AppTheme" >
-30-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:18:9-40
-31        <activity android:name="com.app.mobilize.Vista.Activities.SplashActivity" >
-31-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:20:9-27:20
-31-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:20:19-66
-32            <intent-filter>
-32-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:22:13-26:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:23:17-69
-33-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:23:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:25:17-77
-35-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:25:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="com.app.mobilize.Vista.Activities.LoginActivity" />
-38-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:9-68
-38-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:29:19-65
-39        <activity android:name="com.app.mobilize.Vista.Activities.RegisterActivity" />
-39-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-71
-39-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-68
-40        <activity android:name="com.app.mobilize.Vista.Activities.MainActivity" />
-40-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:9-67
-40-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:19-64
-41        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatExercici" />
-41-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:32:9-72
-41-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:32:19-69
-42        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatEntrenament" />
-42-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:33:9-75
-42-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:33:19-72
-43        <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
-43-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:34:9-72
-43-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:34:19-69
-44        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
-44-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:35:9-78
-44-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:35:19-75
-45        <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
-45-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:36:9-64
-45-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:36:19-61
-46        <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
-46-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:37:9-69
-46-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:37:19-67
-47        <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
-47-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:38:9-73
-47-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:38:19-70
-48        <activity
-48-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:39:9-41:59
-49            android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
-49-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:40:13-57
-50            android:theme="@style/AppTheme.CustomTheme" />
-50-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:41:13-56
-51        <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
-51-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:42:9-68
-51-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:42:19-65
-52        <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
-52-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:43:9-67
-52-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:43:19-64
-53        <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" >
-53-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:44:9-45:20
-53-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:44:19-66
-54        </activity>
-55        <activity
-55-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:46:9-54:20
-56            android:name="com.app.mobilize.Vista.Activities.AddAlertActivity"
-56-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:46:19-68
-57            android:label="@string/addReminder"
-57-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:47:13-48
-58            android:parentActivityName="com.app.mobilize.Vista.Activities.AlertsActivity"
-58-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:48:13-74
-59            android:theme="@style/AppTheme" >
-59-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:49:13-44
-60            <meta-data
-60-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:50:13-53:19
-61                android:name="android.support.PARENT_ACTIVITY"
-61-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:51:17-63
-62                android:value=".Vista.Activities.AlertsActivity" />
-62-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:52:17-65
-63        </activity>
-64
-65        <provider
-65-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:55:9-57:39
-66            android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
-66-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:55:19-78
-67            android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
-67-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:56:13-95
-68            android:exported="false" />
-68-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:57:13-37
-69
-70        <service
-70-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:58:9-60:40
-71            android:name="com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService"
-71-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:59:13-75
-72            android:exported="false" />
-72-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:60:13-37
-73
-74        <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler" />
-74-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:61:9-77
-74-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:61:19-75
-75        <receiver android:name="com.app.mobilize.Vista.Activities.AddAlertActivity" />
-75-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:62:9-70
-75-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:62:19-68
-76
-77        <activity
-77-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
-78            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-78-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
-79            android:excludeFromRecents="true"
-79-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
-80            android:exported="true"
-80-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
-81            android:launchMode="singleTask"
-81-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
-82            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-82-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
-83            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-83-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
-84
-85        <service
-85-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
-86            android:name="com.google.firebase.components.ComponentDiscoveryService"
-86-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
-87            android:directBootAware="true"
-87-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-88            android:exported="false" >
-88-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
-89            <meta-data
-89-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
-90                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-90-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
-93                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-93-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:33:17-109
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:34:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:20:13-22:85
-96                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-96-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:21:17-111
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:22:17-82
-98            <meta-data
-98-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
-99                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-99-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
-100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
-101            <meta-data
-101-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:30:13-32:85
-102                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-102-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:31:17-139
-103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:32:17-82
-104            <meta-data
-104-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
-105                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-105-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
-106                android:value="com.google.firebase.components.ComponentRegistrar" />
-106-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
-107        </service>
-108
-109        <receiver
-109-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
-110            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-110-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
-111            android:exported="true"
-111-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
-112            android:permission="com.google.android.c2dm.permission.SEND" >
-112-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
-113            <intent-filter>
-113-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
-114                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-114-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
-114-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
-115            </intent-filter>
-116        </receiver>
-117
-118        <activity
-118-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-119            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-119-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-120            android:exported="false"
-120-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-121            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-121-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-122
-123        <provider
-123-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-124            android:name="com.google.firebase.provider.FirebaseInitProvider"
-124-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-125            android:authorities="com.app.mobilize.firebaseinitprovider"
-125-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-126            android:exported="false"
-126-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-127            android:initOrder="100" />
-127-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-128
-129        <receiver
-129-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:29:9-33:20
-130            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-130-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:30:13-85
-131            android:enabled="true"
-131-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:31:13-35
-132            android:exported="false" >
-132-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:32:13-37
-133        </receiver>
-134        <receiver
-134-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:34:9-42:20
-135            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
-135-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:35:13-100
-136            android:enabled="true"
-136-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:36:13-35
-137            android:exported="true"
-137-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:37:13-36
-138            android:permission="android.permission.INSTALL_PACKAGES" >
-138-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:38:13-69
-139            <intent-filter>
-139-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:39:13-41:29
-140                <action android:name="com.android.vending.INSTALL_REFERRER" />
-140-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:17-79
-140-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:25-76
-141            </intent-filter>
-142        </receiver>
-143
-144        <service
-144-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:44:9-47:40
-145            android:name="com.google.android.gms.measurement.AppMeasurementService"
-145-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:45:13-84
-146            android:enabled="true"
-146-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:46:13-35
-147            android:exported="false" />
-147-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:47:13-37
-148        <service
-148-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:48:9-52:72
-149            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-149-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:49:13-87
-150            android:enabled="true"
-150-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:50:13-35
-151            android:exported="false"
-151-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:51:13-37
-152            android:permission="android.permission.BIND_JOB_SERVICE" />
-152-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:52:13-69
-153
-154        <meta-data
-154-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-155            android:name="com.google.android.gms.version"
-155-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-156            android:value="@integer/google_play_services_version" />
-156-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-157    </application>
-158
-159</manifest>
+17    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+17-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:11:5-77
+17-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:11:22-75
+18    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+18-->[com.wdullaer:materialdatetimepicker:1.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\184c09e4cf94b5b7c190a06d7165bebf\jetified-materialdatetimepicker-1.2.1\AndroidManifest.xml:26:5-66
+18-->[com.wdullaer:materialdatetimepicker:1.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\184c09e4cf94b5b7c190a06d7165bebf\jetified-materialdatetimepicker-1.2.1\AndroidManifest.xml:26:22-63
+19    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
+19-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
+20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+20-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:5-110
+20-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:26:22-107
+21
+22    <application
+22-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:13:5-70:19
+23        android:allowBackup="true"
+23-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:14:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\64cddd45e89bc3894cf7e46e3178d8e4\core-1.1.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_logo2"
+26-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:15:9-40
+27        android:label="@string/app_name"
+27-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:16:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:17:9-54
+29        android:supportsRtl="true"
+29-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:18:9-35
+30        android:testOnly="true"
+31        android:theme="@style/AppTheme" >
+31-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:19:9-40
+32        <activity android:name="com.app.mobilize.Vista.Activities.SplashActivity" >
+32-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:21:9-28:20
+32-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:21:19-66
+33            <intent-filter>
+33-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:23:13-27:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:24:17-69
+34-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:24:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:26:17-77
+36-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:26:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity android:name="com.app.mobilize.Vista.Activities.LoginActivity" />
+39-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:9-68
+39-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:30:19-65
+40        <activity android:name="com.app.mobilize.Vista.Activities.RegisterActivity" />
+40-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:9-71
+40-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:31:19-68
+41        <activity android:name="com.app.mobilize.Vista.Activities.MainActivity" />
+41-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:32:9-67
+41-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:32:19-64
+42        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatExercici" />
+42-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:33:9-72
+42-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:33:19-69
+43        <activity android:name="com.app.mobilize.Vista.Activities.ModalitatEntrenament" />
+43-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:34:9-75
+43-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:34:19-72
+44        <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
+44-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:35:9-72
+44-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:35:19-69
+45        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
+45-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:36:9-78
+45-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:36:19-75
+46        <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
+46-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:37:9-64
+46-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:37:19-61
+47        <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
+47-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:38:9-69
+47-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:38:19-67
+48        <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
+48-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:39:9-73
+48-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:39:19-70
+49        <activity
+49-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:40:9-42:59
+50            android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
+50-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:41:13-57
+51            android:theme="@style/AppTheme.CustomTheme" />
+51-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:42:13-56
+52        <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
+52-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:43:9-68
+52-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:43:19-65
+53        <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
+53-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:44:9-67
+53-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:44:19-64
+54        <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" >
+54-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:45:9-46:20
+54-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:45:19-66
+55        </activity>
+56        <activity
+56-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:47:9-55:20
+57            android:name="com.app.mobilize.Vista.Activities.AddAlertActivity"
+57-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:47:19-68
+58            android:label="@string/addReminder"
+58-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:48:13-48
+59            android:parentActivityName="com.app.mobilize.Vista.Activities.AlertsActivity"
+59-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:49:13-74
+60            android:theme="@style/AppTheme" >
+60-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:50:13-44
+61            <meta-data
+61-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:51:13-54:19
+62                android:name="android.support.PARENT_ACTIVITY"
+62-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:52:17-63
+63                android:value=".Vista.Activities.AlertsActivity" />
+63-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:53:17-65
+64        </activity>
+65
+66        <provider
+66-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:56:9-58:39
+67            android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
+67-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:56:19-78
+68            android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
+68-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:57:13-95
+69            android:exported="false" />
+69-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:58:13-37
+70
+71        <service
+71-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:59:9-61:40
+72            android:name="com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService"
+72-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:60:13-75
+73            android:exported="false" />
+73-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:61:13-37
+74
+75        <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler" />
+75-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:62:9-77
+75-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:62:19-75
+76        <receiver android:name="com.app.mobilize.Vista.Activities.AddAlertActivity" />
+76-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:63:9-70
+76-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:63:19-68
+77        <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider" />
+77-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:64:9-83
+77-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:64:19-81
+78        <receiver android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider" />
+78-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:65:9-80
+78-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:65:19-78
+79        <receiver android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderContract" />
+79-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:66:9-80
+79-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:66:19-78
+80        <receiver android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper" />
+80-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:67:9-80
+80-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:67:19-78
+81        <receiver android:name="com.app.mobilize.Vista.Activities.AlarmCursorAdapter" />
+81-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:68:9-72
+81-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:68:19-70
+82        <receiver android:name="com.app.mobilize.Vista.Activities.AlertsActivity" />
+82-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:69:9-68
+82-->D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:69:19-66
+83
+84        <activity
+84-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
+85            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+85-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
+86            android:excludeFromRecents="true"
+86-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
+87            android:exported="true"
+87-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
+88            android:launchMode="singleTask"
+88-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
+89            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+89-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
+91
+92        <service
+92-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
+93            android:name="com.google.firebase.components.ComponentDiscoveryService"
+93-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
+94            android:directBootAware="true"
+94-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+95            android:exported="false" >
+95-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
+96            <meta-data
+96-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
+97                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+97-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\38d2e665e4d6792a5794fc4982b6e6a6\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
+100                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+100-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:33:17-109
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-database:19.2.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\29aa42da2f826000f5d1c394f05ac74a\jetified-firebase-database-19.2.1\AndroidManifest.xml:34:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:20:13-22:85
+103                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+103-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:21:17-111
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-firestore:21.4.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\d1386ab44c241d0cde4b9b761f5944ab\jetified-firebase-firestore-21.4.2\AndroidManifest.xml:22:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+106                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+106-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\02e6c7c291f33752dcd930b1d7f990f1\jetified-firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+108            <meta-data
+108-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:30:13-32:85
+109                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+109-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:31:17-139
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.android.gms:play-services-measurement-api:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1490a22a6f7b7c51d6758ffd4476a5f5\jetified-play-services-measurement-api-17.3.0\AndroidManifest.xml:32:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+112                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+112-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+114        </service>
+115
+116        <receiver
+116-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+117            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+117-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+118            android:exported="true"
+118-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+119            android:permission="com.google.android.c2dm.permission.SEND" >
+119-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+120            <intent-filter>
+120-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+121                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+121-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+121-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e108ff629d9a5e65b53844be55bcaf62\jetified-firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+122            </intent-filter>
+123        </receiver>
+124
+125        <activity
+125-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+126            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+126-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+127            android:exported="false"
+127-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+128            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+128-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\c5ea4bf2c42c4bff2c7194317004e737\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+129
+130        <provider
+130-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+131            android:name="com.google.firebase.provider.FirebaseInitProvider"
+131-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+132            android:authorities="com.app.mobilize.firebaseinitprovider"
+132-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+133            android:exported="false"
+133-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+134            android:initOrder="100" />
+134-->[com.google.firebase:firebase-common:19.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\3f1cce472841f11fe16cf955f9472ba3\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+135
+136        <receiver
+136-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:29:9-33:20
+137            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+137-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:30:13-85
+138            android:enabled="true"
+138-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:31:13-35
+139            android:exported="false" >
+139-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:32:13-37
+140        </receiver>
+141        <receiver
+141-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:34:9-42:20
+142            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+142-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:35:13-100
+143            android:enabled="true"
+143-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:36:13-35
+144            android:exported="true"
+144-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:37:13-36
+145            android:permission="android.permission.INSTALL_PACKAGES" >
+145-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:38:13-69
+146            <intent-filter>
+146-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:39:13-41:29
+147                <action android:name="com.android.vending.INSTALL_REFERRER" />
+147-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:17-79
+147-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:40:25-76
+148            </intent-filter>
+149        </receiver>
+150
+151        <service
+151-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:44:9-47:40
+152            android:name="com.google.android.gms.measurement.AppMeasurementService"
+152-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:45:13-84
+153            android:enabled="true"
+153-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:46:13-35
+154            android:exported="false" />
+154-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:47:13-37
+155        <service
+155-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:48:9-52:72
+156            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+156-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:49:13-87
+157            android:enabled="true"
+157-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:50:13-35
+158            android:exported="false"
+158-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:51:13-37
+159            android:permission="android.permission.BIND_JOB_SERVICE" />
+159-->[com.google.android.gms:play-services-measurement:17.3.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\9276f0e1b24fe0d805091f327dcf2a5f\jetified-play-services-measurement-17.3.0\AndroidManifest.xml:52:13-69
+160
+161        <meta-data
+161-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+162            android:name="com.google.android.gms.version"
+162-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+163            android:value="@integer/google_play_services_version" />
+163-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\2465f099dd7150b541b6b858bc6f977b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+164    </application>
+165
+166</manifest>

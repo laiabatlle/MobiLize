@@ -149,5 +149,11 @@
     <string name="reminderError">El título de la alerta no puede estar vacío!</string>
     <string name="deleteReminderYes">Eliminar Alerta</string>
     <string name="saved">Alarma guardada</string>
+    <string name="dateNotSet">Fecha no establecida</string>
+    <string name="repeatNotSet">Repetir no establecido</string>
+    <string name="privacityTV">Privacidad de la cuenta</string>
+    <string name="publictext">Pública</string>
+    <string name="privatetext">Privada</string>
+    <string name="changesSaved">Sus datos se han actualizado correctamente</string>
 
 </resources>

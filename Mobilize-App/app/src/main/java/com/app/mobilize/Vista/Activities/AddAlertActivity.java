@@ -450,6 +450,8 @@ public class AddAlertActivity extends AppCompatActivity implements
         if (mCurrentReminderUri != null) {
             int rowsDeleted = getContentResolver().delete(mCurrentReminderUri, null, null);
 
+            new AlarmScheduler().cancelAlarm(getApplicationContext(), mCurrentReminderUri);
+
             if (rowsDeleted == 0) {
                 Toast.makeText(this, getString(R.string.deleteReminderFailed),
                         Toast.LENGTH_SHORT).show();
@@ -591,7 +593,11 @@ public class AddAlertActivity extends AppCompatActivity implements
             mRepeatNoText.setText(repeatNo);
             mRepeatTypeText.setText(repeatType);
             mRepeatText.setText(getResources().getString(R.string.every) + " "  + repeatNo + " " + repeatType + "(s)");
-            if (repeat.equals("false")) {
+            if (repeat == null){
+                mRepeatSwitch.setChecked(false);
+                mRepeatText.setText(R.string.repeatOff);
+            }
+            else if (repeat.equals("false")) {
                 mRepeatSwitch.setChecked(false);
                 mRepeatText.setText(R.string.repeatOff);
 

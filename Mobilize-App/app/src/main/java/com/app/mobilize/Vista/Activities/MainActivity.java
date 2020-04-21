@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                                 String peso = Objects.requireNonNull(document.getData().get("weight")).toString();
                                 user.setHeight(altura);
                                 user.setWeight(peso);
+                                user.setPrivacity(Objects.requireNonNull(document.getData().get("privacity")).toString());
 
                                 user.setImage(Objects.requireNonNull(document.getData().get("image")).toString());
                                 user.setFriendsList((List<String>) document.get("friendsList"));

@@ -67,7 +67,6 @@ public class AlertsActivity extends AppCompatActivity implements LoaderManager.L
 
         getLoaderManager().initLoader(VEHICLE_LOADER, null, this);
 
-
     }
 
     @Override

@@ -1,7 +1,5 @@
 package com.app.mobilize.Model;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.app.mobilize.Presentador.Interface.RegisterInterface;
@@ -21,9 +19,6 @@ public class RegisterModel implements RegisterInterface.Model {
     private RegisterInterface.TaskListener listener;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
-
-    private static final String TAG = "RegisterModel";
-
 
     public RegisterModel(RegisterInterface.TaskListener taskListener) {
         this.listener = taskListener;
@@ -58,7 +53,6 @@ public class RegisterModel implements RegisterInterface.Model {
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Log.w(TAG, "Error adding document", e);
                                             listener.onError("Error en el registro. Inténtelo de nuevo mas tarde.");
                                         }
                                     });
@@ -77,8 +71,6 @@ public class RegisterModel implements RegisterInterface.Model {
                             }
                         });
                     }
-                } else {
-                    Log.d("MainActivity", "Error getting documents: ", task.getException());
                 }
             }
         });
