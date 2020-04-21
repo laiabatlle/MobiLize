@@ -21,6 +21,7 @@ public class SplashActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("myShared", Context.MODE_PRIVATE);
         email = sharedPreferences.getString("email", null );
+
         if ( email == null ) {
             new Handler().postDelayed(new Runnable() {
                 @Override

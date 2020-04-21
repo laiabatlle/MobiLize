@@ -39,7 +39,6 @@ public class optionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                    showAlertDialog();
-
             }
         });
 
@@ -76,6 +75,10 @@ public class optionsActivity extends AppCompatActivity {
 
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
                 db.collection("users").document(username).delete();
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("email", null);
+                editor.apply();
 
                 goToLogin();
             }

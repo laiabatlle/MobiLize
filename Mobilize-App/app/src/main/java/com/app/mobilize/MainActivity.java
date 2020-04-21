@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             sharedPreferences = this.getSharedPreferences("myShared", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("email", email);
-            editor.commit();
+            editor.apply();
         }
 
         db = FirebaseFirestore.getInstance();
