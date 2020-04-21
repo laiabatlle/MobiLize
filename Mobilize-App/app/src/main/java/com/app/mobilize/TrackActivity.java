@@ -50,6 +50,8 @@ public class TrackActivity extends AppCompatActivity {
 
     TextView tvLongitud, tvLatitud;
 
+    double initialLatitud, initialLongitud;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +64,9 @@ public class TrackActivity extends AppCompatActivity {
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         requestNewLocationData();
+        initialLatitud = 0;
+        initialLongitud = 0;
+
     }
 
     @SuppressLint("MissingPermission")
@@ -78,6 +83,10 @@ public class TrackActivity extends AppCompatActivity {
                                 } else {
                                     tvLongitud.setText(String.valueOf(location.getLongitude()));
                                     tvLatitud.setText(String.valueOf(location.getLatitude()));
+                                    if ( initialLatitud == 0 && initialLongitud == 0 ) {
+                                        initialLatitud = location.getLatitude();
+                                        initialLongitud = location.getLongitude();
+                                    }
                                 }
                             }
                         }
@@ -160,6 +169,7 @@ public class TrackActivity extends AppCompatActivity {
         }
 
     }
+
     private void initChrono () {
         is_Finish = false;
 
@@ -219,8 +229,13 @@ public class TrackActivity extends AppCompatActivity {
             public void onClick(View v) {
                 chrono.stop();
                 is_Finish = true;
+                double endLatitud, endLongitud;
+                float[] result = new float[1];
+                endLatitud = Double.valueOf(tvLatitud.getText().toString());
+                endLongitud = Double.valueOf(tvLongitud.getText().toString());
+                Location.distanceBetween(initialLatitud, initialLongitud, endLatitud, endLongitud, result );
+                Toast.makeText(getApplicationContext(), String.valueOf(result[0]), Toast.LENGTH_LONG).show();
             }
         });
     }
-
 }
