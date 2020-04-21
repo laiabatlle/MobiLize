@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".NivellEntrenament">
 
+    <Button
+        android:id="@+id/rutinaEntrenamiento3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:backgroundTint="#7713A319"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/rutinaEntrenamiento"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="135dp"
@@ -53,10 +72,11 @@
         android:id="@+id/textView9"
         android:layout_width="303dp"
         android:layout_height="70dp"
-        android:layout_marginTop="80dp"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
         android:text="@string/nivellrutina"
-        android:textSize="20dp"
+        android:textColor="#121212"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -100,14 +120,5 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:srcCompat="@drawable/grup" /><![CDATA[
-
-
-
-    60dip"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-]]>
+        app:srcCompat="@drawable/grup" />
 </androidx.constraintlayout.widget.ConstraintLayout>

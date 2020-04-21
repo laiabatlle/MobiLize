@@ -63,7 +63,7 @@ public class PopUpRutina extends AppCompatActivity {
 
 
 
-        Toast.makeText(this, "Borrado Exitoso", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -95,7 +95,7 @@ public class PopUpRutina extends AppCompatActivity {
 
 
 
-        Toast.makeText(this, "Modificado Exitoso", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.ModificaRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
     }
 

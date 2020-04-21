@@ -34,7 +34,7 @@
     <string name="libre">Libre</string>
     <string name="entrenamientos">Entrenamientos disponibles:</string>
     <string name="mis_entrenamientos">Mis entrenamientos</string>
-    <string name="nivellrutina">Seleccione el nivel de su rutina</string>
+    <string name="nivellrutina">Seleccione el nivel de su rutina:</string>
     <string name="continua">Continua</string>
     <string name="GeneroTV">Género</string>
     <string name="Fecha_NacimientoTV">Fecha nacimiento</string>
@@ -47,9 +47,23 @@
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina de entrenamiento</string>
-    <string name="escollirDificultat">Seleccioni una dificultat!</string>
+    <string name="escollirDificultat">Seleccione una dificultad!</string>
     <string name="tit"></string>
     <string name="desc"></string>
+    <string name="crear_una_rutina">Crear una rutina</string>
+    <string name="seleccione_su_rutina">Seleccione su rutina:</string>
+    <string name="crear_rutina_de_entrenamiento">Nueva rutina de entrenamiento</string>
+    <string name="crear">Crear</string>
+    <string name="descripcio_detallada_de_la_rutina">Descripción detallada</string>
+    <string name="informacio_de_la_rutina">Información</string>
+    <string name="nom_de_la_rutina">Nombre</string>
+    <string name="nueva_rutina">Introduzca los datos de su nueva rutina:</string>
+    <string name="empieza">Empieza</string>
+    <string name="elimina">Elimina</string>
+    <string name="modifica">Modifica</string>
+    <string name="ModificaRutinaCorrecte">Rutina modificada con éxito</string>
+    <string name="EsborraRutinaCorrecte">Rutina borrada con éxito</string>
+    <string name="CreaRutinaCorrecte">Rutina creada con éxito</string>
 
 
 </resources>
