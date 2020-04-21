@@ -3,24 +3,23 @@ package com.app.mobilize.Presentador;
 import android.net.Uri;
 
 import com.app.mobilize.Model.CreateEventModel;
-import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 
 public class CreateEventPresenter implements CreateEventInterface.Presenter, CreateEventInterface.TaskListener {
 
-    private Usuari user;
+    private String current_user;
     private CreateEventInterface.View view;
     private CreateEventInterface.Model model;
 
-    public CreateEventPresenter(CreateEventInterface.View view, Usuari user) {
+    public CreateEventPresenter(CreateEventInterface.View view, String current_user) {
         this.view = view;
         this.model = new CreateEventModel(this);
-        this.user = user;
+        this.current_user = current_user;
     }
 
     @Override
-    public void toCreateEvent(Uri imageUri, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
-        model.doCreateEvent(imageUri, desciption, dateEvent, hourEvent, sportEvent, max_part, min_part);
+    public void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
+        model.doCreateEvent(imageUri, title, desciption, dateEvent, hourEvent, sportEvent, max_part, min_part);
     }
 
     @Override

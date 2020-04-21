@@ -37,6 +37,7 @@
         <activity android:name=".Vista.Activities.TipusPlan" />
         <activity android:name=".Vista.Activities.OptionsActivity"/>
         <activity android:name=".Vista.Activities.Seleccionar_rutina" />
+        <activity android:name=".Vista.Activities.CreateEventActivity" />
         <activity
             android:name=".Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />

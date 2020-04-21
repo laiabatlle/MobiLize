@@ -43,7 +43,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
     @Override
     public void onBindViewHolder(@NonNull final viewholdereventos holder, int position) {
         final Events e = eventsList.get(position);
-        holder.title.setText(e.getDescription());
+        holder.title.setText(e.getTitle());
         Glide.with(holder.itemView).load(Uri.parse(e.getImage())).into(holder.event);
     }
 

@@ -1,9 +1,10 @@
-package com.app.mobilize.Vista.Fragments;
+package com.app.mobilize.Vista.Activities;
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,23 +13,23 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
-import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.CreateEventPresenter;
 import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 import com.app.mobilize.R;
@@ -39,59 +40,61 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class CreateEventFragment extends Fragment implements CreateEventInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class CreateEventActivity extends AppCompatActivity implements CreateEventInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private static final int GALLERY_INTENT = 1;
 
-    private Usuari user;
-    private EditText description, dateEvent, hourEvent, max_part, min_part;
+    private String current_user;
+    private EditText title, description, max_part, min_part;
+    private TextView dateEvent, hourEvent;
     private Spinner sportEvent;
-    private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball"};
+    private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball", "Otro"};
     private String sport;
     private ImageView eventImage;
     private Uri imageUri;
     private Button createEvent;
+    private ImageButton pick_hour, pick_date;
 
     private CreateEventInterface.Presenter presenter;
 
-    public CreateEventFragment(Usuari user) {
-        this.user = user;
-    }
-
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_create_event, container, false);
-        setViews(view);
-        return view;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_event);
+        this.current_user = this.getIntent().getStringExtra("username");
+        setViews();
     }
 
-    private void setViews(View view) {
-        presenter = new CreateEventPresenter(this, user);
+    private void setViews() {
+        presenter = new CreateEventPresenter(this, current_user);
 
-        eventImage = view.findViewById(R.id.EventoIV);
+        eventImage = findViewById(R.id.EventoIV);
         eventImage.setOnClickListener(this);
 
-        description = view.findViewById(R.id.descriptionEvent);
-        dateEvent = view.findViewById(R.id.dateEvent);
-        dateEvent.setOnClickListener(this);
+        title = findViewById(R.id.titleEventET);
+        description = findViewById(R.id.descriptionEventET);
 
-        hourEvent = view.findViewById(R.id.hourEvent);
-        hourEvent.setOnClickListener(this);
+        dateEvent = findViewById(R.id.dateEvent);
+        pick_date = findViewById(R.id.dateEventCalendar);
+        pick_date.setOnClickListener(this);
 
-        sportEvent = (Spinner)view.findViewById(R.id.sportSpin);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, sports);
+        hourEvent = findViewById(R.id.hourEvent);
+        pick_hour = findViewById(R.id.hourEventClock);
+        pick_hour.setOnClickListener(this);
+
+        sportEvent = (Spinner) findViewById(R.id.sportSpin);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sports);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sportEvent.setAdapter(adapter);
         sportEvent.setSelection(getPosition(sport));
         sportEvent.setOnItemSelectedListener(this);
 
-        max_part = view.findViewById(R.id.max_partEvent);
+        max_part = findViewById(R.id.max_partEvent);
 
-        min_part = view.findViewById(R.id.min_partEvent);
+        min_part = findViewById(R.id.min_partEvent);
 
-        createEvent = view.findViewById(R.id.crearEvento);
+        createEvent = findViewById(R.id.crearEvento);
         createEvent.setOnClickListener(this);
     }
 
@@ -123,7 +126,7 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int month = calendar.get(Calendar.MONTH);
         int years = calendar.get(Calendar.YEAR);
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 // +1 perque Gener = 0;
@@ -132,6 +135,32 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
             }
         }, years, month, day);
         datePickerDialog.show();
+    }
+
+    private void showHourPickerDialog() {
+        final Calendar c = Calendar.getInstance();
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+        int min = c.get(Calendar.MINUTE);
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                //Formateo el hora obtenido: antepone el 0 si son menores de 10
+                String horaFormateada =  (hourOfDay < 10)? String.valueOf("0" + hourOfDay) : String.valueOf(hourOfDay);
+                //Formateo el minuto obtenido: antepone el 0 si son menores de 10
+                String minutoFormateado = (minute < 10)? String.valueOf("0" + minute):String.valueOf(minute);
+                //Obtengo el valor a.m. o p.m., dependiendo de la selección del usuario
+                String AM_PM;
+                if(hourOfDay < 12) {
+                    AM_PM = "a.m.";
+                } else {
+                    AM_PM = "p.m.";
+                }
+                //Muestro la hora con el formato deseado
+                hourEvent.setText(horaFormateada + ":" + minutoFormateado + " " + AM_PM);
+            }
+        }, hour, min, false);
+        timePickerDialog.show();
     }
 
     private void openGallery() {
@@ -219,24 +248,15 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
 
     @Override
     public void handleCreateEvent() throws ParseException {
-        // Create the user with the email and password introduced
-        if(imageUri == null){
-            AlertDialog.Builder builder;
-            builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage(getResources().getString(R.string.ImageEventError)).setTitle("Error").setCancelable(true);
-
-            AlertDialog alert = builder.create();
-
-            alert.setTitle("Error");
-            alert.show();
+        if(!isValidTitle()){
+            title.setError(getResources().getString(R.string.incorrectTitleEvent));
         }
-
-        if(!isValidDescription()){
+        else if(!isValidDescription()){
             description.setError(getResources().getString(R.string.incorrectDescriptionEvent));
         }
-        if(!isValidDate()){
+        else if(!isValidDate()){
             AlertDialog.Builder builder;
-            builder = new AlertDialog.Builder(getActivity());
+            builder = new AlertDialog.Builder(this);
             if(dateEvent.getText().toString().equals(getResources().getString(R.string.Fecha_NacimientoHint))){
                 builder.setMessage(getResources().getString(R.string.emptyDateEvent)).setTitle("Error").setCancelable(true);
             }
@@ -249,7 +269,7 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
             alert.show();
             dateEvent.setError(getResources().getString(R.string.incorrectDateEvent));
         }
-        if(!isValidParticipantRestriccions1()){
+        else if(!isValidParticipantRestriccions1()){
             if (TextUtils.isEmpty(max_part.getText().toString())){
                 max_part.setError(getResources().getString(R.string.incorrectMax_partEvent));
             }
@@ -260,22 +280,49 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
         else if(!isValidParticipantRestriccions2()){
             max_part.setError(getResources().getString(R.string.incorrectRest_Part_Event));
         }
+        else if(imageUri == null){
+            Log.d("deporte:", sport);
+            if(sport.equals("Running")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Frunning_event.jpg?alt=media&token=8fbee4d3-837f-45a9-bdd3-049dcafb2642");
+            else if (sport.equals("Cycling")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Fcycling_event.jpg?alt=media&token=d309a557-82c7-4f4b-b08e-d408916518a4");
+            else if (sport.equals("Swimminig")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Fswim_event.png?alt=media&token=efe869f8-b4f7-47af-9e54-160dc90114b3");
+            else if (sport.equals("Basketball")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Fbasketball_event.jpg?alt=media&token=af87e7ed-f52a-49b8-9ead-4d03ce1302ed");
+            else if (sport.equals("Football")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Ffootball_event.jpg?alt=media&token=5d3fd4b2-e688-4eed-b7fd-d13569a55735");
+            else if (sport.equals("Voleyball")) imageUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/eventsImages%2Fvolley_event.png?alt=media&token=5f946553-8749-43b4-8ded-212e470c1d82");
+            else if (sport.equals("Otro")) {
+                Log.d("deporte:", "whataaaa!!! "+sport);
+                AlertDialog.Builder builder;
+                builder = new AlertDialog.Builder(this);
+                builder.setMessage(getResources().getString(R.string.ImageEventError)).setTitle("Error").setCancelable(true);
+
+                AlertDialog alert = builder.create();
+
+                alert.setTitle("Error");
+                alert.show();
+            }
+            if(imageUri != null){
+                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
+//                Intent intent = new Intent( this, MainActivity.class);
+//                startActivity(intent);
+                this.finish();
+            }
+        }
         else {
-            presenter.toCreateEvent(imageUri, description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
+            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
+            //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
+//            Intent intent = new Intent( this, MainActivity.class);
+//            startActivity(intent);
+            this.finish();
         }
     }
 
-    private boolean isValidParticipantRestriccions1() {
-        return !TextUtils.isEmpty(max_part.getText().toString()) && !TextUtils.isEmpty(min_part.getText().toString());
+    private boolean isValidTitle() {
+        return !TextUtils.isEmpty(title.getText().toString());
     }
 
-    private boolean isValidParticipantRestriccions2() {
-        int max = Integer.parseInt(max_part.getText().toString());
-        int min = Integer.parseInt(min_part.getText().toString());
-        return max >= min;
+    private boolean isValidDescription() {
+        return !TextUtils.isEmpty(description.getText().toString());
     }
 
-    //TODO control that dateEvent is posterior than the current time.
     private boolean isValidDate() throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         try {
@@ -290,8 +337,14 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
         }
     }
 
-    private boolean isValidDescription() {
-        return !TextUtils.isEmpty(description.getText().toString());
+    private boolean isValidParticipantRestriccions1() {
+        return !TextUtils.isEmpty(max_part.getText().toString()) && !TextUtils.isEmpty(min_part.getText().toString());
+    }
+
+    private boolean isValidParticipantRestriccions2() {
+        int max = Integer.parseInt(max_part.getText().toString());
+        int min = Integer.parseInt(min_part.getText().toString());
+        return max >= min;
     }
 
     @Override
@@ -302,14 +355,14 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
     @Override
     public void onSuccesImageChange(Uri uriImage) {
         imageUri = uriImage;
-        Glide.with(getActivity()).load(imageUri).into(eventImage);
+        Glide.with(this).load(imageUri).into(eventImage);
     }
 
     @Override
     public void onSuccess(String message) {
         if (message.equals("SuccesEventCreate")){
             String mess = getResources().getString(R.string.SuccesEventCreate);
-            Toast.makeText(getContext(), mess, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, mess, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -317,11 +370,15 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.EventoIV:
-                if (checkPermissionREAD_EXTERNAL_STORAGE(getContext())) openGallery();
+                if (checkPermissionREAD_EXTERNAL_STORAGE(this)) openGallery();
                 break;
 
-            case R.id.dateEvent:
+            case R.id.dateEventCalendar:
                 showDatePickerDialog();
+                break;
+
+            case R.id.hourEventClock:
+                showHourPickerDialog();
                 break;
 
             case R.id.crearEvento:
@@ -335,6 +392,5 @@ public class CreateEventFragment extends Fragment implements CreateEventInterfac
             default:
                 break;
         }
-
     }
 }
