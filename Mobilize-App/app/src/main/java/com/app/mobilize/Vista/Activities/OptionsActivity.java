@@ -15,7 +15,7 @@ import com.app.mobilize.R;
 
 public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
-    private Button logout, deleteUser, idiom, info;
+    private Button logout, deleteUser, idiom, info, alerts;
     private String username;
     private OptionsInterface.Presenter presenter;
 
@@ -60,6 +60,14 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
                 goToInfo();
             }
         });
+
+        alerts = findViewById(R.id.alerts);
+        alerts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToAlerts();
+            }
+        });
     }
 
     public void showAlertDialog(){
@@ -98,6 +106,11 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
 
     public void goToInfo () {
         Intent intent = new Intent( this, InfoActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToAlerts () {
+        Intent intent = new Intent( this, AlertsActivity.class);
         startActivity(intent);
     }
 

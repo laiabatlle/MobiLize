@@ -8,14 +8,13 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
@@ -51,6 +50,30 @@
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" >
+        </activity>
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.AddAlertActivity"
+            android:label="@string/addReminder"
+            android:parentActivityName="com.app.mobilize.Vista.Activities.AlertsActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Vista.Activities.AlertsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
+            android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
+            android:exported="false" />
+
+        <service
+            android:name="com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService"
+            android:exported="false" />
+
+        <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler" />
+        <receiver android:name="com.app.mobilize.Vista.Activities.AddAlertActivity" />
+
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

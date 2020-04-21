@@ -12,7 +12,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.app.mobilize.R;
 import com.google.firebase.auth.FirebaseAuth;
 
