@@ -81,6 +81,20 @@
         <item>DIC</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="crear_una_rutina">Crear una rutina</string>
+    <string name="seleccione_su_rutina">Seleccione su rutina:</string>
+    <string name="crear_rutina_de_entrenamiento">Nueva rutina de entrenamiento</string>
+    <string name="crear">Crear</string>
+    <string name="descripcio_detallada_de_la_rutina">Descripción detallada</string>
+    <string name="informacio_de_la_rutina">Información</string>
+    <string name="nom_de_la_rutina">Nombre</string>
+    <string name="nueva_rutina">Introduzca los datos de su nueva rutina:</string>
+    <string name="empieza">Empieza</string>
+    <string name="elimina">Elimina</string>
+    <string name="modifica">Modifica</string>
+    <string name="ModificaRutinaCorrecte">Rutina modificada con éxito</string>
+    <string name="EsborraRutinaCorrecte">Rutina borrada con éxito</string>
+    <string name="CreaRutinaCorrecte">Rutina creada con éxito</string>
 
 
 </resources>

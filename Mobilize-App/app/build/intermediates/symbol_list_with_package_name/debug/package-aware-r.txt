@@ -1484,6 +1484,7 @@ drawable notify_panel_notification_icon_bg
 drawable run
 drawable runers
 drawable running
+drawable rutina
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1497,10 +1498,12 @@ id CTRL
 id Entrenamiento
 id Evento
 id FUNCTION
+id Items
 id META
 id Perfil
 id Plan
 id Progreso
+id Recyclerid
 id SHIFT
 id SYM
 id TOP_END
@@ -1594,6 +1597,8 @@ id button2
 id button3
 id button4
 id button5
+id button6
+id button7
 id buttonActivitats
 id buttonPanel
 id cancel_button
@@ -1606,6 +1611,7 @@ id center_horizontal
 id center_vertical
 id chains
 id chart
+id checkBox
 id checkbox
 id checked
 id chip
@@ -1616,11 +1622,11 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id confirm_button
-id constraintLayout1
 id container
 id content
 id contentPanel
 id coordinator
+id crear_rutina
 id cumpleañosTV
 id custom
 id customPanel
@@ -1642,6 +1648,10 @@ id direct
 id disableHome
 id dropdown_menu
 id edAlert2
+id editText3
+id editText4
+id editText6
+id editText7
 id edit_query
 id email
 id end
@@ -1686,6 +1696,7 @@ id ifRoom
 id image
 id imageView
 id imageView10
+id imageView11
 id imageView2
 id imageView3
 id imageView5
@@ -1705,6 +1716,7 @@ id line3
 id linearLayout
 id linearLayout2
 id linearLayout3
+id linearLayout4
 id listMode
 id listViewActivitats
 id list_item
@@ -1785,6 +1797,7 @@ id rbMitjana
 id rbPasos
 id rbPeso
 id rbSemanal
+id recyclerView3
 id registerButton
 id rellay
 id right
@@ -1792,6 +1805,8 @@ id right_icon
 id right_side
 id rounded
 id rutinaEntrenamiento
+id rutinaEntrenamiento2
+id rutinaEntrenamiento3
 id rv
 id satellite
 id save_non_transition_alpha
@@ -1877,6 +1892,7 @@ id text_input_start_icon
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id textview10
 id time
 id title
 id titleDividerNoCustom
@@ -1978,6 +1994,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_activitats_user
+layout activity_afegir_rutina
 layout activity_crear_plan
 layout activity_maps
 layout activity_modalitat_entrenament
@@ -2011,6 +2028,8 @@ layout fragment_eventos
 layout fragment_perfil
 layout fragment_plan
 layout fragment_progreso
+layout item
+layout item_rec
 layout listausers_fragment
 layout login_activity
 layout main_activity
@@ -2077,11 +2096,14 @@ mipmap ic_logo2_round
 mipmap ic_settings
 plurals mtrl_badge_content_description
 string AlturaTV
+string CreaRutinaCorrecte
 string Darse_de_Baja
+string EsborraRutinaCorrecte
 string Fecha_NacimientoHint
 string Fecha_NacimientoTV
 string GeneroTV
 string GuardarCambiosButton
+string ModificaRutinaCorrecte
 string OpcionesButton
 string PesoTV
 string abc_action_bar_home_description
@@ -2142,15 +2164,21 @@ string common_signin_button_text
 string common_signin_button_text_long
 string config
 string continua
+string crear
+string crear_rutina_de_entrenamiento
+string crear_una_rutina
 string cycling
 string default_web_client_id
 string desc
 string descripcio
+string descripcio_detallada_de_la_rutina
 string dificil
 string dificultat
 string disciplines
 string duracio
+string elimina
 string email
+string empieza
 string enforma
 string enrere
 string entrenamiento_libre
@@ -2171,6 +2199,7 @@ string google_storage_bucket
 string gotologin
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string informacio_de_la_rutina
 string kg
 string libre
 string login_title
@@ -2179,6 +2208,7 @@ string masa_muscular
 string mis_entrenamientos
 string misplanes
 string mitjana
+string modifica
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -2215,6 +2245,8 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nivellrutina
 string nom
+string nom_de_la_rutina
+string nueva_rutina
 string ok
 string password
 string password_toggle_content_description
@@ -2237,6 +2269,7 @@ string rutinaEntrenamiento
 string search_menu_title
 string seguimiento
 string seleccionar_modalidad
+string seleccione_su_rutina
 string status_bar_notification_info_overflow
 string tit
 string title_activity_maps
