@@ -160,5 +160,50 @@
     <string name="changesSaved">Your data has been successfully updated</string>
     <string name="google_status_fmt">email: %s</string>
     <string name="firebase_status_fmt">username: %s</string>
+    <string name="ultima_semana"> Última semana</string>
+    <string name="seguimiento"> Seguimiento </string>
+    <string name="rb_semanal"> Semanal </string>
+    <string name="rb_mensual"> Mensual </string>
+    <string name="rb_peso"> peso </string>
+    <string name="rb_calorias"> calorias </string>
+    <string name="rb_pasos"> pasos </string>
+    <string-array name="dias_semana">
+    <item>dom</item>
+    <item>lun</item>
+    <item>mar</item>
+    <item>mie</item>
+    <item>jue</item>
+    <item>vie</item>
+    <item>sab</item>
+</string-array>
+    <string-array name="meses_año">
+    <item>ENE</item>
+    <item>FEB</item>
+    <item>MAR</item>
+    <item>ABR</item>
+    <item>MAY</item>
+    <item>JUN</item>
+    <item>JUL</item>
+    <item>AGO</item>
+    <item>SET</item>
+    <item>OCT</item>
+    <item>NOV</item>
+    <item>DIC</item>
+</string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="crear_una_rutina">Crear una rutina</string>
+    <string name="seleccione_su_rutina">Seleccione su rutina:</string>
+    <string name="crear_rutina_de_entrenamiento">Nueva rutina de entrenamiento</string>
+    <string name="crear">Crear</string>
+    <string name="descripcio_detallada_de_la_rutina">Descripción detallada</string>
+    <string name="informacio_de_la_rutina">Información</string>
+    <string name="nom_de_la_rutina">Nombre</string>
+    <string name="nueva_rutina">Introduzca los datos de su nueva rutina:</string>
+    <string name="empieza">Empieza</string>
+    <string name="elimina">Elimina</string>
+    <string name="modifica">Modifica</string>
+    <string name="ModificaRutinaCorrecte">Rutina modificada con éxito</string>
+    <string name="EsborraRutinaCorrecte">Rutina borrada con éxito</string>
+    <string name="CreaRutinaCorrecte">Rutina creada con éxito</string>
 
 </resources>

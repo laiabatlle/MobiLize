@@ -1,12 +1,12 @@
 package com.app.mobilize.Vista.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.app.mobilize.R;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.app.mobilize.R;
 
 public class ModalitatExercici extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class ModalitatExercici extends AppCompatActivity {
         bRunning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                sigIntent("running");
             }
         });
 
@@ -29,10 +29,16 @@ public class ModalitatExercici extends AppCompatActivity {
         bCycling.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                sigIntent("cylcing");
             }
         });
     }
 
+
+    private void sigIntent ( String tipus ) {
+        Intent intent = new Intent(this, TrackActivity.class);
+        intent.putExtra("tipus", tipus);
+        startActivity(intent);
+    }
 
 }

@@ -1,0 +1,273 @@
+package com.app.mobilize.Vista.Activities;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.os.Looper;
+import android.os.SystemClock;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Chronometer;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.app.mobilize.Model.Chrono;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.app.mobilize.R;
+
+public class TrackActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    Chronometer chrono;
+    Button bStart, bStop, bResume, bFinish;
+    boolean is_Finish;
+    long timeElapsed;
+
+    int PERMISSION_ID = 44;
+    FusedLocationProviderClient mFusedLocationClient;
+
+    TextView tvLongitud, tvLatitud;
+
+    double initialLatitud, initialLongitud;
+
+    private GoogleMap mMap;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_track);
+
+        tvLatitud = findViewById(R.id.tvLatitud);
+        tvLongitud = findViewById(R.id.tvLongitud);
+
+        initialLatitud = 0;
+        initialLongitud = 0;
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        getLastLocation();
+        requestNewLocationData();
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+        initChrono();
+
+    }
+
+    @SuppressLint("MissingPermission")
+    private void getLastLocation(){
+        if (checkPermissions()) {
+            if (isLocationEnabled()) {
+                mFusedLocationClient.getLastLocation().addOnCompleteListener(
+                        new OnCompleteListener<Location>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Location> task) {
+                                Location location = task.getResult();
+                                if (location == null) {
+                                    requestNewLocationData();
+                                } else {
+                                    tvLongitud.setText(String.valueOf(location.getLongitude()));
+                                    tvLatitud.setText(String.valueOf(location.getLatitude()));
+                                    if ( initialLatitud == 0 && initialLongitud == 0 ) {
+                                        initialLatitud = location.getLatitude();
+                                        initialLongitud = location.getLongitude();
+                                        LatLng auxLatLng = new LatLng(initialLatitud, initialLongitud);
+                                        mMap.addMarker(new MarkerOptions().position(auxLatLng));
+                                        mMap.moveCamera(CameraUpdateFactory.newLatLng(auxLatLng));
+                                        mMap.setMinZoomPreference(15.0f);
+                                    }
+                                }
+                            }
+                        }
+                );
+            } else {
+                Toast.makeText(this, "Turn on location", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(intent);
+            }
+        } else {
+            requestPermissions();
+        }
+    }
+
+
+    @SuppressLint("MissingPermission")
+    private void requestNewLocationData(){
+
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(0);
+        mLocationRequest.setFastestInterval(0);
+        mLocationRequest.setNumUpdates(1);
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient.requestLocationUpdates(
+                mLocationRequest, mLocationCallback,
+                Looper.myLooper()
+        );
+
+    }
+
+    private LocationCallback mLocationCallback = new LocationCallback() {
+        @Override
+        public void onLocationResult(LocationResult locationResult) {
+            Location mLastLocation = locationResult.getLastLocation();
+            //makeToast(initialLatitud, initialLongitud);
+            if ( initialLatitud == 0 && initialLongitud == 0 ) {
+                initialLatitud = mLastLocation.getLatitude();
+                initialLongitud = mLastLocation.getLongitude();
+                mMap.addMarker(new MarkerOptions().position(new LatLng(initialLatitud, initialLongitud)));
+            }
+            tvLongitud.setText(String.valueOf(mLastLocation.getLongitude()));
+            tvLatitud.setText(String.valueOf(mLastLocation.getLatitude()));
+        }
+    };
+
+    private boolean checkPermissions() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        return false;
+    }
+
+    private void requestPermissions() {
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
+                PERMISSION_ID
+        );
+    }
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
+                LocationManager.NETWORK_PROVIDER
+        );
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_ID) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                getLastLocation();
+            }
+        }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if (checkPermissions()) {
+            getLastLocation();
+        }
+
+    }
+
+    private void initChrono () {
+        is_Finish = false;
+
+        bStart = findViewById(R.id.bStart);
+        bStart.setText("START");
+        bStop = findViewById(R.id.bStop);
+        bStop.setText("STOP");
+        bResume = findViewById(R.id.bResume);
+        bResume.setText("RESUME");
+        bFinish = findViewById(R.id.bFinish);
+        bFinish.setText("FINISH");
+
+        chrono = findViewById(R.id.tvTimer);
+        chrono.setTextSize(20.f);
+
+        chrono.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                requestNewLocationData();
+            }
+        });
+
+
+
+        bStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( is_Finish == false ) {
+                    chrono.setBase(SystemClock.elapsedRealtime());
+                    chrono.start();
+                }
+            }
+        });
+
+        bStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( is_Finish == false ) {
+                    timeElapsed = chrono.getBase() - SystemClock.elapsedRealtime();
+                    chrono.stop();
+                }
+            }
+        });
+
+        bResume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( is_Finish == false ) {
+                    chrono.setBase(SystemClock.elapsedRealtime()+timeElapsed);
+                    chrono.start();
+                }
+            }
+        });
+
+        bFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chrono.stop();
+                is_Finish = true;
+                double endLatitud, endLongitud;
+                float[] result = new float[1];
+                endLatitud = Double.valueOf(tvLatitud.getText().toString());
+                endLongitud = Double.valueOf(tvLongitud.getText().toString());
+                Location.distanceBetween(initialLatitud, initialLongitud, endLatitud, endLongitud, result );
+                Toast.makeText(getApplicationContext(), String.valueOf(result[0]), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+    }
+
+    public void makeToast ( double lat, double lon ) {
+        String sLat = String.valueOf(lat);
+        String sLon = String.valueOf(lon);
+
+        Toast.makeText(this, "LATLON --> " + sLat + "  " + sLon, Toast.LENGTH_LONG ).show();
+    }
+}

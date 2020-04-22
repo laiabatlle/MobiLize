@@ -10,9 +10,9 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.ModalitatExercici;
 import com.app.mobilize.Vista.Activities.NivellEntrenament;
-import com.app.mobilize.R;
 
 /**
  * A simple {@link Fragment} subclass.

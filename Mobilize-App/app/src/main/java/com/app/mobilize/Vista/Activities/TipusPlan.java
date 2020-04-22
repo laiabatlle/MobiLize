@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.app.mobilize.R;
 
 public class TipusPlan extends AppCompatActivity {
@@ -87,8 +86,6 @@ public class TipusPlan extends AppCompatActivity {
     }
 
     public void backActivity () {
-        Intent back = new Intent(this, MainActivity.class);
-        startActivity(back);
         finish();
     }
 }

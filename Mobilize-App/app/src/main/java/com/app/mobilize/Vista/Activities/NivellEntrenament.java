@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import com.app.mobilize.R;
 
 public class NivellEntrenament extends AppCompatActivity {
@@ -36,6 +35,9 @@ public class NivellEntrenament extends AppCompatActivity {
                 }
                 else {
                     Intent intent = new Intent(v.getContext(), ModalitatEntrenament.class);
+                    intent.putExtra("facil", rbFacil.isChecked());
+                    intent.putExtra("mitja", rbMitjana.isChecked());
+                    intent.putExtra("dificil", rbDificil.isChecked());
                     startActivityForResult(intent, 0);
                 }
             }
