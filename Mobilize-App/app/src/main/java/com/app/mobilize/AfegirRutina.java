@@ -124,7 +124,7 @@ public class AfegirRutina extends AppCompatActivity {
 
 
 
-        Intent intent = new Intent(view.getContext(), ModalitatEntrenament.class);
+        Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
         startActivityForResult(intent, 0);
 
         Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();

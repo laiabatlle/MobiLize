@@ -44,7 +44,7 @@ public class PopUpRutina extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
-        eaux.clear();
+
 
 
         recycler = (RecyclerView) findViewById(R.id.recyclerView3);
@@ -63,6 +63,7 @@ public class PopUpRutina extends AppCompatActivity {
 
         exe = new ArrayList<>();
         exe = stringToArray(item.getExercicis(), item.getNivell(), item.getModalitat());
+        eaux.clear();
         eaux = exe;
 
 
@@ -131,7 +132,7 @@ public class PopUpRutina extends AppCompatActivity {
 
 
 
-        Intent intent = new Intent(view.getContext(),  ModalitatEntrenament.class);
+        Intent intent = new Intent(view.getContext(),  NivellEntrenament.class);
         startActivityForResult(intent, 0);
 
 
@@ -163,7 +164,7 @@ public class PopUpRutina extends AppCompatActivity {
 
         BaseDeDatos.close();
 
-        Intent intent = new Intent(view.getContext(), ModalitatEntrenament.class);
+        Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
         startActivityForResult(intent, 0);
 
 
