@@ -128,12 +128,12 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         genero.setOnItemSelectedListener(this);
 
         //Spinner de la privacitat de l'usuari:
-        privacity = (Spinner)view.findViewById(R.id.privacitySpin);
-        ArrayAdapter<String> adapterp = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, privates);
-        adapterp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        privacity.setAdapter(adapterp);
-        privacity.setSelection(getPositionPrivacy(user.getPrivacity()));
-        privacity.setOnItemSelectedListener(this);
+//        privacity = (Spinner)view.findViewById(R.id.privacitySpin);
+//        ArrayAdapter<String> adapterp = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, privates);
+//        adapterp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        privacity.setAdapter(adapterp);
+//        privacity.setSelection(getPositionPrivacy(user.getPrivacity()));
+//        privacity.setOnItemSelectedListener(this);
 
         //EditText de la dataNaixement de l'usuari:
         dateNaixement = (TextView) view.findViewById(R.id.dateBirthday);
@@ -182,9 +182,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         if(parent.getId() == R.id.generoSpin) {
             gendre = parent.getItemAtPosition(position).toString();
         }
-        else if(parent.getId() == R.id.privacitySpin) {
-            privacy = parent.getItemAtPosition(position).toString();
-        }
+//        else if(parent.getId() == R.id.privacitySpin) {
+//            privacy = parent.getItemAtPosition(position).toString();
+//        }
     }
 
     @Override
@@ -332,7 +332,8 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     @Override
     public void handleOptions() {
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
-        intent.putExtra("username", user.getEmail());
+        intent.putExtra("user", user.getEmail());
+        intent.putExtra("user_privacity", user.getPrivacity());
         startActivity(intent);
     }
 
@@ -350,7 +351,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         user.setPrivacity(privacy);
         user.setDateNaixement(dateNaixement.getText().toString());
         user.setImage(imageUri);
-        presenter.toGuardarCambios(user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage(), user.getPrivacity());
+        presenter.toGuardarCambios(user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage()/*, user.getPrivacity()*/);
     }
 
     @Override

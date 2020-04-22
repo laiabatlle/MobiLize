@@ -22,11 +22,16 @@ public class OptionsPresenter implements OptionsInterface.Presenter, OptionsInte
     }
 
     @Override
-    public void toDelete(String username) {
+    public void toDelete(String user) {
         if(view!=null){
             view.disableInputs();
         }
-        model.doDelete(username);
+        model.doDelete(user);
+    }
+
+    @Override
+    public void toPrivacity(String user, String privacity) {
+        model.doPrivacity(user, privacity);
     }
 
     @Override

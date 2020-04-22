@@ -34,21 +34,26 @@ public class OptionsModel implements OptionsInterface.Model {
     }
 
     @Override
-    public void doDelete(String username) {
+    public void doDelete(String user) {
         mAuth = FirebaseAuth.getInstance();
         mAuth.getCurrentUser().delete();
-        db.collection("users").document(username).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+        db.collection("users").document(user).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Log.d("hola","success");
             }
         })
-        .addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d("hola","fail", e);
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("hola","fail", e);
 
-            }
-        });
+                    }
+                });
+    }
+
+    @Override
+    public void doPrivacity(String user, String privacity) {
+        db.collection("users").document(user).update("privacity", privacity);
     }
 }

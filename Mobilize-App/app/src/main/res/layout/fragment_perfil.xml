@@ -161,10 +161,6 @@
             android:id="@+id/dateBirthdayLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:clickable="true"
-            android:focusable="true"
             android:hint="@string/Fecha_NacimientoHint"
             android:inputType="date"
             android:maxLines="1"
@@ -180,7 +176,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-
                 android:text="@string/Fecha_NacimientoTV"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp" />
@@ -201,19 +196,20 @@
                     android:hint="@string/Fecha_NacimientoHint"
                     android:importantForAutofill="no"
                     android:textAlignment="gravity"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:id="@+id/dateEventLayoutCalendar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="2dp"
                     android:gravity="end">
 
                     <ImageButton
                         android:id="@+id/dateBirthdayCalendar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
                         android:background="@null"
                         android:src="@mipmap/ic_date" />
 
@@ -342,28 +338,43 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/privacityTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/privacityTV"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/generoLayout" />
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/privacityLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="1.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/alturaLayout">-->
 
-        <Spinner
-            android:id="@+id/privacitySpin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12.5dp"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/privacityTV"
-            app:layout_constraintTop_toTopOf="@+id/generoLayout" />
+        <!--            <TextView-->
+        <!--                android:id="@+id/privacityTV"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/privacityTV"-->
+        <!--                android:textColor="@color/colorPrimaryDark"-->
+        <!--                android:textSize="20sp"/>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/privacityLayoutSinner"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="end"-->
+        <!--                app:layout_constraintStart_toStartOf="@+id/privacityTV"-->
+        <!--                app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--                <Spinner-->
+        <!--                    android:id="@+id/privacitySpin"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:textSize="20sp"-->
+        <!--                    android:layout_marginTop="10dp"/>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
 
         <Button
             android:id="@+id/guardar"
@@ -375,9 +386,9 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/privacityTV" />
+            app:layout_constraintTop_toBottomOf="@+id/alturaLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

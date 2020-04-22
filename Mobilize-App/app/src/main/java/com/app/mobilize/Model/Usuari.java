@@ -1,5 +1,6 @@
 package com.app.mobilize.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuari {
@@ -24,10 +25,10 @@ public class Usuari {
         height = "0";
         weight = "0";
         dateNaixement = "mm/dd/aaaa";
-        privacity = "Pública";
+        privacity = "private";
         URLavatar = "https://firebasestorage.googleapis.com/v0/b/mobilize-app-123.appspot.com/o/profileImages%2Fic_perfil.png?alt=media&token=740a1705-983a-4080-8642-0b50e3695322";
-        friendsList = null;
-}
+        friendsList = new ArrayList<>();
+    }
 
     public String getUsername() {
         return username;

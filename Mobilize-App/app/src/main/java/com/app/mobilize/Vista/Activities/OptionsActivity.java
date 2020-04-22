@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.app.mobilize.Presentador.Interface.OptionsInterface;
 import com.app.mobilize.Presentador.OptionsPresenter;
@@ -17,7 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
     private Button logout, deleteUser, idiom, info, alerts;
-    private String username;
+    private Switch privacity;
+    private String user, privacy;
     private OptionsInterface.Presenter presenter;
 
     @Override
@@ -27,7 +30,8 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
 
         presenter = new OptionsPresenter(this);
 
-        username = this.getIntent().getStringExtra("username");
+        user = this.getIntent().getStringExtra("user");
+        privacy = this.getIntent().getStringExtra("user_privacity");
 
         deleteUser = findViewById(R.id.deleteUser);
         deleteUser.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +41,16 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
             }
         });
 
+        privacity = (Switch) this.findViewById(R.id.privacitySwitch);
+        if(privacy.equals("private")) privacity.setChecked(true);
+        else privacity.setChecked(false);
+        privacity.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) handlePrivacity("private");
+                else handlePrivacity("public");
+            }
+        });
         logout = findViewById(R.id.logOut);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +97,7 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
         alertBuilder.setPositiveButton(R.string.erase, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                presenter.toDelete(username);
+                presenter.toDelete(user);
                 goToLogin();
             }
         });
@@ -125,6 +139,11 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
     @Override
     public void disableInputs() {
         setInputs(false);
+    }
+
+    @Override
+    public void handlePrivacity(String privacity) {
+        presenter.toPrivacity(user, privacity);
     }
 
     @Override
