@@ -32,14 +32,19 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
 
         holder.asignarDatos(Exercicis.get(position));
 
+
         holder.cb.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 if(((CheckBox) view).isChecked()) {
                     AfegirRutina.setExercici(Exercicis.get(position));
+                    PopUpRutina.unsetExercici(Exercicis.get(position));
                 }
-                else AfegirRutina.unsetExercici(Exercicis.get(position));
+                else  {
+                    AfegirRutina.unsetExercici(Exercicis.get(position));
+                    PopUpRutina.setExercici(Exercicis.get(position));
+                }
             }
         });
     }
@@ -60,6 +65,7 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
 
         public void asignarDatos(Exercici exercici) {
             tv.setText(exercici.getNom());
+
         }
     }
 }

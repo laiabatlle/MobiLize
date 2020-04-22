@@ -32,6 +32,8 @@ public class AfegirRutina extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afegir_rutina);
 
+        eaux.clear();
+
         int dificultat = getIntent().getIntExtra("dificultat",0);
         String modalitat = getIntent().getStringExtra("modalitat");
 
@@ -98,6 +100,8 @@ public class AfegirRutina extends AppCompatActivity {
 
         String exer = transformaArray(eaux);
 
+        eaux.clear();
+
 
 
 
@@ -146,7 +150,7 @@ public class AfegirRutina extends AppCompatActivity {
     public static void unsetExercici(Exercici e) {
 
         for (int i = 0; i < eaux.size(); ++i) {
-            if(eaux.get(i) == e) eaux.remove(e);
+            if(eaux.get(i) == e) eaux.remove(i);
         }
 
     }
