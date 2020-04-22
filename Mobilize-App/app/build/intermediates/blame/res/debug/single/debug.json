@@ -60,6 +60,10 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_addfriend.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_bg_rounded_cornerns_n.xml.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\button_bg_rounded_cornerns_n.xml"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_user.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_user.xml"
     },
