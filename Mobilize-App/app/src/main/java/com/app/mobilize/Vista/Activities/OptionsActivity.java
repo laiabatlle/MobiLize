@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -14,7 +15,14 @@ import android.widget.Switch;
 import com.app.mobilize.Presentador.Interface.OptionsInterface;
 import com.app.mobilize.Presentador.OptionsPresenter;
 import com.app.mobilize.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+import java.util.Objects;
 
 public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
@@ -22,16 +30,26 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
     private Switch privacity;
     private String user, privacy;
     private OptionsInterface.Presenter presenter;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+        db = FirebaseFirestore.getInstance();
 
         presenter = new OptionsPresenter(this);
 
         user = this.getIntent().getStringExtra("user");
-        privacy = this.getIntent().getStringExtra("user_privacity");
+        privacy = "private";
+        db.collection("users").document(SaveSharedPreference.getEmail(this).toString()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    privacy = task.getResult().getData().get("privacity").toString();
+                }
+            }
+        });
 
         deleteUser = findViewById(R.id.deleteUser);
         deleteUser.setOnClickListener(new View.OnClickListener() {

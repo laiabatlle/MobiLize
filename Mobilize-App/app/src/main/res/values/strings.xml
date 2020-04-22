@@ -160,13 +160,13 @@
     <string name="changesSaved">Sus datos se han actualizado correctamente</string>
     <string name="google_status_fmt">email: %s</string>
     <string name="firebase_status_fmt">username: %s</string>
-    <string name="ultima_semana"> Última semana</string>
-    <string name="seguimiento"> Seguimiento </string>
-    <string name="rb_semanal"> Semanal </string>
-    <string name="rb_mensual"> Mensual </string>
-    <string name="rb_peso"> peso </string>
-    <string name="rb_calorias"> calorias </string>
-    <string name="rb_pasos"> pasos </string>
+    <string name="ultima_semana">Última semana</string>
+    <string name="seguimiento">Seguimiento </string>
+    <string name="rb_semanal">Semanal </string>
+    <string name="rb_mensual">Mensual </string>
+    <string name="rb_peso">peso </string>
+    <string name="rb_calorias">calorías </string>
+    <string name="rb_pasos">pasos </string>
     <string-array name="dias_semana">
     <item>dom</item>
     <item>lun</item>
@@ -190,7 +190,7 @@
     <item>NOV</item>
     <item>DIC</item>
     </string-array>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Mapa</string>
     <string name="crear_una_rutina">Crear una rutina</string>
     <string name="seleccione_su_rutina">Seleccione su rutina:</string>
     <string name="crear_rutina_de_entrenamiento">Nueva rutina de entrenamiento</string>
