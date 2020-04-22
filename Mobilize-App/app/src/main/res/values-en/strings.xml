@@ -158,5 +158,7 @@
     <string name="publictext">Public</string>
     <string name="privatetext">Private</string>
     <string name="changesSaved">Your data has been successfully updated</string>
+    <string name="google_status_fmt">email: %s</string>
+    <string name="firebase_status_fmt">username: %s</string>
 
 </resources>

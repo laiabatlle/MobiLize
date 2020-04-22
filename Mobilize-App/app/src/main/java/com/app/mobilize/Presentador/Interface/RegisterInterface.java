@@ -19,7 +19,7 @@ public interface RegisterInterface {
     }
 
     interface Presenter{
-        void toRegister(String username, String email, String password);
+        void toRegister(String username, String email, String password, boolean g);
     }
 
     interface Model{

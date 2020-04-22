@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1036230834136-hhs3470ti3lab8rnt9332qtneba4808h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.mobilize",
+            "certificate_hash": "76410d3593dd6f4b37f7ff9bf85da69586689cba"
+          }
+        },
+        {
           "client_id": "1036230834136-us46t9cr61h2bs66sqf7g5jfarqklb16.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -28,7 +36,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1036230834136-us46t9cr61h2bs66sqf7g5jfarqklb16.apps.googleusercontent.com",
+              "client_id": "1036230834136-olkp04et7p25utqqh0a4edra3dp8tb89.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

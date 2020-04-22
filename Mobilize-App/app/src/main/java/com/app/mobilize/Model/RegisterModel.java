@@ -44,7 +44,7 @@ public class RegisterModel implements RegisterInterface.Model {
                                     // Getting the id of the current user
                                     Usuari user = new Usuari(username, password, email);
 
-                                    db.collection("users").document(username).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    db.collection("users").document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             listener.onSuccess();

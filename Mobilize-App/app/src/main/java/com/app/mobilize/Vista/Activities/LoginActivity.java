@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -7,17 +8,37 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Interface.LoginInterface;
 import com.app.mobilize.Presentador.LoginPresenter;
 import com.app.mobilize.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
-public class LoginActivity extends AppCompatActivity implements LoginInterface.View, View.OnClickListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class LoginActivity extends AppCompatActivity implements LoginInterface.View, View.OnClickListener{
 
     private EditText email, password;
 
@@ -26,6 +47,11 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
     private ProgressDialog progressDialog;
 
     private LoginInterface.Presenter presenter;
+
+    private static final int RC_SIGN_IN = 9001;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +65,19 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
             startActivity(sig);
             finish();
         }
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signIn();
+            }
+        });
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
     }
 
     public void setViews() {
@@ -51,6 +90,66 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage(getResources().getString(R.string.auth));
         progressDialog.setCancelable(false);
+    }
+
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                firebaseAuthWithGoogle(account);
+            } catch (ApiException e) {
+                // Google Sign In failed, update UI appropriately
+                // ...
+            }
+        }
+    }
+
+    private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            final FirebaseUser user = mAuth.getCurrentUser();
+
+                            final List<String> list = new ArrayList<>();
+                            final boolean[] newUser = {true};
+                            db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                    if (task.isSuccessful()) {
+                                        for (QueryDocumentSnapshot document : task.getResult()) {
+                                            if(document.getId().equals(user.getEmail())) newUser[0] = false;
+                                        }
+                                        if(newUser[0]){
+                                            Usuari usuari = new Usuari(acct.getDisplayName(), "ojsadf'39iwj3erfd'e0w9ijf90dsij'fodj'aeoa'39ifj'9dsj'3f'", user.getEmail());
+                                            db.collection("users").document(user.getEmail()).set(usuari);
+                                        }
+                                    }
+                                }
+                            });
+
+                            SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
+                            Intent sig = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(sig);
+                            finish();
+                        }
+
+                        // ...
+                    }
+                });
     }
 
     private void setInputs(boolean enable){
@@ -119,7 +218,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
     public void goMainMenu() {
         SaveSharedPreference.setEmail(this, email.getText().toString());
         Intent sig = new Intent(LoginActivity.this, MainActivity.class);
-        sig.putExtra("email", email.getText().toString());
         startActivity(sig);
         finish();
     }

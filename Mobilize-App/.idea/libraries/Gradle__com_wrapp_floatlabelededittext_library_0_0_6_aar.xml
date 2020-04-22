@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.wrapp.floatlabelededittext:library:0.0.6@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c18179c9c485e481aa90c0be3641346/jetified-library-0.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c18179c9c485e481aa90c0be3641346/jetified-library-0.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/570cef9910873cb49294ddfb834ccf16/jetified-library-0.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/570cef9910873cb49294ddfb834ccf16/jetified-library-0.0.6/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wrapp.floatlabelededittext/library/0.0.6/e0e950e5514a53312b03c453b1308a87b5bb410/library-0.0.6-javadoc.jar!/" />

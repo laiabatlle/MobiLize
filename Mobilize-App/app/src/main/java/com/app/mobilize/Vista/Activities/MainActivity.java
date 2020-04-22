@@ -27,6 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -69,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         showSelectedFragment(new EntrenaminetoFragment());
         mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);

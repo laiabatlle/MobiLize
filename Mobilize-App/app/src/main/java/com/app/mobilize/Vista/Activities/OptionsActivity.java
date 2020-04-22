@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.app.mobilize.Presentador.Interface.OptionsInterface;
 import com.app.mobilize.Presentador.OptionsPresenter;
 import com.app.mobilize.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
@@ -92,6 +93,7 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
 
     public void goToLogin () {
         SaveSharedPreference.clearEmail(this);
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent( this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

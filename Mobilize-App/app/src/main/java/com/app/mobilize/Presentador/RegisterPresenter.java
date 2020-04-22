@@ -15,8 +15,8 @@ public class RegisterPresenter implements RegisterInterface.Presenter, RegisterI
     }
 
     @Override
-    public void toRegister(String username, String email, String password) {
-        if(view!=null){
+    public void toRegister(String username, String email, String password, boolean g) {
+        if(view!=null && !g){
             view.disableInputs();
             view.showPrgress();
         }

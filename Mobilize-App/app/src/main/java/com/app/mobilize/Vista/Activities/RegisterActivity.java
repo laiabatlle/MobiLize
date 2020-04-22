@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -7,14 +8,35 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Interface.RegisterInterface;
 import com.app.mobilize.Presentador.RegisterPresenter;
 import com.app.mobilize.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegisterActivity extends AppCompatActivity implements RegisterInterface.View, View.OnClickListener{
 
@@ -86,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterInter
             password.setError(getResources().getString(R.string.incorrectPassword));
         }
         else {
-            presenter.toRegister(username.getText().toString().trim(), email.getText().toString().trim(), password.getText().toString().trim());
+            presenter.toRegister(username.getText().toString().trim(), email.getText().toString().trim(), password.getText().toString().trim(), false);
         }
     }
 

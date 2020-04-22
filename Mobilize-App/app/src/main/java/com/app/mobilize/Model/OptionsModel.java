@@ -1,6 +1,12 @@
 package com.app.mobilize.Model;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.app.mobilize.Presentador.Interface.OptionsInterface;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -31,6 +37,18 @@ public class OptionsModel implements OptionsInterface.Model {
     public void doDelete(String username) {
         mAuth = FirebaseAuth.getInstance();
         mAuth.getCurrentUser().delete();
-        db.collection("users").document(username).delete();
+        db.collection("users").document(username).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d("hola","success");
+            }
+        })
+        .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("hola","fail", e);
+
+            }
+        });
     }
 }

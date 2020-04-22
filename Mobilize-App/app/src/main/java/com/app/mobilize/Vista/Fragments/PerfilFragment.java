@@ -90,7 +90,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         friendList = view.findViewById(R.id.friendsList);
         friendList.setImageResource(R.mipmap.ic_friendslist);
         friendListIcon = "friends";
-        presenter.haveAnyFriendReq(user.getUsername());
+        presenter.haveAnyFriendReq(user.getEmail());
 
         friendList.setOnClickListener(this);
 
@@ -332,7 +332,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     @Override
     public void handleOptions() {
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
-        intent.putExtra("username", user.getUsername());
+        intent.putExtra("username", user.getEmail());
         startActivity(intent);
     }
 
@@ -350,7 +350,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         user.setPrivacity(privacy);
         user.setDateNaixement(dateNaixement.getText().toString());
         user.setImage(imageUri);
-        presenter.toGuardarCambios(user.getUsername(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage(), user.getPrivacity());
+        presenter.toGuardarCambios(user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage(), user.getPrivacity());
     }
 
     @Override
