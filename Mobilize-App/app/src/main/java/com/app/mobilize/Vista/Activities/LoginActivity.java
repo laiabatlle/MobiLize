@@ -220,7 +220,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
     public void goRegister() {
         Intent sig = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(sig);
-        finish();
     }
 
     @Override
