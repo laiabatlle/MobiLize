@@ -9,6 +9,7 @@ import android.app.UiAutomation;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +23,7 @@ public class optionsActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button logout, deleteUser;
     String username;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +39,10 @@ public class optionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                    showAlertDialog();
-
             }
         });
+
+        sharedPreferences = this.getSharedPreferences("myShared", Context.MODE_PRIVATE);
 
         logout = findViewById(R.id.logOut);
         logout.setText("LogOut");
@@ -50,6 +53,11 @@ public class optionsActivity extends AppCompatActivity {
                 mAuth = FirebaseAuth.getInstance();
                 mAuth.getCurrentUser().reload();
                 mAuth.signOut();
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove("email");
+                editor.commit();
+
                 goToLogin();
             }
         });
@@ -67,6 +75,10 @@ public class optionsActivity extends AppCompatActivity {
 
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
                 db.collection("users").document(username).delete();
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("email", null);
+                editor.apply();
 
                 goToLogin();
             }
