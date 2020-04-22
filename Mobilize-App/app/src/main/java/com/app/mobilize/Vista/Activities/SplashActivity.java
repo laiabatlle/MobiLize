@@ -17,13 +17,30 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            };
-        }, DURATION_SPLASH);
+
+        if(SaveSharedPreference.getEmail(this).length() != 0) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent sig = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(sig);
+                    finish();
+                }
+
+                ;
+            }, DURATION_SPLASH);
+        }
+        else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+                ;
+            }, DURATION_SPLASH);
+        }
     }
 }
