@@ -92,12 +92,12 @@
         "source": "D:\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\circle.xml"
     },
     {
-        "merged": "D:\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_logo2_round.png.flat",
-        "source": "D:\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_logo2_round.png"
-    },
-    {
         "merged": "D:\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bicicleta.png.flat",
         "source": "D:\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\bicicleta.png"
+    },
+    {
+        "merged": "D:\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_logo2_round.png.flat",
+        "source": "D:\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_logo2_round.png"
     },
     {
         "merged": "D:\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_options.xml.flat",
