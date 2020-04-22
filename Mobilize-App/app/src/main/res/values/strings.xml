@@ -80,6 +80,7 @@
         <item>NOV</item>
         <item>DIC</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

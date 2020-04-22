@@ -3,6 +3,7 @@ package com.app.mobilize;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -28,22 +29,22 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-public class TrackActivity extends AppCompatActivity {
-
-    Location gps_loc, network_loc, final_loc;
+public class TrackActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     Chronometer chrono;
     Button bStart, bStop, bResume, bFinish;
     boolean is_Finish;
     long timeElapsed;
-
-    double latitud, longitud;
-
-    protected LocationManager locationManager;
-    protected LocationListener locationListener;
 
     int PERMISSION_ID = 44;
     FusedLocationProviderClient mFusedLocationClient;
@@ -51,6 +52,8 @@ public class TrackActivity extends AppCompatActivity {
     TextView tvLongitud, tvLatitud;
 
     double initialLatitud, initialLongitud;
+
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +63,18 @@ public class TrackActivity extends AppCompatActivity {
         tvLatitud = findViewById(R.id.tvLatitud);
         tvLongitud = findViewById(R.id.tvLongitud);
 
-        initChrono();
-
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        requestNewLocationData();
         initialLatitud = 0;
         initialLongitud = 0;
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        getLastLocation();
+        requestNewLocationData();
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+        initChrono();
 
     }
 
@@ -86,6 +95,10 @@ public class TrackActivity extends AppCompatActivity {
                                     if ( initialLatitud == 0 && initialLongitud == 0 ) {
                                         initialLatitud = location.getLatitude();
                                         initialLongitud = location.getLongitude();
+                                        LatLng auxLatLng = new LatLng(initialLatitud, initialLongitud);
+                                        mMap.addMarker(new MarkerOptions().position(auxLatLng));
+                                        mMap.moveCamera(CameraUpdateFactory.newLatLng(auxLatLng));
+                                        mMap.setMinZoomPreference(15.0f);
                                     }
                                 }
                             }
@@ -123,6 +136,12 @@ public class TrackActivity extends AppCompatActivity {
         @Override
         public void onLocationResult(LocationResult locationResult) {
             Location mLastLocation = locationResult.getLastLocation();
+            //makeToast(initialLatitud, initialLongitud);
+            if ( initialLatitud == 0 && initialLongitud == 0 ) {
+                initialLatitud = mLastLocation.getLatitude();
+                initialLongitud = mLastLocation.getLongitude();
+                mMap.addMarker(new MarkerOptions().position(new LatLng(initialLatitud, initialLongitud)));
+            }
             tvLongitud.setText(String.valueOf(mLastLocation.getLongitude()));
             tvLatitud.setText(String.valueOf(mLastLocation.getLatitude()));
         }
@@ -237,5 +256,17 @@ public class TrackActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), String.valueOf(result[0]), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+    }
+
+    public void makeToast ( double lat, double lon ) {
+        String sLat = String.valueOf(lat);
+        String sLon = String.valueOf(lon);
+
+        Toast.makeText(this, "LATLON --> " + sLat + "  " + sLon, Toast.LENGTH_LONG ).show();
     }
 }
