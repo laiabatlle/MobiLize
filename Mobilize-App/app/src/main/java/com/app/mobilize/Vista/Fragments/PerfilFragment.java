@@ -309,7 +309,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         dateNaixement.setEnabled(enable);
         avatar.setEnabled(enable);
         genero.setEnabled(enable);
-        privacity.setEnabled(enable);
         opcions.setEnabled(enable);
         buscadorAmigos.setEnabled(enable);
     }

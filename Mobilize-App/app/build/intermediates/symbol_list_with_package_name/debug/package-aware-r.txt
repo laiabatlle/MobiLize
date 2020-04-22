@@ -2082,8 +2082,9 @@ id phone_layout
 id phone_number
 id pin
 id privacity
-id privacitySpin
-id privacityTV
+id privacityLayout
+id privacitySwitch
+id privateText
 id progress_circular
 id progress_horizontal
 id radio
