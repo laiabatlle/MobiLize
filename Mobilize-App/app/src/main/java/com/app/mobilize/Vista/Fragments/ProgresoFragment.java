@@ -35,14 +35,13 @@ import java.util.Calendar;
  */
 public class ProgresoFragment extends Fragment {
 
-    TextView tvWorkout, tvCycling, tvRunning, tvTotal;
-    ProgressBar pbWorkout, pbCycling, pbRunning;
-    RadioButton rbMensual, rbSemanal, rbPeso, rbCalorias, rbPasos;
-    LineChart chart;
-    Usuari user;
-    Button activitatsFinalitzades;
+    private TextView tvWorkout, tvCycling, tvRunning, tvTotal;
+    private ProgressBar pbWorkout, pbCycling, pbRunning;
+    private RadioButton rbMensual, rbSemanal, rbPeso, rbCalorias, rbPasos;
+    private LineChart chart;
+    private Button activitatsFinalitzades;
 
-    Calendar data_actual = Calendar.getInstance();
+    private Calendar data_actual = Calendar.getInstance();
     //Date d = data_actual.getTime();
 
     public ProgresoFragment( ) {
@@ -87,9 +86,9 @@ public class ProgresoFragment extends Fragment {
         minCycling = 500;
         minWorkout = 500;
 
-        tvWorkout.setText("Workout: " + String.valueOf(minWorkout) + " min");
-        tvRunning.setText("Running: " + String.valueOf(minRunning) + " min");
-        tvCycling.setText("Cycling: " + String.valueOf(minCycling) + " min");
+        tvWorkout.setText(getResources().getString(R.string.workout) + " " + String.valueOf(minWorkout) + " min");
+        tvRunning.setText(getResources().getString(R.string.running) + " " + String.valueOf(minRunning) + " min");
+        tvCycling.setText(getResources().getString(R.string.cycling) + " " + String.valueOf(minCycling) + " min");
 
         pbWorkout.setProgress(minWorkout*100/minTotals);
         pbCycling.setProgress(minCycling*100/minTotals);
@@ -129,7 +128,7 @@ public class ProgresoFragment extends Fragment {
         valors_mensuals.add(new Entry(4, 0f));
         valors_mensuals.add(new Entry(5, 0));
         valors_mensuals.add(new Entry(6, 0));
-        final LineDataSet setM = new LineDataSet(valors_mensuals, "Mensual");
+        final LineDataSet setM = new LineDataSet(valors_mensuals, getResources().getString(R.string.monthly));
 
         final ArrayList<Entry> valors_setmanals = new ArrayList<>();
         //valors per definicio de Pes i Setmanal
@@ -140,7 +139,7 @@ public class ProgresoFragment extends Fragment {
         valors_setmanals.add(new Entry(4, 77.2f));
         valors_setmanals.add(new Entry(5, 76.5f));
         valors_setmanals.add(new Entry(6, 76.4f));
-        final LineDataSet setS = new LineDataSet(valors_setmanals, "Semanal");
+        final LineDataSet setS = new LineDataSet(valors_setmanals, getResources().getString(R.string.weekly));
         DrawGraph(setS, "peso", "semanal");
 
         rbSemanal.setOnClickListener(new View.OnClickListener() {

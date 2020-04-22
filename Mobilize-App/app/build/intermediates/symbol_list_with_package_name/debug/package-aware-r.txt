@@ -1565,6 +1565,7 @@ drawable button_bg_rounded_corners_red
 drawable button_normal
 drawable button_selected
 drawable button_selected_delete
+drawable button_selected_rounded
 drawable circle
 drawable circle_border
 drawable common_full_open_on_phone
@@ -2635,8 +2636,10 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accept
+string actFin
 string addReminder
 string adelgazar
+string adelgazarPlan
 string alerts
 string app_name
 string appbar_scrolling_view_behavior
@@ -2706,6 +2709,7 @@ string email
 string empieza
 string emptyDateEvent
 string enforma
+string enformaPlan
 string english
 string enrere
 string enterNumber
@@ -2856,6 +2860,7 @@ string loginConfirmationButton
 string login_title
 string logoMobiLize
 string masa_muscular
+string masa_muscularPlan
 string mdtp_ampm_circle_radius_multiplier
 string mdtp_circle_radius_multiplier
 string mdtp_circle_radius_multiplier_24HourMode
@@ -2888,6 +2893,7 @@ string misplanes
 string mitjana
 string modifica
 string month
+string monthly
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -2933,6 +2939,7 @@ string off
 string ok
 string on
 string options
+string otro
 string password
 string password_toggle_content_description
 string path_password_eye
@@ -2974,6 +2981,7 @@ string search_menu_title
 string seguimiento
 string seleccionar_modalidad
 string seleccione_su_rutina
+string selectDiscipline
 string selectType
 string spanish
 string status_bar_notification_info_overflow
@@ -2991,6 +2999,7 @@ string updateReminderSuccessful
 string user
 string version
 string week
+string weekly
 string workout
 string yes
 style AlertDialog_AppCompat

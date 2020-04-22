@@ -26,9 +26,12 @@ public class TipusPlan extends AppCompatActivity {
         setContentView(R.layout.activity_tipus_plan);
 
         String tipus = getIntent().getStringExtra("tipus");
+        if(tipus.equals("A")) tipus = getResources().getString(R.string.adelgazarPlan);
+        else if(tipus.equals("E")) tipus = getResources().getString(R.string.enformaPlan);
+        else tipus = getResources().getString(R.string.masa_muscularPlan);
 
         tv = findViewById(R.id.textView5);
-        tv.setText("PLANNING: " + tipus);
+        tv.setText(tipus);
 
         buttonOk = findViewById(R.id.butOk);
         buttonBack = findViewById(R.id.butEnrere);
@@ -52,7 +55,7 @@ public class TipusPlan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if ( cbRunning.isChecked() == false && cbCiclisme.isChecked() == false && cbWorkout.isChecked() == false ){
-                    Toast.makeText(getApplicationContext(), "SELECCIONA UNA DISCIPLINA!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.selectDiscipline, Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -47,21 +47,21 @@ public class PlanFragment extends Fragment {
         ibAdelgazar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tipusPlan("Adelgazar"); // li paso el tipus de plan clickat
+                tipusPlan("A"); // li paso el tipus de plan clickat
             }
         });
 
         ibEnForma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tipusPlan("En forma"); // li paso el tipus de plan clickat
+                tipusPlan("E"); // li paso el tipus de plan clickat
             }
         });
 
         ibMasa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tipusPlan("Ganar Músculo"); // li paso el tipus de plan clickat
+                tipusPlan("G"); // li paso el tipus de plan clickat
             }
         });
         return view;
