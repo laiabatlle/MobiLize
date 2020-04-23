@@ -220,4 +220,14 @@
     <string name="monthly">Mensual</string>
     <string name="weekly">Semanal</string>
     <string name="actFin">Actividades Finalizadas</string>
+    <string name="findfriends">¡Encuentra nuevos amigos!</string>
+    <string name="userNotFound">No se ha encontrado ningún usuario con ese nombre</string>
+    <string-array name="genre">
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Sin especificar</item>
+    </string-array>
+    <string name="man">Hombre</string>
+    <string name="woman">Mujer</string>
+
 </resources>

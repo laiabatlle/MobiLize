@@ -50,6 +50,7 @@ animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array dias_semana
 array duracio
+array genre
 array meses_año
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1558,15 +1559,13 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable button_bg
-drawable button_bg_delete
-drawable button_bg_rounded_cornerns_n
 drawable button_bg_rounded_corners
+drawable button_bg_rounded_corners_delete
 drawable button_bg_rounded_corners_red
 drawable button_normal
-drawable button_selected
 drawable button_selected_delete
 drawable button_selected_rounded
+drawable button_selected_rounded_delete
 drawable circle
 drawable circle_border
 drawable common_full_open_on_phone
@@ -2728,6 +2727,7 @@ string fab_transformation_sheet_behavior
 string facebook_application_id
 string facebook_login_protocol_scheme
 string facil
+string findfriends
 string firebase_database_url
 string firebase_status_fmt
 string firebase_web_host
@@ -2860,6 +2860,7 @@ string logOut
 string loginConfirmationButton
 string login_title
 string logoMobiLize
+string man
 string masa_muscular
 string masa_muscularPlan
 string mdtp_ampm_circle_radius_multiplier
@@ -2998,9 +2999,11 @@ string unsavedChanges
 string updateReminderFailed
 string updateReminderSuccessful
 string user
+string userNotFound
 string version
 string week
 string weekly
+string woman
 string workout
 string yes
 style AlertDialog_AppCompat

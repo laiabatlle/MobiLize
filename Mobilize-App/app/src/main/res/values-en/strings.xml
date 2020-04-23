@@ -220,5 +220,13 @@
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
     <string name="actFin">Completed Activities</string>
-
+    <string name="findfriends">¡Find new friends!</string>
+    <string name="userNotFound">No user was found with that name</string>
+    <string-array name="genre">
+        <item>Man</item>
+        <item>Woman</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
 </resources>

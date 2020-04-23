@@ -130,16 +130,25 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
                                         }
                                         if(newUser[0]){
                                             Usuari usuari = new Usuari(acct.getDisplayName(), "ojsadf'39iwj3erfd'e0w9ijf90dsij'fodj'aeoa'39ifj'9dsj'3f'", user.getEmail());
-                                            db.collection("users").document(user.getEmail()).set(usuari);
+                                            db.collection("users").document(user.getEmail()).set(usuari).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
+                                                    Intent sig = new Intent(LoginActivity.this, MainActivity.class);
+                                                    startActivity(sig);
+                                                    finish();
+                                                }
+                                            });
+                                        }
+                                        else{
+                                            SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
+                                            Intent sig = new Intent(LoginActivity.this, MainActivity.class);
+                                            startActivity(sig);
+                                            finish();
                                         }
                                     }
                                 }
                             });
-
-                            SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
-                            Intent sig = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(sig);
-                            finish();
                         }
 
                         // ...

@@ -98,7 +98,7 @@ public class ListaUsersFragment extends Fragment implements BuscadorUserInterfac
 
     @Override
     public void onError(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), getResources().getString(R.string.userNotFound), Toast.LENGTH_SHORT).show();
     }
 
     @Override

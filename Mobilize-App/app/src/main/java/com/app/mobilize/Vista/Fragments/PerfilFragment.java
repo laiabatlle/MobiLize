@@ -50,9 +50,8 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private Usuari user;
     private EditText peso, altura;
     private TextView dateNaixement;
-    private Spinner genero, privacity;
+    private Spinner genero;
     private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
-    private final String [] privates = {"Pública","Privada"};
     private String gendre;
     private String privacy;
     private ImageView avatar;
@@ -108,7 +107,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
             public boolean onQueryTextSubmit(String query) {
 
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ListaUsersFragment(user, buscadorAmigos.getQuery().toString()))
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
                 return false;
             }
 
@@ -121,19 +120,11 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
         //Spinner del genere de l'usuari:
         genero = (Spinner)view.findViewById(R.id.generoSpin);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, generos);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.genre));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genero.setAdapter(adapter);
         genero.setSelection(getPosition(user.getGender()));
         genero.setOnItemSelectedListener(this);
-
-        //Spinner de la privacitat de l'usuari:
-//        privacity = (Spinner)view.findViewById(R.id.privacitySpin);
-//        ArrayAdapter<String> adapterp = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, privates);
-//        adapterp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        privacity.setAdapter(adapterp);
-//        privacity.setSelection(getPositionPrivacy(user.getPrivacity()));
-//        privacity.setOnItemSelectedListener(this);
 
         //EditText de la dataNaixement de l'usuari:
         dateNaixement = (TextView) view.findViewById(R.id.dateBirthday);
@@ -157,23 +148,13 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     //Funcio per retornar l'element corresponent a l'string "gendre" de l'spinner per seleccionar el genere de l'usuari:
     private int getPosition(String gendre) {
-        int posicion = 0;
-        for (int i = 0; i < genero.getCount(); i++) {
-            if (genero.getItemAtPosition(i).toString().equalsIgnoreCase(gendre)) {
-                posicion = i;
-            }
+        if(gendre.equals("Hombre") || gendre.equals("Man") ||gendre.equals("Home")){
+            return 0;
         }
-        return posicion;
-    }
-
-    private int getPositionPrivacy(String privacy) {
-        int posicion = 0;
-        for (int i = 0; i < privacity.getCount(); i++) {
-            if (privacity.getItemAtPosition(i).toString().equalsIgnoreCase(privacy)) {
-                posicion = i;
-            }
+        else if(gendre.equals("Mujer") || gendre.equals("Woman") ||gendre.equals("Dona")){
+            return 1;
         }
-        return posicion;
+        else return 2;
     }
 
     //Funcio que retorna l'item seleccionat de l'spinner per seleccionar el genere de l'usuari:
@@ -182,9 +163,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         if(parent.getId() == R.id.generoSpin) {
             gendre = parent.getItemAtPosition(position).toString();
         }
-//        else if(parent.getId() == R.id.privacitySpin) {
-//            privacy = parent.getItemAtPosition(position).toString();
-//        }
     }
 
     @Override
@@ -339,7 +317,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     @Override
     public void handleFriendList() {
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FriendsListFragment(user, friendListIcon))
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
     }
 
     @Override

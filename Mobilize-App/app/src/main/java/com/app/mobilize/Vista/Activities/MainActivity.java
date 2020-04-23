@@ -65,35 +65,36 @@ public class MainActivity extends AppCompatActivity {
                                 user.setImage(Objects.requireNonNull(document.getData().get("image")).toString());
                                 user.setFriendsList((List<String>) document.get("friendsList"));
                             }
+
+                            mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+                            showSelectedFragment(new EntrenaminetoFragment());
+                            mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);
+                            mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                                @Override
+                                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                                    if (menuItem.getItemId() == R.id.Evento){
+                                        showSelectedFragment(new EventosFragment(user));
+                                    }
+                                    if (menuItem.getItemId() == R.id.Plan){
+                                        showSelectedFragment(new PlanFragment());
+                                    }
+                                    if (menuItem.getItemId() == R.id.Entrenamiento){
+                                        showSelectedFragment(new EntrenaminetoFragment());
+                                    }
+                                    if (menuItem.getItemId() == R.id.Progreso){
+                                        showSelectedFragment(new ProgresoFragment());
+                                    }
+                                    if (menuItem.getItemId() == R.id.Perfil){
+                                        showSelectedFragment(new PerfilFragment(user));
+                                    }
+                                    return true;
+                                }
+                            });
                         } else {
                             Log.d("MainActivity", "Error getting documents: ", task.getException());
                         }
                     }
                 });
-        mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-        showSelectedFragment(new EntrenaminetoFragment());
-        mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);
-        mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if (menuItem.getItemId() == R.id.Evento){
-                    showSelectedFragment(new EventosFragment(user));
-                }
-                if (menuItem.getItemId() == R.id.Plan){
-                    showSelectedFragment(new PlanFragment());
-                }
-                if (menuItem.getItemId() == R.id.Entrenamiento){
-                    showSelectedFragment(new EntrenaminetoFragment());
-                }
-                if (menuItem.getItemId() == R.id.Progreso){
-                    showSelectedFragment(new ProgresoFragment());
-                }
-                if (menuItem.getItemId() == R.id.Perfil){
-                    showSelectedFragment(new PerfilFragment(user));
-                }
-                return true;
-            }
-        });
     }
 
     public void showSelectedFragment(Fragment fragment){

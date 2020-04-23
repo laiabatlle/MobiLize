@@ -220,4 +220,13 @@
     <string name="monthly">Mensual</string>
     <string name="weekly">Setmanal</string>
     <string name="actFin">Activitats Finalitzades</string>
+    <string name="findfriends">¡Busca nous amics!</string>
+    <string name="userNotFound">No s\'ha trobat cap usuari amb aquest nom</string>
+    <string-array name="genre">
+        <item>Home</item>
+        <item>Dona</item>
+        <item>Sense especificar</item>
+    </string-array>
+    <string name="man">Home</string>
+    <string name="woman">Dona</string>
 </resources>

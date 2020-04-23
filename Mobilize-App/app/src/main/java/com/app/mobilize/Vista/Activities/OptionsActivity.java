@@ -40,7 +40,7 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
 
         presenter = new OptionsPresenter(this);
 
-        user = this.getIntent().getStringExtra("user");
+        user = SaveSharedPreference.getEmail(this).toString();
         privacy = "private";
         db.collection("users").document(SaveSharedPreference.getEmail(this).toString()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -74,7 +74,7 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
             @Override
             public void onClick(View v) {
                 presenter.toLogout();
-                goToLogin();
+                goToLogin(true);
             }
         });
 
@@ -116,20 +116,20 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 presenter.toDelete(user);
-                goToLogin();
+                goToLogin(false);
             }
         });
         AlertDialog alert = alertBuilder.create();
         alert.show();
     }
 
-    public void goToLogin () {
+    public void goToLogin (boolean notDelete) {
         SaveSharedPreference.clearEmail(this);
-        FirebaseAuth.getInstance().signOut();
+        if(notDelete) FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent( this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        this.finish();
+        finish();
         finishAffinity();
     }
 

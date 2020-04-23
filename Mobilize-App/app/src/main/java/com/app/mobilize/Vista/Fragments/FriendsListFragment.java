@@ -76,9 +76,9 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
 
     @Override
     public void onError(String message) {
-        if (message.equals("¡Encuentra nuevos amigos!")){
+        if (message.equals(message)){
             listaFriends.setVisibility(View.INVISIBLE);
-            Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), getResources().getString(R.string.findfriends), Toast.LENGTH_SHORT).show();
         }
         if (message.equals("No tienes solicitudes")){
             req.setVisibility(View.INVISIBLE);
