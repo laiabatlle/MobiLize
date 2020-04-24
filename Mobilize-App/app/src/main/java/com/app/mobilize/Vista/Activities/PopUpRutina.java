@@ -8,12 +8,15 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
 import com.app.mobilize.R;
 
 import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
@@ -26,11 +29,9 @@ public class PopUpRutina extends AppCompatActivity {
 
     ArrayList<Exercici> exe;
     RecyclerView recycler;
+    VideoView videoActivity;
 
     public static ArrayList<Exercici> eaux = new ArrayList<>();
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +46,18 @@ public class PopUpRutina extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
+        videoActivity = findViewById(R.id.videoActivity);
+        Log.d("title", getResources().getResourceName(R.raw.abdominals));
+        videoActivity.setVideoPath("android.resource://" + getPackageName() + "/raw/abdominals");
+        videoActivity.start();
 
+        videoActivity.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.start();
+            }
+        });
 
         recycler = (RecyclerView) findViewById(R.id.recyclerView3);
         recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -57,17 +68,10 @@ public class PopUpRutina extends AppCompatActivity {
         ed1.setText(item.getNom());
         ed2.setText(item.getInfo());
 
-
-
-
-
-
         exe = new ArrayList<>();
         exe = stringToArray(item.getExercicis(), item.getNivell(), item.getModalitat());
         eaux.clear();
         eaux = exe;
-
-
 
         AdapterDatos adapter = new AdapterDatos(exe);
         recycler.setAdapter(adapter);
