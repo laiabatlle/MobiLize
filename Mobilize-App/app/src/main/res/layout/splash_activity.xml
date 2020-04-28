@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/grad">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="263dp"
         android:layout_height="234dp"
         android:layout_margin="50dp"
-        android:background="@drawable/logo_mobilize"
+        android:background="@drawable/logo_mobilize_transparent"
         android:contentDescription="@string/logoMobiLize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
