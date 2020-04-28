@@ -1,10 +1,10 @@
-#Thu Mar 19 15:37:35 CET 2020
+#Thu Apr 23 22:21:07 CEST 2020
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
-base.1=C\:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
-base.0=C\:\\Users\\Usuario\\Desktop\\GithubDesk\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+base.2=D\:\\UNI\\ACTUAL\\prova_merge\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
+base.1=D\:\\UNI\\ACTUAL\\prova_merge\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=D\:\\UNI\\ACTUAL\\prova_merge\\Mobilize-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex

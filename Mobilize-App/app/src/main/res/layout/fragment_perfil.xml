@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.PerfilFragment">
+    tools:context=".Vista.Fragments.PerfilFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rellay"
@@ -14,28 +14,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/opciones"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/buttonslayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@null"
-            android:contentDescription="@string/GuardarCambiosButton"
-            android:src="@mipmap/ic_settings"
+            android:orientation="horizontal"
+            android:gravity="end"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/opciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:contentDescription="@string/GuardarCambiosButton"
+                android:src="@mipmap/ic_settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/AvatarIV"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toTopOf="@+id/usernameTV"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/opciones" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonslayout1" />
 
         <TextView
             android:id="@+id/usernameTV"
@@ -51,23 +64,47 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <SearchView
-        android:id="@+id/cearchFriendsSV"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/friendslayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rellay" />
+        app:layout_constraintTop_toBottomOf="@+id/rellay">
+
+        <ImageButton
+            android:id="@+id/friendsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:contentDescription="@string/GuardarCambiosButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <SearchView
+                android:id="@+id/cearchFriendsSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rellay" />
+        </LinearLayout>
+    </LinearLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -81,136 +118,265 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cearchFriendsSV"
-        app:layout_constraintVertical_bias="0.287">
+        app:layout_constraintTop_toBottomOf="@+id/friendslayout"
+        app:layout_constraintVertical_bias="0.3">
 
-        <TextView
-            android:id="@+id/generoTV"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/generoLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/GeneroTV"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <Spinner
-            android:id="@+id/generoSpin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/generoTV"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/cumpleañosTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/Fecha_NacimientoTV"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/generoTV" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/generoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/GeneroTV"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/dataCumpleañosTV"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/generoLayoutSpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="@+id/generoTV"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Spinner
+                    android:id="@+id/generoSpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.5dp"
+                    android:textSize="22sp"
+                    android:textAlignment="textEnd"
+                    android:gravity="end"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateBirthdayLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:clickable="true"
-            android:focusable="false"
             android:hint="@string/Fecha_NacimientoHint"
             android:inputType="date"
             android:maxLines="1"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/cumpleañosTV"
-            app:layout_constraintTop_toBottomOf="@+id/generoSpin"
-            android:importantForAutofill="no" />
-
-        <TextView
-            android:id="@+id/pesoTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/PesoTV"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cumpleañosTV" />
+            app:layout_constraintTop_toBottomOf="@+id/generoLayout">
 
-        <EditText
-            android:id="@+id/pesoET"
-            android:layout_width="70sp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:ems="10"
-            android:gravity="end"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/dataCumpleañosTV"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/dateBirthdayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="@string/Fecha_NacimientoTV"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/dateBirthdayLayoutCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="@+id/dateEventTV"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/dateBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/Fecha_NacimientoHint"
+                    android:importantForAutofill="no"
+                    android:textAlignment="gravity"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/dateEventLayoutCalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:gravity="end">
+
+                    <ImageButton
+                        android:id="@+id/dateBirthdayCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:background="@null"
+                        android:src="@mipmap/ic_date" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pesoLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/kg"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dataCumpleañosTV" />
-
-        <TextView
-            android:id="@+id/alturaTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/AlturaTV"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pesoTV" />
+            app:layout_constraintTop_toBottomOf="@+id/dateBirthdayLayout">
 
+            <TextView
+                android:id="@+id/pesoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="@string/PesoTV"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/alturaET"
-            android:layout_width="70sp"
+            <LinearLayout
+                android:id="@+id/pesoLayoutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="@+id/dateEventTV"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/pesoET"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:gravity="end"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/dateEventTV"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/kg"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alturaLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:ems="10"
-            android:gravity="end"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/pesoET"
-            android:importantForAutofill="no" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="7dp"
-            android:text="@string/cm"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pesoET" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pesoLayout">
+
+            <TextView
+                android:id="@+id/alturaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="@string/AlturaTV"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/alturaLayoutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="@+id/dateEventTV"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/alturaET"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="end"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="end"
+                    app:layout_constraintStart_toStartOf="@+id/dateEventTV"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/cm"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/privacityLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="1.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/alturaLayout">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/privacityTV"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="@string/privacityTV"-->
+        <!--                android:textColor="@color/colorPrimaryDark"-->
+        <!--                android:textSize="20sp"/>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:id="@+id/privacityLayoutSinner"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="end"-->
+        <!--                app:layout_constraintStart_toStartOf="@+id/privacityTV"-->
+        <!--                app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--                <Spinner-->
+        <!--                    android:id="@+id/privacitySpin"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:textSize="20sp"-->
+        <!--                    android:layout_marginTop="10dp"/>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
 
         <Button
             android:id="@+id/guardar"
@@ -222,8 +388,9 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alturaET" />
+            app:layout_constraintTop_toBottomOf="@+id/alturaLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
