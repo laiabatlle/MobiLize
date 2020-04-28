@@ -2042,6 +2042,7 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
 id list
 id listMode
 id listView
@@ -2341,6 +2342,7 @@ id useLogo
 id usernameRegister
 id usernameTV
 id version
+id videoActivity
 id view_offset_helper
 id visible
 id welcome_back_email_link_body
@@ -2580,6 +2582,7 @@ mipmap ic_settings
 mipmap ic_unfriend
 plurals fui_error_weak_password
 plurals mtrl_badge_content_description
+raw abdominals
 string AcceptFriendReq
 string AlturaTV
 string CancelFriendReq

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\UNI\\ACTUAL\\prova_merge\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
+            "outputFile": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\e54aabf959299f20bcfca6109f173ddb\\jetified-firebase-ui-auth-4.3.1\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\12c1ebbba9b277697f5c4a330fbd7f5b\\jetified-firebase-ui-auth-4.3.1\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\a4c046f6287b646e366d3997284efa26\\jetified-play-services-basement-17.1.1\\res\\values-ru\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "215",
-                        "endOffsets": "462"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4448",
-                        "endColumns": "215",
-                        "endOffsets": "4659"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\218dbebb069836f05f7846587d19961a\\jetified-materialdatetimepicker-1.2.1\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\7c86266b86a4633d3dbde7af9539a8a5\\jetified-materialdatetimepicker-1.2.1\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\6c5a1a33c151bf1b1b969a4997bc8337\\appcompat-1.1.0\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\6c5a1a33c151bf1b1b969a4997bc8337\\appcompat-1.1.0\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\bcfc0b80df78591183083cc148e1cf2c\\core-1.1.0\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\bcfc0b80df78591183083cc148e1cf2c\\core-1.1.0\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Alex Brugal\\.gradle\\caches\\transforms-2\\files-2.1\\75e7c473eccef2b3a0eec97fa3a7825b\\jetified-play-services-base-17.1.0\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\75e7c473eccef2b3a0eec97fa3a7825b\\jetified-play-services-base-17.1.0\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -103,6 +86,23 @@
                         "startOffsets": "3291,3400,3598,3726,3838,4039,4170,4315,4664,4904,5013,5207,5335,5561,5749,5848,5938",
                         "endColumns": "108,197,127,111,200,130,144,132,239,108,193,127,225,187,98,89,114",
                         "endOffsets": "3395,3593,3721,3833,4034,4165,4310,4443,4899,5008,5202,5330,5556,5744,5843,5933,6048"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\f6ff75c8b1d12eeeb05ca2abb84cfdb6\\jetified-play-services-basement-17.1.1\\res\\values-ru\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "215",
+                        "endOffsets": "462"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4448",
+                        "endColumns": "215",
+                        "endOffsets": "4659"
                     }
                 }
             ]
