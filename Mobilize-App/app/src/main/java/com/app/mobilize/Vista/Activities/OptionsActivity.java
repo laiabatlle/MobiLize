@@ -30,26 +30,17 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
     private Switch privacity;
     private String user, privacy;
     private OptionsInterface.Presenter presenter;
-    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
-        db = FirebaseFirestore.getInstance();
 
         presenter = new OptionsPresenter(this);
 
-        user = SaveSharedPreference.getEmail(this).toString();
-        privacy = "private";
-        db.collection("users").document(SaveSharedPreference.getEmail(this).toString()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    privacy = task.getResult().getData().get("privacity").toString();
-                }
-            }
-        });
+        user = SaveSharedPreference.getEmail(this);
+        String privacyExtra = this.getIntent().getStringExtra("user_privacity");
+        privacy = privacyExtra;
 
         deleteUser = findViewById(R.id.deleteUser);
         deleteUser.setOnClickListener(new View.OnClickListener() {

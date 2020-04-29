@@ -229,6 +229,7 @@
     </string-array>
     <string name="man">Hombre</string>
     <string name="woman">Mujer</string>
-    <string name="search">Buscar usuarios</string>
+    <string name="searchFriends">Buscar usuarios</string>
+    <string name="searchEvent">Buscar evento</string>
 
 </resources>

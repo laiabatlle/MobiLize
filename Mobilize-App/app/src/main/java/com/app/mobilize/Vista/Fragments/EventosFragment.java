@@ -59,6 +59,12 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
         handleChargeEvents();
 
         buscadorEventos = view.findViewById(R.id.cearchEventsSV);
+        buscadorEventos.onActionViewExpanded();
+        buscadorEventos.setIconifiedByDefault(false);
+        buscadorEventos.setQueryHint(getResources().getString(R.string.searchEvent));
+        if(!buscadorEventos.isFocused()) {
+            buscadorEventos.clearFocus();
+        }
         buscadorEventos.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

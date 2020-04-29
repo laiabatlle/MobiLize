@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -37,8 +39,15 @@ import com.app.mobilize.Presentador.PerfilPresenter;
 import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.OptionsActivity;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Calendar;
+import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -56,10 +65,11 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private String imageUri, friendListIcon;
     private SearchView buscadorAmigos;
 
-    private ImageButton friendList, pick_date, opcions;
+    private ImageButton friendList, pick_date, opcions, editName;
 
     private PerfilInterface.Presenter presenter;
 
+    FirebaseFirestore db;
 
     public PerfilFragment(Usuari user) {
         this.user = user;
@@ -74,9 +84,36 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         return view;
     }
 
+    @Override
+    public void onStart(){
+        db.collection("users").whereEqualTo("email", user.getEmail()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                        user.setEmail(user.getEmail());
+                        user.setUsername(Objects.requireNonNull(document.getData().get("username")).toString());
+                        user.setGender(Objects.requireNonNull(document.getData().get("gender")).toString());
+                        user.setDateNaixement(Objects.requireNonNull(document.getData().get("dateNaixement")).toString());
+                        String altura = Objects.requireNonNull(document.getData().get("height")).toString();
+                        String peso = Objects.requireNonNull(document.getData().get("weight")).toString();
+                        user.setHeight(altura);
+                        user.setWeight(peso);
+                        user.setPrivacity(Objects.requireNonNull(document.getData().get("privacity")).toString());
+
+                        user.setImage(Objects.requireNonNull(document.getData().get("image")).toString());
+                        user.setFriendsList((List<String>) document.get("friendsList"));
+                    }
+                }
+            }
+        });
+        super.onStart();
+    }
+
     private void setViews(View view) {
         presenter = new PerfilPresenter(this);
 
+        db = FirebaseFirestore.getInstance();
         //Imatge de l'avatar de l'usuari:
         avatar = (ImageView)view.findViewById(R.id.AvatarIV);
         imageUri = user.getImage();
@@ -94,6 +131,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         opcions = view.findViewById(R.id.opciones);
         opcions.setOnClickListener(this);
 
+        editName = view.findViewById(R.id.edit);
+        editName.setOnClickListener(this);
+
         //TextView de l'username:
         TextView username = (TextView) view.findViewById(R.id.usernameTV);
         username.setText(user.getUsername());
@@ -102,7 +142,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         buscadorAmigos = (SearchView) view.findViewById(R.id.cearchFriendsSV);
         buscadorAmigos.onActionViewExpanded();
         buscadorAmigos.setIconifiedByDefault(false);
-        buscadorAmigos.setQueryHint(getResources().getString(R.string.search));
+        buscadorAmigos.setQueryHint(getResources().getString(R.string.searchFriends));
         if(!buscadorAmigos.isFocused()) {
             buscadorAmigos.clearFocus();
         }
@@ -281,6 +321,10 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
                 handleOptions();
                 break;
 
+            case R.id.edit:
+                handleEdit();
+                break;
+
             default:
                 break;
         }
@@ -313,6 +357,13 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void handleOptions() {
+        Intent intent = new Intent(getActivity(), OptionsActivity.class);
+        Log.d("hola", user.getPrivacity());
+        intent.putExtra("user_privacity", user.getPrivacity());
+        startActivity(intent);
+    }
+
+    public void handleEdit() {
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
         intent.putExtra("user", user.getEmail());
         intent.putExtra("user_privacity", user.getPrivacity());
