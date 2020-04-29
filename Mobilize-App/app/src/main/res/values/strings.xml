@@ -231,5 +231,7 @@
     <string name="woman">Mujer</string>
     <string name="searchFriends">Buscar usuarios</string>
     <string name="searchEvent">Buscar evento</string>
+    <string name="editUsername">Cambiar nombre de usuario</string>
+    <string name="errorUsername">Este nombre de usuario ya existe</string>
 
 </resources>

@@ -34,7 +34,7 @@ public class RegisterModel implements RegisterInterface.Model {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     if(!task.getResult().isEmpty()) {
-                        listener.onError("El nombre de usuario ya esta utilizado.");
+                        listener.onError("Este nombre de usuario ya existe");
                     }
                     else{
                         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -53,7 +53,7 @@ public class RegisterModel implements RegisterInterface.Model {
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            listener.onError("Error en el registro. Inténtelo de nuevo mas tarde.");
+                                            listener.onError("Error en el registro. Inténtelo de nuevo más tarde");
                                         }
                                     });
                                 } else {
@@ -61,9 +61,9 @@ public class RegisterModel implements RegisterInterface.Model {
                                     try {
                                         throw task.getException();
                                     } catch (FirebaseAuthUserCollisionException e) {
-                                        listener.onError("Este correo ya tiene una cuenta asociada, porfavor introduce otro correo electronico o acceda a su cuenta.");
+                                        listener.onError("Este correo ya tiene una cuenta asociada, porfavor introduce otro correo electrónico o acceda a su cuenta");
                                     } catch (FirebaseAuthWeakPasswordException e) {
-                                        listener.onError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 caracteres alfanuméricos.");
+                                        listener.onError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 carácteres alfanuméricos");
                                     } catch (Exception e) {
                                         listener.onError(task.getException().getMessage());
                                     }

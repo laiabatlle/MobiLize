@@ -57,12 +57,13 @@ public class PerfilModel implements PerfilInterface.Model {
     }
 
     @Override
-    public void doGuardarCambios(String username, String dateNaixement, String gendre, String weight, String height, String image/*, String privacity*/) {
-        user_ref.document(username).update("weight", weight);
-        user_ref.document(username).update("height", height);
-        user_ref.document(username).update("gender", gendre);
-        user_ref.document(username).update("dateNaixement", dateNaixement);
-        user_ref.document(username).update("image", image);
+    public void doGuardarCambios(String username, String email, String dateNaixement, String gendre, String weight, String height, String image/*, String privacity*/) {
+        user_ref.document(email).update("weight", weight);
+        user_ref.document(email).update("username", username);
+        user_ref.document(email).update("height", height);
+        user_ref.document(email).update("gender", gendre);
+        user_ref.document(email).update("dateNaixement", dateNaixement);
+        user_ref.document(email).update("image", image);
         /*user_ref.document(username).update("privacity", privacity);*/
         listener.onSuccess("1");
     }

@@ -57,7 +57,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     private static final int GALLERY_INTENT = 1;
     private Usuari user;
-    private EditText peso, altura;
+    private EditText peso, altura, username, editText;
     private TextView dateNaixement;
     private Spinner genero;
     private String gendre;
@@ -135,8 +135,9 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         editName.setOnClickListener(this);
 
         //TextView de l'username:
-        TextView username = (TextView) view.findViewById(R.id.usernameTV);
+        username = (EditText) view.findViewById(R.id.usernameTV);
         username.setText(user.getUsername());
+        username.setEnabled(false);
 
         //Buscador de Amics per a l'ususari:
         buscadorAmigos = (SearchView) view.findViewById(R.id.cearchFriendsSV);
@@ -358,16 +359,24 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     @Override
     public void handleOptions() {
         Intent intent = new Intent(getActivity(), OptionsActivity.class);
-        Log.d("hola", user.getPrivacity());
         intent.putExtra("user_privacity", user.getPrivacity());
         startActivity(intent);
     }
 
-    public void handleEdit() {
-        Intent intent = new Intent(getActivity(), OptionsActivity.class);
-        intent.putExtra("user", user.getEmail());
-        intent.putExtra("user_privacity", user.getPrivacity());
-        startActivity(intent);
+    public void handleEdit(){
+        final AlertDialog.Builder editAD = new AlertDialog.Builder(getActivity());
+        editText = new EditText(getActivity());
+        editAD.setTitle(getResources().getString(R.string.editUsername));
+        editAD.setView(editText);
+        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                username.setText(editText.getText());
+            }
+        });
+        editText.setText(username.getText());
+        AlertDialog alert = editAD.create();
+        alert.show();
     }
 
     @Override
@@ -378,12 +387,39 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
     @Override
     public void handleGuardarCambios() {
-        user.setWeight(peso.getText().toString());
-        user.setHeight(altura.getText().toString());
-        user.setGender(gendre);
-        user.setDateNaixement(dateNaixement.getText().toString());
-        user.setImage(imageUri);
-        presenter.toGuardarCambios(user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage()/*, user.getPrivacity()*/);
+        if(user.getUsername().equals(username.getText().toString())){
+            user.setWeight(peso.getText().toString());
+            user.setHeight(altura.getText().toString());
+            user.setGender(gendre);
+            user.setDateNaixement(dateNaixement.getText().toString());
+            user.setImage(imageUri);
+            presenter.toGuardarCambios(user.getUsername(), user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage());
+        }
+        else {
+            db.collection("users").whereEqualTo("username", username.getText().toString()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        if (!task.getResult().isEmpty()) {
+                            AlertDialog.Builder error = new AlertDialog.Builder(getActivity());
+                            error.setMessage(R.string.errorUsername).setTitle("Error").setCancelable(true);
+                            AlertDialog alert = error.create();
+                            alert.show();
+                        }
+                        else {
+                            user.setUsername(username.getText().toString());
+                            user.setWeight(peso.getText().toString());
+                            user.setHeight(altura.getText().toString());
+                            user.setGender(gendre);
+                            user.setDateNaixement(dateNaixement.getText().toString());
+                            user.setImage(imageUri);
+                            presenter.toGuardarCambios(user.getUsername(), user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage());
+                        }
+                    }
+                }
+            });
+        }
     }
 
     @Override
