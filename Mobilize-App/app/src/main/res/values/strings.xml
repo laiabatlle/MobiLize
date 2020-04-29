@@ -66,7 +66,7 @@
     <string name="idiomChanged">El idioma se ha cambiado al Español</string>
     <string name="introduceValidEmail">Por favor, introduce un email válido</string>
     <string name="incorrectEmail">Email incorrecto</string>
-    <string name="incorrectPassword">Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 carácteres alfanuméricos</string>
+    <string name="incorrectPassword">Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener más de 6 carácteres alfanuméricos</string>
     <string name="confirmEmail">Confirma primero tu dirección de correo electrónico</string>
     <string name="errorEmail">Error en el correo electrónico o contraseña</string>
     <string name="event">Evento</string>
@@ -233,5 +233,8 @@
     <string name="searchEvent">Buscar evento</string>
     <string name="editUsername">Cambiar nombre de usuario</string>
     <string name="errorUsername">Este nombre de usuario ya existe</string>
+    <string name="changePassword">Cambiar contraseña</string>
+    <string name="newPassword">Nueva contraseña</string>
+    <string name="passwordChanged">La contraseña se ha cambiado correctamente</string>
 
 </resources>

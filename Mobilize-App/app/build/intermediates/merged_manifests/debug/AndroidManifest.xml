@@ -82,6 +82,7 @@
         </activity>
         <activity android:name="com.app.mobilize.Vista.Activities.ActivitatsUser" />
         <activity android:name="com.app.mobilize.Vista.Activities.AfegirRutina" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ChangePasswordActivity" />
 
         <provider
             android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"

@@ -26,7 +26,7 @@ import java.util.Objects;
 
 public class OptionsActivity extends AppCompatActivity implements OptionsInterface.View{
 
-    private Button logout, deleteUser, idiom, info, alerts;
+    private Button logout, deleteUser, idiom, info, alerts, change;
     private Switch privacity;
     private String user, privacy;
     private OptionsInterface.Presenter presenter;
@@ -92,6 +92,14 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
                 goToAlerts();
             }
         });
+
+        change = findViewById(R.id.changePassword);
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToChangePassword();
+            }
+        });
     }
 
     public void showAlertDialog(){
@@ -136,6 +144,11 @@ public class OptionsActivity extends AppCompatActivity implements OptionsInterfa
 
     public void goToAlerts () {
         Intent intent = new Intent( this, AlertsActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToChangePassword() {
+        Intent intent = new Intent( this, ChangePasswordActivity.class);
         startActivity(intent);
     }
 

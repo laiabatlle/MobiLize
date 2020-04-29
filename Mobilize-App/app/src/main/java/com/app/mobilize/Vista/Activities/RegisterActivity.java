@@ -124,7 +124,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterInter
 
     @Override
     public boolean isValidPassword() {
-        return ((!TextUtils.isEmpty(password.getText().toString())) && (password.getText().toString().length() > 6 || password.getText().toString().length() < 10));
+        return ((!TextUtils.isEmpty(password.getText().toString())) && (password.getText().toString().length() > 6));
     }
 
     @Override

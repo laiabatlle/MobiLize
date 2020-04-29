@@ -66,7 +66,7 @@
     <string name="idiomChanged">The language has been changed to English</string>
     <string name="introduceValidEmail">Please, enter a valid email</string>
     <string name="incorrectEmail">Incorrect email</string>
-    <string name="incorrectPassword">Incorrect password. Please enter a valid password. It must contain between 6 and 10 alphanumeric characters</string>
+    <string name="incorrectPassword">Incorrect password. Please enter a valid password. It must contain more than 6 alphanumeric characters</string>
     <string name="confirmEmail">Confirm your email address first</string>
     <string name="errorEmail">Wrong email or password</string>
     <string name="event">Event</string>
@@ -233,4 +233,8 @@
     <string name="searchEvent">Search event</string>
     <string name="editUsername">Change username</string>
     <string name="errorUsername">This username already exists</string>
+    <string name="changePassword">Change password</string>
+    <string name="newPassword">New password</string>
+    <string name="passwordChanged">The password has been successfully changed</string>
+
 </resources>

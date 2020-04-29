@@ -63,7 +63,7 @@ public class RegisterModel implements RegisterInterface.Model {
                                     } catch (FirebaseAuthUserCollisionException e) {
                                         listener.onError("Este correo ya tiene una cuenta asociada, porfavor introduce otro correo electrónico o acceda a su cuenta");
                                     } catch (FirebaseAuthWeakPasswordException e) {
-                                        listener.onError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener entre 6 y 10 carácteres alfanuméricos");
+                                        listener.onError("Contraseña incorrecta. Por favor, introduce una contraseña válida. Debe contener más de 6 carácteres alfanuméricos");
                                     } catch (Exception e) {
                                         listener.onError(task.getException().getMessage());
                                     }

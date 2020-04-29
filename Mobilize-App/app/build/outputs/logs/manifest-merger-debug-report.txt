@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\23e6ef51467248364acb26032462f6e5\AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e17c0a53865e02cbd88aa4d4a6c56cc3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.bignerdranch.android:recyclerview-multiselect:0.2] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\1fa27c33611a8ee32efe856e429eeede\AndroidManifest.xml:2:1-11:12
@@ -88,20 +88,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\VSPC-BRIGTHWAVE2
 MERGED from [androidx.print:print:1.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\bbf43e56f44124b1012e24b0dc2c519e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e92ddfddd3bd49eef69093d42218ef61\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\edf4e56c37a070027d0334e1fc64edb1\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
-INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
 	package
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-87:12
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-88:12
 		INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:2:11-69
@@ -194,7 +194,7 @@ ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\An
 	android:name
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:14:22-75
 application
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:16:5-85:19
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:16:5-86:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\23e6ef51467248364acb26032462f6e5\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\23e6ef51467248364acb26032462f6e5\AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\VSPC-BRIGTHWAVE2V5\.gradle\caches\transforms-2\files-2.1\e17c0a53865e02cbd88aa4d4a6c56cc3\AndroidManifest.xml:22:5-20
@@ -415,52 +415,56 @@ activity#com.app.mobilize.Vista.Activities.AfegirRutina
 ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:69:9-67
 	android:name
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:69:19-64
+activity#com.app.mobilize.Vista.Activities.ChangePasswordActivity
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:70:9-77
+	android:name
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:70:19-74
 provider#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:71:9-73:39
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:72:9-74:39
 	android:authorities
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:72:13-95
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:73:13-95
 	android:exported
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:73:13-37
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:74:13-37
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:71:19-78
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:72:19-78
 service#com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:74:9-76:40
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:75:9-77:40
 	android:exported
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:76:13-37
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:77:13-37
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:75:13-75
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:76:13-75
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:77:9-77
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:78:9-77
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:77:19-75
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:78:19-75
 receiver#com.app.mobilize.Vista.Activities.AddAlertActivity
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:78:9-70
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:79:9-70
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:78:19-68
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:79:19-68
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:79:9-83
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:80:9-83
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:79:19-81
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:80:19-81
 receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:80:9-80
-	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:80:19-78
-receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderContract
 ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:81:9-80
 	android:name
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:81:19-78
-receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper
+receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderContract
 ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:82:9-80
 	android:name
 		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:82:19-78
+receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:83:9-80
+	android:name
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:83:19-78
 receiver#com.app.mobilize.Vista.Activities.AlarmCursorAdapter
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:83:9-72
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:84:9-72
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:83:19-70
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:84:19-70
 receiver#com.app.mobilize.Vista.Activities.AlertsActivity
-ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:84:9-68
+ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:85:9-68
 	android:name
-		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:84:19-66
+		ADDED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml:85:19-66
 uses-sdk
 INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\AndroidManifest.xml

@@ -64,7 +64,6 @@ public class PerfilModel implements PerfilInterface.Model {
         user_ref.document(email).update("gender", gendre);
         user_ref.document(email).update("dateNaixement", dateNaixement);
         user_ref.document(email).update("image", image);
-        /*user_ref.document(username).update("privacity", privacity);*/
         listener.onSuccess("1");
     }
 
