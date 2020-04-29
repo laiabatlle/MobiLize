@@ -6,7 +6,7 @@
     <string name="email">Email</string>
     <string name="register">Registrarse</string>
     <string name="gotologin">Ir al inicio de sesión</string>
-    <string name="gotoregister">No tienes una cuenta?</string>
+    <string name="gotoregister">¿No tienes una cuenta?</string>
     <string name="confirmationEmailText">No tienes una cuenta?</string>
     <string name="login_title">Iniciar sesión</string>
     <string name="loginConfirmationButton">Iniciar sesión</string>
@@ -229,5 +229,6 @@
     </string-array>
     <string name="man">Hombre</string>
     <string name="woman">Mujer</string>
+    <string name="search">Buscar usuarios</string>
 
 </resources>

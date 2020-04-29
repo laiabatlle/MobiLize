@@ -229,4 +229,5 @@
     </string-array>
     <string name="man">Home</string>
     <string name="woman">Dona</string>
+    <string name="search">Cercar usuaris</string>
 </resources>

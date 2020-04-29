@@ -51,9 +51,7 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
     private EditText peso, altura;
     private TextView dateNaixement;
     private Spinner genero;
-    private static final String [] generos = {"","Hombre", "Mujer", "Otro"};
     private String gendre;
-    private String privacy;
     private ImageView avatar;
     private String imageUri, friendListIcon;
     private SearchView buscadorAmigos;
@@ -102,6 +100,13 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
 
         //Buscador de Amics per a l'ususari:
         buscadorAmigos = (SearchView) view.findViewById(R.id.cearchFriendsSV);
+        buscadorAmigos.onActionViewExpanded();
+        buscadorAmigos.setIconifiedByDefault(false);
+        buscadorAmigos.setQueryHint(getResources().getString(R.string.search));
+        if(!buscadorAmigos.isFocused()) {
+            buscadorAmigos.clearFocus();
+        }
+
         buscadorAmigos.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -325,7 +330,6 @@ public class PerfilFragment extends Fragment implements PerfilInterface.View, Ad
         user.setWeight(peso.getText().toString());
         user.setHeight(altura.getText().toString());
         user.setGender(gendre);
-        user.setPrivacity(privacy);
         user.setDateNaixement(dateNaixement.getText().toString());
         user.setImage(imageUri);
         presenter.toGuardarCambios(user.getEmail(),  user.getDateNaixement(), user.getGender(), user.getWeight(), user.getHeight(), user.getImage()/*, user.getPrivacity()*/);
