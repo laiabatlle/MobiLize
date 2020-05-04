@@ -1,5 +1,7 @@
 package com.app.mobilize.Presentador;
 
+import android.content.Context;
+
 import com.app.mobilize.Model.Events;
 import com.app.mobilize.Model.EventsModel;
 import com.app.mobilize.Model.Usuari;
@@ -20,13 +22,15 @@ public class EventsPresenter implements EventsInterface.Presenter, EventsInterfa
     private EventsInterface.Model model;
     private AdapterEventos adapterEventos;
     private ArrayList<Events> eventsList;
+    private Context mContext;
 
-    public EventsPresenter(EventsInterface.View view, Usuari user) {
+    public EventsPresenter(Context context, EventsInterface.View view, Usuari user) {
+        this.mContext = context;
         this.view = view;
         this.currentUser = user;
         model = new EventsModel(this);
         eventsList = new ArrayList<>();
-        adapterEventos = new AdapterEventos(this.currentUser, eventsList);
+        adapterEventos = new AdapterEventos(mContext, this.currentUser, eventsList);
     }
 
     private void sortList() {
@@ -63,7 +67,7 @@ public class EventsPresenter implements EventsInterface.Presenter, EventsInterfa
         if (miLista.isEmpty()){
             view.onError("No se ha encontrado ningún evento con ese nombre.");
         }
-        AdapterEventos ad = new AdapterEventos(this.currentUser, miLista);
+        AdapterEventos ad = new AdapterEventos(mContext, this.currentUser, miLista);
         view.setAdapterEventsList(ad);
     }
 
@@ -71,14 +75,14 @@ public class EventsPresenter implements EventsInterface.Presenter, EventsInterfa
     public void addEventsList(Events e) {
         eventsList.add(e);
         sortList();
-        AdapterEventos ad = new AdapterEventos(this.currentUser, eventsList);
+        AdapterEventos ad = new AdapterEventos(mContext, this.currentUser, eventsList);
         view.setAdapterEventsList(ad);
     }
 
     @Override
     public void onSuccess() {
         sortList();
-        AdapterEventos ad = new AdapterEventos(this.currentUser, eventsList);
+        AdapterEventos ad = new AdapterEventos(mContext, this.currentUser, eventsList);
         view.setAdapterEventsList(ad);
     }
 

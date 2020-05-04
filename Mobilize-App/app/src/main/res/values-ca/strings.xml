@@ -236,5 +236,11 @@
     <string name="changePassword">Canviar contrasenya</string>
     <string name="newPassword">Nova contrasenya</string>
     <string name="passwordChanged">La contrasenya s\'ha canviat correctament</string>
+    <string name="existingTitleEvent">Ja existeix un esdeveniment amb aquest nom. Si us plau, introdueix un títol que identifiqui l\'esdeveniment.</string>
+    <string name="PlazasLibresEventTV">Places restants:</string>
+    <string name="InscritosEventTV">Consultar usuaris Inscrits.</string>
+    <string name="RegisterOnEventButton">Inscriure\'s</string>
+    <string name="UnsubscribeEventButton">Desinscriure\'s</string>
+    <string name="InscritosEventList" >Llista d\'usuaris inscrits:</string>
 
 </resources>

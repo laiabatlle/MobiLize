@@ -40,17 +40,21 @@
 
         <activity android:name=".Vista.Activities.LoginActivity" />
         <activity android:name=".Vista.Activities.RegisterActivity" />
+        <activity android:name=".Vista.Activities.RegisterMessageActivity" />
         <activity android:name=".Vista.Activities.MainActivity" />
         <activity android:name=".Vista.Activities.ModalitatExercici" />
         <activity android:name=".Vista.Activities.ModalitatEntrenament" />
         <activity android:name=".Vista.Activities.NivellEntrenament" />
-        <activity android:name=".Vista.Activities.RegisterMessageActivity" />
         <activity android:name=".Vista.Activities.TipusPlan" />
         <activity android:name=".Vista.Activities.OptionsActivity"/>
+        <activity android:name=".Vista.Activities.UserActivity" />
         <activity android:name=".Vista.Activities.Seleccionar_rutina" />
         <activity android:name=".Vista.Activities.CreateEventActivity" />
         <activity
             android:name=".Vista.Activities.PopUpRutina"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".Vista.Activities.PopUpEventListInscriptions"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Vista.Activities.IdiomActivity" />
         <activity android:name=".Vista.Activities.InfoActivity" />

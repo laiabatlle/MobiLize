@@ -200,9 +200,4 @@ public class PopUpRutina extends AppCompatActivity {
 
         eaux.add(e);
     }
-
-
-
-
-
 }

@@ -45,7 +45,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     private static final int GALLERY_INTENT = 1;
 
     private String current_user;
-    private EditText title, description, max_part, min_part;
+    private EditText title, description, max_part;
     private TextView dateEvent, hourEvent;
     private Spinner sportEvent;
     private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball", "Otro"};
@@ -91,8 +91,6 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         sportEvent.setOnItemSelectedListener(this);
 
         max_part = findViewById(R.id.max_partEvent);
-
-        min_part = findViewById(R.id.min_partEvent);
 
         createEvent = findViewById(R.id.crearEvento);
         createEvent.setOnClickListener(this);
@@ -232,7 +230,6 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         dateEvent.setEnabled(enable);
         description.setEnabled(enable);
         max_part.setEnabled(enable);
-        min_part.setEnabled(enable);
         createEvent.setEnabled(enable);
     }
 
@@ -250,6 +247,9 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     public void handleCreateEvent() throws ParseException {
         if(!isValidTitle()){
             title.setError(getResources().getString(R.string.incorrectTitleEvent));
+        }
+        else if(!existingTitle()){
+            title.setError(getResources().getString(R.string.existingTitleEvent));
         }
         else if(!isValidDescription()){
             description.setError(getResources().getString(R.string.incorrectDescriptionEvent));
@@ -273,12 +273,6 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
             if (TextUtils.isEmpty(max_part.getText().toString())){
                 max_part.setError(getResources().getString(R.string.incorrectMax_partEvent));
             }
-            if (TextUtils.isEmpty(min_part.getText().toString())){
-                min_part.setError(getResources().getString(R.string.incorrectMin_partEvent));
-            }
-        }
-        else if(!isValidParticipantRestriccions2()){
-            max_part.setError(getResources().getString(R.string.incorrectRest_Part_Event));
         }
         else if(imageUri == null){
             Log.d("deporte:", sport);
@@ -300,19 +294,23 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
                 alert.show();
             }
             if(imageUri != null){
-                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
+                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString());
 //                Intent intent = new Intent( this, MainActivity.class);
 //                startActivity(intent);
                 this.finish();
             }
         }
         else {
-            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
+            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString());
             //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
 //            Intent intent = new Intent( this, MainActivity.class);
 //            startActivity(intent);
             this.finish();
         }
+    }
+
+    private boolean existingTitle() {
+        return presenter.existingEvent(title.getText().toString());
     }
 
     private boolean isValidTitle() {
@@ -338,13 +336,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     }
 
     private boolean isValidParticipantRestriccions1() {
-        return !TextUtils.isEmpty(max_part.getText().toString()) && !TextUtils.isEmpty(min_part.getText().toString());
-    }
-
-    private boolean isValidParticipantRestriccions2() {
-        int max = Integer.parseInt(max_part.getText().toString());
-        int min = Integer.parseInt(min_part.getText().toString());
-        return max >= min;
+        return !TextUtils.isEmpty(max_part.getText().toString());
     }
 
     @Override

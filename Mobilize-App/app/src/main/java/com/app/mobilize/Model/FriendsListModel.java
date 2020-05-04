@@ -31,20 +31,21 @@ public class FriendsListModel implements FriendsListInterface.Model {
     }
 
     @Override
-    public void doGetFriendReq(String username) {
-        req_ref.document(username).collection("request").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    public void doGetFriendReq(String user) {
+        req_ref.document(user).collection("request").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         if (document.getData().get("request_type").equals("received")) {
-                            user_ref.whereEqualTo("username", document.getId()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            user_ref.whereEqualTo("email", document.getId()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                     if (task.isSuccessful()) {
                                         for (QueryDocumentSnapshot document : task.getResult()) {
                                             Usuari u = new Usuari();
                                             u.setUsername(document.getData().get("username").toString());
+                                            u.setEmail(document.getData().get("email").toString());
                                             u.setImage(document.getData().get("image").toString());
                                             listener.addListaReq(u);
                                         }
@@ -60,8 +61,8 @@ public class FriendsListModel implements FriendsListInterface.Model {
     }
 
     @Override
-    public void doGetFriendList(final String username) {
-        user_ref.whereEqualTo("username", username).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    public void doGetFriendList(final String user) {
+        user_ref.whereEqualTo("email", user).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -69,13 +70,14 @@ public class FriendsListModel implements FriendsListInterface.Model {
                     if (friendList.size() == 0) listener.onError("¡Encuentra nuevos amigos!");
                     else {
                         for (String friend : friendList) {
-                            user_ref.whereEqualTo("username", friend).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            user_ref.whereEqualTo("email", friend).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                     if (task.isSuccessful()) {
                                         for (QueryDocumentSnapshot document : task.getResult()) {
                                             Usuari u = new Usuari();
                                             u.setUsername(document.getData().get("username").toString());
+                                            u.setEmail(document.getData().get("email").toString());
                                             u.setImage(document.getData().get("image").toString());
                                             listener.addListaFriends(u);
                                         }

@@ -4,8 +4,8 @@ import com.app.mobilize.Model.Usuari;
 
 public interface UserInterface {
     interface View {
-        void handleActionReq(Usuari currentUser, String userperfil, String CURRENT_STATE);
-        void handleDeclineReq(Usuari currentUser, String userperfil, String CURRENT_STATE);
+        void handleActionReq(String userperfil, String CURRENT_STATE);
+        void handleDeclineReq(String userperfil, String CURRENT_STATE);
         void MaintanceofButtons(String currentUser, String userperfil, String current_state);
 
         void onSuccess(String username, String message);

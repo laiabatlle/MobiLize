@@ -6,7 +6,6 @@ public class Events {
     private String image;
     private String title;
     private String description;
-    private String min_part;
     private String max_part;
     private String dateEvent;
     private String hourEvent;
@@ -37,14 +36,6 @@ public class Events {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getMin_part() {
-        return min_part;
-    }
-
-    public void setMin_part(String min_part) {
-        this.min_part = min_part;
     }
 
     public String getMax_part() {

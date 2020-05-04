@@ -45,7 +45,7 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
     }
 
     private void setViews(View view) {
-        presenter = new FriendListPresenter(this, user);
+        presenter = new FriendListPresenter(getContext(), this, user);
 
         req = (LinearLayout) view.findViewById(R.id.ReqListLL);
         imageView = (ImageView) view.findViewById(R.id.iconoFriends);
@@ -66,12 +66,12 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
 
     @Override
     public void handleChargeFriendReq() {
-        presenter.toGetFriendReq(user.getUsername());
+        presenter.toGetFriendReq(user.getEmail());
     }
 
     @Override
     public void handleChargeFriendList() {
-        presenter.toGetFriendList(user.getUsername());
+        presenter.toGetFriendList(user.getEmail());
     }
 
     @Override

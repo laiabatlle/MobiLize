@@ -1,22 +1,23 @@
 package com.app.mobilize.Presentador.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
-import com.app.mobilize.Vista.Fragments.UserFragment;
+import com.app.mobilize.Vista.Activities.UserActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,9 +37,11 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
     private Usuari currentUser;
     private CollectionReference user_ref;
     private CollectionReference req_ref;
+    private Context mContext;
     private String type;
 
-    public AdapterUsuarios(Usuari currentUser, List<Usuari> userList, String type){
+    public AdapterUsuarios(@NonNull Context context, Usuari currentUser, List<Usuari> userList, String type){
+        this.mContext = context;
         this.currentUser = currentUser;
         this.userList = userList;
         user_ref = FirebaseFirestore.getInstance().collection("users");
@@ -65,17 +68,11 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         holder.username.setText(us.getUsername());
         Glide.with(holder.itemView).load(Uri.parse(us.getImage())).into(holder.avatar);
 
-        MaintanceofButtons(holder, currentUser.getUsername(), us.getUsername());
-        holder.username.setOnClickListener(new View.OnClickListener() {
+        MaintanceofButtons(holder, currentUser.getEmail(), us.getEmail());
+        holder.user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToUserProfile(v, us.getUsername(), us.getImage(), holder.CURRENT_STATE);
-            }
-        });
-        holder.avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToUserProfile(v, us.getUsername(), us.getImage(), holder.CURRENT_STATE);
+                goToUserProfile(us.getUsername(), us.getImage(), holder.CURRENT_STATE);
             }
         });
         holder.action.setOnClickListener(new View.OnClickListener() {
@@ -84,32 +81,34 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
                 holder.action.setEnabled(false);
 
                 if(holder.CURRENT_STATE.equals("not_friends")){
-                    SendFriendRequest(v, holder, currentUser.getUsername(), us.getUsername());
+                    SendFriendRequest(v, holder, currentUser.getEmail(), us.getEmail());
                 }
 
                 if(holder.CURRENT_STATE.equals("request_sent")){
-                    CancelFriendRequest(v, holder, currentUser.getUsername(), us.getUsername());
+                    CancelFriendRequest(v, holder, currentUser.getEmail(), us.getEmail());
                 }
 
                 if(holder.CURRENT_STATE.equals("request_received")) {
-                    AcceptFriendRequest(v, holder, currentUser.getUsername(), us.getUsername());
-                    user_ref.document(currentUser.getUsername()).update("friendsList", FieldValue.arrayUnion(us.getUsername()));
-                    user_ref.document(us.getUsername()).update("friendsList", FieldValue.arrayUnion(currentUser.getUsername()));
+                    AcceptFriendRequest(v, holder, currentUser.getEmail(), us.getEmail());
+                    user_ref.document(currentUser.getEmail()).update("friendsList", FieldValue.arrayUnion(us.getEmail()));
+                    user_ref.document(us.getEmail()).update("friendsList", FieldValue.arrayUnion(currentUser.getEmail()));
                 }
 
                 if(holder.CURRENT_STATE.equals("friends")) {
-                    DeleteFriendRequest(v, holder, currentUser.getUsername(), us.getUsername());
-                    user_ref.document(currentUser.getUsername()).update("friendsList", FieldValue.arrayRemove(us.getUsername()));
-                    user_ref.document(us.getUsername()).update("friendsList", FieldValue.arrayRemove(currentUser.getUsername()));
+                    DeleteFriendRequest(v, holder, currentUser.getEmail(), us.getEmail());
+                    user_ref.document(currentUser.getEmail()).update("friendsList", FieldValue.arrayRemove(us.getEmail()));
+                    user_ref.document(us.getEmail()).update("friendsList", FieldValue.arrayRemove(currentUser.getEmail()));
                 }
             }
         });
     }
 
-    private void goToUserProfile(View v, String username, String avatar, String current_state) {
-        AppCompatActivity activity = (AppCompatActivity) v.getContext();
-        Fragment myFragment = new UserFragment(currentUser, username, avatar, current_state);
-        activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, myFragment).addToBackStack(null).commit();
+    private void goToUserProfile(String username, String avatar, String current_state) {
+        Intent intent = new Intent(mContext, UserActivity.class);
+        intent.putExtra("userperfil", username);
+        intent.putExtra("imageUri", avatar);
+        intent.putExtra("CURRENT_STATE", current_state);
+        mContext.startActivity(intent);
     }
 
     private void MaintanceofButtons(final viewholderusuarios holder, String senderUser, final String receiverUser) {
@@ -143,7 +142,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
             }
         });
 
-        user_ref.whereEqualTo("username", currentUser.getUsername()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        user_ref.whereEqualTo("email", currentUser.getEmail()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -247,6 +246,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
 
     static class viewholderusuarios extends RecyclerView.ViewHolder {
 
+        LinearLayout user;
         ImageView avatar;
         TextView username;
         ImageButton action;
@@ -255,6 +255,8 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
 
         viewholderusuarios(@NonNull View itemView) {
             super(itemView);
+
+            user = (LinearLayout) itemView.findViewById(R.id.userLayout);
 
             username = (TextView) itemView.findViewById(R.id.busquedaUserTV);
             avatar = (ImageView) itemView.findViewById(R.id.AvatarIV_Cercador);

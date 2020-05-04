@@ -50,7 +50,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     private void setViews(View view) {
-        presenter = new EventsPresenter(this, user);
+        presenter = new EventsPresenter(getContext(), this, user);
 
         events = (RecyclerView) view.findViewById(R.id.rv_events);
         events.addItemDecoration(new DividerItemDecoration(events.getContext(), DividerItemDecoration.VERTICAL));

@@ -31,6 +31,7 @@ public class BuscadorUserModel implements BuscadorUserInterface.Model {
                         if (!document.getData().get("username").toString().equals(currentUser.getUsername())) {
                             Usuari u = new Usuari();
                             u.setUsername(document.getData().get("username").toString());
+                            u.setEmail(document.getData().get("email").toString());
                             u.setImage(document.getData().get("image").toString());
                             listener.addLista(u);
                         }

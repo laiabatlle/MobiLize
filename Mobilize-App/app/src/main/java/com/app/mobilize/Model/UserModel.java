@@ -123,7 +123,7 @@ public class UserModel implements UserInterface.Model {
             }
         });
 
-        user_ref.whereEqualTo("username", currentUser).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        user_ref.whereEqualTo("email", currentUser).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {

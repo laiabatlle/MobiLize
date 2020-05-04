@@ -236,5 +236,11 @@
     <string name="changePassword">Change password</string>
     <string name="newPassword">New password</string>
     <string name="passwordChanged">The password has been successfully changed</string>
+    <string name="existingTitleEvent">An event with that name already exists. Please enter a title that identifies the event.</string>
+    <string name="InscritosEventTV">Get users Inscribed.</string>
+    <string name="PlazasLibresEventTV">Remaining seats:</string>
+    <string name="RegisterOnEventButton">Register</string>
+    <string name="UnsubscribeEventButton">Unsubscrive</string>
+    <string name="InscritosEventList" >" List of registered users:"</string>
 
 </resources>

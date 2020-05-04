@@ -18,13 +18,18 @@ public class CreateEventPresenter implements CreateEventInterface.Presenter, Cre
     }
 
     @Override
-    public void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String min_part) {
-        model.doCreateEvent(imageUri, title, desciption, dateEvent, hourEvent, sportEvent, max_part, min_part);
+    public void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part) {
+        model.doCreateEvent(imageUri, title, desciption, dateEvent, hourEvent, sportEvent, max_part);
     }
 
     @Override
     public void toImageChange(Uri image) {
         model.doImageChange(image);
+    }
+
+    @Override
+    public boolean existingEvent(String event) {
+        return model.existingEvent(event);
     }
 
     @Override
