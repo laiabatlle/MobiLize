@@ -55,17 +55,21 @@
         <activity android:name="com.app.mobilize.Vista.Activities.TrackActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.LoginActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.RegisterActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.MainActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.ModalitatExercici" />
         <activity android:name="com.app.mobilize.Vista.Activities.ModalitatEntrenament" />
         <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
-        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
         <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.UserActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.CreateEventActivity" />
         <activity
             android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.PopUpEventListInscriptions"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
