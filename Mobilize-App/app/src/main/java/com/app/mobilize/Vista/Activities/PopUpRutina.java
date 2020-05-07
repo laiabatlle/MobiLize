@@ -97,7 +97,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
             if(c == ',' ) {
 
                 args = new String[] {s};
-                fila = BaseDeDades.rawQuery("select kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica from Exercicis where nom =?", args);
+                fila = BaseDeDades.rawQuery("select kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, punts from Exercicis where nom =?", args);
 
                 while (fila.moveToNext()) {
                     String kmh = fila.getString(0);
@@ -108,9 +108,12 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
                     int repeticions = fila.getInt(5);
                     int series = fila.getInt(6);
                     String tecnica = fila.getString(7);
-                    Exercici ex = new Exercici(s, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, dificultat, modalitat);
+                    int punts = fila.getInt(8);
+                    Exercici ex = new Exercici(s, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, dificultat, modalitat, punts);
                     e.add(ex);
                 }
+
+
 
                 s = "";
             }

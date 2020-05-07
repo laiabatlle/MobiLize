@@ -53,7 +53,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
 
         //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
 
-        Cursor fila = BaseDeDades.rawQuery("select nom, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica from Exercicis where modalitat=? AND nivell =" + dificultat, args);
+        Cursor fila = BaseDeDades.rawQuery("select nom, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, punts from Exercicis where modalitat=? AND nivell =" + dificultat, args);
 
 
         Exercicis = new ArrayList<>();
@@ -71,7 +71,8 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
             int repeticions = fila.getInt(6);
             int series = fila.getInt(7);
             String tecnica = fila.getString(8);
-            Exercici e = new Exercici(nom, kmh, durada_min, kcal, pendent,  musculs, repeticions, series,  tecnica,  dificultat, modalitat);
+            int punts = fila.getInt(9);
+            Exercici e = new Exercici(nom, kmh, durada_min, kcal, pendent,  musculs, repeticions, series,  tecnica,  dificultat, modalitat, punts);
             Exercicis.add(e);
        }
 

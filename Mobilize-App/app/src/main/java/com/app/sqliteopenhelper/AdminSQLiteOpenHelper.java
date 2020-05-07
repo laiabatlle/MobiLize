@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT, exercicis TEXT)";
-    String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN)";
+    String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN, punts INTEGER)";
 
     private ArrayList<Rutina> cjtRutines;
     private ArrayList<Exercici> cjtExercicis;
@@ -54,6 +55,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             contentValues.put("kmh", cjtExercicis.get(i).getKmh());
             contentValues.put("durada_min", cjtExercicis.get(i).getDuradamin());
             contentValues.put("pendent", cjtExercicis.get(i).getPendent());
+            contentValues.put("punts", cjtExercicis.get(i).getPunts());
 
 
             db.insert("Exercicis", null, contentValues);
@@ -62,7 +64,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllRutines () {
         cjtRutines = new ArrayList<>();
-        cjtRutines.add(new Rutina("Abdominals", "Abdominals per ...", 0, "workout", "Abdominals,Pectorals,"));
+        cjtRutines.add(new Rutina("Abdominals", "Abdominals per ...", 0, "workout", "Abdominals superiors,Pectorals,"));
         cjtRutines.add(new Rutina("Flexions", "Flexions per ...", 1, "workout","global"));
         cjtRutines.add(new Rutina("Flexions2", "Flexions per ...", 2, "running", "global"));
         cjtRutines.add(new Rutina("Flexions3", "Flexions per ...", 0, "workout",  "global"));
@@ -71,14 +73,16 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllExercicis () {
         cjtExercicis = new ArrayList<>();
-        cjtExercicis.add(new Exercici("Abdominals superiors", null, 0, 0, false, "Abdominals", 15, 3, "abdominals", 0, "workout"));
-        cjtExercicis.add(new Exercici("Pectorals", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout"));
-        cjtExercicis.add(new Exercici("Espatlla", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout"));
-        cjtExercicis.add(new Exercici("Cames", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout"));
-        cjtExercicis.add(new Exercici("xxx", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout"));
-        cjtExercicis.add(new Exercici("yyy", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout"));
-        cjtExercicis.add(new Exercici("Correr", "10", 120, 1000, true, null, 0, 0, null, 1, "running"));
-        cjtExercicis.add(new Exercici("Bicicleta", "20", 60, 2000, true, null, 0, 0, null, 2, "cycling"));
+        cjtExercicis.add(new Exercici("Abdominals superiors", null, 0, 0, false, "Abdominals", 15, 3, "abdominals", 0, "workout", 250));
+        cjtExercicis.add(new Exercici("Pectorals", null, 0, 0, false, "Abdominals", 15, 3, "pectorals", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Espatlla", null, 0, 0, false, "Abdominals", 15, 3, "espatlla", 0, "workout", 150));
+        cjtExercicis.add(new Exercici("Cames", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 300));
+        cjtExercicis.add(new Exercici("xxx", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 400));
+        cjtExercicis.add(new Exercici("yyy", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Correr", "10", 120, 1000, true, null, 0, 0, null, 1, "running", 150));
+        cjtExercicis.add(new Exercici("Bicicleta", "20", 60, 2000, true, null, 0, 0, null, 2, "cycling", 200));
+
+
     }
 
     @Override

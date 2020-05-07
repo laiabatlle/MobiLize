@@ -32,9 +32,12 @@ public class VeureExercici extends AppCompatActivity {
         tvmusculs.setText(exercici.getMusculs());
         String ser = Integer.toString(exercici.getSeries());
         String rep = Integer.toString(exercici.getRepeticions());
+        String punts = Integer.toString(exercici.getPunts());
         tvseries.setText(ser);
         tvrepeticions.setText(rep);
-        tvpunts.setText("200");
+        tvpunts.setText(punts);
+
+
 
        videoActivity = findViewById(R.id.videoView);
         videoActivity.setVideoPath("android.resource://" + getPackageName() + "/raw/" + exercici.getTecnica());

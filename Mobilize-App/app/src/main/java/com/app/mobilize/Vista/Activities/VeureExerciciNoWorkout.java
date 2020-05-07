@@ -30,6 +30,7 @@ public class VeureExerciciNoWorkout extends AppCompatActivity {
 
         String kcal = Double.toString(exercici.getKcal());
         String durada = Integer.toString(exercici.getDuradamin());
+        String punts = Integer.toString(exercici.getPunts());
 
         tvdurada.setText(durada);
         tvkcal.setText(kcal);
@@ -40,6 +41,6 @@ public class VeureExerciciNoWorkout extends AppCompatActivity {
 
         else tvpendent.setText("No ha d'incloure pendent");
 
-        tvpunts.setText("200");
+        tvpunts.setText(punts);
     }
 }

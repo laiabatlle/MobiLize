@@ -1,10 +1,7 @@
 package com.app.sqliteopenhelper;
 
-import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.sql.Time;
 
 public class Exercici implements Parcelable {
     private String nom;
@@ -18,8 +15,9 @@ public class Exercici implements Parcelable {
     private String tecnica;
     private int nivell;
     private String modalitat;
+    private int punts;
 
-    public Exercici(String nom, String kmh, int durada_min, double kcal, boolean pendent, String musculs, int repeticions, int series, String tecnica, int nivell, String modalitat) {
+    public Exercici(String nom, String kmh, int durada_min, double kcal, boolean pendent, String musculs, int repeticions, int series, String tecnica, int nivell, String modalitat, int punts) {
 
         this.nom = nom;
         this.modalitat = modalitat;
@@ -32,6 +30,7 @@ public class Exercici implements Parcelable {
         this.durada_min = durada_min;
         this.kcal = kcal;
         this.pendent = pendent;
+        this.punts = punts;
 
     }
 
@@ -47,6 +46,7 @@ public class Exercici implements Parcelable {
         tecnica = in.readString();
         nivell = in.readInt();
         modalitat = in.readString();
+        punts = in.readInt();
     }
 
     @Override
@@ -62,6 +62,7 @@ public class Exercici implements Parcelable {
         dest.writeString(tecnica);
         dest.writeInt(nivell);
         dest.writeString(modalitat);
+        dest.writeInt(punts);
     }
 
     @Override
@@ -124,5 +125,7 @@ public class Exercici implements Parcelable {
     public String getTecnica() {
         return tecnica;
     }
+
+    public int getPunts() { return punts; }
 
 }
