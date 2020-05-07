@@ -74,8 +74,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     private void insertAllExercicis () {
         cjtExercicis = new ArrayList<>();
         cjtExercicis.add(new Exercici("Abdominals superiors", null, 0, 0, false, "Abdominals", 15, 3, "abdominals", 0, "workout", 250));
-        cjtExercicis.add(new Exercici("Pectorals", null, 0, 0, false, "Abdominals", 15, 3, "pectorals", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Espatlla", null, 0, 0, false, "Abdominals", 15, 3, "espatlla", 0, "workout", 150));
+        cjtExercicis.add(new Exercici("Pectorals", null, 0, 0, false, "Abdominals", 15, 3, "abdominals", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Espatlla", null, 0, 0, false, "Abdominals", 15, 3, "abdominals", 0, "workout", 150));
         cjtExercicis.add(new Exercici("Cames", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 300));
         cjtExercicis.add(new Exercici("xxx", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 400));
         cjtExercicis.add(new Exercici("yyy", null, 0, 0, false, "Abdominals", 15, 3, "Has de fer abdominals aixi: ", 0, "workout", 100));

@@ -36,6 +36,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutinaNoWorkout" />
+        <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.VeureExerciciNoWorkout" />
         <activity android:name="com.app.mobilize.Vista.Activities.VeureExercici" />
 

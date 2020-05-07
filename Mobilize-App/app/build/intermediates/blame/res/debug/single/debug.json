@@ -324,6 +324,10 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_avanca_rutina.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_avanca_rutina.xml"
+    },
+    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e4255cfaedbfc6bf88759a1dac59d064\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
@@ -3094,6 +3098,10 @@
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout-sw600dp-v13\\mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_avanca_rutina_no_workout.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_avanca_rutina_no_workout.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_toolbar_surface.xml.flat",

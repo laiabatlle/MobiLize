@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -150,6 +151,29 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
 
     }
 
+    public void Start(View view) {
+        if(exe.get(0).getKmh() == null) {
+            Intent intent = new Intent(this, AvancaRutina.class);
+            intent.putParcelableArrayListExtra("exercici", exe);
+            intent.putExtra("pos", 0);
+            intent.putExtra("puntstotals", 0);
+            intent.putExtra("kcaltotals",0);
+            startActivityForResult(intent, 0);
+
+        }
+
+        else {
+            Intent intent = new Intent(this, AvancaRutinaNoWorkout.class);
+            intent.putParcelableArrayListExtra("exercici", exe);
+            intent.putExtra("pos", 0);
+            intent.putExtra("puntstotals", 0);
+            intent.putExtra("kcaltotals",0);
+            startActivityForResult(intent, 0);
+        }
+
+
+    }
+
 
     public void Modifica(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
@@ -223,4 +247,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
         }
 
     }
+
+
+
 }

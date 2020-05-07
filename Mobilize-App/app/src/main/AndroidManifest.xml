@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Vista.Activities.VeureExerciciNoWorkout"></activity>
+        <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout"></activity>
+        <activity android:name=".Vista.Activities.AvancaRutina" />
+        <activity android:name=".Vista.Activities.VeureExerciciNoWorkout" />
         <activity android:name=".Vista.Activities.VeureExercici" />
 
         <meta-data
