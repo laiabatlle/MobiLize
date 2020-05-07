@@ -18,9 +18,10 @@ import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
 import com.app.sqliteopenhelper.Exercici;
 import com.app.sqliteopenhelper.Rutina;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class AfegirRutina extends AppCompatActivity {
+public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNoteListener {
 
 
     ArrayList<Exercici> Exercicis;
@@ -78,7 +79,7 @@ public class AfegirRutina extends AppCompatActivity {
 
 
 
-        AdapterDatos adapter = new AdapterDatos(Exercicis);
+        AdapterDatos adapter = new AdapterDatos(Exercicis, this);
         recycler.setAdapter(adapter);
 
         BaseDeDades.close();
@@ -156,5 +157,22 @@ public class AfegirRutina extends AppCompatActivity {
             if(eaux.get(i) == e) eaux.remove(i);
         }
 
+    }
+
+    @Override
+    public void onNoteClick(int position) {
+
+        if(Exercicis.get(position).getKmh() == null) {
+            Intent intent = new Intent(this, VeureExercici.class);
+            intent.putExtra("exercici", Exercicis.get(position));
+            startActivityForResult(intent, 0);
+
+        }
+
+        else {
+            Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
+            intent.putExtra("exercici", Exercicis.get(position));
+            startActivityForResult(intent, 0);
+        }
     }
 }

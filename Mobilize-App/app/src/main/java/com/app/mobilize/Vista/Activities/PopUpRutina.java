@@ -23,9 +23,10 @@ import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
 import com.app.sqliteopenhelper.Exercici;
 import com.app.sqliteopenhelper.Rutina;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PopUpRutina extends AppCompatActivity {
+public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNoteListener {
 
     ArrayList<Exercici> exe;
     RecyclerView recycler;
@@ -46,7 +47,7 @@ public class PopUpRutina extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
-        videoActivity = findViewById(R.id.videoActivity);
+       /*videoActivity = findViewById(R.id.videoActivity);
         Log.d("title", getResources().getResourceName(R.raw.abdominals));
         videoActivity.setVideoPath("android.resource://" + getPackageName() + "/raw/abdominals");
         videoActivity.start();
@@ -57,7 +58,7 @@ public class PopUpRutina extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
                 mp.start();
             }
-        });
+        }); */
 
         recycler = (RecyclerView) findViewById(R.id.recyclerView3);
         recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -73,7 +74,7 @@ public class PopUpRutina extends AppCompatActivity {
         eaux.clear();
         eaux = exe;
 
-        AdapterDatos adapter = new AdapterDatos(exe);
+        AdapterDatos adapter = new AdapterDatos(exe, this);
         recycler.setAdapter(adapter);
 
 
@@ -202,7 +203,21 @@ public class PopUpRutina extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onNoteClick(int position) {
 
+        if(exe.get(position).getKmh() == null) {
+            Intent intent = new Intent(this, VeureExercici.class);
+            intent.putExtra("exercici", exe.get(position));
+            startActivityForResult(intent, 0);
 
+        }
 
+        else {
+            Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
+            intent.putExtra("exercici", exe.get(position));
+            startActivityForResult(intent, 0);
+        }
+
+    }
 }
