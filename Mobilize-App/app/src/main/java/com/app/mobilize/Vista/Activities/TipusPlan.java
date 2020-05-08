@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.app.mobilize.R;
@@ -19,6 +20,7 @@ public class TipusPlan extends AppCompatActivity {
     CheckBox cbRunning, cbCiclisme, cbWorkout;
     RadioButton rbDificil, rbMitjana, rbFacil;
     Button buttonOk, buttonBack;
+    Spinner duracio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class TipusPlan extends AppCompatActivity {
         tv = findViewById(R.id.textView5);
         tv.setText(tipus);
 
+        duracio = findViewById(R.id.spinnerDuracio);
         buttonOk = findViewById(R.id.butOk);
         buttonBack = findViewById(R.id.butEnrere);
 
@@ -57,6 +60,32 @@ public class TipusPlan extends AppCompatActivity {
                 if ( cbRunning.isChecked() == false && cbCiclisme.isChecked() == false && cbWorkout.isChecked() == false ){
                     Toast.makeText(getApplicationContext(), R.string.selectDiscipline, Toast.LENGTH_LONG).show();
                 }
+
+                String modalitat = null;
+                Intent intent = new Intent(v.getContext(), Seleccionar_planning.class);
+
+                if ( cbRunning.isChecked() == true) {
+                    modalitat = "running";
+                }
+
+                if (cbCiclisme.isChecked() == true) {
+                    modalitat = modalitat + "cycling";
+                }
+
+                if (cbWorkout.isChecked() == true) {
+                    modalitat = modalitat + "workout";
+                }
+                intent.putExtra("modalitat", modalitat);
+                if(rbDificil.isChecked()) intent.putExtra("nivell", 2);
+                if(rbMitjana.isChecked()) intent.putExtra("nivell", 1);
+                if(rbFacil.isChecked()) intent.putExtra("nivell", 0);
+
+                String dur = duracio.getSelectedItem().toString();
+
+                intent.putExtra("duracio", dur);
+                startActivityForResult(intent, 0);
+
+
             }
         });
 
@@ -91,4 +120,7 @@ public class TipusPlan extends AppCompatActivity {
     public void backActivity () {
         finish();
     }
+
+
+
 }
