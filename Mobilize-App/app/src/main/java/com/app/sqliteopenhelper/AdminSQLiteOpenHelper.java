@@ -14,9 +14,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT, exercicis TEXT)";
     String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN, punts INTEGER)";
-
+    String sqlCreate2 = "CREATE TABLE Plannings (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, exercicis TEXT)";
     private ArrayList<Rutina> cjtRutines;
     private ArrayList<Exercici> cjtExercicis;
+    private ArrayList<Planning> cjtPlannings;
 
     public AdminSQLiteOpenHelper(Context context,String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -27,6 +28,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL(sqlCreate);
         insertAllRutines();
         insertAllExercicis();
+        insertAllPlannings();
         for ( int i=0; i<cjtRutines.size(); i++ ){
             ContentValues contentValues = new ContentValues();
 
@@ -60,6 +62,27 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
             db.insert("Exercicis", null, contentValues);
         }
+
+        db.execSQL(sqlCreate2);
+
+        for ( int i=0; i<cjtPlannings.size(); i++ ){
+            ContentValues contentValues = new ContentValues();
+
+            contentValues.put("nom",cjtPlannings.get(i).getNom());
+            contentValues.put("info", cjtPlannings.get(i).getInfo());
+            contentValues.put("nivell", cjtPlannings.get(i).getNivell());
+            contentValues.put("dies", cjtPlannings.get(i).getDies());
+            contentValues.put("modalitat", cjtPlannings.get(i).getModalitat());
+            contentValues.put("rutines", cjtPlannings.get(i).getRutines());
+
+            db.insert("Plannings", null, contentValues);
+        }
+
+    }
+
+    private void insertAllPlannings() {
+        cjtPlannings = new ArrayList<>();
+        cjtPlannings.add(new Planning("Road to fit", "Planning extens de categoria alta", 2, 14, "workout","Abdominals," ));
     }
 
     private void insertAllRutines () {
