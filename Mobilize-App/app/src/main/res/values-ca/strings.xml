@@ -88,13 +88,13 @@
     <string name="confirmation">S\'ha enviat un correu de confirmació al teu compte de correu electrònic: </string>
     <string name="friendList"> Llista d\'amics </string>
     <string name="TitleEventTV">Títol</string>
-    <string name="DescripcionEventTV">Descripció</string>
+    <string name="DescripcionEventTV">Descripció:</string>
     <string name="DateEventTV">Data:</string>
     <string name="hourEventTV">Hora:</string>
     <string name="SportEventTV">Esport:</string>
     <string name="Max_partEventTV">Nombre màxim de participants:</string>
     <string name="Min_partEventTV">Nombre mínim de participants:</string>
-    <string name="CrearEventoButton">Crear esdeveniment</string>
+    <string name="CrearEventoButton">  Crear esdeveniment  </string>
     <string name="contact">Contacta amb nosaltres</string>
     <string name="resp">Descàrrec de responsabilitat</string>
     <string name="privacity">Política de Privacitat</string>
@@ -242,5 +242,9 @@
     <string name="RegisterOnEventButton">Inscriure\'s</string>
     <string name="UnsubscribeEventButton">Desinscriure\'s</string>
     <string name="InscritosEventList" >Llista d\'usuaris inscrits:</string>
+    <string name="ModificarEsdeveniment">Modificar esdeveniment</string>
+    <string name="ModificarEsdevenimentText">Estàs a punt de modificar un esdeveniment. En el cas que modifiquis la data o l\'hora d\'aquest, els usuaris inscrits seran desapuntats automàticament. ¿Vols continuar?</string>
+    <string name="EliminarEsdeveniment">Eliminar esdeveniment</string>
+    <string name="EliminarEsdevenimentText">" Estàs a punt d'eliminar un esdeveniment. Si continues no podràs tornar enrere. Vols continuar?"</string>
 
 </resources>

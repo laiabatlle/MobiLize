@@ -52,7 +52,7 @@ public class EventsPresenter implements EventsInterface.Presenter, EventsInterfa
 
     @Override
     public void toGetEvents() {
-        view.setAdapterEventsList(adapterEventos);
+        eventsList = new ArrayList<>();
         model.doGetEvents();
     }
 

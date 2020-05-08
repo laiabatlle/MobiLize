@@ -92,7 +92,7 @@
     <string name="DateEventTV">Date:</string>
     <string name="SportEventTV">Sport:</string>
     <string name="hourEventTV">Schedule:</string>
-    <string name="CrearEventoButton">Create event</string>
+    <string name="CrearEventoButton">"  Create event  "</string>
     <string name="Max_partEventTV">Maximum number of participants:</string>
     <string name="Min_partEventTV">Minimum number of participants:</string>
     <string name="contact">Contact us</string>
@@ -242,5 +242,9 @@
     <string name="RegisterOnEventButton">Register</string>
     <string name="UnsubscribeEventButton">Unsubscrive</string>
     <string name="InscritosEventList" >" List of registered users:"</string>
+    <string name="ModificarEsdeveniment">Modify event</string>
+    <string name="ModificarEsdevenimentText">You are about to modify an event. In case you change the date or time of the same, the registered users will be automatically unsubscribed. Do you want to continue?</string>
+    <string name="EliminarEsdeveniment">Delete event</string>
+    <string name="EliminarEsdevenimentText">You are about to delete an event. If you continue you will not be able to go back. Do you want to continue?</string>
 
 </resources>

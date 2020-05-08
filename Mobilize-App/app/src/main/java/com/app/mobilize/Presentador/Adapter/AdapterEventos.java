@@ -1,11 +1,15 @@
 package com.app.mobilize.Presentador.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.mobilize.Model.Events;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Activities.ModifyEventActivity;
 import com.app.mobilize.Vista.Activities.PopUpEventListInscriptions;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +32,6 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewholdereventos> {
@@ -90,10 +94,20 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
                 handleShowInscriptions(v, holder, e);
             }
         });
+        holder.actionButtomEventModify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleModify(e, currentUser.getEmail());
+            }
+        });
         holder.actionButtomEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (holder.CURRENT_STATE.equals("subscribed")){
+                if (holder.CURRENT_STATE.equals("creator")){
+                    handleDelete(e);
+                    Toast.makeText(v.getContext(), "Has eliminado el evento " + e.getTitle(), Toast.LENGTH_SHORT).show();
+                }
+                else if (holder.CURRENT_STATE.equals("subscribed")){
                     handleToUnsubscribe(holder, currentUser.getEmail(), e);
                     Toast.makeText(v.getContext(), "Te has desapuntado del evento  " + e.getTitle(), Toast.LENGTH_SHORT).show();
                 }
@@ -111,14 +125,18 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
-                    List<String> inscriptions = (List<String>) task.getResult().getDocuments().get(0).getData().get("inscripcionsList");
-                    if(inscriptions.contains(user)) {
-                        holder.actionButtomEvent.setImageResource(R.mipmap.ic_unsubscrive_event);
-                        holder.CURRENT_STATE = "subscribed";
-                    }
-                    else{
-                        holder.actionButtomEvent.setImageResource(R.mipmap.ic_subscrive_event);
-                        holder.CURRENT_STATE = "not_subscribed";
+                    if (user.equals(task.getResult().getDocuments().get(0).getData().get("creator").toString())) {
+                        holder.actionButtomEvent.setImageResource(R.mipmap.ic_delete);
+                        holder.CURRENT_STATE = "creator";
+                    }else {
+                        List<String> inscriptions = (List<String>) task.getResult().getDocuments().get(0).getData().get("inscripcionsList");
+                        if (inscriptions.contains(user)) {
+                            holder.actionButtomEvent.setImageResource(R.mipmap.ic_unsubscrive_event);
+                            holder.CURRENT_STATE = "subscribed";
+                        } else {
+                            holder.actionButtomEvent.setImageResource(R.mipmap.ic_subscrive_event);
+                            holder.CURRENT_STATE = "not_subscribed";
+                        }
                     }
                 }
             }
@@ -140,6 +158,10 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.titleLayout.setBackgroundResource(R.drawable.titleevent_bg_rounded_courners);
         holder.title2.setEnabled(true);
         holder.title2.setVisibility(View.VISIBLE);
+        if (holder.CURRENT_STATE.equals("creator")){
+            holder.actionButtomEventModify.setEnabled(true);
+            holder.actionButtomEventModify.setVisibility(View.VISIBLE);
+        }
         holder.actionButtomEvent.setEnabled(true);
         holder.actionButtomEvent.setVisibility(View.VISIBLE);
         holder.descriptionTV.setEnabled(true);
@@ -173,6 +195,8 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.titleLayout.setBackground(null);
         holder.title2.setEnabled(false);
         holder.title2.setVisibility(View.INVISIBLE);
+        holder.actionButtomEventModify.setEnabled(false);
+        holder.actionButtomEventModify.setVisibility(View.INVISIBLE);
         holder.actionButtomEvent.setEnabled(false);
         holder.actionButtomEvent.setVisibility(View.INVISIBLE);
         holder.descriptionTV.setEnabled(false);
@@ -212,6 +236,61 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         mContext.startActivity(intent);
     }
 
+    private void handleModify(final Events e, final String current_user) {
+        final AlertDialog.Builder editAD = new AlertDialog.Builder(mContext);
+        TextView textView = new TextView(mContext);
+        editAD.setIcon(R.mipmap.ic_edit_round);
+        editAD.setTitle(mContext.getResources().getString(R.string.ModificarEsdeveniment));
+        editAD.setView(textView);
+
+        textView.setText(mContext.getResources().getString(R.string.ModificarEsdevenimentText));
+        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(mContext, ModifyEventActivity.class);
+                intent.putExtra("current_user", current_user);
+                intent.putExtra("title", e.getTitle());
+                intent.putExtra("descrption", e.getDescription());
+                intent.putExtra("image", e.getImage());
+                intent.putExtra("sport", e.getSportEvent());
+                intent.putExtra("date", e.getDateEvent());
+                intent.putExtra("hour", e.getHourEvent());
+                intent.putExtra("max_part", e.getMax_part());
+                mContext.startActivity(intent);
+            }
+        });
+        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog alert = editAD.create();
+        alert.show();
+    }
+
+    private void handleDelete(final Events e) {
+        final AlertDialog.Builder editAD = new AlertDialog.Builder(mContext);
+        TextView textView = new TextView(mContext);
+        editAD.setIcon(R.mipmap.ic_delete);
+        editAD.setTitle(mContext.getResources().getString(R.string.EliminarEsdeveniment));
+        editAD.setView(textView);
+
+        textView.setText(mContext.getResources().getString(R.string.EliminarEsdevenimentText));
+        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                event_ref.document(e.getTitle()).delete();
+            }
+        });
+        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog alert = editAD.create();
+        alert.show();
+    }
+
     private void handleToSubscribe(final viewholdereventos holder, final String user, Events e) {
         holder.actionButtomEvent.setImageResource(R.mipmap.ic_unsubscrive_event);
         event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayUnion(user));
@@ -224,24 +303,12 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.CURRENT_STATE = "not_subscribed";
     }
 
-    private void handleDelete() {
-    }
-
-    private void handleModify() {
-    }
-
-    private void handleUnsubscribe() {
-    }
-
-    private void handleRegister() {
-    }
-
     static class viewholdereventos extends RecyclerView.ViewHolder {
 
         ConstraintLayout titleLayout;
         ImageView event;
         TextView title1, title2, descriptionTV, description, sportTV, sport, date, hour, romandingTV, romanding, inscriptionListTV;
-        ImageButton dateTV, hourTV, inscriptionList, actionButtomEvent;
+        ImageButton dateTV, hourTV, inscriptionList, actionButtomEventModify, actionButtomEvent;
 
         String CURRENT_STATE;
 
@@ -266,6 +333,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
             this.inscriptionListTV = (TextView) itemView.findViewById(R.id.inscritosInfoEventTV);
             this.inscriptionList = (ImageButton) itemView.findViewById(R.id.ConsultarInscritosButton);
             this.actionButtomEvent = (ImageButton) itemView.findViewById(R.id.actionButtomEvent);
+            this.actionButtomEventModify = (ImageButton) itemView.findViewById(R.id.actionButtomEventModify);
 
             this.CURRENT_STATE = "not_subscribed";
         }

@@ -7,19 +7,17 @@ import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 
 public class CreateEventPresenter implements CreateEventInterface.Presenter, CreateEventInterface.TaskListener {
 
-    private String current_user;
     private CreateEventInterface.View view;
     private CreateEventInterface.Model model;
 
-    public CreateEventPresenter(CreateEventInterface.View view, String current_user) {
+    public CreateEventPresenter(CreateEventInterface.View view) {
         this.view = view;
         this.model = new CreateEventModel(this);
-        this.current_user = current_user;
     }
 
     @Override
-    public void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part) {
-        model.doCreateEvent(imageUri, title, desciption, dateEvent, hourEvent, sportEvent, max_part);
+    public void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, int actionId) {
+        model.doCreateEvent(imageUri, title, desciption, dateEvent, hourEvent, sportEvent, max_part, creator, actionId);
     }
 
     @Override
@@ -27,10 +25,6 @@ public class CreateEventPresenter implements CreateEventInterface.Presenter, Cre
         model.doImageChange(image);
     }
 
-    @Override
-    public boolean existingEvent(String event) {
-        return model.existingEvent(event);
-    }
 
     @Override
     public void onSuccess(String message) {

@@ -27,48 +27,48 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
 import com.app.mobilize.Presentador.CreateEventPresenter;
 import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 import com.app.mobilize.R;
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class CreateEventActivity extends AppCompatActivity implements CreateEventInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class ModifyEventActivity extends AppCompatActivity implements CreateEventInterface.View, AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     private static final int GALLERY_INTENT = 1;
 
-    private String current_user;
-    private EditText title, description, max_part;
+    private String currentUser, title, descrption, image, sport, date, hour, max_part;
+    private EditText titleEvent, descriptionEvent, max_partEvent;
     private TextView dateEvent, hourEvent;
     private Spinner sportEvent;
     private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball", "Otro"};
-    private String sport;
     private ImageView eventImage;
     private Uri imageUri;
-    private Button createEvent;
+    private Button modifyEvent;
     private ImageButton pick_hour, pick_date;
 
     private CreateEventInterface.Presenter presenter;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event);
-        this.current_user = this.getIntent().getStringExtra("user");
+        this.currentUser = this.getIntent().getStringExtra("current_user");
+        this.title = this.getIntent().getStringExtra("title");
+        this.descrption = this.getIntent().getStringExtra("descrption");
+        this.image = this.getIntent().getStringExtra("image");
+        this.sport = this.getIntent().getStringExtra("sport");
+        this.date = this.getIntent().getStringExtra("date");
+        this.hour = this.getIntent().getStringExtra("hour");
+        this.max_part = this.getIntent().getStringExtra("max_part");
         setViews();
     }
 
@@ -76,16 +76,23 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         presenter = new CreateEventPresenter(this);
 
         eventImage = findViewById(R.id.EventoIV);
+        Glide.with(this).load(Uri.parse(image)).into(eventImage);
+        imageUri = Uri.parse(image);
         eventImage.setOnClickListener(this);
 
-        title = findViewById(R.id.titleEventET);
-        description = findViewById(R.id.descriptionEventET);
+        titleEvent = findViewById(R.id.titleEventET);
+        titleEvent.setText(title);
+        titleEvent.setEnabled(false);
+        descriptionEvent = findViewById(R.id.descriptionEventET);
+        descriptionEvent.setText(descrption);
 
         dateEvent = findViewById(R.id.dateEvent);
+        dateEvent.setText(date);
         pick_date = findViewById(R.id.dateEventCalendar);
         pick_date.setOnClickListener(this);
 
         hourEvent = findViewById(R.id.hourEvent);
+        hourEvent.setText(hour);
         pick_hour = findViewById(R.id.hourEventClock);
         pick_hour.setOnClickListener(this);
 
@@ -96,11 +103,12 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         sportEvent.setSelection(getPosition(sport));
         sportEvent.setOnItemSelectedListener(this);
 
-        max_part = findViewById(R.id.max_partEvent);
+        max_partEvent = findViewById(R.id.max_partEvent);
+        max_partEvent.setText(max_part);
 
-        createEvent = findViewById(R.id.actionEvento);
-        createEvent.setText(getResources().getString(R.string.CrearEventoButton));
-        createEvent.setOnClickListener(this);
+        modifyEvent = findViewById(R.id.actionEvento);
+        modifyEvent.setText(getResources().getString(R.string.ModificarEsdeveniment));
+        modifyEvent.setOnClickListener(this);
     }
 
     private int getPosition(String gendre) {
@@ -195,7 +203,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
 
     private boolean checkPermissionREAD_EXTERNAL_STORAGE(Context context) {
         int currentAPIVersion = Build.VERSION.SDK_INT;
-        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+        if (currentAPIVersion >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(context,
                     Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
@@ -235,9 +243,9 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     private void setInputs(boolean enable){
         eventImage.setEnabled(enable);
         dateEvent.setEnabled(enable);
-        description.setEnabled(enable);
-        max_part.setEnabled(enable);
-        createEvent.setEnabled(enable);
+        descriptionEvent.setEnabled(enable);
+        max_partEvent.setEnabled(enable);
+        modifyEvent.setEnabled(enable);
     }
 
     @Override
@@ -252,12 +260,8 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
 
     @Override
     public void handleCreateEvent() throws ParseException {
-        existingTitle();
-        if(!isValidTitle()){
-            title.setError(getResources().getString(R.string.incorrectTitleEvent));
-        }
-        else if(!isValidDescription()){
-            description.setError(getResources().getString(R.string.incorrectDescriptionEvent));
+        if(!isValidDescription()){
+            descriptionEvent.setError(getResources().getString(R.string.incorrectDescriptionEvent));
         }
         else if(!isValidDate()){
             AlertDialog.Builder builder;
@@ -275,8 +279,8 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
             dateEvent.setError(getResources().getString(R.string.incorrectDateEvent));
         }
         else if(!isValidParticipantRestriccions1()){
-            if (TextUtils.isEmpty(max_part.getText().toString())){
-                max_part.setError(getResources().getString(R.string.incorrectMax_partEvent));
+            if (TextUtils.isEmpty(max_partEvent.getText().toString())){
+                max_partEvent.setError(getResources().getString(R.string.incorrectMax_partEvent));
             }
         }
         else if(imageUri == null){
@@ -299,14 +303,14 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
                 alert.show();
             }
             if(imageUri != null){
-                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, 0);
+                presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, 1);
 //                Intent intent = new Intent( this, MainActivity.class);
 //                startActivity(intent);
                 this.finish();
             }
         }
         else {
-            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, 0);
+            presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, 1);
             //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
 //            Intent intent = new Intent( this, MainActivity.class);
 //            startActivity(intent);
@@ -314,29 +318,11 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         }
     }
 
-    private void existingTitle() {
-        CollectionReference event_ref = FirebaseFirestore.getInstance().collection("Events");
-        event_ref.whereEqualTo("title", title.getText().toString()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    if (!task.getResult().isEmpty()) {
-                        title.setError(getResources().getString(R.string.existingTitleEvent));
-                    }
-                }
-            }
-        });
-    }
-
-    private boolean isValidTitle() {
-        return !TextUtils.isEmpty(title.getText().toString());
-    }
-
     private boolean isValidDescription() {
-        return !TextUtils.isEmpty(description.getText().toString());
+        return !TextUtils.isEmpty(descriptionEvent.getText().toString());
     }
 
-    private boolean isValidDate() throws ParseException {
+    private boolean isValidDate() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         try {
             Date date = formatter.parse(dateEvent.getText().toString());
@@ -351,7 +337,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     }
 
     private boolean isValidParticipantRestriccions1() {
-        return !TextUtils.isEmpty(max_part.getText().toString());
+        return !TextUtils.isEmpty(max_partEvent.getText().toString());
     }
 
     @Override

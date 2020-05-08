@@ -42,6 +42,12 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        handleChargeEvents();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_eventos, container, false);
@@ -56,7 +62,6 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
         events.addItemDecoration(new DividerItemDecoration(events.getContext(), DividerItemDecoration.VERTICAL));
         LinearLayoutManager lm = new LinearLayoutManager(getContext());
         events.setLayoutManager(lm);
-        handleChargeEvents();
 
         buscadorEventos = view.findViewById(R.id.cearchEventsSV);
         buscadorEventos.onActionViewExpanded();
@@ -104,7 +109,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
 
     private void gotoCreateEvent() {
         Intent intent = new Intent(getActivity(), CreateEventActivity.class);
-        intent.putExtra("username", user.getUsername());
+        intent.putExtra("user", user.getEmail());
         startActivity(intent);
     }
 

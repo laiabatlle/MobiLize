@@ -72,6 +72,7 @@
         <activity android:name=".Vista.Activities.ActivitatsUser" />
         <activity android:name=".Vista.Activities.AfegirRutina" />
         <activity android:name=".Vista.Activities.ChangePasswordActivity" />
+        <activity android:name=".Vista.Activities.ModifyEventActivity" />
 
         <provider android:name=".Vista.Activities.Data.AlarmReminderProvider"
             android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"

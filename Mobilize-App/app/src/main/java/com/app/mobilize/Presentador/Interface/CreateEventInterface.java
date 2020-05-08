@@ -17,18 +17,14 @@ public interface CreateEventInterface {
     }
 
     interface Presenter{
-        void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part);
+        void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, int actionId);
 
         void toImageChange(Uri image);
-
-        boolean existingEvent(String title);
     }
 
     interface Model{
-        void doCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part);
+        void doCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, int actionId);
         void doImageChange(Uri uri);
-
-        boolean existingEvent(String event);
     }
 
     interface TaskListener{

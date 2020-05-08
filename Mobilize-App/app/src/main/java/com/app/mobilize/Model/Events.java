@@ -10,6 +10,7 @@ public class Events {
     private String dateEvent;
     private String hourEvent;
     private String sportEvent;
+    private String creator;
     private List<String> inscripcionsList;
 
     public Events(){};
@@ -68,6 +69,14 @@ public class Events {
 
     public void setSportEvent(String sportEvent) {
         this.sportEvent = sportEvent;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public String getCreator() {
+        return creator;
     }
 
     public List<String> getInscripcionsList() {
