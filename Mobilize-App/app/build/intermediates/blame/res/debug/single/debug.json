@@ -4,6 +4,10 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable\\mtrl_ic_cancel.xml"
     },
     {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_plan.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\item_plan.xml"
+    },
+    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_choice_chip_text_color.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_choice_chip_text_color.xml"
     },
@@ -32,12 +36,12 @@
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\row_req.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable\\design_fab_background.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_colored_item_tint.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_bottom_nav_colored_item_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_fab_background.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_edit.png.flat",
@@ -60,12 +64,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\9bbf1f3e6c17e8fc868698efeaa70d4c\\res\\drawable-xxxhdpi-v4\\fab_bg_normal.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e4255cfaedbfc6bf88759a1dac59d064\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e4255cfaedbfc6bf88759a1dac59d064\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_fast_out_slow_in.xml.flat",
@@ -128,12 +132,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\efb9e9a5ccabae7fa9d3e2bf069b284d\\res\\drawable-land-v19\\mdtp_done_background_color.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility.png.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\8a342cede6c22f98d33def43ea85f3d9\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility.png.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_state_list_anim.xml.flat",
@@ -232,28 +236,28 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_calendar_selected_range.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_fui_idp_button_background_facebook.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\5694784c613f0012211f4d41cb99cf67\\res\\drawable-v21\\fui_idp_button_background_facebook.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clear_black_24dp.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable\\ic_clear_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_edit_round.png.flat",
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_edit_round.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_clear_black_24dp.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\drawable\\ic_clear_black_24dp.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_fui_idp_button_background_facebook.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\5694784c613f0012211f4d41cb99cf67\\res\\drawable-v21\\fui_idp_button_background_facebook.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_test_mtrl_calendar_day.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\test_mtrl_calendar_day.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rutina.png.flat",
-        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\drawable\\rutina.png"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_popupmenu_overlay_color.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_popupmenu_overlay_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rutina.png.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\drawable\\rutina.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps.xml.flat",
@@ -284,20 +288,20 @@
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\8a342cede6c22f98d33def43ea85f3d9\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_logo2_round.png.flat",
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_logo2_round.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout\\design_navigation_item_header.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\8a342cede6c22f98d33def43ea85f3d9\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_path_animation.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout\\design_navigation_item_header.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -316,12 +320,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_avanca_rutina.xml.flat",
@@ -332,12 +336,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e4255cfaedbfc6bf88759a1dac59d064\\res\\drawable-hdpi-v4\\googleg_disabled_color_18.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout\\design_layout_tab_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
@@ -372,12 +376,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_track.xml.flat",
-        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_track.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material_anim.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_track.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_track.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -532,24 +536,24 @@
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_settings.png.flat",
-        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_settings.png"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_running_login.png.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\drawable\\running_login.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_running_login.png.flat",
-        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\drawable\\running_login.png"
-    },
-    {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_veure_exercici_no_workout.xml.flat",
-        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_veure_exercici_no_workout.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_settings.png"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_veure_exercici_no_workout.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_veure_exercici_no_workout.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_mdtp_date_picker_view_animator.xml.flat",
@@ -576,24 +580,24 @@
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_clock.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_card_view_ripple.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_card_view_ripple.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_mdtp_time_picker_dialog.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\efb9e9a5ccabae7fa9d3e2bf069b284d\\res\\layout-land\\mdtp_time_picker_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_card_view_ripple.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\color\\mtrl_card_view_ripple.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v19_mdtp_done_background_color.xml.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\efb9e9a5ccabae7fa9d3e2bf069b284d\\res\\drawable-v19\\mdtp_done_background_color.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\layout-v26\\abc_screen_toolbar.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\layout-v26\\abc_screen_toolbar.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_unfriend.png.flat",
@@ -824,12 +828,12 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\layout\\mtrl_layout_snackbar_include.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fui_ic_github_white_24dp.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\5694784c613f0012211f4d41cb99cf67\\res\\drawable\\fui_ic_github_white_24dp.xml"
-    },
-    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_item.xml.flat",
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\item.xml"
+    },
+    {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fui_ic_github_white_24dp.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\5694784c613f0012211f4d41cb99cf67\\res\\drawable\\fui_ic_github_white_24dp.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -1136,16 +1140,16 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_cascading_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\layout\\abc_cascading_menu_item_layout.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_text_material.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\8a342cede6c22f98d33def43ea85f3d9\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_text_material.xml.flat",
-        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\color-v23\\abc_btn_colored_text_material.xml"
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_cascading_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\layout\\abc_cascading_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_grup.png.flat",
