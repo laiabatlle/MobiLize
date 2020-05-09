@@ -243,7 +243,7 @@
     <string name="UnsubscribeEventButton">Desinscriure\'s</string>
     <string name="InscritosEventList" >Llista d\'usuaris inscrits:</string>
     <string name="ModificarEsdeveniment">Modificar esdeveniment</string>
-    <string name="ModificarEsdevenimentText">Estàs a punt de modificar un esdeveniment. En el cas que modifiquis la data o l\'hora d\'aquest, els usuaris inscrits seran desapuntats automàticament. ¿Vols continuar?</string>
+    <string name="ModificarEsdevenimentText">Estàs a punt de modificar un esdeveniment. En el cas que modifiquis la data o l\'hora d\'aquest, els usuaris inscrits seran desapuntats automàticament. Vols continuar?</string>
     <string name="EliminarEsdeveniment">Eliminar esdeveniment</string>
     <string name="EliminarEsdevenimentText">" Estàs a punt d'eliminar un esdeveniment. Si continues no podràs tornar enrere. Vols continuar?"</string>
 

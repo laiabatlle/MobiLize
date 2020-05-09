@@ -2,14 +2,11 @@ package com.app.mobilize.Presentador.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,8 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.mobilize.Model.Events;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
-import com.app.mobilize.Vista.Activities.ModifyEventActivity;
 import com.app.mobilize.Vista.Activities.PopUpEventListInscriptions;
+import com.app.mobilize.Vista.Activities.QuestionDialog;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -104,8 +101,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
             @Override
             public void onClick(View v) {
                 if (holder.CURRENT_STATE.equals("creator")){
-                    handleDelete(e);
-                    Toast.makeText(v.getContext(), "Has eliminado el evento " + e.getTitle(), Toast.LENGTH_SHORT).show();
+                    handleDelete(e, currentUser.getEmail());
                 }
                 else if (holder.CURRENT_STATE.equals("subscribed")){
                     handleToUnsubscribe(holder, currentUser.getEmail(), e);
@@ -237,58 +233,52 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
     }
 
     private void handleModify(final Events e, final String current_user) {
-        final AlertDialog.Builder editAD = new AlertDialog.Builder(mContext);
-        TextView textView = new TextView(mContext);
-        editAD.setIcon(R.mipmap.ic_edit_round);
-        editAD.setTitle(mContext.getResources().getString(R.string.ModificarEsdeveniment));
-        editAD.setView(textView);
-
-        textView.setText(mContext.getResources().getString(R.string.ModificarEsdevenimentText));
-        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(mContext, ModifyEventActivity.class);
-                intent.putExtra("current_user", current_user);
-                intent.putExtra("title", e.getTitle());
-                intent.putExtra("descrption", e.getDescription());
-                intent.putExtra("image", e.getImage());
-                intent.putExtra("sport", e.getSportEvent());
-                intent.putExtra("date", e.getDateEvent());
-                intent.putExtra("hour", e.getHourEvent());
-                intent.putExtra("max_part", e.getMax_part());
-                mContext.startActivity(intent);
-            }
-        });
-        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        AlertDialog alert = editAD.create();
-        alert.show();
+        Intent intent = new Intent(mContext, QuestionDialog.class);
+        intent.putExtra("type", "modify");
+        intent.putExtra("current_user", current_user);
+        intent.putExtra("title", e.getTitle());
+        intent.putExtra("descrption", e.getDescription());
+        intent.putExtra("image", e.getImage());
+        intent.putExtra("sport", e.getSportEvent());
+        intent.putExtra("date", e.getDateEvent());
+        intent.putExtra("hour", e.getHourEvent());
+        intent.putExtra("max_part", e.getMax_part());
+        mContext.startActivity(intent);
     }
 
-    private void handleDelete(final Events e) {
+    private void handleDelete(final Events e, final String current_user) {
+        Intent intent = new Intent(mContext, QuestionDialog.class);
+        intent.putExtra("type", "delete");
+        intent.putExtra("current_user", current_user);
+        intent.putExtra("title", e.getTitle());
+        intent.putExtra("descrption", e.getDescription());
+        intent.putExtra("image", e.getImage());
+        intent.putExtra("sport", e.getSportEvent());
+        intent.putExtra("date", e.getDateEvent());
+        intent.putExtra("hour", e.getHourEvent());
+        intent.putExtra("max_part", e.getMax_part());
+        mContext.startActivity(intent);
+
         final AlertDialog.Builder editAD = new AlertDialog.Builder(mContext);
         TextView textView = new TextView(mContext);
         editAD.setIcon(R.mipmap.ic_delete);
         editAD.setTitle(mContext.getResources().getString(R.string.EliminarEsdeveniment));
         editAD.setView(textView);
 
-        textView.setText(mContext.getResources().getString(R.string.EliminarEsdevenimentText));
-        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                event_ref.document(e.getTitle()).delete();
-            }
-        });
-        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        AlertDialog alert = editAD.create();
-        alert.show();
+//        textView.setText(mContext.getResources().getString(R.string.EliminarEsdevenimentText));
+//        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                event_ref.document(e.getTitle()).delete();
+//            }
+//        });
+//        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//            }
+//        });
+//        AlertDialog alert = editAD.create();
+//        alert.show();
     }
 
     private void handleToSubscribe(final viewholdereventos holder, final String user, Events e) {

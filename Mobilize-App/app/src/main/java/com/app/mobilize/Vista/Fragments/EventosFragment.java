@@ -29,8 +29,6 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
 
     private Usuari user;
     private RecyclerView events;
-    private ImageButton createEvent;
-    private SearchView buscadorEventos;
 
     private EventsInterface.Presenter presenter;
 
@@ -63,7 +61,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
         LinearLayoutManager lm = new LinearLayoutManager(getContext());
         events.setLayoutManager(lm);
 
-        buscadorEventos = view.findViewById(R.id.cearchEventsSV);
+        SearchView buscadorEventos = view.findViewById(R.id.cearchEventsSV);
         buscadorEventos.onActionViewExpanded();
         buscadorEventos.setIconifiedByDefault(false);
         buscadorEventos.setQueryHint(getResources().getString(R.string.searchEvent));
@@ -83,7 +81,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
             }
         });
 
-        createEvent = (ImageButton) view.findViewById(R.id.createEvent);
+        ImageButton createEvent = (ImageButton) view.findViewById(R.id.createEvent);
         createEvent.setOnClickListener(this);
     }
 
