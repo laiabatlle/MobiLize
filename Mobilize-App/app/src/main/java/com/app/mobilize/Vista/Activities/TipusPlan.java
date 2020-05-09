@@ -69,12 +69,29 @@ public class TipusPlan extends AppCompatActivity {
                 }
 
                 if (cbCiclisme.isChecked() == true) {
-                    modalitat = modalitat + "cycling";
+                    modalitat = "cycling";
                 }
 
                 if (cbWorkout.isChecked() == true) {
-                    modalitat = modalitat + "workout";
+                    modalitat = "workout";
                 }
+
+                if( cbRunning.isChecked() == true && cbCiclisme.isChecked() == true) {
+                    modalitat = "runningcycling";
+                }
+
+                if (cbRunning.isChecked() == true && cbWorkout.isChecked() == true ) {
+                    modalitat = "runningworkout";
+                }
+
+                if (cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true ) {
+                    modalitat = "cyclingworkout";
+                }
+
+                if (cbRunning.isChecked() == true && cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true ) {
+                    modalitat = "runningcyclingworkout";
+                }
+
                 intent.putExtra("modalitat", modalitat);
                 if(rbDificil.isChecked()) intent.putExtra("nivell", 2);
                 if(rbMitjana.isChecked()) intent.putExtra("nivell", 1);

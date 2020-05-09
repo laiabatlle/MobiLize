@@ -44,8 +44,8 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
         int dies = 0;
         if(duracio == "1 week")  dies = 14;
 
-       //Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings where modalitat=? AND nivell =" + dificultat, args);
-        Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings",null);
+       Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings where modalitat=? AND nivell =" + dificultat, args);
+       // Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings where modalitat =?", args);
         PlanningArrayList = new ArrayList<>();
         while (fila.moveToNext()) {
             String nom = fila.getString(0);
@@ -69,7 +69,7 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
         String s = Integer.toString(a);
 
 
-        tv1.setText(PlanningArrayList.get(0).getNom());
+        tv1.setText(modalitat);
 
         tv2.setText(getIntent().getStringExtra("duracio"));
         tv3.setText(s);
