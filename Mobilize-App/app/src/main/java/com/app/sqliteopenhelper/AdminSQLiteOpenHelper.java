@@ -82,7 +82,13 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllPlannings() {
         cjtPlannings = new ArrayList<>();
-        cjtPlannings.add(new Planning("Road to fit", "Planning extens de categoria alta", 2, 14, "workout","Abdominals," ));
+        cjtPlannings.add(new Planning("Road to fit", "Planning extens de categoria alta", 2, 7, "workout","Abdominals," ));
+        cjtPlannings.add(new Planning("xxx", "Planning extens de categoria alta", 1, 7, "running","Abdominals," ));
+        cjtPlannings.add(new Planning("yyy", "Planning extens de categoria alta", 0, 30, "runningcyclingworkout","Abdominals," ));
+        cjtPlannings.add(new Planning("zzz", "Planning extens de categoria alta", 2 , 60, "workout","Abdominals," ));
+        cjtPlannings.add(new Planning("Road to xxx", "Planning extens de categoria alta", 2, 90, "cycling","Abdominals," ));
+        cjtPlannings.add(new Planning("Road to yyy", "Planning extens de categoria alta", 2, 7, "workout","Abdominals," ));
+        cjtPlannings.add(new Planning("Road to zzz", "Planning extens de categoria alta", 2, 7, "workout","Abdominals," ));
     }
 
     private void insertAllRutines () {

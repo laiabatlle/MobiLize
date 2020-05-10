@@ -42,17 +42,20 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
         String[] args = new String[] {modalitat};
         String duracio = getIntent().getStringExtra("duracio");
         int dies = 0;
-        if(duracio == "1 week")  dies = 14;
+        if(duracio.equals("1 week"))  dies = 7;
+        else if (duracio.equals("15 days")) dies = 15;
+        else if (duracio.equals("1 month")) dies = 30;
+        else if (duracio.equals("2 months")) dies = 60;
+        else if (duracio.equals("3 months")) dies = 90;
 
-       Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings where modalitat=? AND nivell =" + dificultat, args);
+       Cursor fila = BaseDeDades.rawQuery("select nom, info, rutines from Plannings where modalitat=? AND nivell =" + dificultat + " AND dies =" +dies, args);
        // Cursor fila = BaseDeDades.rawQuery("select nom, info, dies, rutines from Plannings where modalitat =?", args);
         PlanningArrayList = new ArrayList<>();
         while (fila.moveToNext()) {
             String nom = fila.getString(0);
             String info = fila.getString(1);
-            int dur = fila.getInt(2);
-            String rutines = fila.getString(3);
-            Planning p = new Planning(nom, info, dificultat, dur, modalitat, rutines);
+            String rutines = fila.getString(2);
+            Planning p = new Planning(nom, info, dificultat, dies, modalitat, rutines);
             PlanningArrayList.add(p);
         }
 
@@ -71,7 +74,7 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
 
         tv1.setText(modalitat);
 
-        tv2.setText(getIntent().getStringExtra("duracio"));
+        tv2.setText(duracio);
         tv3.setText(s);
 
     }
