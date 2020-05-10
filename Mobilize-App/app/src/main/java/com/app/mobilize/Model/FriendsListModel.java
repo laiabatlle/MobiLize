@@ -1,14 +1,8 @@
 package com.app.mobilize.Model;
 
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 
-import com.app.mobilize.Presentador.FriendListPresenter;
 import com.app.mobilize.Presentador.Interface.FriendsListInterface;
-import com.app.mobilize.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
@@ -47,6 +41,7 @@ public class FriendsListModel implements FriendsListInterface.Model {
                                             u.setUsername(document.getData().get("username").toString());
                                             u.setEmail(document.getData().get("email").toString());
                                             u.setImage(document.getData().get("image").toString());
+                                            u.setPrivacity(document.getData().get("privacity").toString());
                                             listener.addListaReq(u);
                                         }
                                     }
@@ -79,6 +74,7 @@ public class FriendsListModel implements FriendsListInterface.Model {
                                             u.setUsername(document.getData().get("username").toString());
                                             u.setEmail(document.getData().get("email").toString());
                                             u.setImage(document.getData().get("image").toString());
+                                            u.setPrivacity(document.getData().get("privacity").toString());
                                             listener.addListaFriends(u);
                                         }
                                     }

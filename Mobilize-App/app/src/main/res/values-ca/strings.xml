@@ -74,9 +74,9 @@
     <string name="training">Entrenament</string>
     <string name="progress">Progrés</string>
     <string name="profile">Perfil</string>
-    <string name="CancelFriendReq">"   Cancel·lar  sol·licitud   "</string>
-    <string name="AcceptFriendReq">"   Acceptar  sol·licitud   "</string>
-    <string name="DeclineFriendReq">"   Denegar  sol·licitud   "</string>
+    <string name="CancelFriendReq">Cancel·lar sol·licitud</string>
+    <string name="AcceptFriendReq">Acceptar sol·licitud</string>
+    <string name="DeclineFriendReq">Denegar sol·licitud</string>
     <string name="CancelFriendReqMes">S\'ha cancel·lat la sol·licitud</string>
     <string name="UnfriendMes">" i tu ja no sou amics."</string>
     <string name="NewFriendMes">" i tu ara sou amics."</string>
@@ -246,5 +246,7 @@
     <string name="ModificarEsdevenimentText">Estàs a punt de modificar un esdeveniment. En el cas que modifiquis la data o l\'hora d\'aquest, els usuaris inscrits seran desapuntats automàticament. Vols continuar?</string>
     <string name="EliminarEsdeveniment">Eliminar esdeveniment</string>
     <string name="EliminarEsdevenimentText">" Estàs a punt d'eliminar un esdeveniment. Si continues no podràs tornar enrere. Vols continuar?"</string>
+    <string name="PrivateAccount">"Aquest compte és privat. Envia una sol·licitud d'amistat per poder veure més informació sobre "</string>
+    <string name="NoFriends">"Actualment no tens amics, troba gent amb qui practicar esport i compartir els teus progressos."</string>
 
 </resources>

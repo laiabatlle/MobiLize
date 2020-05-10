@@ -74,11 +74,11 @@
     <string name="training">Entrenamiento</string>
     <string name="progress">Progreso</string>
     <string name="profile">Perfil</string>
-    <string name="SendFriendReq">   Enviar  solicitud  de  amistad   </string>
-    <string name="CancelFriendReq">   Cancelar  solicitud   </string>
-    <string name="DeclineFriendReq">   Denegar  solicitud  de  amistad   </string>
-    <string name="AcceptFriendReq">   Aceptar  solicitud   </string>
-    <string name="Unfriend">   Dejar  de  ser  amigos   </string>
+    <string name="SendFriendReq">Enviar solicitud de amistad</string>
+    <string name="CancelFriendReq">Cancelar solicitud</string>
+    <string name="DeclineFriendReq">Denegar solicitud de amistad</string>
+    <string name="AcceptFriendReq">Aceptar solicitud</string>
+    <string name="Unfriend">Dejar de ser amigos</string>
     <string name="SendFriendReqMes">Se ha enviado la solicitud de amistad</string>
     <string name="CancelFriendReqMes">Se ha cancelado la solicitud</string>
     <string name="UnfriendMes"> y tu ya no soys amigos</string>
@@ -246,5 +246,7 @@
     <string name="ModificarEsdevenimentText">"Estás a punto de modificar un evento. En caso de que modifique la fecha o la hora del mismo, los usuarios inscritos serán desapuntats automáticamente. ¿Quieres continuar?"</string>
     <string name="EliminarEsdeveniment">"Eliminar evento"</string>
     <string name="EliminarEsdevenimentText">"Estás a punto de eliminar un evento. Si continuas no podrás volver atrás. ¿Quieres continuar?"</string>
+    <string name="PrivateAccount">"Esta cuenta es privada. Envia una solicitud de amistad para poder ver más información sobre "</string>
+    <string name="NoFriends">"Actualmente no tienes amigos, encuentra gente con quien practicar deporte y compartir tus progresos."</string>
 
 </resources>

@@ -56,6 +56,9 @@
         <activity
             android:name=".Vista.Activities.PopUpEventListInscriptions"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".Vista.Activities.QuestionDialog"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Vista.Activities.IdiomActivity" />
         <activity android:name=".Vista.Activities.InfoActivity" />
         <activity android:name=".Vista.Activities.AlertsActivity">
@@ -73,7 +76,6 @@
         <activity android:name=".Vista.Activities.AfegirRutina" />
         <activity android:name=".Vista.Activities.ChangePasswordActivity" />
         <activity android:name=".Vista.Activities.ModifyEventActivity" />
-        <activity android:name=".Vista.Activities.QuestionDialog" />
 
         <provider android:name=".Vista.Activities.Data.AlarmReminderProvider"
             android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"

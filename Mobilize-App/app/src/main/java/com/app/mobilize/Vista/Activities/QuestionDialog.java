@@ -15,8 +15,11 @@ import com.app.mobilize.R;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
+
 public class QuestionDialog extends AppCompatActivity implements View.OnClickListener{
 
+    private ArrayList<String> inscriptions;
     private String type, currentUser, title, descrption, image, sport, date, hour, max_part;
     ImageButton icon;
     TextView titleDialog, textDialog;
@@ -44,6 +47,7 @@ public class QuestionDialog extends AppCompatActivity implements View.OnClickLis
         this.date = this.getIntent().getStringExtra("date");
         this.hour = this.getIntent().getStringExtra("hour");
         this.max_part = this.getIntent().getStringExtra("max_part");
+        this.inscriptions = this.getIntent().getStringArrayListExtra("inscriptions");
         setViews();
     }
 
@@ -82,6 +86,7 @@ public class QuestionDialog extends AppCompatActivity implements View.OnClickLis
                     intent.putExtra("date", date);
                     intent.putExtra("hour", hour);
                     intent.putExtra("max_part", max_part);
+                    intent.putStringArrayListExtra("inscriptions", inscriptions);
                     startActivity(intent);
                     finish();
 

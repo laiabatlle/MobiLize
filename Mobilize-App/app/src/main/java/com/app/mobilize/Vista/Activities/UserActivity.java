@@ -8,23 +8,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.Presentador.Interface.UserInterface;
 import com.app.mobilize.Presentador.UserPresenter;
 import com.app.mobilize.R;
 import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.List;
-import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,7 +22,7 @@ import java.util.Objects;
 public class UserActivity extends AppCompatActivity implements UserInterface.View, View.OnClickListener  {
 
     private String currentUser;
-    private String imageUri, userperfil, CURRENT_STATE;
+    private String imageUri, userperfil, email, privacity, CURRENT_STATE;
     private Button actionRequest, declineRequest;
 
     private UserInterface.Presenter presenter;
@@ -43,7 +33,9 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
         setContentView(R.layout.activity_user);
         this.currentUser = SaveSharedPreference.getEmail(this);
         this.userperfil = this.getIntent().getStringExtra("userperfil");
-        this.imageUri = this.getIntent().getStringExtra("imageUri");;
+        this.imageUri = this.getIntent().getStringExtra("imageUri");
+        this.email = this.getIntent().getStringExtra("email");
+        this.privacity = this.getIntent().getStringExtra("privacity");
         this.CURRENT_STATE = this.getIntent().getStringExtra("CURRENT_STATE");;
         setViews();
     }
@@ -55,30 +47,53 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
         ImageView avatar = (ImageView) findViewById(R.id.AvatarIV);
         Glide.with(this).load(Uri.parse(imageUri)).error(R.drawable.ic_user).into(avatar);
 
-        //TextView de l'username:
         TextView username = (TextView) findViewById(R.id.usernameTV);
         username.setText(userperfil);
 
-        //Boto de guardar canvis. S'actualitza la Base de Dades amb els parametres seleccionats als diferents widgets:
+        TextView privateText = (TextView) findViewById(R.id.privateText);
+        if(this.privacity.equals("private") && !this.CURRENT_STATE.equals("friends")){
+            privateText.setText(getResources().getString(R.string.PrivateAccount) + this.userperfil + ".");
+            privateText.setVisibility(View.VISIBLE);
+        }
         actionRequest = (Button) findViewById(R.id.actionRequestButton);
         declineRequest = (Button) findViewById(R.id.declineRequestButton);
-        actionRequest.setText(getResources().getString(R.string.SendFriendReq));
+        MaintanceofButtons();
         declineRequest.setText(getResources().getString(R.string.DeclineFriendReq));
-        declineRequest.setVisibility(View.INVISIBLE);
-        MaintanceofButtons(currentUser, userperfil, CURRENT_STATE);
+        MaintanceofButtons(currentUser, email, CURRENT_STATE);
         actionRequest.setOnClickListener(this);
         declineRequest.setOnClickListener(this);
+    }
+
+    private void MaintanceofButtons() {
+        switch (this.CURRENT_STATE) {
+            case "not_friends":
+                actionRequest.setText(getResources().getString(R.string.SendFriendReq));
+                declineRequest.setVisibility(View.INVISIBLE);
+                break;
+            case "request_sent":
+                actionRequest.setText(getResources().getString(R.string.CancelFriendReq));
+                declineRequest.setVisibility(View.INVISIBLE);
+                break;
+            case "request_received":
+                actionRequest.setText(getResources().getString(R.string.DeclineFriendReq));
+                declineRequest.setVisibility(View.VISIBLE);
+                break;
+            default:
+                actionRequest.setText(getResources().getString(R.string.Unfriend));
+                declineRequest.setVisibility(View.INVISIBLE);
+                break;
+        }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.actionRequestButton:
-                handleActionReq(userperfil, CURRENT_STATE);
+                handleActionReq(email, CURRENT_STATE);
                 break;
 
             case R.id.declineRequestButton:
-                handleDeclineReq(userperfil, CURRENT_STATE);
+                handleDeclineReq(email, CURRENT_STATE);
                 break;
 
             default:
@@ -87,18 +102,18 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
     }
 
     @Override
-    public void handleActionReq(String userperfil, String CURRENT_STATE) {
-        presenter.toActionReq(this.currentUser, this.userperfil, this.CURRENT_STATE);
+    public void handleActionReq(String user, String CURRENT_STATE) {
+        presenter.toActionReq(this.currentUser, user, this.CURRENT_STATE);
     }
 
     @Override
-    public void handleDeclineReq(String userperfil, String CURRENT_STATE) {
-        presenter.toDeclineReq(this.currentUser, this.userperfil, this.CURRENT_STATE);
+    public void handleDeclineReq(String user, String CURRENT_STATE) {
+        presenter.toDeclineReq(this.currentUser, user, this.CURRENT_STATE);
     }
 
     @Override
-    public void MaintanceofButtons(String currentUser, String userperfil, String current_state) {
-        presenter.MaintanceofButtons(currentUser, userperfil, current_state);
+    public void MaintanceofButtons(String currentUser, String user, String current_state) {
+        presenter.MaintanceofButtons(currentUser, user, current_state);
     }
 
     @Override

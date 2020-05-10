@@ -72,7 +72,7 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         holder.user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToUserProfile(us.getUsername(), us.getImage(), holder.CURRENT_STATE);
+                goToUserProfile(us.getUsername(), us.getImage(), us.getEmail(), us.getPrivacity(), holder.CURRENT_STATE);
             }
         });
         holder.action.setOnClickListener(new View.OnClickListener() {
@@ -103,10 +103,12 @@ public class AdapterUsuarios extends RecyclerView.Adapter<AdapterUsuarios.viewho
         });
     }
 
-    private void goToUserProfile(String username, String avatar, String current_state) {
+    private void goToUserProfile(String username, String avatar, String email, String privacity, String current_state) {
         Intent intent = new Intent(mContext, UserActivity.class);
         intent.putExtra("userperfil", username);
         intent.putExtra("imageUri", avatar);
+        intent.putExtra("email", email);
+        intent.putExtra("privacity", privacity);
         intent.putExtra("CURRENT_STATE", current_state);
         mContext.startActivity(intent);
     }

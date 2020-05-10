@@ -37,7 +37,7 @@ public class PopUpEventListInscriptions extends AppCompatActivity implements Bus
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop_up_event);
         currentUser = new Usuari();
-        event = this.getIntent().getStringExtra("event");
+        event = this.getIntent().getStringExtra("title");
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);

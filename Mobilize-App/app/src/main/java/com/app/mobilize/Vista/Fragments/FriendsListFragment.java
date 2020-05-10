@@ -1,12 +1,12 @@
 package com.app.mobilize.Vista.Fragments;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -23,8 +23,8 @@ import com.app.mobilize.R;
 public class FriendsListFragment extends Fragment implements FriendsListInterface.View{
 
     private Usuari user;
+    private TextView noFriends;
     private RecyclerView reqFriends, listaFriends;
-    private LinearLayout req;
     private ImageView imageView;
     private String iconoFriends;
 
@@ -47,10 +47,11 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
     private void setViews(View view) {
         presenter = new FriendListPresenter(getContext(), this, user);
 
-        req = (LinearLayout) view.findViewById(R.id.ReqListLL);
         imageView = (ImageView) view.findViewById(R.id.iconoFriends);
         if (iconoFriends.equals("req")) imageView.setImageResource(R.mipmap.ic_reqfriend);
         else imageView.setImageResource(R.mipmap.ic_friendslist);
+
+        noFriends = (TextView) view.findViewById(R.id.NoFriendText);
 
         reqFriends = (RecyclerView) view.findViewById(R.id.rv_req);
         listaFriends = (RecyclerView) view.findViewById(R.id.rv_friends);
@@ -78,11 +79,12 @@ public class FriendsListFragment extends Fragment implements FriendsListInterfac
     public void onError(String message) {
         if (message.equals(message)){
             listaFriends.setVisibility(View.INVISIBLE);
-            Toast.makeText(getContext(), getResources().getString(R.string.findfriends), Toast.LENGTH_SHORT).show();
+            noFriends.setVisibility(View.VISIBLE);
+
         }
         if (message.equals("No tienes solicitudes")){
-            req.setVisibility(View.INVISIBLE);
             reqFriends.setVisibility(View.INVISIBLE);
+            noFriends.setVisibility(View.VISIBLE);
         }
     }
 

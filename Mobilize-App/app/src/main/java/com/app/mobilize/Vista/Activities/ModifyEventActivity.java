@@ -38,6 +38,7 @@ import com.bumptech.glide.Glide;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -45,6 +46,7 @@ public class ModifyEventActivity extends AppCompatActivity implements CreateEven
 
     private static final int GALLERY_INTENT = 1;
 
+    private ArrayList<String> inscriptions;
     private String currentUser, title, descrption, image, sport, date, hour, max_part;
     private EditText titleEvent, descriptionEvent, max_partEvent;
     private TextView dateEvent, hourEvent;
@@ -69,6 +71,7 @@ public class ModifyEventActivity extends AppCompatActivity implements CreateEven
         this.date = this.getIntent().getStringExtra("date");
         this.hour = this.getIntent().getStringExtra("hour");
         this.max_part = this.getIntent().getStringExtra("max_part");
+        this.inscriptions = this.getIntent().getStringArrayListExtra("inscriptions");
         setViews();
     }
 
@@ -303,18 +306,23 @@ public class ModifyEventActivity extends AppCompatActivity implements CreateEven
                 alert.show();
             }
             if(imageUri != null){
-                presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, 1);
-//                Intent intent = new Intent( this, MainActivity.class);
-//                startActivity(intent);
-                this.finish();
+                if(dateEvent.getText().toString().equals(date) && hourEvent.getText().toString().equals(hour)) {
+                    presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, inscriptions, 1);
+                    this.finish();
+                }else{
+                    presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, new ArrayList<String>(), 1);
+                    this.finish();
+                }
             }
         }
         else {
-            presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, 1);
-            //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
-//            Intent intent = new Intent( this, MainActivity.class);
-//            startActivity(intent);
-            this.finish();
+            if(dateEvent.getText().toString().equals(date) && hourEvent.getText().toString().equals(hour)) {
+                presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, inscriptions, 1);
+                this.finish();
+            }else{
+                presenter.toCreateEvent(imageUri, titleEvent.getText().toString(), descriptionEvent.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_partEvent.getText().toString(), currentUser, new ArrayList<String>(), 1);
+                this.finish();
+            }
         }
     }
 

@@ -27,7 +27,9 @@
                 android:id="@+id/eventImage"
                 android:layout_width="400dp"
                 android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
 
             <TextView
                 android:id="@+id/eventTitle"

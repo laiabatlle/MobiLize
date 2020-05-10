@@ -3,6 +3,7 @@ package com.app.mobilize.Presentador.Interface;
 import android.net.Uri;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 
 public interface CreateEventInterface {
     interface View {
@@ -17,13 +18,13 @@ public interface CreateEventInterface {
     }
 
     interface Presenter{
-        void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, int actionId);
+        void toCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, ArrayList<String> inscriptions, int actionId);
 
         void toImageChange(Uri image);
     }
 
     interface Model{
-        void doCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, int actionId);
+        void doCreateEvent(Uri imageUri, String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, ArrayList<String> inscriptions, int actionId);
         void doImageChange(Uri uri);
     }
 

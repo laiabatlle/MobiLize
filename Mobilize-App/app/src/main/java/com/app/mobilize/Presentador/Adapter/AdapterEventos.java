@@ -29,6 +29,7 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewholdereventos> {
@@ -88,7 +89,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.inscriptionList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                handleShowInscriptions(v, holder, e);
+                handleShowInscriptions(e);
             }
         });
         holder.actionButtomEventModify.setOnClickListener(new View.OnClickListener() {
@@ -226,9 +227,9 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.event.setVisibility(View.VISIBLE);
     }
 
-    private void handleShowInscriptions(View v, viewholdereventos holder, Events e) {
+    private void handleShowInscriptions(Events e) {
         Intent intent = new Intent(mContext, PopUpEventListInscriptions.class);
-        intent.putExtra("event", e.getTitle());
+        intent.putExtra("title", e.getTitle());
         mContext.startActivity(intent);
     }
 
@@ -243,6 +244,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         intent.putExtra("date", e.getDateEvent());
         intent.putExtra("hour", e.getHourEvent());
         intent.putExtra("max_part", e.getMax_part());
+        intent.putStringArrayListExtra("inscriptions", (ArrayList<String>) e.getInscripcionsList());
         mContext.startActivity(intent);
     }
 
@@ -257,6 +259,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         intent.putExtra("date", e.getDateEvent());
         intent.putExtra("hour", e.getHourEvent());
         intent.putExtra("max_part", e.getMax_part());
+        intent.putStringArrayListExtra("inscriptions", (ArrayList<String>) e.getInscripcionsList());
         mContext.startActivity(intent);
 
         final AlertDialog.Builder editAD = new AlertDialog.Builder(mContext);
@@ -264,21 +267,6 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         editAD.setIcon(R.mipmap.ic_delete);
         editAD.setTitle(mContext.getResources().getString(R.string.EliminarEsdeveniment));
         editAD.setView(textView);
-
-//        textView.setText(mContext.getResources().getString(R.string.EliminarEsdevenimentText));
-//        editAD.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                event_ref.document(e.getTitle()).delete();
-//            }
-//        });
-//        editAD.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//            }
-//        });
-//        AlertDialog alert = editAD.create();
-//        alert.show();
     }
 
     private void handleToSubscribe(final viewholdereventos holder, final String user, Events e) {

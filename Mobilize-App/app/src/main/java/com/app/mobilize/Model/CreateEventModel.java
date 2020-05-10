@@ -35,7 +35,7 @@ public class CreateEventModel implements CreateEventInterface.Model {
     }
 
     @Override
-    public void doCreateEvent(Uri imageUri, final String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, final int actionId) {
+    public void doCreateEvent(Uri imageUri, final String title, String desciption, String dateEvent, String hourEvent, String sportEvent, String max_part, String creator, ArrayList<String> inscriptions, final int actionId) {
         event.setImage(imageUri.toString());
         event.setTitle(title);
         event.setDescription(desciption);
@@ -44,7 +44,7 @@ public class CreateEventModel implements CreateEventInterface.Model {
         event.setSportEvent(sportEvent);
         event.setMax_part(max_part);
         event.setCreator(creator);
-        event.setInscripcionsList(new ArrayList<String>());
+        event.setInscripcionsList(inscriptions);
         event_ref.document(title).set(event).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

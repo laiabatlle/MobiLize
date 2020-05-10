@@ -43,6 +43,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -299,17 +300,12 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
                 alert.show();
             }
             if(imageUri != null){
-                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, 0);
-//                Intent intent = new Intent( this, MainActivity.class);
-//                startActivity(intent);
+                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, new ArrayList<String>(), 0);
                 this.finish();
             }
         }
         else {
-            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, 0);
-            //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
-//            Intent intent = new Intent( this, MainActivity.class);
-//            startActivity(intent);
+            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, new ArrayList<String>(), 0);
             this.finish();
         }
     }
