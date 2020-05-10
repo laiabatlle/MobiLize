@@ -16,7 +16,7 @@ import com.app.mobilize.Vista.Activities.Data.AlarmReminderContract;
 
 public class AlarmCursorAdapter extends CursorAdapter {
 
-    private TextView mTitleText, mDateAndTimeText, mRepeatInfoText;
+    private TextView mTitleText, mDateAndTimeText;
     private ImageView mActiveImage , mThumbnailImage;
     private ColorGenerator mColorGenerator = ColorGenerator.DEFAULT;
     private TextDrawable mDrawableBuilder;
@@ -36,7 +36,6 @@ public class AlarmCursorAdapter extends CursorAdapter {
 
         mTitleText = (TextView) view.findViewById(R.id.recycle_title);
         mDateAndTimeText = (TextView) view.findViewById(R.id.recycle_date_time);
-        mRepeatInfoText = (TextView) view.findViewById(R.id.recycle_repeat_info);
         mActiveImage = (ImageView) view.findViewById(R.id.active_image);
         mThumbnailImage = (ImageView) view.findViewById(R.id.thumbnail_image);
 
@@ -51,9 +50,6 @@ public class AlarmCursorAdapter extends CursorAdapter {
         String title = cursor.getString(titleColumnIndex);
         String date = cursor.getString(dateColumnIndex);
         String time = cursor.getString(timeColumnIndex);
-        String repeat = cursor.getString(repeatColumnIndex);
-        String repeatNo = cursor.getString(repeatNoColumnIndex);
-        String repeatType = cursor.getString(repeatTypeColumnIndex);
         String active = cursor.getString(activeColumnIndex);
 
 
@@ -65,16 +61,10 @@ public class AlarmCursorAdapter extends CursorAdapter {
             mDateAndTimeText.setText(context.getResources().getString(R.string.dateNotSet));
         }
 
-        if(repeat != null){
-            setReminderRepeatInfo(repeat, repeatNo, repeatType);
-        }else{
-            mRepeatInfoText.setText(context.getResources().getString(R.string.repeatNotSet));
-        }
-
         if (active != null){
             setActiveImage(active);
         }else{
-            mActiveImage.setImageResource(R.drawable.ic_notifications_off);
+            mActiveImage.setImageResource(R.drawable.ic_notifications_on);
         }
 
 
@@ -106,21 +96,13 @@ public class AlarmCursorAdapter extends CursorAdapter {
         mDateAndTimeText.setText(datetime);
     }
 
-    // Set repeat views
-    public void setReminderRepeatInfo(String repeat, String repeatNo, String repeatType) {
-        if(repeat.equals("true")){
-            mRepeatInfoText.setText(context.getResources().getString(R.string.every) + " " + repeatNo + " " + repeatType + "(s)");
-        }else if (repeat.equals("false")) {
-            mRepeatInfoText.setText(context.getResources().getString(R.string.repeatOff));
-        }
-    }
 
     // Set active image as on or off
     public void setActiveImage(String active){
         if(active.equals("true")){
             mActiveImage.setImageResource(R.drawable.ic_notifications_on);
         }else if (active.equals("false")) {
-            mActiveImage.setImageResource(R.drawable.ic_notifications_off);
+            mActiveImage.setImageResource(R.drawable.ic_notifications_on);
         }
     }
 }

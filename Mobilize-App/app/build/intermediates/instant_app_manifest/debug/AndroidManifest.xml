@@ -72,6 +72,9 @@
         <activity
             android:name="com.app.mobilize.Vista.Activities.PopUpEventListInscriptions"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.QuestionDialog"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" >
@@ -88,6 +91,7 @@
         <activity android:name="com.app.mobilize.Vista.Activities.ActivitatsUser" />
         <activity android:name="com.app.mobilize.Vista.Activities.AfegirRutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.ChangePasswordActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ModifyEventActivity" />
 
         <provider
             android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
@@ -98,6 +102,7 @@
             android:name="com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService"
             android:exported="false" />
 
+        <receiver android:name="com.app.mobilize.Vista.Activities.ReminderBroadcast" />
         <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler" />
         <receiver android:name="com.app.mobilize.Vista.Activities.AddAlertActivity" />
         <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider" />
