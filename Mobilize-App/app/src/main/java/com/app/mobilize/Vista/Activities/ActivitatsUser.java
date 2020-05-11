@@ -37,12 +37,13 @@ public class ActivitatsUser extends AppCompatActivity {
 
     public void getActivitats(){
         activitats = new ArrayList<>();
-        String calendar = Calendar.getInstance().toString();
-        activitats.add(new ActivitatFinalitzada(calendar, username, 12334, 12.5, 1, 34.5));
-        activitats.add(new ActivitatFinalitzada(calendar, username, 876, 3, 0, 50));
-        activitats.add(new ActivitatFinalitzada(calendar, username, 1245, 4.5, 2, 25.5));
-        activitats.add(new ActivitatFinalitzada(calendar, username, 8987654, 17, 0, 340.5));
-        activitats.add(new ActivitatFinalitzada(calendar, username, 345, 1, 1, 12));
+        Calendar calendar = Calendar.getInstance();
+        String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
+        activitats.add(new ActivitatFinalitzada(data, username, 12334, 12.5, 1, 34.5));
+        activitats.add(new ActivitatFinalitzada(data, username, 876, 3, 0, 50));
+        activitats.add(new ActivitatFinalitzada(data, username, 1245, 4.5, 2, 25.5));
+        activitats.add(new ActivitatFinalitzada(data, username, 8987654, 17, 0, 340.5));
+        activitats.add(new ActivitatFinalitzada(data, username, 345, 1, 1, 12));
 
     }
 }

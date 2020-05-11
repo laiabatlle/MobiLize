@@ -57,6 +57,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -308,34 +309,40 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
                 makeToast("Ritmo -> " + ritme + "  kcal -> kcal");
 
-                ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(Calendar.getInstance().toString(), email, timeElapsed/1000, distance, 0, kcal);
+                Calendar calendar = Calendar.getInstance();
+                String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
+                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed/1000, distance, 0, kcal);
                 is_empty = false;
                 activitatsF = new ArrayList<>();
+                Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
                 DocumentReference docRef = FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email);
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if ( task.isSuccessful() ) {
                             DocumentSnapshot documentSnapshot = task.getResult();
-                            if ( documentSnapshot.getData() == null ) is_empty = true;
-                            else if ( documentSnapshot.getData().isEmpty() ) is_empty = true;
-                            else activitatsF = (ArrayList<ActivitatFinalitzada>) documentSnapshot.getData().get("activitats");
+                            if ( documentSnapshot.getData() == null ) {
+                                Log.i("TASKFIREBASE", "NULL");
+                                is_empty = true;
+                            }
+                            else if ( documentSnapshot.getData().isEmpty() ) {
+                                Log.i("TASKFIREBASE", "EMPTY");
+                                is_empty = true;
+                            }
+                            else {
+                                Log.i("TASKFIREBASE", "SUCCES");
+                                activitatsF = (ArrayList<ActivitatFinalitzada>) documentSnapshot.getData().get("activitats");
+                                Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
+                                putMapFirebase(activitatFinalitzada);
+                            }
                         }
                     }
                 });
+                Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
 
-                activitatsF.add(activitatFinalitzada);
+                Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
 
-                Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
-                mapAux.put("activitats", activitatsF);
 
-                FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document().set(mapAux).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if ( task.isSuccessful() ) Log.i("TrackActivity", "Succesful");
-                        else Log.i("TrackActivity", "Not Succesful");
-                    }
-                });
 
 
 
@@ -343,6 +350,21 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
                 showCustomDialog("Activitat Finalitzada!", getTimeChrono(timeElapsed), String.valueOf(kcal), String.valueOf(distance/1000));
 
+            }
+        });
+    }
+
+    private void putMapFirebase (ActivitatFinalitzada activitatFinalitzada ) {
+        activitatsF.add(activitatFinalitzada);
+        Map <String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
+        mapAux.put("activitats", activitatsF);
+
+
+        FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(mapAux).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if ( task.isSuccessful() ) Log.i("TASKFIREBASE", "Succesful");
+                else Log.i("TASKFIREBASE", "Not Succesful");
             }
         });
     }
