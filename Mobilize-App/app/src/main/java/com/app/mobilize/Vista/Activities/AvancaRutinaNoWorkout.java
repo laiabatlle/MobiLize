@@ -38,12 +38,13 @@ public class AvancaRutinaNoWorkout extends AppCompatActivity {
 
 
         tvnom.setText(exercici.get(pos).getNom());
-        tvkmh.setText(exercici.get(pos).getKmh());
+        String km_h = exercici.get(pos).getKmh() + " " + getString(R.string.kmh);
+        tvkmh.setText(km_h);
 
 
-        String kcal = Double.toString(exercici.get(pos).getKcal());
-        String durada = Integer.toString(exercici.get(pos).getDuradamin());
-        String punts = Integer.toString(exercici.get(pos).getPunts());
+        String kcal = Double.toString(exercici.get(pos).getKcal()) + " " + getString(R.string.Kcal);
+        String durada = Integer.toString(exercici.get(pos).getDuradamin()) + " " + getString(R.string.minuts);
+        String punts = Integer.toString(exercici.get(pos).getPunts()) + " " + getString(R.string.punts);
 
         tvdurada.setText(durada);
         tvkcal.setText(kcal);
@@ -51,11 +52,11 @@ public class AvancaRutinaNoWorkout extends AppCompatActivity {
         puntstotals = exercici.get(pos).getPunts() + puntstotals;
         kcaltotals = exercici.get(pos).getKcal() + kcaltotals;
 
-        if(exercici.get(pos).getPendent() == true) {
-            tvpendent.setText("Ha d'incloure pendent");
+        if(exercici.get(pos).getPendent()) {
+            tvpendent.setText(getString(R.string.inclou_pendent));
         }
 
-        else tvpendent.setText("No ha d'incloure pendent");
+        else tvpendent.setText(getString(R.string.sense_pendent));
 
         tvpunts.setText(punts);
     }

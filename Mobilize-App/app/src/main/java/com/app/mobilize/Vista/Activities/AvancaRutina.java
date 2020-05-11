@@ -41,9 +41,9 @@ public class AvancaRutina extends AppCompatActivity {
 
             tvnom.setText(exercici.get(pos).getNom());
            tvmusculs.setText(exercici.get(pos).getMusculs());
-            String ser = Integer.toString(exercici.get(pos).getSeries());
-            String rep = Integer.toString(exercici.get(pos).getRepeticions());
-            String punts = Integer.toString(exercici.get(pos).getPunts());
+            String ser = Integer.toString(exercici.get(pos).getSeries()) + " " + getString(R.string.sèries);
+            String rep = Integer.toString(exercici.get(pos).getRepeticions()) + " " + getString(R.string.repeticions);
+            String punts = Integer.toString(exercici.get(pos).getPunts()) + " " + getString(R.string.punts);
             tvseries.setText(ser);
             tvrepeticions.setText(rep);
             tvpunts.setText(punts);

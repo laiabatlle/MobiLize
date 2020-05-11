@@ -244,5 +244,7 @@
     <string name="minuts">"minuts"</string>
     <string name="inclou_pendent">Ha d\'incloure pendent</string>
     <string name="sense_pendent">No ha d\'incloure pendent</string>
+    <string name="completed">Completed</string>
+    <string name="track_it">Track it!</string>
 
 </resources>
