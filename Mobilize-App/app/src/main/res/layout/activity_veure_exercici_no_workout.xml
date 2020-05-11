@@ -8,67 +8,71 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="253dp"
-        android:layout_height="44dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Nom"
+        android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
+        app:layout_constraintVertical_bias="0.747" />
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="284dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="52dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Km/h"
         app:layout_constraintBottom_toTopOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="294dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="36dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Durada"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView21"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="290dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Kcal"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="334dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="88dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Pendent"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="331dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="Punts"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

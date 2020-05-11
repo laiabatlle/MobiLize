@@ -23,23 +23,23 @@ public class VeureExerciciNoWorkout extends AppCompatActivity {
         TextView tvpunts = (TextView) findViewById(R.id.textView23);
 
         Exercici exercici = (Exercici) getIntent().getParcelableExtra("exercici");
+        String km_h = exercici.getKmh() + " " + getString(R.string.kmh);
+        tvnom.setText(exercici.getNom());
+        tvkmh.setText(km_h);
 
-       tvnom.setText(exercici.getNom());
-       tvkmh.setText(exercici.getKmh());
 
-
-        String kcal = Double.toString(exercici.getKcal());
-        String durada = Integer.toString(exercici.getDuradamin());
-        String punts = Integer.toString(exercici.getPunts());
+        String kcal = Double.toString(exercici.getKcal()) + " " + getString(R.string.Kcal);
+        String durada = Integer.toString(exercici.getDuradamin()) + " " + getString(R.string.minuts);
+        String punts = Integer.toString(exercici.getPunts()) + " " + getString(R.string.punts);
 
         tvdurada.setText(durada);
         tvkcal.setText(kcal);
 
-        if(exercici.getPendent() == true) {
-            tvpendent.setText("Ha d'incloure pendent");
+        if(exercici.getPendent()) {
+            tvpendent.setText(R.string.inclou_pendent);
         }
 
-        else tvpendent.setText("No ha d'incloure pendent");
+        else tvpendent.setText(R.string.sense_pendent);
 
         tvpunts.setText(punts);
     }

@@ -236,5 +236,13 @@
     <string name="changePassword">Cambiar contraseña</string>
     <string name="newPassword">Nueva contraseña</string>
     <string name="passwordChanged">La contraseña se ha cambiado correctamente</string>
+    <string name="kmh" translatable="false">"km/h"</string>
+    <string name="Kcal" translatable="false">"kcal"</string>
+    <string name="sèries">"sèries"</string>
+    <string name="repeticions">"repeticions"</string>
+    <string name="punts">"punts"</string>
+    <string name="minuts">"minuts"</string>
+    <string name="inclou_pendent">Ha d\'incloure pendent</string>
+    <string name="sense_pendent">No ha d\'incloure pendent</string>
 
 </resources>
