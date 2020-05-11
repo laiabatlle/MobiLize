@@ -249,5 +249,7 @@
     <string name="PrivateAccount">"This account is private. Send a friend request to see more information about "</string>
     <string name="NoFriends">Currently you have no friends, find people with whom to play sports and share your progress.</string>
     <string name="timeLeft">"One day left for the event "</string>
+    <string name="calendar"> Calendar</string>
+
 
 </resources>

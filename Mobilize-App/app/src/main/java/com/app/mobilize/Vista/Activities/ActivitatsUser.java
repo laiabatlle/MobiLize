@@ -37,7 +37,7 @@ public class ActivitatsUser extends AppCompatActivity {
 
     public void getActivitats(){
         activitats = new ArrayList<>();
-        Calendar calendar = Calendar.getInstance();
+        String calendar = Calendar.getInstance().toString();
         activitats.add(new ActivitatFinalitzada(calendar, username, 12334, 12.5, 1, 34.5));
         activitats.add(new ActivitatFinalitzada(calendar, username, 876, 3, 0, 50));
         activitats.add(new ActivitatFinalitzada(calendar, username, 1245, 4.5, 2, 25.5));

@@ -1,15 +1,14 @@
 package com.app.mobilize.Model;
 
-import java.util.Calendar;
-
-public class ActivitatFinalitzada {private Calendar data;
+public class ActivitatFinalitzada {
+    String data;
     String username;
-    int temps; // en segons
+    long temps; // en segons
     double distancia;
     int tipus;
     double kcalCremades;
 
-    public ActivitatFinalitzada(Calendar data, String username, int temps, double distancia, int tipus, double kcalCremades) {
+    public ActivitatFinalitzada(String data, String username, long temps, double distancia, int tipus, double kcalCremades) {
         this.data = data;
         this.username = username;
         this.temps = temps;
@@ -18,11 +17,11 @@ public class ActivitatFinalitzada {private Calendar data;
         this.kcalCremades = kcalCremades;
     }
 
-    public Calendar getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Calendar data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -34,11 +33,11 @@ public class ActivitatFinalitzada {private Calendar data;
         this.username = username;
     }
 
-    public int getTemps() {
+    public long getTemps() {
         return temps;
     }
 
-    public void setTemps(int temps) {
+    public void setTemps(long temps) {
         this.temps = temps;
     }
 

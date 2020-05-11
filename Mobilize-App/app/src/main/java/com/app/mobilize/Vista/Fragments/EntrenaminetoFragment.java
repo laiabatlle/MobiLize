@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.ModalitatExercici;
 import com.app.mobilize.Vista.Activities.NivellEntrenament;
@@ -19,8 +20,10 @@ import com.app.mobilize.Vista.Activities.NivellEntrenament;
  */
 public class EntrenaminetoFragment extends Fragment {
 
-    public EntrenaminetoFragment() {
+    Usuari user;
+    public EntrenaminetoFragment(Usuari user) {
         // Required empty public constructor
+        this.user = user;
     }
 
 
@@ -37,6 +40,7 @@ public class EntrenaminetoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), ModalitatExercici.class);
+                intent.putExtra("email", user.getEmail());
                 startActivityForResult(intent, 0);
             }
         });

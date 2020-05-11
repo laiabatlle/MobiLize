@@ -19,7 +19,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Vista.Create_plan"></activity>
+        <service
+            android:name=".Vista.Activities.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".Vista.Create_plan" />
         <activity android:name=".Vista.Activities.Seleccionar_planning" />
         <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout" />
         <activity android:name=".Vista.Activities.AvancaRutina" />
@@ -52,7 +57,7 @@
         <activity android:name=".Vista.Activities.ModalitatEntrenament" />
         <activity android:name=".Vista.Activities.NivellEntrenament" />
         <activity android:name=".Vista.Activities.TipusPlan" />
-        <activity android:name=".Vista.Activities.OptionsActivity"/>
+        <activity android:name=".Vista.Activities.OptionsActivity" />
         <activity android:name=".Vista.Activities.UserActivity" />
         <activity android:name=".Vista.Activities.Seleccionar_rutina" />
         <activity android:name=".Vista.Activities.CreateEventActivity" />
@@ -90,16 +95,16 @@
         <service
             android:name=".Vista.Activities.Reminder.ReminderAlarmService"
             android:exported="false" />
-        <receiver android:name=".Vista.Activities.ReminderBroadcast"/>
-        <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler"/>
-        <receiver android:name=".Vista.Activities.AddAlertActivity"/>
-        <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderContract"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper"/>
-        <receiver android:name=".Vista.Activities.AlarmCursorAdapter"/>
-        <receiver android:name=".Vista.Activities.AlertsActivity"/>
 
+        <receiver android:name=".Vista.Activities.ReminderBroadcast" />
+        <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler" />
+        <receiver android:name=".Vista.Activities.AddAlertActivity" />
+        <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderContract" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper" />
+        <receiver android:name=".Vista.Activities.AlarmCursorAdapter" />
+        <receiver android:name=".Vista.Activities.AlertsActivity" />
     </application>
 
 </manifest>

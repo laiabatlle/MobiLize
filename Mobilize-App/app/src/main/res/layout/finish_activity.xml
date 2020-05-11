@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Time:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvActivityTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Distance:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Kcal:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKcalBurned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/bOKFinishActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:gravity="center"
+        android:text="@string/ok" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>

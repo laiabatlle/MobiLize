@@ -249,5 +249,8 @@
     <string name="PrivateAccount">"Aquest compte és privat. Envia una sol·licitud d'amistat per poder veure més informació sobre "</string>
     <string name="NoFriends">"Actualment no tens amics, troba gent amb qui practicar esport i compartir els teus progressos."</string>
     <string name="timeLeft">"Queda un dia per l'event "</string>
+    <string name="calendar"> Calendari</string>
+
+
 
 </resources>

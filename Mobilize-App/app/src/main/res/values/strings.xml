@@ -259,5 +259,6 @@
     <string name="sense_pendent">No ha d\'incloure pendent</string>
     <string name="completed">Completed</string>
     <string name="track_it">Track it!</string>
+    <string name="calendar"> Calendario</string>
 
 </resources>
