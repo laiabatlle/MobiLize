@@ -9,18 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.app.mobilize.R;
 
-public class Crear_plan extends Fragment {
-
-    public Crear_plan() {
-        // Required empty public constructor
-    }
-
+public class Crear_plan extends AppCompatActivity {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.activity_crear_plan, container, false);
-        return view;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_crear_plan);
+
     }
+
+
 }

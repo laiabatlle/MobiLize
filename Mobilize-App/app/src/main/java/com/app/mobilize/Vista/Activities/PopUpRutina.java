@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -23,9 +24,10 @@ import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
 import com.app.sqliteopenhelper.Exercici;
 import com.app.sqliteopenhelper.Rutina;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PopUpRutina extends AppCompatActivity {
+public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNoteListener {
 
     ArrayList<Exercici> exe;
     RecyclerView recycler;
@@ -46,7 +48,7 @@ public class PopUpRutina extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
-        videoActivity = findViewById(R.id.videoActivity);
+       /*videoActivity = findViewById(R.id.videoActivity);
         Log.d("title", getResources().getResourceName(R.raw.abdominals));
         videoActivity.setVideoPath("android.resource://" + getPackageName() + "/raw/abdominals");
         videoActivity.start();
@@ -57,7 +59,7 @@ public class PopUpRutina extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
                 mp.start();
             }
-        });
+        }); */
 
         recycler = (RecyclerView) findViewById(R.id.recyclerView3);
         recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -73,7 +75,7 @@ public class PopUpRutina extends AppCompatActivity {
         eaux.clear();
         eaux = exe;
 
-        AdapterDatos adapter = new AdapterDatos(exe);
+        AdapterDatos adapter = new AdapterDatos(exe, this);
         recycler.setAdapter(adapter);
 
 
@@ -96,7 +98,7 @@ public class PopUpRutina extends AppCompatActivity {
             if(c == ',' ) {
 
                 args = new String[] {s};
-                fila = BaseDeDades.rawQuery("select kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica from Exercicis where nom =?", args);
+                fila = BaseDeDades.rawQuery("select kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, punts from Exercicis where nom =?", args);
 
                 while (fila.moveToNext()) {
                     String kmh = fila.getString(0);
@@ -107,9 +109,12 @@ public class PopUpRutina extends AppCompatActivity {
                     int repeticions = fila.getInt(5);
                     int series = fila.getInt(6);
                     String tecnica = fila.getString(7);
-                    Exercici ex = new Exercici(s, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, dificultat, modalitat);
+                    int punts = fila.getInt(8);
+                    Exercici ex = new Exercici(s, kmh, durada_min, kcal, pendent, musculs, repeticions, series, tecnica, dificultat, modalitat, punts);
                     e.add(ex);
                 }
+
+
 
                 s = "";
             }
@@ -143,6 +148,29 @@ public class PopUpRutina extends AppCompatActivity {
 
 
         Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void Start(View view) {
+        if(exe.get(0).getKmh() == null) {
+            Intent intent = new Intent(this, AvancaRutina.class);
+            intent.putParcelableArrayListExtra("exercici", exe);
+            intent.putExtra("pos", 0);
+            intent.putExtra("puntstotals", 0);
+            intent.putExtra("kcaltotals",0);
+            startActivityForResult(intent, 0);
+
+        }
+
+        else {
+            Intent intent = new Intent(this, AvancaRutinaNoWorkout.class);
+            intent.putParcelableArrayListExtra("exercici", exe);
+            intent.putExtra("pos", 0);
+            intent.putExtra("puntstotals", 0);
+            intent.putExtra("kcaltotals",0);
+            startActivityForResult(intent, 0);
+        }
+
 
     }
 
@@ -199,5 +227,23 @@ public class PopUpRutina extends AppCompatActivity {
     public static void setExercici(Exercici e) {
 
         eaux.add(e);
+    }
+
+    @Override
+    public void onNoteClick(int position) {
+
+        if(exe.get(position).getKmh() == null) {
+            Intent intent = new Intent(this, VeureExercici.class);
+            intent.putExtra("exercici", exe.get(position));
+            startActivityForResult(intent, 0);
+
+        }
+
+        else {
+            Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
+            intent.putExtra("exercici", exe.get(position));
+            startActivityForResult(intent, 0);
+        }
+
     }
 }

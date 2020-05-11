@@ -1,10 +1,9 @@
 package com.app.sqliteopenhelper;
 
-import android.media.Image;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-import java.sql.Time;
-
-public class Exercici {
+public class Exercici implements Parcelable {
     private String nom;
     private String kmh;
     private int durada_min;
@@ -16,8 +15,9 @@ public class Exercici {
     private String tecnica;
     private int nivell;
     private String modalitat;
+    private int punts;
 
-    public Exercici(String nom, String kmh, int durada_min, double kcal, boolean pendent, String musculs, int repeticions, int series, String tecnica, int nivell, String modalitat) {
+    public Exercici(String nom, String kmh, int durada_min, double kcal, boolean pendent, String musculs, int repeticions, int series, String tecnica, int nivell, String modalitat, int punts) {
 
         this.nom = nom;
         this.modalitat = modalitat;
@@ -30,8 +30,57 @@ public class Exercici {
         this.durada_min = durada_min;
         this.kcal = kcal;
         this.pendent = pendent;
+        this.punts = punts;
 
     }
+
+    protected Exercici(Parcel in) {
+        nom = in.readString();
+        kmh = in.readString();
+        durada_min = in.readInt();
+        kcal = in.readDouble();
+        pendent = in.readByte() != 0;
+        musculs = in.readString();
+        repeticions = in.readInt();
+        series = in.readInt();
+        tecnica = in.readString();
+        nivell = in.readInt();
+        modalitat = in.readString();
+        punts = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nom);
+        dest.writeString(kmh);
+        dest.writeInt(durada_min);
+        dest.writeDouble(kcal);
+        dest.writeByte((byte) (pendent ? 1 : 0));
+        dest.writeString(musculs);
+        dest.writeInt(repeticions);
+        dest.writeInt(series);
+        dest.writeString(tecnica);
+        dest.writeInt(nivell);
+        dest.writeString(modalitat);
+        dest.writeInt(punts);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Exercici> CREATOR = new Creator<Exercici>() {
+        @Override
+        public Exercici createFromParcel(Parcel in) {
+            return new Exercici(in);
+        }
+
+        @Override
+        public Exercici[] newArray(int size) {
+            return new Exercici[size];
+        }
+    };
 
     public String getNom() {
         return nom;
@@ -76,5 +125,7 @@ public class Exercici {
     public String getTecnica() {
         return tecnica;
     }
+
+    public int getPunts() { return punts; }
 
 }

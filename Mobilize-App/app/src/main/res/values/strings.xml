@@ -169,27 +169,27 @@
     <string name="rb_calorias">calorías </string>
     <string name="rb_pasos">pasos </string>
     <string-array name="dias_semana">
-    <item>dom</item>
-    <item>lun</item>
-    <item>mar</item>
-    <item>mie</item>
-    <item>jue</item>
-    <item>vie</item>
-    <item>sab</item>
+        <item>dom</item>
+        <item>lun</item>
+        <item>mar</item>
+        <item>mie</item>
+        <item>jue</item>
+        <item>vie</item>
+        <item>sab</item>
     </string-array>
     <string-array name="meses_año">
-    <item>ENE</item>
-    <item>FEB</item>
-    <item>MAR</item>
-    <item>ABR</item>
-    <item>MAY</item>
-    <item>JUN</item>
-    <item>JUL</item>
-    <item>AGO</item>
-    <item>SET</item>
-    <item>OCT</item>
-    <item>NOV</item>
-    <item>DIC</item>
+        <item>ENE</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>ABR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AGO</item>
+        <item>SET</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DIC</item>
     </string-array>
     <string name="title_activity_maps">Mapa</string>
     <string name="crear_una_rutina">Crear una rutina</string>
@@ -249,5 +249,15 @@
     <string name="PrivateAccount">"Esta cuenta es privada. Envia una solicitud de amistad para poder ver más información sobre "</string>
     <string name="NoFriends">"Actualmente no tienes amigos, encuentra gente con quien practicar deporte y compartir tus progresos."</string>
     <string name="timeLeft">"Queda un dia para el evento "</string>
+    <string name="kmh" translatable="false">"km/h"</string>
+    <string name="Kcal" translatable="false">"kcal"</string>
+    <string name="sèries">"sèries"</string>
+    <string name="repeticions">"repeticions"</string>
+    <string name="punts">"punts"</string>
+    <string name="minuts">"minuts"</string>
+    <string name="inclou_pendent">Ha d\'incloure pendent</string>
+    <string name="sense_pendent">No ha d\'incloure pendent</string>
+    <string name="completed">Completed</string>
+    <string name="track_it">Track it!</string>
 
 </resources>
