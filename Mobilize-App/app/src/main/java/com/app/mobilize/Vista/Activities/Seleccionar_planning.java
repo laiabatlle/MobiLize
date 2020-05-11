@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Create_plan;
 import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
 import com.app.sqliteopenhelper.Planning;
 import com.app.sqliteopenhelper.Rutina;
@@ -22,6 +24,8 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
     TextView tv1;
     TextView tv2;
     TextView tv3;
+    String modalitat;
+    int dificultat;
     RecyclerView recycler;
    ArrayList<Planning>  PlanningArrayList;
     @Override
@@ -32,8 +36,8 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
         recycler = (RecyclerView) findViewById(R.id.Recyclerid1);
         recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        String modalitat = getIntent().getStringExtra("modalitat");
-        int dificultat =  getIntent().getIntExtra("nivell", 0);
+        modalitat = getIntent().getStringExtra("modalitat");
+        dificultat =  getIntent().getIntExtra("nivell", 0);
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDades = admin.getWritableDatabase();
@@ -87,5 +91,12 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
             startActivityForResult(intent, 0);
 
 
+    }
+
+    public void CreatePla(View view) {
+        Intent intent = new Intent(this, Create_plan.class);
+       // intent.putExtra("modalitat", modalitat);
+        //intent.putExtra("dificultat", dificultat);
+        startActivityForResult(intent, 0);
     }
 }

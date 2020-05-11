@@ -2920,6 +2920,10 @@
         "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e2d6da442f0a85a042c2ec50ee077c68\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
+        "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_plan.xml.flat",
+        "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_create_plan.xml"
+    },
+    {
         "merged": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_calendar.xml.flat",
         "source": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_calendar.xml"
     },

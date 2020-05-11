@@ -36,6 +36,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.app.mobilize.Vista.Create_plan" />
         <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_planning" />
         <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutinaNoWorkout" />
         <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutina" />
