@@ -248,5 +248,6 @@
     <string name="EliminarEsdevenimentText">You are about to delete an event. If you continue you will not be able to go back. Do you want to continue?</string>
     <string name="PrivateAccount">"This account is private. Send a friend request to see more information about "</string>
     <string name="NoFriends">Currently you have no friends, find people with whom to play sports and share your progress.</string>
+    <string name="timeLeft">"One day left for the event "</string>
 
 </resources>

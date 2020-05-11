@@ -243,10 +243,11 @@
     <string name="UnsubscribeEventButton">Desinscribirse</string>
     <string name="InscritosEventList">Lista de usuarios inscritos:</string>
     <string name="ModificarEsdeveniment">"Modificar evento"</string>
-    <string name="ModificarEsdevenimentText">"Estás a punto de modificar un evento. En caso de que modifique la fecha o la hora del mismo, los usuarios inscritos serán desapuntats automáticamente. ¿Quieres continuar?"</string>
+    <string name="ModificarEsdevenimentText">"Estás a punto de modificar un evento. En caso de que modifique la fecha o la hora del mismo, los usuarios inscritos serán desapuntados automáticamente. ¿Quieres continuar?"</string>
     <string name="EliminarEsdeveniment">"Eliminar evento"</string>
     <string name="EliminarEsdevenimentText">"Estás a punto de eliminar un evento. Si continuas no podrás volver atrás. ¿Quieres continuar?"</string>
     <string name="PrivateAccount">"Esta cuenta es privada. Envia una solicitud de amistad para poder ver más información sobre "</string>
     <string name="NoFriends">"Actualmente no tienes amigos, encuentra gente con quien practicar deporte y compartir tus progresos."</string>
+    <string name="timeLeft">"Queda un dia para el evento "</string>
 
 </resources>

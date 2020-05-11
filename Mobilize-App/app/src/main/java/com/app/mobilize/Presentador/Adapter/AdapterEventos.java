@@ -1,9 +1,15 @@
 package com.app.mobilize.Presentador.Adapter;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +25,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.mobilize.Model.Events;
 import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Activities.AddAlertActivity;
 import com.app.mobilize.Vista.Activities.PopUpEventListInscriptions;
 import com.app.mobilize.Vista.Activities.QuestionDialog;
+import com.app.mobilize.Vista.Activities.ReminderBroadcast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,7 +38,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Random;
 
 public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewholdereventos> {
 
@@ -273,12 +283,79 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.actionButtomEvent.setImageResource(R.mipmap.ic_unsubscrive_event);
         event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayUnion(user));
         holder.CURRENT_STATE = "subscribed";
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = "ReminderChannel";
+            String description = "Channel for Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(e.getTitle() + "day", name , importance);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = mContext.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+        Intent intent = new Intent(mContext, ReminderBroadcast.class);
+        Log.d("hola", mContext.getResources().getString(R.string.timeLeft));
+        String s = mContext.getResources().getString(R.string.timeLeft) + e.getTitle();
+        intent.putExtra("title", e.getTitle());
+        intent.putExtra("text", s);
+        Random r = new Random();
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, r.nextInt(100000000), intent, 0);
+
+        AlarmManager alarmManager = (AlarmManager) mContext.getSystemService(mContext.ALARM_SERVICE);
+
+        int day = Integer.parseInt(e.getDateEvent().substring(0, 2))-1;
+        int month = Integer.parseInt(e.getDateEvent().substring(3, 5));
+        int year = Integer.parseInt(e.getDateEvent().substring(6, 10));
+        int hour = Integer.parseInt(e.getHourEvent().substring(0, 2));
+        int minute = Integer.parseInt(e.getHourEvent().substring(3, 5));
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month-1, day,
+                hour, minute, 0);
+        long startTime = calendar.getTimeInMillis();
+        alarmManager.set(AlarmManager.RTC_WAKEUP, startTime, pendingIntent);
+        Log.d("hola", String.valueOf(startTime));
+
+        /*if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = "ReminderChannel";
+            String description = "Channel for Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(e.getTitle() + "hour", name , importance);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = mContext.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+        Intent intent2 = new Intent(mContext, ReminderBroadcast.class);
+        intent2.putExtra("title", mContext.getResources().getString(R.string.timeLeft) + e.getTitle());
+        Random r2 = new Random();
+        PendingIntent pendingIntent2 = PendingIntent.getBroadcast(mContext, r2.nextInt(100000000), intent2, 0);
+
+        AlarmManager alarmManager2 = (AlarmManager) mContext.getSystemService(mContext.ALARM_SERVICE);
+
+        day = Integer.parseInt(e.getDateEvent().substring(0, 2));
+        month = Integer.parseInt(e.getDateEvent().substring(3, 5));
+        year = Integer.parseInt(e.getDateEvent().substring(6, 10));
+        hour = Integer.parseInt(e.getHourEvent().substring(0, 2))-1;
+        minute = Integer.parseInt(e.getHourEvent().substring(3, 5));
+        calendar = Calendar.getInstance();
+        calendar.set(year, month-1, day,
+                hour, minute, 0);
+        startTime = calendar.getTimeInMillis();
+        alarmManager2.set(AlarmManager.RTC_WAKEUP, startTime, pendingIntent2);*/
     }
 
     private void handleToUnsubscribe(viewholdereventos holder, String user, Events e) {
         holder.actionButtomEvent.setImageResource(R.mipmap.ic_subscrive_event);
         event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayRemove(user));
         holder.CURRENT_STATE = "not_subscribed";
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = mContext.getSystemService(NotificationManager.class);
+            manager.deleteNotificationChannel(e.getTitle()+"hour");
+        }
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = mContext.getSystemService(NotificationManager.class);
+            manager.deleteNotificationChannel(e.getTitle()+"day");
+        }
     }
 
     static class viewholdereventos extends RecyclerView.ViewHolder {
