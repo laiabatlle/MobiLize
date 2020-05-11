@@ -30,9 +30,9 @@ public class VeureExercici extends AppCompatActivity {
 
         tvnom.setText(exercici.getNom());
         tvmusculs.setText(exercici.getMusculs());
-        String ser = Integer.toString(exercici.getSeries());
-        String rep = Integer.toString(exercici.getRepeticions());
-        String punts = Integer.toString(exercici.getPunts());
+        String ser = Integer.toString(exercici.getSeries()) + " " + getString(R.string.sèries);
+        String rep = Integer.toString(exercici.getRepeticions()) + " " + getString(R.string.repeticions);
+        String punts = Integer.toString(exercici.getPunts()) + " " + getString(R.string.punts);
         tvseries.setText(ser);
         tvrepeticions.setText(rep);
         tvpunts.setText(punts);
