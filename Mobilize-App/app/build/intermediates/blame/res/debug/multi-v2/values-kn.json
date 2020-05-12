@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/eric/Documentos/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/home/eric/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
                     "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/c463364493ac3ff72667fb9129c6544f/res/values-kn/values.xml",

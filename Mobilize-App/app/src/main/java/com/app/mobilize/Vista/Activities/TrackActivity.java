@@ -13,12 +13,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.Settings;
@@ -26,6 +28,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,11 +66,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TrackActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     String email, tipus;
+
+    AlertDialog dialog;
 
     Chronometer chrono;
     Button bStart, bStop, bFinish;
@@ -77,13 +83,14 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
     Polyline polyline = null;
     Intent service = null;
 
-    ArrayList<ActivitatFinalitzada> activitatsF;
+    List<ActivitatFinalitzada> activitatsF;
     boolean is_empty;
 
     boolean firstStop = true;
     boolean firstStart = true;
 
     int number = 1;
+    int number2;
 
     Location initialLocation;
 
@@ -113,8 +120,19 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track);
 
+       // this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         tipus = getIntent().getStringExtra("tipus");
         email = getIntent().getStringExtra("email");
+
+        TextView tvDisciplina = findViewById(R.id.tvDisciplina);
+        if ( tipus.equals("running" ) ) {
+            tvDisciplina.setText(R.string.running);
+            ImageView ivDisciplina = findViewById(R.id.ivDisciplina);
+            ivDisciplina.setImageResource(R.drawable.funcionamiento);
+        }
+        else tvDisciplina.setText(R.string.cycling);
+
 
         if ( isLocationEnabled() == false ) {
             Toast.makeText(this, "Turn on location", Toast.LENGTH_LONG).show();
@@ -245,7 +263,9 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                     bFinish.setVisibility(View.VISIBLE);
                     bStart.setVisibility(View.GONE);
                     bStart.setText("RESUME");
-
+                }
+                else {
+                    goToMenu();
                 }
             }
         });
@@ -266,12 +286,14 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                     bFinish.setVisibility(View.GONE);
                     bStart.setVisibility(View.VISIBLE);
 
-                    LocationSignal locationSignal = locations.get(locations.size()-1);
-                    locationSignal.setSignal("STOP");
-                    locationSignal.setExerciciTime(getTimeChrono(timeElapsed));
-                    locations.set(locations.size()-1, locationSignal);
-                    drawMap();
-                    locations.clear();
+                    if ( locations.size() > 0 ) {
+                        LocationSignal locationSignal = locations.get(locations.size() - 1);
+                        locationSignal.setSignal("STOP");
+                        locationSignal.setExerciciTime(getTimeChrono(timeElapsed));
+                        locations.set(locations.size() - 1, locationSignal);
+                        drawMap();
+                        locations.clear();
+                    }
                 }
             }
         });
@@ -311,7 +333,9 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
                 Calendar calendar = Calendar.getInstance();
                 String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
-                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed/1000, distance, 0, kcal);
+                int tipusAct = 0;
+                if ( tipus.equals("running") ) tipusAct = 1;
+                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed, round(distance/1000, 2), tipusAct, kcal);
                 is_empty = false;
                 activitatsF = new ArrayList<>();
                 Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
@@ -324,49 +348,60 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                             if ( documentSnapshot.getData() == null ) {
                                 Log.i("TASKFIREBASE", "NULL");
                                 is_empty = true;
+                                putMapFirebase(activitatFinalitzada, 0, null);
                             }
                             else if ( documentSnapshot.getData().isEmpty() ) {
                                 Log.i("TASKFIREBASE", "EMPTY");
                                 is_empty = true;
+                                putMapFirebase(activitatFinalitzada, 0, null);
                             }
                             else {
                                 Log.i("TASKFIREBASE", "SUCCES");
-                                activitatsF = (ArrayList<ActivitatFinalitzada>) documentSnapshot.getData().get("activitats");
+                                Map <String, Object> mapAux = documentSnapshot.getData();
                                 Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
-                                putMapFirebase(activitatFinalitzada);
+                                putMapFirebase(activitatFinalitzada, mapAux.size(), mapAux);
                             }
                         }
                     }
                 });
-                Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
 
-                Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
-
-
-
-
-
-                // put ActivitatFinalitzada in Database
-
-                showCustomDialog("Activitat Finalitzada!", getTimeChrono(timeElapsed), String.valueOf(kcal), String.valueOf(distance/1000));
+                showCustomDialog("Activitat Finalitzada!", getTimeChrono(activitatFinalitzada.getTemps()),
+                        String.valueOf(activitatFinalitzada.getKcalCremades()), String.valueOf(activitatFinalitzada.getDistancia()));
 
             }
         });
     }
 
-    private void putMapFirebase (ActivitatFinalitzada activitatFinalitzada ) {
-        activitatsF.add(activitatFinalitzada);
-        Map <String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
-        mapAux.put("activitats", activitatsF);
+    private void putMapFirebase (ActivitatFinalitzada activitatFinalitzada, int size, Map<String, Object> map ) {
+        Map<String, String> mapAux2 = new HashMap<>();
+        mapAux2.put("data", activitatFinalitzada.getData());
+        mapAux2.put("email", activitatFinalitzada.getUsername());
+        mapAux2.put("distancia", String.valueOf(activitatFinalitzada.getDistancia()));
+        mapAux2.put("kcal", String.valueOf(activitatFinalitzada.getKcalCremades()));
+        mapAux2.put("temps", String.valueOf(activitatFinalitzada.getTemps()));
+        mapAux2.put("tipus", String.valueOf(activitatFinalitzada.getTipus()));
+        if ( size == 0 ) {
+            Map<String, Object> mapAux = new HashMap<>();
+            mapAux.put(String.valueOf(size), mapAux2);
 
-
-        FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(mapAux).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if ( task.isSuccessful() ) Log.i("TASKFIREBASE", "Succesful");
-                else Log.i("TASKFIREBASE", "Not Succesful");
-            }
-        });
+            FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(mapAux).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) Log.i("TASKFIREBASE", "Succesful");
+                    else Log.i("TASKFIREBASE", "Not Succesful");
+                }
+            });
+        }
+        else {
+            map.put(String.valueOf(size), mapAux2);
+            FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) Log.i("TASKFIREBASE", "Succesful");
+                    else Log.i("TASKFIREBASE", "Not Succesful");
+                }
+            });
+        }
     }
 
     private static double round ( double value, int places ) {
@@ -402,6 +437,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
     private void drawMap () {
         PolylineOptions polylineOptions = new PolylineOptions();
+        number2 = 1;
         for ( int i=0; i<locations.size(); i++ ) {
             final LocationSignal lsAux = locations.get(i);
             polylineOptions.add(lsAux.getLatLng());
@@ -413,12 +449,13 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                     public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                         MarkerOptions markerOptions = new MarkerOptions()
                                 .position(lsAux.getLatLng())
-                                .title(String.valueOf(number)+ ": " + lsAux.getSignal())
+                                .title(String.valueOf(number2)+ ": " + lsAux.getSignal())
                                 .snippet("Time: " + lsAux.getExerciciTime() )
                                 .icon(BitmapDescriptorFactory.fromBitmap(Bitmap.createScaledBitmap(resource, 53, 96, false)));
                         mMap.addMarker(markerOptions);
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(lsAux.getLatLng()));
                         mMap.setMinZoomPreference(15.0f);
+                        number2++;
                     }
 
                     @Override
@@ -488,10 +525,14 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         bOkey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToMenu();
+                dialog.dismiss();
+                bStop.setVisibility(View.GONE);
+                bFinish.setVisibility(View.GONE);
+                bStart.setVisibility(View.VISIBLE);
+                bStart.setText("OK");
             }
         });
-
+        
         TextView tvTime = customLayout.findViewById(R.id.tvActivityTime);
         TextView tvKms = customLayout.findViewById(R.id.tvDistance);
         TextView tvKcalBurned = customLayout.findViewById(R.id.tvKcalBurned);
@@ -499,8 +540,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         tvTime.setText(time);
         tvKms.setText(dist + " km");
         tvKcalBurned.setText(kcal + " kcal");
-
-        AlertDialog dialog = builder.create();
+        dialog = builder.create();
         dialog.show();
     }
 

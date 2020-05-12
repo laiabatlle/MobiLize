@@ -71,6 +71,7 @@ class ActivitatListAdapter extends ArrayAdapter<ActivitatFinalitzada> {
     }
 
     private String secToFormat( long sec ){
+        sec = sec/1000;
         long horas = sec/3600;
         long minuts = (sec - (3600*horas))/60;
         long segons = sec - ((horas*3600) + (minuts*60));
