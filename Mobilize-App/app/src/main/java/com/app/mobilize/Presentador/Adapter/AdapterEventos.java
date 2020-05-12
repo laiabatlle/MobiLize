@@ -76,8 +76,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         holder.sport.setText(e.getSportEvent());
         holder.date.setText(e.getDateEvent());
         holder.hour.setText(e.getHourEvent());
-        int romandingSeats =  Integer.parseInt(e.getMax_part()) - e.getInscripcionsList().size();
-        holder.romanding.setText(Integer.toString(romandingSeats));
+        calculateRomandingSeats(holder, e);
         holder.title1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -282,7 +281,28 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
     private void handleToSubscribe(final viewholdereventos holder, final String user, Events e) {
         holder.actionButtomEvent.setImageResource(R.mipmap.ic_unsubscrive_event);
         event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayUnion(user));
+        e.getInscripcionsList().add(user);
+        calculateRomandingSeats(holder, e);
         holder.CURRENT_STATE = "subscribed";
+        handelCreateAlarm(e);
+    }
+
+    private void calculateRomandingSeats(viewholdereventos holder, Events e){
+        holder.romandingSeats =  Integer.parseInt(e.getMax_part()) - e.getInscripcionsList().size();
+        holder.romanding.setText(String.valueOf(holder.romandingSeats));
+    }
+
+
+    private void handleToUnsubscribe(viewholdereventos holder, String user, Events e) {
+        holder.actionButtomEvent.setImageResource(R.mipmap.ic_subscrive_event);
+        event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayRemove(user));
+        e.getInscripcionsList().remove(user);
+        calculateRomandingSeats(holder, e);
+        holder.CURRENT_STATE = "not_subscribed";
+        handleDeleteAlarm(e);
+    }
+
+    private void handelCreateAlarm(Events e) {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence name = "ReminderChannel";
             String description = "Channel for Reminder";
@@ -344,17 +364,14 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         alarmManager2.set(AlarmManager.RTC_WAKEUP, startTime, pendingIntent2);*/
     }
 
-    private void handleToUnsubscribe(viewholdereventos holder, String user, Events e) {
-        holder.actionButtomEvent.setImageResource(R.mipmap.ic_subscrive_event);
-        event_ref.document(e.getTitle()).update("inscripcionsList", FieldValue.arrayRemove(user));
-        holder.CURRENT_STATE = "not_subscribed";
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    private void handleDeleteAlarm(Events e) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager manager = mContext.getSystemService(NotificationManager.class);
-            manager.deleteNotificationChannel(e.getTitle()+"hour");
+            manager.deleteNotificationChannel(e.getTitle() + "hour");
         }
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationManager manager = mContext.getSystemService(NotificationManager.class);
-            manager.deleteNotificationChannel(e.getTitle()+"day");
+            manager.deleteNotificationChannel(e.getTitle() + "day");
         }
     }
 
@@ -364,7 +381,7 @@ public class AdapterEventos extends RecyclerView.Adapter<AdapterEventos.viewhold
         ImageView event;
         TextView title1, title2, descriptionTV, description, sportTV, sport, date, hour, romandingTV, romanding, inscriptionListTV;
         ImageButton dateTV, hourTV, inscriptionList, actionButtomEventModify, actionButtomEvent;
-
+        int romandingSeats;
         String CURRENT_STATE;
 
         viewholdereventos(@NonNull View itemView) {

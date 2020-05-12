@@ -58,30 +58,49 @@
         app:layout_constraintTop_toBottomOf="@+id/rellay" />
 
     <Button
-        android:id="@+id/actionRequestButton"
+        android:id="@+id/messageButtom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:background="@drawable/button_bg_rounded_corners"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:background="@drawable/button_bg_rounded_corners"
+        android:text="Send message"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/privateText" />
 
+
+    <Button
+        android:id="@+id/actionRequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageButtom" />
+
     <Button
         android:id="@+id/declineRequestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/button_bg_rounded_corners_red"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:background="@drawable/button_bg_rounded_corners_red"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actionRequestButton" />
 

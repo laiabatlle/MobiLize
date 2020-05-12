@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,7 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
 
     private String currentUser;
     private String imageUri, userperfil, email, privacity, CURRENT_STATE;
-    private Button actionRequest, declineRequest;
+    private Button messageButton, actionRequest, declineRequest;
 
     private UserInterface.Presenter presenter;
 
@@ -55,11 +56,13 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
             privateText.setText(getResources().getString(R.string.PrivateAccount) + this.userperfil + ".");
             privateText.setVisibility(View.VISIBLE);
         }
+        messageButton = (Button) findViewById(R.id.messageButtom);
         actionRequest = (Button) findViewById(R.id.actionRequestButton);
         declineRequest = (Button) findViewById(R.id.declineRequestButton);
         MaintanceofButtons();
         declineRequest.setText(getResources().getString(R.string.DeclineFriendReq));
         MaintanceofButtons(currentUser, email, CURRENT_STATE);
+        messageButton.setOnClickListener(this);
         actionRequest.setOnClickListener(this);
         declineRequest.setOnClickListener(this);
     }
@@ -88,6 +91,10 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.messageButtom:
+                handleGoToChat();
+                break;
+
             case R.id.actionRequestButton:
                 handleActionReq(email, CURRENT_STATE);
                 break;
@@ -99,6 +106,15 @@ public class UserActivity extends AppCompatActivity implements UserInterface.Vie
             default:
                 break;
         }
+    }
+
+    private void handleGoToChat() {
+        Intent intent = new Intent( this, ChatActivity.class);
+        intent.putExtra("user", email);
+        intent.putExtra("username", userperfil);
+        intent.putExtra("avatar", imageUri);
+
+        startActivity(intent);
     }
 
     @Override

@@ -10,8 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Fragments.EventosFragment;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -93,7 +95,6 @@ public class QuestionDialog extends AppCompatActivity implements View.OnClickLis
                 }else{
                     CollectionReference event_ref = FirebaseFirestore.getInstance().collection("Events");;
                     event_ref.document(title).delete();
-                    Toast.makeText(v.getContext(), "Has eliminado el evento " + title, Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 break;

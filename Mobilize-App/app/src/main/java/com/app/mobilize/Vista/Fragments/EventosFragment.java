@@ -21,7 +21,6 @@ import com.app.mobilize.Presentador.Interface.EventsInterface;
 import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.CreateEventActivity;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -40,8 +39,8 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
         handleChargeEvents();
     }
 
