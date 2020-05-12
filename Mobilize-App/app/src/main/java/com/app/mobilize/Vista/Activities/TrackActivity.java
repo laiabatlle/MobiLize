@@ -333,8 +333,9 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
                 Calendar calendar = Calendar.getInstance();
                 String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
-
-                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed, round(distance/1000, 2), 0, kcal);
+                int tipusAct = 0;
+                if ( tipus.equals("running") ) tipusAct = 1;
+                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed, round(distance/1000, 2), tipusAct, kcal);
                 is_empty = false;
                 activitatsF = new ArrayList<>();
                 Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
