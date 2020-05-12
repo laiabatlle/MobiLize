@@ -333,7 +333,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
                 Calendar calendar = Calendar.getInstance();
                 String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
-                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed/1000, distance, 0, kcal);
+
+                final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed, round(distance/1000, 2), 0, kcal);
                 is_empty = false;
                 activitatsF = new ArrayList<>();
                 Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
@@ -356,8 +357,6 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                             else {
                                 Log.i("TASKFIREBASE", "SUCCES");
                                 Map <String, Object> mapAux = documentSnapshot.getData();
-                                Toast.makeText(getApplicationContext(), mapAux.toString(), Toast.LENGTH_LONG).show();
-                               // activitatsF = (ArrayList<ActivitatFinalitzada>) documentSnapshot.getData().get("activitats");
                                 Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
                                 putMapFirebase(activitatFinalitzada, mapAux.size(), mapAux);
                             }
@@ -365,7 +364,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                     }
                 });
 
-                showCustomDialog("Activitat Finalitzada!", getTimeChrono(timeElapsed), String.valueOf(kcal), String.valueOf(distance/1000));
+                showCustomDialog("Activitat Finalitzada!", getTimeChrono(activitatFinalitzada.getTemps()),
+                        String.valueOf(activitatFinalitzada.getKcalCremades()), String.valueOf(activitatFinalitzada.getDistancia()));
 
             }
         });
@@ -380,10 +380,10 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
         mapAux2.put("temps", String.valueOf(activitatFinalitzada.getTemps()));
         mapAux2.put("tipus", String.valueOf(activitatFinalitzada.getTipus()));
         if ( size == 0 ) {
-            Map<String, Map<String, String>> mapAux = new HashMap<>();
+            Map<String, Object> mapAux = new HashMap<>();
             mapAux.put(String.valueOf(size), mapAux2);
 
-            FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email).set(mapAux).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) Log.i("TASKFIREBASE", "Succesful");
