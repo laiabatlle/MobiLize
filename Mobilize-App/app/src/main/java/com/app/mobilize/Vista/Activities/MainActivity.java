@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                         showSelectedFragment(new EntrenaminetoFragment(user));
                                     }
                                     if (menuItem.getItemId() == R.id.Progreso){
-                                        showSelectedFragment(new ProgresoFragment());
+                                        showSelectedFragment(new ProgresoFragment(user));
                                     }
                                     if (menuItem.getItemId() == R.id.Perfil){
                                         showSelectedFragment(new PerfilFragment(user));

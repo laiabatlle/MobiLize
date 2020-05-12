@@ -44,10 +44,13 @@ public class ProgresoFragment extends Fragment {
     private LineChart chart;
     private Button activitatsFinalitzades, btCalendar;
 
+    private Usuari user;
+
     private Calendar data_actual = Calendar.getInstance();
     //Date d = data_actual.getTime();
 
-    public ProgresoFragment( ) {
+    public ProgresoFragment( Usuari user ) {
+        this.user = user;
     }
 
 
@@ -272,7 +275,7 @@ public class ProgresoFragment extends Fragment {
 
     public void goToActivitats(){
         Intent sigIntent = new Intent (getActivity(), ActivitatsUser.class);
-        //sigIntent.putExtra("user", user.getUsername());
+        sigIntent.putExtra("email", user.getEmail());
         startActivity(sigIntent);
     }
 

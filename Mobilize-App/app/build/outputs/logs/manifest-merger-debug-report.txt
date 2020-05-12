@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.material:material:1.1.0] /home/eric/.gradle/caches/transforms-2/files-2.1/34ece7bc2b7e9320097862d625c9182d/AndroidManifest.xml:17:1-24:12
 MERGED from [com.bignerdranch.android:recyclerview-multiselect:0.2] /home/eric/.gradle/caches/transforms-2/files-2.1/d7df97dce5550b1774eda70997d36521/AndroidManifest.xml:2:1-11:12
@@ -88,33 +88,33 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/eric/.gradle/caches
 MERGED from [androidx.print:print:1.0.0] /home/eric/.gradle/caches/transforms-2/files-2.1/bb084e276dee8d2a241655da04412850/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/eric/.gradle/caches/transforms-2/files-2.1/81b78178b56c7264f53ae1db8ec82bb1/AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.21.0] /home/eric/.gradle/caches/transforms-2/files-2.1/c2ba6205a6616936785b868620dd514a/AndroidManifest.xml:2:1-13:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
 	package
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:3:5-31
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-110:12
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:1-111:12
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:6:5-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:6:5-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:6:22-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:7:5-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:7:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:13:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:13:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/eric/.gradle/caches/transforms-2/files-2.1/3cfddd547008a26ea1fad4693d64c955/AndroidManifest.xml:24:5-67
@@ -136,9 +136,9 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:17.3.0] /home
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/ccca16477e44fb020809424dc45d0626/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/ccca16477e44fb020809424dc45d0626/AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:8:5-79
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:12:5-79
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/eric/.gradle/caches/transforms-2/files-2.1/3cfddd547008a26ea1fad4693d64c955/AndroidManifest.xml:23:5-79
@@ -162,17 +162,17 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.3.0] /h
 MERGED from [io.grpc:grpc-android:1.21.0] /home/eric/.gradle/caches/transforms-2/files-2.1/c2ba6205a6616936785b868620dd514a/AndroidManifest.xml:11:5-79
 MERGED from [io.grpc:grpc-android:1.21.0] /home/eric/.gradle/caches/transforms-2/files-2.1/c2ba6205a6616936785b868620dd514a/AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:9:5-80
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:9:5-80
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:9:22-77
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:9:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:10:5-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:10:22-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:10:22-78
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:11:5-68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:11:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/2757ffa217b2b3df34e6e4ecb9d38b8f/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/2757ffa217b2b3df34e6e4ecb9d38b8f/AndroidManifest.xml:24:5-68
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/eric/.gradle/caches/transforms-2/files-2.1/b8e2a11bc867e5aab9ddc27fe7734198/AndroidManifest.xml:24:5-68
@@ -184,17 +184,17 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:17.3.0] /home
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/ccca16477e44fb020809424dc45d0626/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.3.0] /home/eric/.gradle/caches/transforms-2/files-2.1/ccca16477e44fb020809424dc45d0626/AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:11:22-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:11:22-65
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:12:5-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:12:22-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:12:22-78
 uses-permission#com.android.alarm.permission.SET_ALARM
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:13:5-78
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:13:5-78
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:13:22-75
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:13:22-75
 application
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:15:5-108:19
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:15:5-109:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.1.0] /home/eric/.gradle/caches/transforms-2/files-2.1/34ece7bc2b7e9320097862d625c9182d/AndroidManifest.xml:22:5-20
@@ -278,253 +278,257 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /home/eric/.gradle/cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/eric/.gradle/caches/transforms-2/files-2.1/cf5f01d6012b860546c2703a67637760/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:19:9-54
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:19:9-54
 	android:icon
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:17:9-40
 	android:allowBackup
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:21:9-40
 service#com.app.mobilize.Vista.Activities.MyService
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:22:9-25:47
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:22:9-25:47
 	android:enabled
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:24:13-35
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:24:13-35
 	android:exported
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:25:13-36
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:23:13-55
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:23:13-55
 activity#com.app.mobilize.Vista.Create_plan
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:27:9-55
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:27:9-55
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:27:19-52
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:27:19-52
 activity#com.app.mobilize.Vista.Activities.Seleccionar_planning
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:28:9-75
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:28:9-75
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:28:19-72
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:28:19-72
 activity#com.app.mobilize.Vista.Activities.AvancaRutinaNoWorkout
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:29:9-76
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:29:9-76
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:29:19-73
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:29:19-73
 activity#com.app.mobilize.Vista.Activities.AvancaRutina
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:30:9-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:30:9-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:30:19-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:30:19-64
 activity#com.app.mobilize.Vista.Activities.VeureExerciciNoWorkout
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:31:9-77
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:31:9-77
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:31:19-74
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:31:19-74
 activity#com.app.mobilize.Vista.Activities.VeureExercici
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:32:9-68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:32:9-68
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:32:19-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:32:19-65
 meta-data#com.google.android.gms.version
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:34:9-36:69
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:34:9-36:69
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:16:9-18:69
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:16:9-18:69
 MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/eric/.gradle/caches/transforms-2/files-2.1/4bda0a9eee541eeb44a8517e891372a5/AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/eric/.gradle/caches/transforms-2/files-2.1/4bda0a9eee541eeb44a8517e891372a5/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:36:13-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:36:13-66
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:35:13-58
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:35:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:37:9-39:55
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:37:9-39:55
 	android:value
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:39:13-52
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:39:13-52
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:38:13-58
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:38:13-58
 activity#com.app.mobilize.Vista.Activities.MapsActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:41:9-43:59
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:41:9-43:59
 	android:label
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:43:13-56
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:42:13-58
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:42:13-58
 activity#com.app.mobilize.Vista.Activities.SplashActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:44:9-50:20
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:44:9-50:20
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:44:19-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:44:19-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:45:13-49:29
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:45:13-49:29
 action#android.intent.action.MAIN
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:46:17-69
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:46:25-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:48:17-77
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:48:17-77
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:48:27-74
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:48:27-74
 activity#com.app.mobilize.Vista.Activities.TrackActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:51:9-68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:51:9-68
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:51:19-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:51:19-65
 activity#com.app.mobilize.Vista.Activities.LoginActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:52:9-68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:52:9-68
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:52:19-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:52:19-65
 activity#com.app.mobilize.Vista.Activities.RegisterActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:53:9-71
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:53:9-71
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:53:19-68
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:53:19-68
 activity#com.app.mobilize.Vista.Activities.RegisterMessageActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:54:9-78
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:54:9-78
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:54:19-75
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:54:19-75
 activity#com.app.mobilize.Vista.Activities.MainActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:55:9-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:55:9-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:55:19-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:55:19-64
 activity#com.app.mobilize.Vista.Activities.ModalitatExercici
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:56:9-72
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:56:9-72
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:56:19-69
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:56:19-69
 activity#com.app.mobilize.Vista.Activities.ModalitatEntrenament
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:57:9-75
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:57:9-75
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:57:19-72
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:57:19-72
 activity#com.app.mobilize.Vista.Activities.NivellEntrenament
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:58:9-72
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:58:9-72
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:58:19-69
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:58:19-69
 activity#com.app.mobilize.Vista.Activities.TipusPlan
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:59:9-64
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:59:9-64
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:59:19-61
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:59:19-61
 activity#com.app.mobilize.Vista.Activities.OptionsActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:60:9-70
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:60:9-70
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:60:19-67
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:60:19-67
 activity#com.app.mobilize.Vista.Activities.UserActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:61:9-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:61:9-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:61:19-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:61:19-64
 activity#com.app.mobilize.Vista.Activities.Seleccionar_rutina
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:62:9-73
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:62:9-73
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:62:19-70
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:62:19-70
 activity#com.app.mobilize.Vista.Activities.CreateEventActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:63:9-74
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:63:9-74
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:63:19-71
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:63:19-71
 activity#com.app.mobilize.Vista.Activities.PopUpRutina
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:64:9-66:59
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:64:9-66:59
 	android:theme
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:66:13-56
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:66:13-56
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:65:13-57
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:65:13-57
 activity#com.app.mobilize.Vista.Activities.PopUpEventListInscriptions
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:67:9-69:59
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:67:9-69:59
 	android:theme
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:69:13-56
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:69:13-56
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:68:13-72
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:68:13-72
 activity#com.app.mobilize.Vista.Activities.QuestionDialog
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:70:9-72:59
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:70:9-72:59
 	android:theme
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:72:13-56
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:72:13-56
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:71:13-60
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:71:13-60
 activity#com.app.mobilize.Vista.Activities.IdiomActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:73:9-68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:73:9-68
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:73:19-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:73:19-65
 activity#com.app.mobilize.Vista.Activities.InfoActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:74:9-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:74:9-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:74:19-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:74:19-64
 activity#com.app.mobilize.Vista.Activities.AlertsActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:75:9-69
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:75:9-69
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:75:19-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:75:19-66
 activity#com.app.mobilize.Vista.Activities.AddAlertActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:76:9-84:20
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:76:9-84:20
 	android:parentActivityName
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:79:13-74
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:79:13-74
 	android:label
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:78:13-48
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:78:13-48
 	android:theme
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:80:13-44
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:80:13-44
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:77:13-62
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:77:13-62
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:81:13-83:68
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:81:13-83:68
 	android:value
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:83:17-65
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:83:17-65
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:82:17-63
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:82:17-63
 activity#com.app.mobilize.Vista.Activities.ActivitatsUser
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:85:9-69
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:85:9-69
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:85:19-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:85:19-66
 activity#com.app.mobilize.Vista.Activities.AfegirRutina
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:86:9-67
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:86:9-67
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:86:19-64
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:86:19-64
 activity#com.app.mobilize.Vista.Activities.ChangePasswordActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:87:9-77
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:87:9-77
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:87:19-74
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:87:19-74
 activity#com.app.mobilize.Vista.Activities.ModifyEventActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:88:9-74
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:88:9-74
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:88:19-71
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:88:19-71
+activity#com.app.mobilize.Vista.Activities.ChatActivity
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:89:9-67
+	android:name
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:89:19-64
 provider#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:90:9-93:40
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:91:9-94:40
 	android:authorities
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:92:13-95
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:93:13-95
 	android:exported
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:93:13-37
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:94:13-37
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:91:13-72
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:92:13-72
 service#com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:95:9-97:40
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:96:9-98:40
 	android:exported
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:97:13-37
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:98:13-37
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:96:13-75
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:97:13-75
 receiver#com.app.mobilize.Vista.Activities.ReminderBroadcast
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:99:9-72
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:100:9-72
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:99:19-69
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:100:19-69
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:100:9-78
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:101:9-78
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:100:19-75
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:101:19-75
 receiver#com.app.mobilize.Vista.Activities.AddAlertActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:101:9-71
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:102:9-71
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:101:19-68
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:102:19-68
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:102:9-84
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:103:9-84
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:102:19-81
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:103:19-81
 receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:103:9-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:104:9-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:103:19-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:104:19-78
 receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderContract
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:104:9-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:105:9-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:104:19-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:105:19-78
 receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:105:9-81
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:106:9-81
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:105:19-78
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:106:19-78
 receiver#com.app.mobilize.Vista.Activities.AlarmCursorAdapter
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:106:9-73
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:107:9-73
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:106:19-70
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:107:19-70
 receiver#com.app.mobilize.Vista.Activities.AlertsActivity
-ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:107:9-69
+ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:108:9-69
 	android:name
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:107:19-66
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml:108:19-66
 uses-sdk
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:8:5-10:41
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.material:material:1.1.0] /home/eric/.gradle/caches/transforms-2/files-2.1/34ece7bc2b7e9320097862d625c9182d/AndroidManifest.xml:20:5-44
@@ -693,16 +697,16 @@ MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/eric/.
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/eric/.gradle/caches/transforms-2/files-2.1/81b78178b56c7264f53ae1db8ec82bb1/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /home/eric/.gradle/caches/transforms-2/files-2.1/c2ba6205a6616936785b868620dd514a/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /home/eric/.gradle/caches/transforms-2/files-2.1/c2ba6205a6616936785b868620dd514a/AndroidManifest.xml:7:5-9:41
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		ADDED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
-		INJECTED from /home/eric/Documentos/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		ADDED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
+		INJECTED from /home/eric/PES_MobiLize/Mobilize-App/app/src/main/AndroidManifest.xml
 meta-data#com.facebook.sdk.ApplicationId
 ADDED from [com.firebaseui:firebase-ui-auth:4.3.1] /home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/AndroidManifest.xml:19:9-21:63
 	android:value
