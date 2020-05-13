@@ -58,6 +58,7 @@ public class AdapterRutPlan extends RecyclerView.Adapter<AdapterRutPlan.ViewHold
                 public void onClick(View view) {
                     if(((CheckBox) view).isChecked()) {
                         if(crear.equals("si")) {
+
                             Create_plan.setRutina(Rutines.get(position));
                         }
                         else {
@@ -97,6 +98,7 @@ public class AdapterRutPlan extends RecyclerView.Adapter<AdapterRutPlan.ViewHold
             public void asignarDatos(Rutina rutina) {
                 tv1.setText(rutina.getNom());
                 tv2.setText(rutina.getInfo());
+                VeurePlanning.setRutina(rutina);
 
             }
 

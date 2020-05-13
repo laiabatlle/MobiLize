@@ -56,7 +56,6 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
 
         rut = new ArrayList<>();
         rut = stringToArray(rutines, dificultat, modalitat);
-        eaux1 = rut;
 
         AdapterRutPlan adapter = new AdapterRutPlan(rut, this, "no");
         recycler.setAdapter(adapter);
@@ -138,6 +137,7 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
 
+
         String s = transformaArray(eaux1);
 
         ContentValues registro = new ContentValues();
@@ -175,7 +175,7 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
     public static void unsetRutina(Rutina r) {
 
         for (int i = 0; i < eaux1.size(); ++i) {
-            if(eaux1.get(i) != null && eaux1.get(i) == r) eaux1.remove(i);
+            if(eaux1.get(i) == r) eaux1.remove(i);
         }
 
     }
