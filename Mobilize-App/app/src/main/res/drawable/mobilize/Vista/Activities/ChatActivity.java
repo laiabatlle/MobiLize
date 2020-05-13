@@ -87,7 +87,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void handleChargeMessages() {
+     public void handleChargeMessages() {
         this.presenter.toGetMessageList();
     }
 
