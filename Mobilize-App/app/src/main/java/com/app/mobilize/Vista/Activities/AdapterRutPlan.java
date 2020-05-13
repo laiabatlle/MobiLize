@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +20,12 @@ public class AdapterRutPlan extends RecyclerView.Adapter<AdapterRutPlan.ViewHold
 
         ArrayList<Rutina> Rutines;
         private AdapterRutPlan.OnNoteListener OnNoteListener;
+        String crear;
 
-    public AdapterRutPlan(ArrayList<Rutina> Rutines, AdapterRutPlan.OnNoteListener OnNoteListener) {
+    public AdapterRutPlan(ArrayList<Rutina> Rutines, AdapterRutPlan.OnNoteListener OnNoteListener, String crear) {
             this.Rutines = Rutines;
             this.OnNoteListener = OnNoteListener;
+            this.crear = crear;
         }
         @NonNull
         @Override
@@ -54,10 +57,18 @@ public class AdapterRutPlan extends RecyclerView.Adapter<AdapterRutPlan.ViewHold
                 @Override
                 public void onClick(View view) {
                     if(((CheckBox) view).isChecked()) {
-                        Create_plan.setRutina(Rutines.get(position));
+                        if(crear.equals("si")) {
+                            Create_plan.setRutina(Rutines.get(position));
+                        }
+                        else {
+                            VeurePlanning.setRutina(Rutines.get(position));
+                        }
                     }
                     else  {
-                        Create_plan.unsetRutina(Rutines.get(position));
+                        if(crear.equals(("si"))) {
+                            Create_plan.unsetRutina(Rutines.get(position));
+                        }
+                        else VeurePlanning.unsetRutina(Rutines.get(position));
                     }
                 }
             });
@@ -78,6 +89,7 @@ public class AdapterRutPlan extends RecyclerView.Adapter<AdapterRutPlan.ViewHold
                 tv1 = (TextView) itemView.findViewById(R.id.textView41);
                 tv2 = (TextView) itemView.findViewById(R.id.textView42);
                 cb = (CheckBox) itemView.findViewById(R.id.checkBox2);
+                if(crear.equals("no")) cb.setChecked(true);
                 this.OnNoteListener = OnNoteListener;
                 itemView.setOnClickListener(this);
             }

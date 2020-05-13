@@ -75,7 +75,12 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
     public void onNoteClick(int position) {
 
 
-            Intent intent = new Intent(this, NivellEntrenament.class);
+            Intent intent = new Intent(this, VeurePlanning.class);
+            intent.putExtra("nom", PlanningArrayList.get(position).getNom());
+            intent.putExtra("info", PlanningArrayList.get(position).getInfo());
+            intent.putExtra("rutines", PlanningArrayList.get(position).getRutines());
+            intent.putExtra("modalitat", modalitat);
+            intent.putExtra("dificultat" , dificultat);
             startActivityForResult(intent, 0);
 
 

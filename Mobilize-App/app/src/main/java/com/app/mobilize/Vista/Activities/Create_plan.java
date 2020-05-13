@@ -38,7 +38,7 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
         int dificultat = getIntent().getIntExtra("dificultat",0);
         String modalitat = getIntent().getStringExtra("modalitat");
 
-        recycler = (RecyclerView) findViewById(R.id.recyclerView3);
+        recycler = (RecyclerView) findViewById(R.id.recyclerView5);
         recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
@@ -61,7 +61,7 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
         }
 
 
-        AdapterRutPlan adapter = new AdapterRutPlan(Rutines, this);
+        AdapterRutPlan adapter = new AdapterRutPlan(Rutines, this, "si");
         recycler.setAdapter(adapter);
 
         BaseDeDades.close();
