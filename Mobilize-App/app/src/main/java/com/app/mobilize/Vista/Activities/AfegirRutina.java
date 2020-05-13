@@ -80,7 +80,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
 
 
 
-        AdapterDatos adapter = new AdapterDatos(Exercicis, this);
+        AdapterDatos adapter = new AdapterDatos(Exercicis, this, "si");
         recycler.setAdapter(adapter);
 
         BaseDeDades.close();

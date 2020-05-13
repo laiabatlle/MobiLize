@@ -18,10 +18,12 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
 
     ArrayList<Exercici> Exercicis;
     private OnNoteListener OnNoteListener;
+    String crear;
 
-    public AdapterDatos(ArrayList<Exercici> Exercicis, OnNoteListener OnNoteListener) {
+    public AdapterDatos(ArrayList<Exercici> Exercicis, OnNoteListener OnNoteListener, String crear) {
         this.Exercicis = Exercicis;
         this.OnNoteListener = OnNoteListener;
+        this.crear = crear;
     }
     @NonNull
     @Override
@@ -53,12 +55,16 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
             @Override
             public void onClick(View view) {
                 if(((CheckBox) view).isChecked()) {
-                    AfegirRutina.setExercici(Exercicis.get(position));
-                    PopUpRutina.unsetExercici(Exercicis.get(position));
+                    if(crear.equals("si")) {
+                        AfegirRutina.setExercici(Exercicis.get(position));
+                    }
+                    else PopUpRutina.setExercici(Exercicis.get(position));
                 }
                 else  {
-                    AfegirRutina.unsetExercici(Exercicis.get(position));
-                    PopUpRutina.setExercici(Exercicis.get(position));
+                    if(crear.equals("si")) {
+                        AfegirRutina.unsetExercici(Exercicis.get(position));
+                    }
+                    else PopUpRutina.unsetExercici(Exercicis.get(position));
                 }
             }
         });
@@ -77,12 +83,14 @@ public class AdapterDatos extends RecyclerView.Adapter<AdapterDatos.ViewHolderDa
             super(itemView);
             tv = (TextView) itemView.findViewById(R.id.textView11);
             cb = (CheckBox) itemView.findViewById(R.id.checkBox);
+            if(crear.equals("no")) cb.setChecked(true);
             this.OnNoteListener = OnNoteListener;
             itemView.setOnClickListener(this);
         }
 
         public void asignarDatos(Exercici exercici) {
             tv.setText(exercici.getNom());
+            PopUpRutina.setExercici(exercici);
 
         }
 
