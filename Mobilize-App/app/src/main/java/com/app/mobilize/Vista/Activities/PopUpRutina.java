@@ -73,9 +73,8 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
         exe = new ArrayList<>();
         exe = stringToArray(item.getExercicis(), item.getNivell(), item.getModalitat());
         eaux.clear();
-        eaux = exe;
 
-        AdapterDatos adapter = new AdapterDatos(exe, this);
+        AdapterDatos adapter = new AdapterDatos(exe, this, "no");
         recycler.setAdapter(adapter);
 
 
