@@ -40,7 +40,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.app.mobilize.Vista.Create_plan" />
+        <activity android:name="com.app.mobilize.Vista.Activities.Create_plan" />
         <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_planning" />
         <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutinaNoWorkout" />
         <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutina" />
@@ -102,6 +102,7 @@
         <activity android:name="com.app.mobilize.Vista.Activities.AfegirRutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.ChangePasswordActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.ModifyEventActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ChatActivity" />
 
         <provider
             android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"

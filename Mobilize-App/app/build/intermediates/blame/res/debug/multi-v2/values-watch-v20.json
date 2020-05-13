@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/eric/Documentos/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/b9bd46ab7756e31a2a0db5a170e5bef1/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/3831b4b75d1c2148c737a3d30fc005f0/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\e2d6da442f0a85a042c2ec50ee077c68\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

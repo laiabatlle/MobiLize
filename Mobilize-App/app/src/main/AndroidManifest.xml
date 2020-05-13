@@ -19,12 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Vista.Activities.VeurePlanning"></activity>
+
         <service
             android:name=".Vista.Activities.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
-        <activity android:name=".Vista.Create_plan" />
+        <activity android:name=".Vista.Activities.Create_plan" />
         <activity android:name=".Vista.Activities.Seleccionar_planning" />
         <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout" />
         <activity android:name=".Vista.Activities.AvancaRutina" />
