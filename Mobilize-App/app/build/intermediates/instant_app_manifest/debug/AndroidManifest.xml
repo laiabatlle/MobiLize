@@ -36,6 +36,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.app.mobilize.Vista.Activities.VeurePlanning" />
+
+        <service
+            android:name="com.app.mobilize.Vista.Activities.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.app.mobilize.Vista.Activities.Create_plan" />
+        <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_planning" />
+        <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutinaNoWorkout" />
+        <activity android:name="com.app.mobilize.Vista.Activities.AvancaRutina" />
+        <activity android:name="com.app.mobilize.Vista.Activities.VeureExerciciNoWorkout" />
+        <activity android:name="com.app.mobilize.Vista.Activities.VeureExercici" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -56,22 +70,28 @@
         <activity android:name="com.app.mobilize.Vista.Activities.TrackActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.LoginActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.RegisterActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.MainActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.ModalitatExercici" />
         <activity android:name="com.app.mobilize.Vista.Activities.ModalitatEntrenament" />
         <activity android:name="com.app.mobilize.Vista.Activities.NivellEntrenament" />
-        <activity android:name="com.app.mobilize.Vista.Activities.RegisterMessageActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.TipusPlan" />
         <activity android:name="com.app.mobilize.Vista.Activities.OptionsActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.UserActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.Seleccionar_rutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.CreateEventActivity" />
         <activity
             android:name="com.app.mobilize.Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.PopUpEventListInscriptions"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name="com.app.mobilize.Vista.Activities.QuestionDialog"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name="com.app.mobilize.Vista.Activities.IdiomActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.InfoActivity" />
-        <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" >
-        </activity>
+        <activity android:name="com.app.mobilize.Vista.Activities.AlertsActivity" />
         <activity
             android:name="com.app.mobilize.Vista.Activities.AddAlertActivity"
             android:label="@string/addReminder"
@@ -84,6 +104,8 @@
         <activity android:name="com.app.mobilize.Vista.Activities.ActivitatsUser" />
         <activity android:name="com.app.mobilize.Vista.Activities.AfegirRutina" />
         <activity android:name="com.app.mobilize.Vista.Activities.ChangePasswordActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ModifyEventActivity" />
+        <activity android:name="com.app.mobilize.Vista.Activities.ChatActivity" />
 
         <provider
             android:name="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
@@ -94,6 +116,7 @@
             android:name="com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService"
             android:exported="false" />
 
+        <receiver android:name="com.app.mobilize.Vista.Activities.ReminderBroadcast" />
         <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler" />
         <receiver android:name="com.app.mobilize.Vista.Activities.AddAlertActivity" />
         <receiver android:name="com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider" />

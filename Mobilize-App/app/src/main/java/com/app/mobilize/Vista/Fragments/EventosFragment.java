@@ -21,7 +21,6 @@ import com.app.mobilize.Presentador.Interface.EventsInterface;
 import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.CreateEventActivity;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -29,8 +28,6 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
 
     private Usuari user;
     private RecyclerView events;
-    private ImageButton createEvent;
-    private SearchView buscadorEventos;
 
     private EventsInterface.Presenter presenter;
 
@@ -42,6 +39,12 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        handleChargeEvents();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_eventos, container, false);
@@ -50,15 +53,14 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
     }
 
     private void setViews(View view) {
-        presenter = new EventsPresenter(this, user);
+        presenter = new EventsPresenter(getContext(), this, user);
 
         events = (RecyclerView) view.findViewById(R.id.rv_events);
         events.addItemDecoration(new DividerItemDecoration(events.getContext(), DividerItemDecoration.VERTICAL));
         LinearLayoutManager lm = new LinearLayoutManager(getContext());
         events.setLayoutManager(lm);
-        handleChargeEvents();
 
-        buscadorEventos = view.findViewById(R.id.cearchEventsSV);
+        SearchView buscadorEventos = view.findViewById(R.id.cearchEventsSV);
         buscadorEventos.onActionViewExpanded();
         buscadorEventos.setIconifiedByDefault(false);
         buscadorEventos.setQueryHint(getResources().getString(R.string.searchEvent));
@@ -78,7 +80,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
             }
         });
 
-        createEvent = (ImageButton) view.findViewById(R.id.createEvent);
+        ImageButton createEvent = (ImageButton) view.findViewById(R.id.createEvent);
         createEvent.setOnClickListener(this);
     }
 
@@ -104,7 +106,7 @@ public class EventosFragment extends Fragment implements EventsInterface.View, V
 
     private void gotoCreateEvent() {
         Intent intent = new Intent(getActivity(), CreateEventActivity.class);
-        intent.putExtra("username", user.getUsername());
+        intent.putExtra("user", user.getEmail());
         startActivity(intent);
     }
 

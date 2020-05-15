@@ -52,7 +52,7 @@
     <string name="logOut">Cerrar sesión</string>
     <string name="delete">Eliminar cuenta</string>
     <string name="idiom">Idioma</string>
-    <string name="alerts">Alertas</string>
+    <string name="alerts">Notificaciones</string>
     <string name="information">Información</string>
     <string name="desc">desc</string>
     <string name="tit">tit</string>
@@ -74,11 +74,11 @@
     <string name="training">Entrenamiento</string>
     <string name="progress">Progreso</string>
     <string name="profile">Perfil</string>
-    <string name="SendFriendReq">   Enviar  solicitud  de  amistad   </string>
-    <string name="CancelFriendReq">   Cancelar  solicitud   </string>
-    <string name="DeclineFriendReq">   Denegar  solicitud  de  amistad   </string>
-    <string name="AcceptFriendReq">   Aceptar  solicitud   </string>
-    <string name="Unfriend">   Dejar  de  ser  amigos   </string>
+    <string name="SendFriendReq">Enviar solicitud de amistad</string>
+    <string name="CancelFriendReq">Cancelar solicitud</string>
+    <string name="DeclineFriendReq">Denegar solicitud de amistad</string>
+    <string name="AcceptFriendReq">Aceptar solicitud</string>
+    <string name="Unfriend">Dejar de ser amigos</string>
     <string name="SendFriendReqMes">Se ha enviado la solicitud de amistad</string>
     <string name="CancelFriendReqMes">Se ha cancelado la solicitud</string>
     <string name="UnfriendMes"> y tu ya no soys amigos</string>
@@ -95,7 +95,7 @@
     <string name="SportEventTV">Deporte:</string>
     <string name="Max_partEventTV">Número máximo de participantes:</string>
     <string name="Min_partEventTV">Número mínimo de participantes:</string>
-    <string name="CrearEventoButton">Crear evento</string>
+    <string name="CrearEventoButton">"  Crear evento  "</string>
     <string name="contact">Contacta con nosotros</string>
     <string name="resp">Descargo de responsabilidad</string>
     <string name="privacity">Política de Privacidad</string>
@@ -106,6 +106,7 @@
     <string name="respMessage">Toda la información proporcionada dentro de la aplicación es de carácter general y se supone que debe usarse solo con fines educativos / de entretenimiento. No se puede tomar información como consejo médico u otro consejo de salud. Usted acepta que el uso de esta información está bajo su propio riesgo y mantiene a MobiLize indemne de todas y cada una de las pérdidas, responsabilidades, lesiones o daños resultantes de cualquier reclamo.</string>
     <string name="privacityMessage">La presente Política de Privacidad establece los términos en que MobiLize usa y protege la información que es proporcionada por sus usuarios al momento de utilizar la aplicación. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.\n\n<b>Información que es recogida</b> \n\nNuestra aplicación podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.\n\n<b>Uso de la información recogida</b> \n\nNuestra aplicación emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.\n\nMobiLize está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.\n\n<b>Cookies</b> \n\nUna cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico de la aplicación.\n\nNuestra aplicación emplea las cookies para poder identificar las ventanas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento. Sin embargo las cookies ayudan a proporcionar un mejor servicio de la aplicación, estas no dan acceso a información de su móvil ni de usted, a menos de que usted así lo quiera y la proporcione directamente . Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio. También usted puede cambiar la configuración de su móbil para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.\n\n<b>Enlaces a Terceros</b> \n\nEsta aplicación puede contener enlaces a otros sitios que pueden ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra aplicación, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los términos o privacidad ni de la protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.\n\n<b>Control de su información personal</b> \n\nEn cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestra aplicación.\n\nEsta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.\n\nMobiLize se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</string>
     <string name="ImageEventError">Por favor, introduce una imagen que caracterize el evento</string>
+    <string name="existingTitleEvent">Ya existe un evento con ese nombre. Por favor, introduce un título que identifique el evento.</string>
     <string name="incorrectTitleEvent">Por favor, introduce un título que identifique el evento</string>
     <string name="incorrectDescriptionEvent">Por favor, introduce una descripción que descriva el evento</string>
     <string name="emptyDateEvent">Por favor, introduce la fecha del evento que desea crear</string>
@@ -115,7 +116,7 @@
     <string name="incorrectRest_Part_Event">El número mínimo de participantes no puede ser superior al máximo establecido</string>
     <string name="SuccesEventCreate">El evento se ha creado correctamente</string>
     <string name="no_cardetails">Haz clic en el botón de abajo para comenzar a crear tu recordatorio</string>
-    <string name="reminder">Alerta</string>
+    <string name="reminder">Notificación</string>
     <string name="details">Detalles</string>
     <string name="date">Fecha</string>
     <string name="time">Hora</string>
@@ -126,22 +127,22 @@
     <string name="repeat_type">Tipo de repeticiones</string>
     <string name="every">Cada </string>
     <string name="repeatOff">Repetir desactivado</string>
-    <string name="newReminder">Añade detalles a la alerta</string>
-    <string name="editReminder">Editar Alerta</string>
-    <string name="addReminder">Añadir Alerta</string>
+    <string name="newReminder">Añade detalles a la notificación</string>
+    <string name="editReminder">Editar Notificación</string>
+    <string name="addReminder">Añadir Notificación</string>
     <string name="unsavedChanges">¿Desea descartar los cambios y salir de la edición?</string>
     <string name="discard">Descartar</string>
     <string name="keepEditing">Seguir editando</string>
-    <string name="deleteReminder">Eliminar esta Alerta?</string>
-    <string name="deleteReminderSuccessful">Alerta eliminada</string>
-    <string name="deleteReminderFailed">Error en eliminar la alerta</string>
-    <string name="insertReminderSuccessful">Alerta guardada</string>
-    <string name="insertReminderFailed">Error en eliminar la alerta</string>
-    <string name="updateReminderSuccessful">Alerta actualizada</string>
-    <string name="updateReminderFailed">Error en actualizar la alerta</string>
+    <string name="deleteReminder">Eliminar esta Notificación?</string>
+    <string name="deleteReminderSuccessful">Notificación eliminada</string>
+    <string name="deleteReminderFailed">Error en eliminar la notificación</string>
+    <string name="insertReminderSuccessful">Notificación guardada</string>
+    <string name="insertReminderFailed">Error en eliminar la notificación</string>
+    <string name="updateReminderSuccessful">Notificación actualizada</string>
+    <string name="updateReminderFailed">Error en actualizar la notificación</string>
     <string name="enterNumber">Introduce número</string>
-    <string name="discardReminder">Descartar Alerta</string>
-    <string name="saveReminder">Guardar Alerta</string>
+    <string name="discardReminder">Descartar Notificación</string>
+    <string name="saveReminder">Guardar Notificación</string>
     <string name="selectType">Seleccione tipo</string>
     <string name="minute">Minuto</string>
     <string name="hour">Hora</string>
@@ -149,8 +150,8 @@
     <string name="week">Semana</string>
     <string name="month">Mes</string>
     <string name="title">Título</string>
-    <string name="reminderError">El título de la alerta no puede estar vacío!</string>
-    <string name="deleteReminderYes">Eliminar Alerta</string>
+    <string name="reminderError">El título de la notificación no puede estar vacío!</string>
+    <string name="deleteReminderYes">Eliminar Notificación</string>
     <string name="saved">Alarma guardada</string>
     <string name="dateNotSet">Fecha no establecida</string>
     <string name="repeatNotSet">Repetir no establecido</string>
@@ -168,27 +169,27 @@
     <string name="rb_calorias">calorías </string>
     <string name="rb_pasos">pasos </string>
     <string-array name="dias_semana">
-    <item>dom</item>
-    <item>lun</item>
-    <item>mar</item>
-    <item>mie</item>
-    <item>jue</item>
-    <item>vie</item>
-    <item>sab</item>
+        <item>dom</item>
+        <item>lun</item>
+        <item>mar</item>
+        <item>mie</item>
+        <item>jue</item>
+        <item>vie</item>
+        <item>sab</item>
     </string-array>
     <string-array name="meses_año">
-    <item>ENE</item>
-    <item>FEB</item>
-    <item>MAR</item>
-    <item>ABR</item>
-    <item>MAY</item>
-    <item>JUN</item>
-    <item>JUL</item>
-    <item>AGO</item>
-    <item>SET</item>
-    <item>OCT</item>
-    <item>NOV</item>
-    <item>DIC</item>
+        <item>ENE</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>ABR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AGO</item>
+        <item>SET</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DIC</item>
     </string-array>
     <string name="title_activity_maps">Mapa</string>
     <string name="crear_una_rutina">Crear una rutina</string>
@@ -236,5 +237,28 @@
     <string name="changePassword">Cambiar contraseña</string>
     <string name="newPassword">Nueva contraseña</string>
     <string name="passwordChanged">La contraseña se ha cambiado correctamente</string>
+    <string name="PlazasLibresEventTV">Plazas restantes: </string>
+    <string name="InscritosEventTV">Consultar usuarios inscritos.</string>
+    <string name="RegisterOnEventButton">Inscribirse</string>
+    <string name="UnsubscribeEventButton">Desinscribirse</string>
+    <string name="InscritosEventList">Lista de usuarios inscritos:</string>
+    <string name="ModificarEsdeveniment">"Modificar evento"</string>
+    <string name="ModificarEsdevenimentText">"Estás a punto de modificar un evento. En caso de que modifique la fecha o la hora del mismo, los usuarios inscritos serán desapuntados automáticamente. ¿Quieres continuar?"</string>
+    <string name="EliminarEsdeveniment">"Eliminar evento"</string>
+    <string name="EliminarEsdevenimentText">"Estás a punto de eliminar un evento. Si continuas no podrás volver atrás. ¿Quieres continuar?"</string>
+    <string name="PrivateAccount">"Esta cuenta es privada. Envia una solicitud de amistad para poder ver más información sobre "</string>
+    <string name="NoFriends">"Actualmente no tienes amigos, encuentra gente con quien practicar deporte y compartir tus progresos."</string>
+    <string name="timeLeft">"Queda un dia para el evento "</string>
+    <string name="kmh" translatable="false">"km/h"</string>
+    <string name="Kcal" translatable="false">"kcal"</string>
+    <string name="sèries">"sèries"</string>
+    <string name="repeticions">"repeticions"</string>
+    <string name="punts">"punts"</string>
+    <string name="minuts">"minuts"</string>
+    <string name="inclou_pendent">Ha d\'incloure pendent</string>
+    <string name="sense_pendent">No ha d\'incloure pendent</string>
+    <string name="completed">Completed</string>
+    <string name="track_it">Track it!</string>
+    <string name="calendar"> Calendario</string>
 
 </resources>

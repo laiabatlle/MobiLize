@@ -25,10 +25,10 @@ android {
 
 apply plugin: 'com.google.gms.google-services'
 
-repositories{
+repositories {
     maven {
         url 'http://dl.bintray.com/amulyakhare/maven'
-        }
+    }
     maven { url 'https://jitpack.io' }
 }
 

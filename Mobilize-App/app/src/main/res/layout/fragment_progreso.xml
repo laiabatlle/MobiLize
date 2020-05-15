@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:text="@string/actFin"
@@ -23,7 +23,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@color/gradStart"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
 
             <TextView
                 android:id="@+id/tvRunning"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="20"
                 android:textStyle="bold" />
@@ -92,7 +92,7 @@
 
             <TextView
                 android:id="@+id/tvCycling"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="20"
                 android:textStyle="bold" />
@@ -116,7 +116,7 @@
 
             <TextView
                 android:id="@+id/tvWorkout"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="20"
                 android:textStyle="bold" />
@@ -131,9 +131,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -245,5 +246,16 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bCalendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_normal"
+        android:text="@string/calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

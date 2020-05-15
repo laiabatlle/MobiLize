@@ -10,10 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ModalitatExercici extends AppCompatActivity {
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modalitat_exercici);
+
+        email = getIntent().getStringExtra("email");
 
         Button bRunning, bCycling;
 
@@ -38,6 +42,7 @@ public class ModalitatExercici extends AppCompatActivity {
     private void sigIntent ( String tipus ) {
         Intent intent = new Intent(this, TrackActivity.class);
         intent.putExtra("tipus", tipus);
+        intent.putExtra("email", email);
         startActivity(intent);
     }
 

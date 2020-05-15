@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                             mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-                            showSelectedFragment(new EntrenaminetoFragment());
+                            showSelectedFragment(new EntrenaminetoFragment(user));
                             mBottomNavigation.setSelectedItemId(R.id.Entrenamiento);
                             mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                                 @Override
@@ -79,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
                                         showSelectedFragment(new PlanFragment());
                                     }
                                     if (menuItem.getItemId() == R.id.Entrenamiento){
-                                        showSelectedFragment(new EntrenaminetoFragment());
+                                        showSelectedFragment(new EntrenaminetoFragment(user));
                                     }
                                     if (menuItem.getItemId() == R.id.Progreso){
-                                        showSelectedFragment(new ProgresoFragment());
+                                        showSelectedFragment(new ProgresoFragment(user));
                                     }
                                     if (menuItem.getItemId() == R.id.Perfil){
                                         showSelectedFragment(new PerfilFragment(user));

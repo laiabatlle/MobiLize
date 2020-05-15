@@ -36,7 +36,6 @@ public class EventsModel implements EventsInterface.Model {
                         e.setDateEvent(document.getData().get("dateEvent").toString());
                         e.setHourEvent(document.getData().get("hourEvent").toString());
                         e.setMax_part(document.getData().get("max_part").toString());
-                        e.setMin_part(document.getData().get("min_part").toString());
                         e.setSportEvent(document.getData().get("sportEvent").toString());
                         e.setInscripcionsList((List<String>) document.get("inscripcionsList"));
                         listener.addEventsList(e);

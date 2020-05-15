@@ -64,6 +64,5 @@ public class RutinaListAdapter extends ArrayAdapter<Rutina> {
         infoed.setText(info);
 
         return convertView;
-
     }
 }

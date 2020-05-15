@@ -14,5 +14,8 @@
     <color name="red">#b10f0f</color>
     <color name="black_red">#240505</color>
     <color name="light_green">#FF90EE90</color>
+    <color name="senderColor">#3FFFFFFF</color>
+    <color name="receiverColor">#FF90EE90</color>
+
 
 </resources>

@@ -36,8 +36,8 @@ class ActivitatListAdapter extends ArrayAdapter<ActivitatFinalitzada> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Double distancia = getItem(position).getDistancia();
-        Calendar data = getItem(position).getData();
-        int temps = getItem(position).getTemps();
+        String data = getItem(position).getData();
+        long temps = getItem(position).getTemps();
         String username = getItem(position).getUsername();
         int tipus = getItem(position).getTipus();
         double kcal = getItem(position).getKcalCremades();
@@ -65,16 +65,16 @@ class ActivitatListAdapter extends ArrayAdapter<ActivitatFinalitzada> {
         tvRitmo.setText(String.valueOf(df2.format(kcal)) + " kcal");
         tvTemps.setText(secToFormat(temps));
         if (tvTemps.getText().toString().length() > 15 ) tvTemps.setTextSize(15.0f);
-        String data2 = String.valueOf(data.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(data.get(Calendar.MONTH)) + "/" + String.valueOf(data.get(Calendar.YEAR));
-        tvData.setText(data2);
+        tvData.setText(data);
 
         return convertView;
     }
 
-    private String secToFormat( int sec ){
-        int horas = sec/3600;
-        int minuts = (sec - (3600*horas))/60;
-        int segons = sec - ((horas*3600) + (minuts*60));
+    private String secToFormat( long sec ){
+        sec = sec/1000;
+        long horas = sec/3600;
+        long minuts = (sec - (3600*horas))/60;
+        long segons = sec - ((horas*3600) + (minuts*60));
         String timeFormat;
         if ( horas == 0 ) timeFormat = String.valueOf(minuts) + " min " + String.valueOf(segons) + " sec";
         else  timeFormat = String.valueOf(horas) + " h " + String.valueOf(minuts) + " min " + String.valueOf(segons) + " sec";

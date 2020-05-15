@@ -45,16 +45,6 @@
             android:textColor="@color/colorPrimaryDark"
             tools:text="Date and Time"/>
 
-        <TextView
-            android:id="@+id/recycle_repeat_info"
-            android:layout_width="match_parent"
-            android:ellipsize="marquee"
-            android:singleLine="true"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textColor="@color/colorPrimaryDark"
-            tools:text="Repeat No and Type"/>
-
     </LinearLayout>
 
     <ImageView android:layout_width="wrap_content"
@@ -62,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_notifications_off"
+        android:src="@drawable/ic_notifications_on"
         android:layout_centerVertical="true"
         android:id="@+id/active_image"/>
 

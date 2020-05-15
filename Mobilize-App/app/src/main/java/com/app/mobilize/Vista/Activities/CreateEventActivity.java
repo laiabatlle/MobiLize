@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -34,9 +35,15 @@ import com.app.mobilize.Presentador.CreateEventPresenter;
 import com.app.mobilize.Presentador.Interface.CreateEventInterface;
 import com.app.mobilize.R;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -45,7 +52,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     private static final int GALLERY_INTENT = 1;
 
     private String current_user;
-    private EditText title, description, max_part, min_part;
+    private EditText title, description, max_part;
     private TextView dateEvent, hourEvent;
     private Spinner sportEvent;
     private static final String [] sports = {"","Running", "Cycling", "Swimminig", "Basketball", "Football", "Voleyball", "Otro"};
@@ -62,12 +69,12 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event);
-        this.current_user = this.getIntent().getStringExtra("username");
+        this.current_user = this.getIntent().getStringExtra("user");
         setViews();
     }
 
     private void setViews() {
-        presenter = new CreateEventPresenter(this, current_user);
+        presenter = new CreateEventPresenter(this);
 
         eventImage = findViewById(R.id.EventoIV);
         eventImage.setOnClickListener(this);
@@ -92,9 +99,8 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
 
         max_part = findViewById(R.id.max_partEvent);
 
-        min_part = findViewById(R.id.min_partEvent);
-
-        createEvent = findViewById(R.id.crearEvento);
+        createEvent = findViewById(R.id.actionEvento);
+        createEvent.setText(getResources().getString(R.string.CrearEventoButton));
         createEvent.setOnClickListener(this);
     }
 
@@ -232,7 +238,6 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
         dateEvent.setEnabled(enable);
         description.setEnabled(enable);
         max_part.setEnabled(enable);
-        min_part.setEnabled(enable);
         createEvent.setEnabled(enable);
     }
 
@@ -248,6 +253,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
 
     @Override
     public void handleCreateEvent() throws ParseException {
+        existingTitle();
         if(!isValidTitle()){
             title.setError(getResources().getString(R.string.incorrectTitleEvent));
         }
@@ -273,12 +279,6 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
             if (TextUtils.isEmpty(max_part.getText().toString())){
                 max_part.setError(getResources().getString(R.string.incorrectMax_partEvent));
             }
-            if (TextUtils.isEmpty(min_part.getText().toString())){
-                min_part.setError(getResources().getString(R.string.incorrectMin_partEvent));
-            }
-        }
-        else if(!isValidParticipantRestriccions2()){
-            max_part.setError(getResources().getString(R.string.incorrectRest_Part_Event));
         }
         else if(imageUri == null){
             Log.d("deporte:", sport);
@@ -300,19 +300,28 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
                 alert.show();
             }
             if(imageUri != null){
-                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
-//                Intent intent = new Intent( this, MainActivity.class);
-//                startActivity(intent);
+                presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, new ArrayList<String>(), 0);
                 this.finish();
             }
         }
         else {
-            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), min_part.getText().toString());
-            //TODO: que al crear un esdeveniment et redireccioni al fragmentEventos amb l'event nou carregat. (He pensat de fer-ho passant un parametre al main activity i que depenent d'aquest parametre el main activity carrega un fragment o un altre).
-//            Intent intent = new Intent( this, MainActivity.class);
-//            startActivity(intent);
+            presenter.toCreateEvent(imageUri, title.getText().toString(), description.getText().toString(), dateEvent.getText().toString(), hourEvent.getText().toString(), sport, max_part.getText().toString(), current_user, new ArrayList<String>(), 0);
             this.finish();
         }
+    }
+
+    private void existingTitle() {
+        CollectionReference event_ref = FirebaseFirestore.getInstance().collection("Events");
+        event_ref.whereEqualTo("title", title.getText().toString()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    if (!task.getResult().isEmpty()) {
+                        title.setError(getResources().getString(R.string.existingTitleEvent));
+                    }
+                }
+            }
+        });
     }
 
     private boolean isValidTitle() {
@@ -338,13 +347,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
     }
 
     private boolean isValidParticipantRestriccions1() {
-        return !TextUtils.isEmpty(max_part.getText().toString()) && !TextUtils.isEmpty(min_part.getText().toString());
-    }
-
-    private boolean isValidParticipantRestriccions2() {
-        int max = Integer.parseInt(max_part.getText().toString());
-        int min = Integer.parseInt(min_part.getText().toString());
-        return max >= min;
+        return !TextUtils.isEmpty(max_part.getText().toString());
     }
 
     @Override
@@ -381,7 +384,7 @@ public class CreateEventActivity extends AppCompatActivity implements CreateEven
                 showHourPickerDialog();
                 break;
 
-            case R.id.crearEvento:
+            case R.id.actionEvento:
                 try {
                     handleCreateEvent();
                 } catch (ParseException e) {

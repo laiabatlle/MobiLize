@@ -43,7 +43,7 @@ public class ListaUsersFragment extends Fragment implements BuscadorUserInterfac
     }
 
     private void setViews(View view) {
-        presenter = new BuscadorUserPresenter(this, user);
+        presenter = new BuscadorUserPresenter(getContext(), this, user);
 
         lista = (RecyclerView) view.findViewById(R.id.rv);
         lista.addItemDecoration(new DividerItemDecoration(lista.getContext(), DividerItemDecoration.VERTICAL));

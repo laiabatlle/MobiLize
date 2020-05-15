@@ -92,7 +92,7 @@
     <string name="DateEventTV">Date:</string>
     <string name="SportEventTV">Sport:</string>
     <string name="hourEventTV">Schedule:</string>
-    <string name="CrearEventoButton">Create event</string>
+    <string name="CrearEventoButton">"  Create event  "</string>
     <string name="Max_partEventTV">Maximum number of participants:</string>
     <string name="Min_partEventTV">Minimum number of participants:</string>
     <string name="contact">Contact us</string>
@@ -236,5 +236,20 @@
     <string name="changePassword">Change password</string>
     <string name="newPassword">New password</string>
     <string name="passwordChanged">The password has been successfully changed</string>
+    <string name="existingTitleEvent">An event with that name already exists. Please enter a title that identifies the event.</string>
+    <string name="InscritosEventTV">Get users Inscribed.</string>
+    <string name="PlazasLibresEventTV">Remaining seats:</string>
+    <string name="RegisterOnEventButton">Register</string>
+    <string name="UnsubscribeEventButton">Unsubscrive</string>
+    <string name="InscritosEventList" >" List of registered users:"</string>
+    <string name="ModificarEsdeveniment">Modify event</string>
+    <string name="ModificarEsdevenimentText">You are about to modify an event. In case you change the date or time of the same, the registered users will be automatically unsubscribed. Do you want to continue?</string>
+    <string name="EliminarEsdeveniment">Delete event</string>
+    <string name="EliminarEsdevenimentText">You are about to delete an event. If you continue you will not be able to go back. Do you want to continue?</string>
+    <string name="PrivateAccount">"This account is private. Send a friend request to see more information about "</string>
+    <string name="NoFriends">Currently you have no friends, find people with whom to play sports and share your progress.</string>
+    <string name="timeLeft">"One day left for the event "</string>
+    <string name="calendar"> Calendar</string>
+
 
 </resources>

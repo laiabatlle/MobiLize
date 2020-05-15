@@ -52,7 +52,7 @@
     <string name="logOut">Tancar sessió</string>
     <string name="delete">Eliminar compte</string>
     <string name="idiom">Idioma</string>
-    <string name="alerts">Alertes</string>
+    <string name="alerts">Notificacions</string>
     <string name="information">Informació</string>
     <string name="desc">desc</string>
     <string name="tit">tit</string>
@@ -74,9 +74,9 @@
     <string name="training">Entrenament</string>
     <string name="progress">Progrés</string>
     <string name="profile">Perfil</string>
-    <string name="CancelFriendReq">"   Cancel·lar  sol·licitud   "</string>
-    <string name="AcceptFriendReq">"   Acceptar  sol·licitud   "</string>
-    <string name="DeclineFriendReq">"   Denegar  sol·licitud   "</string>
+    <string name="CancelFriendReq">Cancel·lar sol·licitud</string>
+    <string name="AcceptFriendReq">Acceptar sol·licitud</string>
+    <string name="DeclineFriendReq">Denegar sol·licitud</string>
     <string name="CancelFriendReqMes">S\'ha cancel·lat la sol·licitud</string>
     <string name="UnfriendMes">" i tu ja no sou amics."</string>
     <string name="NewFriendMes">" i tu ara sou amics."</string>
@@ -88,13 +88,13 @@
     <string name="confirmation">S\'ha enviat un correu de confirmació al teu compte de correu electrònic: </string>
     <string name="friendList"> Llista d\'amics </string>
     <string name="TitleEventTV">Títol</string>
-    <string name="DescripcionEventTV">Descripció</string>
+    <string name="DescripcionEventTV">Descripció:</string>
     <string name="DateEventTV">Data:</string>
     <string name="hourEventTV">Hora:</string>
     <string name="SportEventTV">Esport:</string>
     <string name="Max_partEventTV">Nombre màxim de participants:</string>
     <string name="Min_partEventTV">Nombre mínim de participants:</string>
-    <string name="CrearEventoButton">Crear esdeveniment</string>
+    <string name="CrearEventoButton">  Crear esdeveniment  </string>
     <string name="contact">Contacta amb nosaltres</string>
     <string name="resp">Descàrrec de responsabilitat</string>
     <string name="privacity">Política de Privacitat</string>
@@ -115,7 +115,7 @@
     <string name="emptyDateEvent">Si us plau, introdueix la data de l\'esdeveniment que voleu crear</string>
     <string name="HourEvent_Hint">hh:mm a.m</string>
     <string name="no_cardetails">Feu clic al botó de sota per començar a crear el seu recordatori</string>
-    <string name="reminder">Alerta</string>
+    <string name="reminder">Notificació</string>
     <string name="details">Detalls</string>
     <string name="date">Data</string>
     <string name="time">Hora</string>
@@ -126,22 +126,22 @@
     <string name="repeat_type">Tipus de repeticions</string>
     <string name="every">Cada </string>
     <string name="repeatOff">Repetir desactivat</string>
-    <string name="newReminder">Afagiu detalls a l\'alerta</string>
-    <string name="editReminder">Editar Alerta</string>
-    <string name="addReminder">Afegir Alerta</string>
+    <string name="newReminder">Afagiu detalls a la notificació</string>
+    <string name="editReminder">Editar Notificació</string>
+    <string name="addReminder">Afegir Notificació</string>
     <string name="unsavedChanges">Voleu descartar els canvis i sortir de l\'edició?</string>
     <string name="discard">Descartar</string>
     <string name="keepEditing">Continuar editant</string>
-    <string name="deleteReminder">Eliminar aquesta Alerta?</string>
-    <string name="deleteReminderSuccessful">Alerta eliminada</string>
-    <string name="deleteReminderFailed">Error en suprimir l\'alerta</string>
-    <string name="insertReminderSuccessful">Alerta guardada</string>
-    <string name="insertReminderFailed">Error en guardar l\'alerta</string>
-    <string name="updateReminderSuccessful">Alerta actualitzada</string>
-    <string name="updateReminderFailed">Error en actualitzar l\'alerta</string>
+    <string name="deleteReminder">Eliminar aquesta Notificació?</string>
+    <string name="deleteReminderSuccessful">Notificació eliminada</string>
+    <string name="deleteReminderFailed">Error en suprimir la notificació</string>
+    <string name="insertReminderSuccessful">Notificació guardada</string>
+    <string name="insertReminderFailed">Error en guardar la notificació</string>
+    <string name="updateReminderSuccessful">Notificació actualitzada</string>
+    <string name="updateReminderFailed">Error en actualitzar la notificació</string>
     <string name="enterNumber">Introdueix nombre</string>
-    <string name="discardReminder">Descartar Alerta</string>
-    <string name="saveReminder">Guardar Alerta</string>
+    <string name="discardReminder">Descartar Notificació</string>
+    <string name="saveReminder">Guardar Notificació</string>
     <string name="selectType">Selecciona tipus</string>
     <string name="minute">Minut</string>
     <string name="hour">Hora</string>
@@ -149,8 +149,8 @@
     <string name="week">Setmana</string>
     <string name="month">Mes</string>
     <string name="title">Títol</string>
-    <string name="reminderError">El títol de l\'alerta no pot estar buit!</string>
-    <string name="deleteReminderYes">Eliminar Alerta</string>
+    <string name="reminderError">El títol de la notificació no pot estar buit!</string>
+    <string name="deleteReminderYes">Eliminar Notificació</string>
     <string name="saved">Alarma guardada</string>
     <string name="dateNotSet">Data no definida</string>
     <string name="repeatNotSet">Repetir no definit</string>
@@ -197,7 +197,7 @@
     <string name="crear">Crear</string>
     <string name="descripcio_detallada_de_la_rutina">Descripció detallada</string>
     <string name="informacio_de_la_rutina">Informació</string>
-    <string name="nom_de_la_rutina">Nomb</string>
+    <string name="nom_de_la_rutina">Nom</string>
     <string name="nueva_rutina">Introdueix les dades de la seva nova rutina:</string>
     <string name="empieza">Comença</string>
     <string name="elimina">Elimina</string>
@@ -236,5 +236,21 @@
     <string name="changePassword">Canviar contrasenya</string>
     <string name="newPassword">Nova contrasenya</string>
     <string name="passwordChanged">La contrasenya s\'ha canviat correctament</string>
+    <string name="existingTitleEvent">Ja existeix un esdeveniment amb aquest nom. Si us plau, introdueix un títol que identifiqui l\'esdeveniment.</string>
+    <string name="PlazasLibresEventTV">Places restants:</string>
+    <string name="InscritosEventTV">Consultar usuaris Inscrits.</string>
+    <string name="RegisterOnEventButton">Inscriure\'s</string>
+    <string name="UnsubscribeEventButton">Desinscriure\'s</string>
+    <string name="InscritosEventList" >Llista d\'usuaris inscrits:</string>
+    <string name="ModificarEsdeveniment">Modificar esdeveniment</string>
+    <string name="ModificarEsdevenimentText">Estàs a punt de modificar un esdeveniment. En el cas que modifiquis la data o l\'hora d\'aquest, els usuaris inscrits seran desapuntats automàticament. Vols continuar?</string>
+    <string name="EliminarEsdeveniment">Eliminar esdeveniment</string>
+    <string name="EliminarEsdevenimentText">" Estàs a punt d'eliminar un esdeveniment. Si continues no podràs tornar enrere. Vols continuar?"</string>
+    <string name="PrivateAccount">"Aquest compte és privat. Envia una sol·licitud d'amistat per poder veure més informació sobre "</string>
+    <string name="NoFriends">"Actualment no tens amics, troba gent amb qui practicar esport i compartir els teus progressos."</string>
+    <string name="timeLeft">"Queda un dia per l'event "</string>
+    <string name="calendar"> Calendari</string>
+
+
 
 </resources>

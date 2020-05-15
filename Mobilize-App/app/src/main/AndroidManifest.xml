@@ -2,16 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.mobilize">
 
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -20,69 +19,95 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Vista.Activities.VeurePlanning"></activity>
 
+        <service
+            android:name=".Vista.Activities.MyService"
+            android:enabled="true"
+            android:exported="true" />
 
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name=".Vista.Activities.Create_plan" />
+        <activity android:name=".Vista.Activities.Seleccionar_planning" />
+        <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout" />
+        <activity android:name=".Vista.Activities.AvancaRutina" />
+        <activity android:name=".Vista.Activities.VeureExerciciNoWorkout" />
+        <activity android:name=".Vista.Activities.VeureExercici" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
-        <activity android:name=".Vista.Activities.MapsActivity" android:label="@string/title_activity_maps"/>
+        <activity
+            android:name=".Vista.Activities.MapsActivity"
+            android:label="@string/title_activity_maps" />
         <activity android:name=".Vista.Activities.SplashActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Vista.Activities.TrackActivity"/>
-
+        <activity android:name=".Vista.Activities.TrackActivity" />
         <activity android:name=".Vista.Activities.LoginActivity" />
         <activity android:name=".Vista.Activities.RegisterActivity" />
+        <activity android:name=".Vista.Activities.RegisterMessageActivity" />
         <activity android:name=".Vista.Activities.MainActivity" />
         <activity android:name=".Vista.Activities.ModalitatExercici" />
         <activity android:name=".Vista.Activities.ModalitatEntrenament" />
         <activity android:name=".Vista.Activities.NivellEntrenament" />
-        <activity android:name=".Vista.Activities.RegisterMessageActivity" />
         <activity android:name=".Vista.Activities.TipusPlan" />
-        <activity android:name=".Vista.Activities.OptionsActivity"/>
+        <activity android:name=".Vista.Activities.OptionsActivity" />
+        <activity android:name=".Vista.Activities.UserActivity" />
         <activity android:name=".Vista.Activities.Seleccionar_rutina" />
         <activity android:name=".Vista.Activities.CreateEventActivity" />
         <activity
             android:name=".Vista.Activities.PopUpRutina"
             android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".Vista.Activities.PopUpEventListInscriptions"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".Vista.Activities.QuestionDialog"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Vista.Activities.IdiomActivity" />
         <activity android:name=".Vista.Activities.InfoActivity" />
-        <activity android:name=".Vista.Activities.AlertsActivity">
-        </activity>
-        <activity android:name=".Vista.Activities.AddAlertActivity"
+        <activity android:name=".Vista.Activities.AlertsActivity" />
+        <activity
+            android:name=".Vista.Activities.AddAlertActivity"
             android:label="@string/addReminder"
             android:parentActivityName=".Vista.Activities.AlertsActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Vista.Activities.AlertsActivity"
-                />
+                android:value=".Vista.Activities.AlertsActivity" />
         </activity>
         <activity android:name=".Vista.Activities.ActivitatsUser" />
         <activity android:name=".Vista.Activities.AfegirRutina" />
         <activity android:name=".Vista.Activities.ChangePasswordActivity" />
+        <activity android:name=".Vista.Activities.ModifyEventActivity" />
+        <activity android:name=".Vista.Activities.ChatActivity" />
 
-        <provider android:name=".Vista.Activities.Data.AlarmReminderProvider"
+        <provider
+            android:name=".Vista.Activities.Data.AlarmReminderProvider"
             android:authorities="com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider"
-            android:exported="false"/>
+            android:exported="false" />
+
         <service
             android:name=".Vista.Activities.Reminder.ReminderAlarmService"
             android:exported="false" />
-        <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler"/>
-        <receiver android:name=".Vista.Activities.AddAlertActivity"/>
-        <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderContract"/>
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper"/>
-        <receiver android:name=".Vista.Activities.AlarmCursorAdapter"/>
-        <receiver android:name=".Vista.Activities.AlertsActivity"/>
+
+        <receiver android:name=".Vista.Activities.ReminderBroadcast" />
+        <receiver android:name=".Vista.Activities.Reminder.AlarmScheduler" />
+        <receiver android:name=".Vista.Activities.AddAlertActivity" />
+        <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderContract" />
+        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper" />
+        <receiver android:name=".Vista.Activities.AlarmCursorAdapter" />
+        <receiver android:name=".Vista.Activities.AlertsActivity" />
     </application>
 
 </manifest>

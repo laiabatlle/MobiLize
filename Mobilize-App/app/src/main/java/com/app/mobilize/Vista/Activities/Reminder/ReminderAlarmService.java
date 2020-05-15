@@ -44,7 +44,7 @@ public class ReminderAlarmService extends IntentService {
                 .addNextIntentWithParentStack(action)
                 .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        /*Cursor cursor = getContentResolver().query(uri, null, null, null, null);
 
         String description = "";
         try {
@@ -67,6 +67,6 @@ public class ReminderAlarmService extends IntentService {
                 .setAutoCancel(true)
                 .build();
 
-        manager.notify(NOTIFICATION_ID, note);
+        manager.notify(NOTIFICATION_ID, note);*/
     }
 }

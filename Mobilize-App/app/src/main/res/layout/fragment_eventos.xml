@@ -40,7 +40,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginEnd="15dp"
                 android:background="@null"
-                android:src="@mipmap/ic_create_event"/>
+                android:src="@mipmap/ic_create_a_event"/>
 
         </LinearLayout>
 

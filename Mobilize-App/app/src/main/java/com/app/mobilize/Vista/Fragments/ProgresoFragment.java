@@ -1,8 +1,11 @@
 package com.app.mobilize.Vista.Fragments;
 
+import android.content.ContentUris;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,12 +42,15 @@ public class ProgresoFragment extends Fragment {
     private ProgressBar pbWorkout, pbCycling, pbRunning;
     private RadioButton rbMensual, rbSemanal, rbPeso, rbCalorias, rbPasos;
     private LineChart chart;
-    private Button activitatsFinalitzades;
+    private Button activitatsFinalitzades, btCalendar;
+
+    private Usuari user;
 
     private Calendar data_actual = Calendar.getInstance();
     //Date d = data_actual.getTime();
 
-    public ProgresoFragment( ) {
+    public ProgresoFragment( Usuari user ) {
+        this.user = user;
     }
 
 
@@ -79,6 +85,8 @@ public class ProgresoFragment extends Fragment {
         rbPeso = view.findViewById(R.id.rbPeso);
         rbCalorias = view.findViewById(R.id.rbCalorias);
         rbPasos = view.findViewById(R.id.rbPasos);
+
+        btCalendar = view.findViewById(R.id.bCalendar);
 
         int minTotals, minRunning, minCycling, minWorkout;
         minTotals = 2000;
@@ -243,12 +251,31 @@ public class ProgresoFragment extends Fragment {
             }
         });
 
+        /*
+         * https://developers.google.com/api-client-library/java/
+         * https://stackoverflow.com/questions/21665862/how-to-view-a-public-google-calendar-via-an-android-application
+         * https://stackoverflow.com/questions/16360073/android-calendar-how-to-write-sync-adapter-for-calendar-insert
+         * */
+        btCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //goToCalendar();
+
+                long startMillis = System.currentTimeMillis();
+                Uri.Builder builder = CalendarContract.CONTENT_URI.buildUpon();
+                builder.appendPath("time");
+                ContentUris.appendId(builder, startMillis);
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(builder.build());
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
     public void goToActivitats(){
         Intent sigIntent = new Intent (getActivity(), ActivitatsUser.class);
-        //sigIntent.putExtra("user", user.getUsername());
+        sigIntent.putExtra("email", user.getEmail());
         startActivity(sigIntent);
     }
 
