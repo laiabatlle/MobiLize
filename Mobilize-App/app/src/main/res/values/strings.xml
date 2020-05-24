@@ -260,5 +260,14 @@
     <string name="completed">Completed</string>
     <string name="track_it">Track it!</string>
     <string name="calendar"> Calendario</string>
+    <string name="crear_planning">Nuevo plan de entrenamiento</string>
+    <string name="crear">Crear</string>
+    <string name="nuevo_plan">Introduzca los datos de su nuevo plan:</string>
+    <string name="Modifica">Modifica</string>
+    <string name="Elimina">Elimina</string>
+    <string name="Empieza">Empieza</string>
+    <string name="seleccione_su_plan">Seleccione su plan:</string>
+    <string name="planEntrenamiento">Plan de entrenamiento</string>
+    <string name="crearplan">Crear un plan</string>
 
 </resources>

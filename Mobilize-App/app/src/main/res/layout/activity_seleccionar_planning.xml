@@ -6,12 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".Vista.Activities.Seleccionar_planning">
 
+
+    <Button
+        android:id="@+id/plan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:backgroundTint="#7713A319"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/planEntrenamiento"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccione_su_plan"
+        android:textSize="18sp"
+        android:textColor="#121212"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Recyclerid1"
+        app:layout_constraintTop_toBottomOf="@+id/plan1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/button9"
         android:layout_width="198dp"
         android:layout_height="48dp"
         android:onClick="CreatePla"
-        android:text="Create Planning"
+        android:text="@string/crearplan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,11 +52,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Recyclerid1"
-        android:layout_width="408dp"
-        android:layout_height="389dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="370dp"
+        android:layout_height="495dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

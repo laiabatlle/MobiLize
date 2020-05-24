@@ -10,19 +10,18 @@
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text="Start"
+        android:text="@string/Empieza"
+        android:layout_marginRight="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView4" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView4"
-        android:layout_width="417dp"
-        android:layout_height="273dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="380dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
@@ -31,9 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="Elimina"
-        android:text="Delete"
+        android:layout_marginLeft="50dp"
+        android:text="@string/Elimina"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView4" />
 
@@ -41,11 +40,11 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:onClick="Modifica"
-        android:text="Modify"
+        android:text="@string/Modifica"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView4" />
 
     <EditText
@@ -53,21 +52,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:gravity="center"
+        android:hint="@string/nom_de_la_rutina"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:inputType="textCapSentences|textPersonName"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText10"
-        android:layout_width="287dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="@string/informacio_de_la_rutina"
+        android:inputType="textCapSentences|textPersonName"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText9" />
