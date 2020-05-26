@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.Create_plan">
+    tools:context=".Vista.Activities.Create_plan">
 
     <EditText
         android:id="@+id/editText5"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerView5"
         android:layout_width="388dp"
         android:layout_height="367dp"
         android:layout_marginTop="32dp"
@@ -44,9 +44,10 @@
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Crear"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
