@@ -112,9 +112,11 @@ public class MainActivity extends AppCompatActivity {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if ( documentSnapshot.getData() == null ) {
                         Log.i("TASKFIREBASE1", "NULL");
+                        showSelectedFragment(new ProgresoFragment(user, map));
                     }
                     else if ( documentSnapshot.getData().isEmpty() ) {
                         Log.i("TASKFIREBASE1", "EMPTY");
+                        showSelectedFragment(new ProgresoFragment(user, map));
                     }
                     else {
                         if ( task.isComplete() ) {
