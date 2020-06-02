@@ -158,6 +158,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
             intent.putExtra("puntstotals", 0);
             intent.putExtra("kcaltotals",0);
             startActivityForResult(intent, 0);
+            this.finish();
 
         }
 
@@ -168,6 +169,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
             intent.putExtra("puntstotals", 0);
             intent.putExtra("kcaltotals",0);
             startActivityForResult(intent, 0);
+            this.finish();
         }
 
 

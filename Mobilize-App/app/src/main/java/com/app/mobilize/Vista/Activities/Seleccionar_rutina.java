@@ -82,6 +82,7 @@ public class Seleccionar_rutina extends AppCompatActivity  {
         intent.putExtra("modalitat", modalitat);
         intent.putExtra("dificultat", dificultat);
         startActivityForResult(intent, 0);
+        this.finish();
     }
 
 

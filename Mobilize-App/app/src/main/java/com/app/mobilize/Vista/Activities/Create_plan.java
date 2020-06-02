@@ -134,6 +134,7 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
         Intent intent = new Intent(view.getContext(), TipusPlan.class);
         intent.putExtra("tipus", "prova");
         startActivityForResult(intent, 0);
+        this.finish();
 
        // Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
