@@ -131,7 +131,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
 
         Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
         startActivityForResult(intent, 0);
-
+        this.finish();
         Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
     }
@@ -167,6 +167,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
             Intent intent = new Intent(this, VeureExercici.class);
             intent.putExtra("exercici", Exercicis.get(position));
             startActivityForResult(intent, 0);
+            this.finish();
 
         }
 
@@ -174,6 +175,8 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
             Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
             intent.putExtra("exercici", Exercicis.get(position));
             startActivityForResult(intent, 0);
+            this.finish();
         }
+
     }
 }

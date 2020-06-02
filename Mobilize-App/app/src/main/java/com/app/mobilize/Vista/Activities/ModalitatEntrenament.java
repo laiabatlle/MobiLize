@@ -1,5 +1,6 @@
 package com.app.mobilize.Vista.Activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class ModalitatEntrenament extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modalitat_entrenament);
+
 
         Button bRunning, bCycling, bWorkout;
 
@@ -44,6 +46,7 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "running");
                 startActivityForResult(intent, 0);
+                finish();
 
             }
         });
@@ -69,6 +72,7 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "cycling");
                 startActivityForResult(intent, 0);
+                finish();
 
             }
         });
@@ -77,7 +81,6 @@ public class ModalitatEntrenament extends AppCompatActivity {
         bWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(v.getContext(), Seleccionar_rutina.class);
                 if(facil == true) {
                     intent.putExtra("dificultat", 0);
@@ -94,6 +97,9 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "workout");
                 startActivityForResult(intent, 0);
+                finish();
+
+
 
             }
         });

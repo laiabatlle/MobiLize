@@ -143,7 +143,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
 
         Intent intent = new Intent(view.getContext(),  NivellEntrenament.class);
         startActivityForResult(intent, 0);
-
+        this.finish();
 
 
         Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
@@ -198,7 +198,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
 
         Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
         startActivityForResult(intent, 0);
-
+        this.finish();
 
 
 
@@ -235,6 +235,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
             Intent intent = new Intent(this, VeureExercici.class);
             intent.putExtra("exercici", exe.get(position));
             startActivityForResult(intent, 0);
+            this.finish();
 
         }
 
@@ -242,7 +243,10 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
             Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
             intent.putExtra("exercici", exe.get(position));
             startActivityForResult(intent, 0);
+            this.finish();
         }
+
+
 
     }
 }
