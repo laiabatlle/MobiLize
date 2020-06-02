@@ -12,6 +12,8 @@ import android.widget.VideoView;
 
 import com.app.mobilize.R;
 import com.app.sqliteopenhelper.Exercici;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -40,7 +42,7 @@ public class AvancaRutina extends AppCompatActivity {
          kcaltotals = getIntent().getDoubleExtra("kcaltotals", 0);
 
             tvnom.setText(exercici.get(pos).getNom());
-           tvmusculs.setText(exercici.get(pos).getMusculs());
+            tvmusculs.setText(exercici.get(pos).getMusculs());
             String ser = Integer.toString(exercici.get(pos).getSeries()) + " " + getString(R.string.sèries);
             String rep = Integer.toString(exercici.get(pos).getRepeticions()) + " " + getString(R.string.repeticions);
             String punts = Integer.toString(exercici.get(pos).getPunts()) + " " + getString(R.string.punts);
@@ -73,6 +75,7 @@ public class AvancaRutina extends AppCompatActivity {
         if (exercici.size() == pos) {
             Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya puntuacio ranking
             intent.putExtra("puntstotals", puntstotals);
+            FirebaseFirestore.getInstance().collection("Ranking").document(SaveSharedPreference.getEmail(this)).update("points", FieldValue.increment(puntstotals));
             intent.putExtra("kcaltotals",kcaltotals);
             startActivityForResult(intent, 0);
             this.finish();
@@ -98,7 +101,5 @@ public class AvancaRutina extends AppCompatActivity {
                 this.finish();
             }
         }
-
-
     }
 }

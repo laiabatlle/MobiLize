@@ -14,6 +14,9 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RegisterModel implements RegisterInterface.Model {
 
     private RegisterInterface.TaskListener listener;
@@ -47,8 +50,16 @@ public class RegisterModel implements RegisterInterface.Model {
                                     db.collection("users").document(email).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
-                                            listener.onSuccess();
-                                            ConfirmationEmail();
+                                            Map<String, Object> rank = new HashMap<>();
+                                            rank.put("user", email);
+                                            rank.put("points", 0);
+                                            db.collection("Ranking").document(email).set(rank).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    listener.onSuccess();
+                                                    ConfirmationEmail();
+                                                }
+                                            });
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
@@ -56,6 +67,7 @@ public class RegisterModel implements RegisterInterface.Model {
                                             listener.onError("Error en el registro. Inténtelo de nuevo más tarde");
                                         }
                                     });
+
                                 } else {
                                     // If the user aldready exists show the alert
                                     try {

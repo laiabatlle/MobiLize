@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.app.mobilize.R;
 import com.app.sqliteopenhelper.Exercici;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -82,6 +84,7 @@ public class AvancaRutinaNoWorkout extends AppCompatActivity {
         if (exercici.size() == pos) {
             Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya puntuació ranking
             intent.putExtra("puntstotals", puntstotals);
+            FirebaseFirestore.getInstance().collection("Ranking").document(SaveSharedPreference.getEmail(this)).update("points", FieldValue.increment(puntstotals));
             intent.putExtra("kcaltotals",kcaltotals);
             startActivityForResult(intent, 0);
             this.finish();
