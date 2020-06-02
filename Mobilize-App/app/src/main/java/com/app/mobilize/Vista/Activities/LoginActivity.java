@@ -25,6 +25,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -36,7 +37,9 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity implements LoginInterface.View, View.OnClickListener{
 
@@ -134,6 +137,10 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
+                                                    Map<String, Object> rank = new HashMap<>();
+                                                    rank.put("user", email);
+                                                    rank.put("points", 0);
+                                                    db.collection("Ranking").document(user.getEmail()).set(rank);
                                                     Intent sig = new Intent(LoginActivity.this, MainActivity.class);
                                                     startActivity(sig);
                                                     finish();
