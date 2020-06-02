@@ -32,9 +32,6 @@ public class TipusPlan extends AppCompatActivity {
         else if(tipus.equals("E")) tipus = getResources().getString(R.string.enformaPlan);
         else tipus = getResources().getString(R.string.masa_muscularPlan);
 
-        tv = findViewById(R.id.textView5);
-        tv.setText(tipus);
-
         duracio = findViewById(R.id.spinnerDuracio);
         buttonOk = findViewById(R.id.butOk);
         buttonBack = findViewById(R.id.butEnrere);
