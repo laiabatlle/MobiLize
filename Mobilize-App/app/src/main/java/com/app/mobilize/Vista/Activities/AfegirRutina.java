@@ -167,7 +167,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
             Intent intent = new Intent(this, VeureExercici.class);
             intent.putExtra("exercici", Exercicis.get(position));
             startActivityForResult(intent, 0);
-            this.finish();
+
 
         }
 
@@ -175,7 +175,7 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
             Intent intent = new Intent(this, VeureExerciciNoWorkout.class);
             intent.putExtra("exercici", Exercicis.get(position));
             startActivityForResult(intent, 0);
-            this.finish();
+
         }
 
     }

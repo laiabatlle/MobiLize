@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.getbase:floatingactionbutton:1.9.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0720d7ab68920092f0af689f25c0654f/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bbf1f3e6c17e8fc868698efeaa70d4c/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0720d7ab68920092f0af689f25c0654f/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0720d7ab68920092f0af689f25c0654f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bbf1f3e6c17e8fc868698efeaa70d4c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bbf1f3e6c17e8fc868698efeaa70d4c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

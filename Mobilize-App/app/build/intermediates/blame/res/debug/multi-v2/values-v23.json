@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/eric/Documentos/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "C:\\Users\\joanf\\StudioProjects\\PES_MobiLize-FAKE\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/34ece7bc2b7e9320097862d625c9182d/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\f9b16f720320a724d7f3c412650a3e29\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/b9bd46ab7756e31a2a0db5a170e5bef1/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\741e124e958db766032b5587e5ee7703\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/4eaeae08a423705fc0bd8cdbac758685/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\joanf\\.gradle\\caches\\transforms-2\\files-2.1\\dff9369eb22ed794335bb377277bf05b\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
