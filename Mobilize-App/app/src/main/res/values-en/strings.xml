@@ -27,7 +27,7 @@
     <string name="facil">Easy</string>
     <string name="mitjana">Medium</string>
     <string name="dificil">Hard</string>
-    <string name="planning">PLANNING</string>
+    <string name="planning">Planning</string>
     <string name="nom">Name:</string>
     <string name="descripcio">Description:</string>
     <string name="entrenamiento_libre">Free training</string>
@@ -249,9 +249,26 @@
     <string name="PrivateAccount">"This account is private. Send a friend request to see more information about "</string>
     <string name="NoFriends">Currently you have no friends, find people with whom to play sports and share your progress.</string>
     <string name="timeLeft">"One day left for the event "</string>
-    <string name="calendar"> Calendar</string>
+    <string name="calendar">Calendar</string>
     <string name="progres_mensual">Monthly progress</string>
     <string name="temps_total">Total time: </string>
     <string name="rb_mesActual">Current Month</string>
     <string name="rb_mesAnterior">Last month</string>
+    <string name="send_message">Send message</string>
+    <string name="sèries">"series"</string>
+    <string name="repeticions">"repetitions"</string>
+    <string name="punts">"points"</string>
+    <string name="minuts">"minutes"</string>
+    <string name="inclou_pendent">Must include slope</string>
+    <string name="sense_pendent">Must not include slope</string>
+    <string name="completed">Completed</string>
+    <string name="track_it">Open the map</string>
+    <string name="crear_planning">New training plan</string>
+    <string name="nuevo_plan">Enter the details of your new plan:</string>
+    <string name="Modifica">Modify</string>
+    <string name="Elimina">Delete</string>
+    <string name="Empieza">Start</string>
+    <string name="seleccione_su_plan">Select your plan:</string>
+    <string name="planEntrenamiento">Training plan</string>
+    <string name="crearplan">Create a plan</string>
 </resources>

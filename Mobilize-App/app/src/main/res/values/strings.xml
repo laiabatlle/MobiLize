@@ -27,7 +27,7 @@
     <string name="facil">Fácil</string>
     <string name="mitjana">Mediano</string>
     <string name="dificil">Difícil</string>
-    <string name="planning">PLANNING</string>
+    <string name="planning">Planning</string>
     <string name="nom">Nombre:</string>
     <string name="descripcio">Descripción:</string>
     <string name="entrenamiento_libre">Entrenamiento libre</string>
@@ -253,15 +253,15 @@
     <string name="timeLeft">"Queda un dia para el evento "</string>
     <string name="kmh" translatable="false">"km/h"</string>
     <string name="Kcal" translatable="false">"kcal"</string>
-    <string name="sèries">"sèries"</string>
-    <string name="repeticions">"repeticions"</string>
-    <string name="punts">"punts"</string>
-    <string name="minuts">"minuts"</string>
-    <string name="inclou_pendent">Ha d\'incloure pendent</string>
-    <string name="sense_pendent">No ha d\'incloure pendent</string>
-    <string name="completed">Completed</string>
-    <string name="track_it">Track it!</string>
-    <string name="calendar"> Calendario</string>
+    <string name="sèries">"series"</string>
+    <string name="repeticions">"repeticiones"</string>
+    <string name="punts">"puntos"</string>
+    <string name="minuts">"minutos"</string>
+    <string name="inclou_pendent">Ha de incluir pendiente</string>
+    <string name="sense_pendent">No ha de incluir pendiente</string>
+    <string name="completed">Completado</string>
+    <string name="track_it">Abrir el mapa</string>
+    <string name="calendar">Calendario</string>
     <string name="crear_planning">Nuevo plan de entrenamiento</string>
     <string name="nuevo_plan">Introduzca los datos de su nuevo plan:</string>
     <string name="Modifica">Modifica</string>
@@ -272,5 +272,6 @@
     <string name="crearplan">Crear un plan</string>
     <string name="progres_mensual">Progreso mensual</string>
     <string name="temps_total">Tiempo total: </string>
+    <string name="send_message">Enviar mensaje</string>
 
 </resources>

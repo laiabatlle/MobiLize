@@ -6,35 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".ModalitatEntrenament">
 
-    <Button
+    <LinearLayout
         android:id="@+id/rutinaEntrenamiento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button_bg_rounded_corners"
-        android:backgroundTint="#7713A319"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="@string/rutinaEntrenamiento"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/grad"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconoFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@mipmap/ic_gym" />
+
+        <LinearLayout
+            android:id="@+id/buttonslayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="1.5"
+                android:shadowRadius="1.8"
+                android:text="@string/rutinaEntrenamiento"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/rutinaEntrenamiento">
 
         <Button
             android:id="@+id/bRunning2"
@@ -73,17 +99,5 @@
             android:text="@string/workout"
             android:textSize="24sp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/seleccionar_modalidad"
-        android:textColor="#121212"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rutinaEntrenamiento" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

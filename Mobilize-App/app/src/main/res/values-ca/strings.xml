@@ -27,7 +27,7 @@
     <string name="facil">Fàcil</string>
     <string name="mitjana">Mitjà</string>
     <string name="dificil">Difícil</string>
-    <string name="planning">PLANNING</string>
+    <string name="planning">Planning</string>
     <string name="nom">Nom:</string>
     <string name="descripcio">Descripció:</string>
     <string name="entrenamiento_libre">Entrenament lliure</string>
@@ -249,11 +249,28 @@
     <string name="PrivateAccount">"Aquest compte és privat. Envia una sol·licitud d'amistat per poder veure més informació sobre "</string>
     <string name="NoFriends">"Actualment no tens amics, troba gent amb qui practicar esport i compartir els teus progressos."</string>
     <string name="timeLeft">"Queda un dia per l'event "</string>
-    <string name="calendar"> Calendari</string>
+    <string name="calendar">Calendari</string>
 
     <string name="temps_total">Temps total: </string>
     <string name="rb_mesActual">Mes Actual</string>
     <string name="rb_mesAnterior">Mes Anterior</string>
     <string name="progres_mensual">Progrés mensual</string>
+    <string name="send_message">Enviar missatge</string>
+    <string name="sèries">"sèries"</string>
+    <string name="repeticions">"repeticions"</string>
+    <string name="punts">"punts"</string>
+    <string name="minuts">"minuts"</string>
+    <string name="inclou_pendent">Ha d\'incluir pendent</string>
+    <string name="sense_pendent">No ha d\'incluir pendent</string>
+    <string name="completed">Completat</string>
+    <string name="track_it">Obrir el mapa</string>
+    <string name="crear_planning">Nou pla d\'entrenament</string>
+    <string name="nuevo_plan">Introdueix les dades del seu nou pla:</string>
+    <string name="Modifica">Modifica</string>
+    <string name="Elimina">Elimina</string>
+    <string name="Empieza">Comença</string>
+    <string name="seleccione_su_plan">Selecciona el teu pla:</string>
+    <string name="planEntrenamiento">Pla d\'entrenament</string>
+    <string name="crearplan">Crear un pla</string>
 
 </resources>

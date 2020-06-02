@@ -152,8 +152,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\res\drawable\gimnasio.png" />
-                                      <entry key="outputName" value="ic_gym" />
+                                      <entry key="imageAsset" value="D:\ALEX\TREBALLS\UNI\Q8\PES\PES_MobiLize\Mobilize-App\app\src\main\res\drawable\funcionamiento.png" />
+                                      <entry key="outputName" value="ic_correr" />
                                     </map>
                                   </option>
                                 </PersistentState>
