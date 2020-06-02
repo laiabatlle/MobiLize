@@ -125,8 +125,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Recyclerid"
             android:scrollbars="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
             app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
