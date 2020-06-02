@@ -58,46 +58,48 @@ public class TipusPlan extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), R.string.selectDiscipline, Toast.LENGTH_LONG).show();
                 }
 
-                String modalitat = null;
-                Intent intent = new Intent(v.getContext(), Seleccionar_planning.class);
+                else {
+                    String modalitat = null;
+                    Intent intent = new Intent(v.getContext(), Seleccionar_planning.class);
 
-                if ( cbRunning.isChecked() == true) {
-                    modalitat = "running";
+                    if (cbRunning.isChecked() == true) {
+                        modalitat = "running";
+                    }
+
+                    if (cbCiclisme.isChecked() == true) {
+                        modalitat = "cycling";
+                    }
+
+                    if (cbWorkout.isChecked() == true) {
+                        modalitat = "workout";
+                    }
+
+                    if (cbRunning.isChecked() == true && cbCiclisme.isChecked() == true) {
+                        modalitat = "runningcycling";
+                    }
+
+                    if (cbRunning.isChecked() == true && cbWorkout.isChecked() == true) {
+                        modalitat = "runningworkout";
+                    }
+
+                    if (cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true) {
+                        modalitat = "cyclingworkout";
+                    }
+
+                    if (cbRunning.isChecked() == true && cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true) {
+                        modalitat = "runningcyclingworkout";
+                    }
+
+                    intent.putExtra("modalitat", modalitat);
+                    if (rbDificil.isChecked()) intent.putExtra("nivell", 2);
+                    if (rbMitjana.isChecked()) intent.putExtra("nivell", 1);
+                    if (rbFacil.isChecked()) intent.putExtra("nivell", 0);
+
+                    String dur = duracio.getSelectedItem().toString();
+
+                    intent.putExtra("duracio", dur);
+                    startActivityForResult(intent, 0);
                 }
-
-                if (cbCiclisme.isChecked() == true) {
-                    modalitat = "cycling";
-                }
-
-                if (cbWorkout.isChecked() == true) {
-                    modalitat = "workout";
-                }
-
-                if( cbRunning.isChecked() == true && cbCiclisme.isChecked() == true) {
-                    modalitat = "runningcycling";
-                }
-
-                if (cbRunning.isChecked() == true && cbWorkout.isChecked() == true ) {
-                    modalitat = "runningworkout";
-                }
-
-                if (cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true ) {
-                    modalitat = "cyclingworkout";
-                }
-
-                if (cbRunning.isChecked() == true && cbCiclisme.isChecked() == true && cbWorkout.isChecked() == true ) {
-                    modalitat = "runningcyclingworkout";
-                }
-
-                intent.putExtra("modalitat", modalitat);
-                if(rbDificil.isChecked()) intent.putExtra("nivell", 2);
-                if(rbMitjana.isChecked()) intent.putExtra("nivell", 1);
-                if(rbFacil.isChecked()) intent.putExtra("nivell", 0);
-
-                String dur = duracio.getSelectedItem().toString();
-
-                intent.putExtra("duracio", dur);
-                startActivityForResult(intent, 0);
 
 
             }
