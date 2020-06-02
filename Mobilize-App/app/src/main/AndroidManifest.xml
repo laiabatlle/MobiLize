@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.mobilize">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -13,14 +14,16 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
+        tools:ignore="LockedOrientationActivity"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
-        <activity android:name=".Vista.Activities.CalendarActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".Vista.Activities.CalendarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name=".Vista.Activities.VeurePlanning" />
 
         <service
@@ -28,12 +31,24 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Vista.Activities.Create_plan" />
-        <activity android:name=".Vista.Activities.Seleccionar_planning" />
-        <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout" />
-        <activity android:name=".Vista.Activities.AvancaRutina" />
-        <activity android:name=".Vista.Activities.VeureExerciciNoWorkout" />
-        <activity android:name=".Vista.Activities.VeureExercici" />
+        <activity android:name=".Vista.Activities.Create_plan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.Seleccionar_planning"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.AvancaRutinaNoWorkout"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.AvancaRutina"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.VeureExerciciNoWorkout"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.VeureExercici"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -44,41 +59,85 @@
 
         <activity
             android:name=".Vista.Activities.MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity android:name=".Vista.Activities.SplashActivity">
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.Activities.TrackActivity" />
-        <activity android:name=".Vista.Activities.LoginActivity" />
-        <activity android:name=".Vista.Activities.RegisterActivity" />
-        <activity android:name=".Vista.Activities.RegisterMessageActivity" />
-        <activity android:name=".Vista.Activities.MainActivity" />
-        <activity android:name=".Vista.Activities.ModalitatExercici" />
-        <activity android:name=".Vista.Activities.ModalitatEntrenament" />
-        <activity android:name=".Vista.Activities.NivellEntrenament" />
-        <activity android:name=".Vista.Activities.TipusPlan" />
-        <activity android:name=".Vista.Activities.OptionsActivity" />
-        <activity android:name=".Vista.Activities.UserActivity" />
-        <activity android:name=".Vista.Activities.Seleccionar_rutina" />
-        <activity android:name=".Vista.Activities.CreateEventActivity" />
+        <activity android:name=".Vista.Activities.TrackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.RegisterMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.ModalitatExercici"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.ModalitatEntrenament"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.NivellEntrenament"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.TipusPlan"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.OptionsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.UserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.Seleccionar_rutina"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.CreateEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Vista.Activities.PopUpRutina"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Vista.Activities.PopUpEventListInscriptions"
-            android:theme="@style/AppTheme.CustomTheme" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Vista.Activities.QuestionDialog"
-            android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".Vista.Activities.IdiomActivity" />
-        <activity android:name=".Vista.Activities.InfoActivity" />
-        <activity android:name=".Vista.Activities.AlertsActivity" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.IdiomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.InfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.AlertsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Vista.Activities.AddAlertActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/addReminder"
             android:parentActivityName=".Vista.Activities.AlertsActivity"
             android:theme="@style/AppTheme">
@@ -86,11 +145,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Vista.Activities.AlertsActivity" />
         </activity>
-        <activity android:name=".Vista.Activities.ActivitatsUser" />
-        <activity android:name=".Vista.Activities.AfegirRutina" />
-        <activity android:name=".Vista.Activities.ChangePasswordActivity" />
-        <activity android:name=".Vista.Activities.ModifyEventActivity" />
-        <activity android:name=".Vista.Activities.ChatActivity" />
+        <activity android:name=".Vista.Activities.ActivitatsUser"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.AfegirRutina"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.ModifyEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Vista.Activities.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
 
         <provider
             android:name=".Vista.Activities.Data.AlarmReminderProvider"
