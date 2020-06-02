@@ -1,5 +1,7 @@
 package com.app.mobilize.Vista.Activities;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,6 +14,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.mobilize.R;
+import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
+import com.app.sqliteopenhelper.Planning;
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
@@ -40,8 +44,74 @@ public class CalendarActivity extends AppCompatActivity {
         etCalendarInfo.setEnabled(false);
         etCalendarInfo.setText("");
 
+        eventDescriptions = new ArrayList<>();
+        events = new ArrayList<>();
+
         calendarView = (CalendarView) findViewById(R.id.calendarView);
         calendarView.setHeaderColor(R.color.colorPrimary);
+
+        // ---------------------------------------------
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+        SQLiteDatabase BaseDeDades = admin.getWritableDatabase();
+
+        String nom = "";
+        String info = "";
+        String rutines = "";
+
+        Cursor fila = BaseDeDades.rawQuery("select nom, info, rutines from PlanningActual", null);
+        while (fila.moveToNext()) {
+            nom = fila.getString(0);
+            info = fila.getString(1);
+            rutines = fila.getString(2);
+        }
+        BaseDeDades.close();
+
+        Log.i("CalendarActivity", nom + " " + info + " " + rutines);
+
+        ArrayList<String> rutinesPlanning = new ArrayList<>();
+        String rutinaNom = "";
+        for ( int i=0; i<rutines.length(); i++ )  {
+            if ( rutines.charAt(i) == ',' ) {
+                rutinesPlanning.add(rutinaNom);
+                rutinaNom = "";
+            }
+            else {
+                rutinaNom = rutinaNom + rutines.charAt(i);
+            }
+        }
+
+        BaseDeDades = admin.getWritableDatabase();
+        for ( int i = 0; i<rutinesPlanning.size(); i++ ){
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_MONTH, i);
+            Log.i("CalendarActivity", rutinesPlanning.get(i));
+            String[] args = new String[] {rutinesPlanning.get(i)};
+            Cursor fila2 = BaseDeDades.rawQuery("select info, modalitat from Rutines where nom = ?", args);
+            while (fila2.moveToNext()) {
+                String infoR = fila2.getString(0);
+                String modalitat = fila2.getString(1);
+
+                Log.i("CalendarACTIVITY", infoR + "   " + String.valueOf(modalitat));
+
+                EventDay eventAux = null;
+                eventDescription eventDescr = null;
+                if (modalitat.equals("workout")) {
+                    eventAux = new EventDay(calendar, R.drawable.gimnasio, Color.parseColor("#228B22"));
+                     eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
+                }
+                else if (modalitat.equals("cycling")) {
+                     eventAux = new EventDay(calendar, R.drawable.bicicleta, Color.parseColor("#228B22"));
+                     eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
+                }
+                else if (modalitat.equals("running")){
+                     eventAux = new EventDay(calendar, R.drawable.funcionamiento, Color.parseColor("#228B22"));
+                     eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
+                }
+                events.add(eventAux);
+                eventDescriptions.add(eventDescr);
+            }
+        }
+        // -------------------------------------------
 
         int actualDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
         Calendar minimumDate = Calendar.getInstance();
@@ -62,10 +132,9 @@ public class CalendarActivity extends AppCompatActivity {
         tvCalendarTitle = findViewById(R.id.tvCalendarTitle);
         tvCalendarTitle.setText("");
 
-        eventDescriptions = new ArrayList<>();
-        events = new ArrayList<>();
 
-        EventDay eventAux = null;
+
+        /*EventDay eventAux = null;
         eventDescription eventDescr = null;
 
         for ( int i=2; i<30; i++ ) {
@@ -92,7 +161,7 @@ public class CalendarActivity extends AppCompatActivity {
             }
 
             Log.i("SIZE EVENTS", String.valueOf(events.size()));
-        }
+        }*/
         calendarView.setEvents(events);
         calendarView.setOnDayClickListener(new OnDayClickListener() {
             @Override

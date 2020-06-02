@@ -81,6 +81,7 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
             intent.putExtra("rutines", PlanningArrayList.get(position).getRutines());
             intent.putExtra("modalitat", modalitat);
             intent.putExtra("dificultat" , dificultat);
+            intent.putExtra("dies", PlanningArrayList.get(position).getDies());
             startActivityForResult(intent, 0);
 
 

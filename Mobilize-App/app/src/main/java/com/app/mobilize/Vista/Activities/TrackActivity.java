@@ -75,6 +75,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
     AlertDialog dialog;
 
+    int ticks = 0;
+
     Chronometer chrono;
     Button bStart, bStop, bFinish;
     boolean is_Finish, is_running;
@@ -88,6 +90,10 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
     boolean firstStop = true;
     boolean firstStart = true;
+
+    double initialDistance;
+
+    boolean rutina;
 
     int number = 1;
     int number2;
@@ -122,6 +128,10 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
        // this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        rutina = getIntent().getBooleanExtra("rutina", false);
+        if ( rutina == true ) {
+            initialDistance = getIntent().getDoubleExtra("initialDistance", -1 );
+        }
         tipus = getIntent().getStringExtra("tipus");
         email = getIntent().getStringExtra("email");
 
@@ -242,6 +252,89 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
         chrono = findViewById(R.id.chrono);
 
+        if ( rutina ){
+            chrono.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+                @Override
+                public void onChronometerTick(Chronometer chronometer) {
+                    if ( is_running ) ticks++;
+                    if (  ticks % 300 == 299 ) {
+                        countMetres();
+                        if ( distance > initialDistance ) {
+                            // sound
+                            Log.i("TrackActivity", "FINISH ACTIVITY KMS CONSEGUITS!");
+                            chrono.stop();
+                            timeElapsed = chrono.getBase() - SystemClock.elapsedRealtime();
+                            finishService();
+
+                            if ( firstStop == true ) {
+                                mMap.clear();
+                                firstStop = false;
+                            }
+
+                            if ( locations.size() > 0 ) {
+                                LocationSignal locationSignal = locations.get(locations.size() - 1);
+                                locationSignal.setSignal("FINISH");
+                                locationSignal.setExerciciTime(getTimeChrono(timeElapsed));
+                                locations.set(locations.size() - 1, locationSignal);
+                            }
+
+                            countMetres();
+                            is_Finish = true;
+                            drawMap();
+                            locations.clear();
+
+
+                            CalculateKcals calculateKcals = new CalculateKcals();
+                            double ritme = getRitme();
+                            double kcal;
+                            if ( ritme == -1 ) kcal = 0;
+                            else kcal = calculateKcals.calculateRunningKcal(60,getRitme());
+
+                            makeToast("Ritmo -> " + ritme + "  kcal -> kcal");
+
+                            Calendar calendar = Calendar.getInstance();
+                            String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
+                            int tipusAct = 0;
+                            if ( tipus.equals("running") ) tipusAct = 1;
+                            final ActivitatFinalitzada activitatFinalitzada = new ActivitatFinalitzada(data, email, -timeElapsed, round(distance/1000, 2), tipusAct, kcal);
+                            is_empty = false;
+                            activitatsF = new ArrayList<>();
+                            Map<String, ArrayList<ActivitatFinalitzada>> mapAux = new HashMap<>();
+                            DocumentReference docRef = FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(email);
+                            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if ( task.isSuccessful() ) {
+                                        DocumentSnapshot documentSnapshot = task.getResult();
+                                        if ( documentSnapshot.getData() == null ) {
+                                            Log.i("TASKFIREBASE", "NULL");
+                                            is_empty = true;
+                                            putMapFirebase(activitatFinalitzada, 0, null);
+                                        }
+                                        else if ( documentSnapshot.getData().isEmpty() ) {
+                                            Log.i("TASKFIREBASE", "EMPTY");
+                                            is_empty = true;
+                                            putMapFirebase(activitatFinalitzada, 0, null);
+                                        }
+                                        else {
+                                            Log.i("TASKFIREBASE", "SUCCES");
+                                            Map <String, Object> mapAux = documentSnapshot.getData();
+                                            Log.i("TASKFIREBASE", "Size " +  String.valueOf(activitatsF.size()));
+                                            putMapFirebase(activitatFinalitzada, mapAux.size(), mapAux);
+                                        }
+                                    }
+                                }
+                            });
+
+
+                            showCustomDialog("Activitat Finalitzada!", getTimeChrono(activitatFinalitzada.getTemps()),
+                                    String.valueOf(activitatFinalitzada.getKcalCremades()), String.valueOf(activitatFinalitzada.getDistancia()));
+                            }
+                        }
+                    }
+                });
+            }
+
         bStart = findViewById(R.id.bStart);
         bFinish = findViewById(R.id.bFinish);
         bStop = findViewById(R.id.bStop);
@@ -265,7 +358,8 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                     bStart.setText("RESUME");
                 }
                 else {
-                    goToMenu();
+                    if ( !rutina ) goToMenu();
+                    else finishActualActivity();
                 }
             }
         });
@@ -370,6 +464,10 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
             }
         });
+    }
+
+    private void finishActualActivity(){
+        this.finish();
     }
 
     private void putMapFirebase (ActivitatFinalitzada activitatFinalitzada, int size, Map<String, Object> map ) {
@@ -591,7 +689,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                 distance = distance + result[0];
             }
         }
-        else makeToast("No se han obtenido ubicaciones suficientes.");
+        //else makeToast("No se han obtenido ubicaciones suficientes.");
     }
 
     class LocationSignal {
