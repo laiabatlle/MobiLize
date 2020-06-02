@@ -71,10 +71,11 @@ public class AvancaRutina extends AppCompatActivity {
         pos = pos + 1;
 
         if (exercici.size() == pos) {
-            Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya process
+            Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya puntuacio ranking
             intent.putExtra("puntstotals", puntstotals);
             intent.putExtra("kcaltotals",kcaltotals);
             startActivityForResult(intent, 0);
+            this.finish();
         }
 
         else {
@@ -85,6 +86,7 @@ public class AvancaRutina extends AppCompatActivity {
                 intent.putExtra("puntstotals", puntstotals);
                 intent.putExtra("kcaltotals",kcaltotals);
                 startActivityForResult(intent, 0);
+                this.finish();
 
             } else {
                 Intent intent = new Intent(this, AvancaRutinaNoWorkout.class);
@@ -93,6 +95,7 @@ public class AvancaRutina extends AppCompatActivity {
                 intent.putExtra("puntstotals", puntstotals);
                 intent.putExtra("kcaltotals",kcaltotals);
                 startActivityForResult(intent, 0);
+                this.finish();
             }
         }
 
