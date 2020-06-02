@@ -250,6 +250,8 @@
     <string name="NoFriends">Currently you have no friends, find people with whom to play sports and share your progress.</string>
     <string name="timeLeft">"One day left for the event "</string>
     <string name="calendar"> Calendar</string>
-
-
+    <string name="progres_mensual">Monthly progress</string>
+    <string name="temps_total">Total time: </string>
+    <string name="rb_mesActual">Current Month</string>
+    <string name="rb_mesAnterior">Last month</string>
 </resources>

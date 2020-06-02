@@ -36,6 +36,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.app.mobilize.Vista.Activities.CalendarActivity" />
         <activity android:name="com.app.mobilize.Vista.Activities.VeurePlanning" />
 
         <service
