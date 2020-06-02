@@ -15,6 +15,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT, exercicis TEXT)";
     String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN, punts INTEGER)";
     String sqlCreate2 = "CREATE TABLE Plannings (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, rutines TEXT)";
+    String sqlCreate3 = "CREATE TABLE PlanningActual (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, rutines TEXT)";
+
     private ArrayList<Rutina> cjtRutines;
     private ArrayList<Exercici> cjtExercicis;
     private ArrayList<Planning> cjtPlannings;
@@ -78,6 +80,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             db.insert("Plannings", null, contentValues);
         }
 
+        db.execSQL(sqlCreate3);
+
     }
 
     private void insertAllPlannings() {
@@ -102,54 +106,54 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllExercicis () {
         cjtExercicis = new ArrayList<>();
-        cjtExercicis.add(new Exercici("Abdominals fàcil", null, 0, 0, false, "Abdominals", 10, 3, "abdominals", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Abdominals normal", null, 0, 0, false, "Abdominals", 20, 3, "abdominals", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Abdominals difícil", null, 0, 0, false, "Abdominals", 30, 3, "abdominals", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Abdominals", null, 0, 0, false, "Abdominals", 10, 3, "abdominals", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Abdominals", null, 0, 0, false, "Abdominals", 20, 3, "abdominals", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Abdominals", null, 0, 0, false, "Abdominals", 30, 3, "abdominals", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Burpees fàcil", null, 0, 0, false, "Abdominals", 10, 3, "burpees", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Burpees normal", null, 0, 0, false, "Abdominals", 20, 3, "burpees", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Burpees difícil", null, 0, 0, false, "Abdominals", 30, 3, "burpees", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Burpees", null, 0, 0, false, "Abdominals", 10, 3, "burpees", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Burpees", null, 0, 0, false, "Abdominals", 20, 3, "burpees", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Burpees", null, 0, 0, false, "Abdominals", 30, 3, "burpees", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Hyper Extension fàcil", null, 0, 0, false, "Abdominals", 10, 3, "hyperextension", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Hyper Extension normal", null, 0, 0, false, "Abdominals", 20, 3, "hyperextension", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Hyper Extension difícil", null, 0, 0, false, "Abdominals", 30, 3, "hyperextension", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Hyper Extension", null, 0, 0, false, "Abdominals", 10, 3, "hyperextension", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Hyper Extension", null, 0, 0, false, "Abdominals", 20, 3, "hyperextension", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Hyper Extension", null, 0, 0, false, "Abdominals", 30, 3, "hyperextension", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Incline Push-Ups fàcil", null, 0, 0, false, "Abdominals", 10, 3, "inclinepushupsx16", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Incline Push-Ups normal", null, 0, 0, false, "Abdominals", 20, 3, "inclinepushupsx16", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Incline Push-Ups difícil", null, 0, 0, false, "Abdominals", 30, 3, "inclinepushupsx16", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Incline Push-Ups", null, 0, 0, false, "Abdominals", 10, 3, "inclinepushupsx16", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Incline Push-Ups", null, 0, 0, false, "Abdominals", 20, 3, "inclinepushupsx16", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Incline Push-Ups", null, 0, 0, false, "Abdominals", 30, 3, "inclinepushupsx16", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Push-Ups fàcil", null, 0, 0, false, "Abdominals", 10, 3, "inclinepushups", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Push-Ups normal", null, 0, 0, false, "Abdominals", 20, 3, "inclinepushups", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Push-Ups difícil", null, 0, 0, false, "Abdominals", 30, 3, "inclinepushups", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Push-Ups", null, 0, 0, false, "Abdominals", 10, 3, "inclinepushups", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Push-Ups", null, 0, 0, false, "Abdominals", 20, 3, "inclinepushups", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Push-Ups", null, 0, 0, false, "Abdominals", 30, 3, "inclinepushups", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Knee Push-Ups fàcil", null, 0, 0, false, "Abdominals", 10, 3, "kneepushups", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Knee Push-Ups normal", null, 0, 0, false, "Abdominals", 20, 3, "kneepushups", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Knee Push-Ups difícil", null, 0, 0, false, "Abdominals", 30, 3, "kneepushups", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Knee Push-Ups", null, 0, 0, false, "Abdominals", 10, 3, "kneepushups", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Knee Push-Ups", null, 0, 0, false, "Abdominals", 20, 3, "kneepushups", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Knee Push-Ups", null, 0, 0, false, "Abdominals", 30, 3, "kneepushups", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Mountain Climber fàcil", null, 0, 0, false, "Abdominals", 10, 3, "mountainclimber", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Mountain Climber normal", null, 0, 0, false, "Abdominals", 20, 3, "mountainclimber", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Mountain Climber difícil", null, 0, 0, false, "Abdominals", 30, 3, "mountainclimber", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Mountain Climber", null, 0, 0, false, "Abdominals", 10, 3, "mountainclimber", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Mountain Climber", null, 0, 0, false, "Abdominals", 20, 3, "mountainclimber", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Mountain Climber", null, 0, 0, false, "Abdominals", 30, 3, "mountainclimber", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Jumping Squats fàcil", null, 0, 0, false, "Abdominals", 10, 3, "jumpingsquats", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Jumping Squats normal", null, 0, 0, false, "Abdominals", 20, 3, "jumpingsquats", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Jumping Squats difícil", null, 0, 0, false, "Abdominals", 30, 3, "jumpingsquats", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Jumping Squats", null, 0, 0, false, "Abdominals", 10, 3, "jumpingsquats", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Jumping Squats", null, 0, 0, false, "Abdominals", 20, 3, "jumpingsquats", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Jumping Squats", null, 0, 0, false, "Abdominals", 30, 3, "jumpingsquats", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Sit-Ups fàcil", null, 0, 0, false, "Abdominals", 10, 3, "situps", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Sit-Ups normal", null, 0, 0, false, "Abdominals", 20, 3, "situps", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Sit-Ups", null, 0, 0, false, "Abdominals", 10, 3, "situps", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Sit-Ups", null, 0, 0, false, "Abdominals", 20, 3, "situps", 1, "workout", 200));
         cjtExercicis.add(new Exercici("Sit-Ups", null, 0, 0, false, "Abdominals", 30, 3, "situps", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Squats fàcil", null, 0, 0, false, "Abdominals", 10, 3, "squats", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Squats normal", null, 0, 0, false, "Abdominals", 20, 3, "squats", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Squats difícil", null, 0, 0, false, "Abdominals", 30, 3, "squats", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Squats", null, 0, 0, false, "Abdominals", 10, 3, "squats", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Squats", null, 0, 0, false, "Abdominals", 20, 3, "squats", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Squats", null, 0, 0, false, "Abdominals", 30, 3, "squats", 2, "workout", 300));
 
 
-        cjtExercicis.add(new Exercici("Triceps Dips fàcil", null, 0, 0, false, "Abdominals", 10, 3, "tricepsdips", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("Triceps Dips normal", null, 0, 0, false, "Abdominals", 20, 3, "tricepsdips", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("Triceps Dips difícil", null, 0, 0, false, "Abdominals", 30, 3, "tricepsdips", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("Triceps Dips", null, 0, 0, false, "Abdominals", 10, 3, "tricepsdips", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("Triceps Dips", null, 0, 0, false, "Abdominals", 20, 3, "tricepsdips", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("Triceps Dips", null, 0, 0, false, "Abdominals", 30, 3, "tricepsdips", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("V-Up fàcil", null, 0, 0, false, "Abdominals", 10, 3, "vup", 0, "workout", 100));
-        cjtExercicis.add(new Exercici("V-Up normal", null, 0, 0, false, "Abdominals", 20, 3, "vup", 1, "workout", 200));
-        cjtExercicis.add(new Exercici("V-Up difícil", null, 0, 0, false, "Abdominals", 30, 3, "vup", 2, "workout", 300));
+        cjtExercicis.add(new Exercici("V-Up", null, 0, 0, false, "Abdominals", 10, 3, "vup", 0, "workout", 100));
+        cjtExercicis.add(new Exercici("V-Up", null, 0, 0, false, "Abdominals", 20, 3, "vup", 1, "workout", 200));
+        cjtExercicis.add(new Exercici("V-Up", null, 0, 0, false, "Abdominals", 30, 3, "vup", 2, "workout", 300));
 
         cjtExercicis.add(new Exercici("Correr", "10", 120, 1000, true, null, 0, 0, null, 1, "running", 150));
         cjtExercicis.add(new Exercici("Bicicleta", "20", 60, 2000, true, null, 0, 0, null, 2, "cycling", 200));

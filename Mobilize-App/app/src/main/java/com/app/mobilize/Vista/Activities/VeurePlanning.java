@@ -21,6 +21,7 @@ import com.app.sqliteopenhelper.Exercici;
 import com.app.sqliteopenhelper.Rutina;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.OnNoteListener{
 
@@ -29,6 +30,9 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
     int dificultat;
     String modalitat;
     String nom;
+    String info;
+    int dies;
+    String rutines;
     RecyclerView recycler;
     ArrayList<Rutina> rut;
     public static ArrayList<Rutina> eaux1 = new ArrayList<>();
@@ -40,12 +44,12 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
         tvnom = findViewById(R.id.editText9);
         tvinfo = findViewById(R.id.editText10);
 
-        String rutines = getIntent().getStringExtra("rutines");
+        rutines = getIntent().getStringExtra("rutines");
         nom = getIntent().getStringExtra("nom");
-        String info = getIntent().getStringExtra("info");
+        info = getIntent().getStringExtra("info");
         modalitat = getIntent().getStringExtra("modalitat");
         dificultat = getIntent().getIntExtra("dificultat", 0);
-
+        dies = getIntent().getIntExtra("dies", -1);
         tvnom.setText(nom);
         tvinfo.setText(info);
 
@@ -109,6 +113,26 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
         Intent intent = new Intent(this, PopUpRutina.class);
         intent.putExtra("rutina", rut.get(position));
         startActivityForResult(intent, 0);
+    }
+
+    public void Comença(View view){
+        // ficar el planning actual en sqlite
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+
+        BaseDeDatos.execSQL("DELETE FROM PlanningActual");
+
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("nom",nom);
+        contentValues.put("info", info);
+        contentValues.put("nivell", dificultat);
+        contentValues.put("dies", dies);
+        contentValues.put("modalitat", modalitat);
+        contentValues.put("rutines", rutines);
+
+        BaseDeDatos.insert("PlanningActual", null, contentValues);
+       
     }
 
     public void Elimina(View view) {

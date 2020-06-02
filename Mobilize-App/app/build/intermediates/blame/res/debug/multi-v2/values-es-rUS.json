@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
+            "outputFile": "/home/eric/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/b9bd46ab7756e31a2a0db5a170e5bef1/res/values-es-rUS/values-es-rUS.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\70fb95083027a960f221902ef619dfbe\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/cf5f01d6012b860546c2703a67637760/res/values-es-rUS/values-es-rUS.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\ee069b07d9a0e59c8b5338a8dbc73f11\\res\\values-es-rUS\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "267,380,492,572,696,819,947,1043,1137,1235,1326",
-                        "endColumns": "112,111,79,123,122,127,95,93,97,90,100",
-                        "endOffsets": "375,487,567,691,814,942,1038,1132,1230,1321,1422"
-                    },
-                    "to": {
-                        "startLines": "134,135,136,137,138,139,140,141,142,143,144",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "14720,14833,14945,15025,15149,15272,15400,15496,15590,15688,15779",
-                        "endColumns": "112,111,79,123,122,127,95,93,97,90,100",
-                        "endOffsets": "14828,14940,15020,15144,15267,15395,15491,15585,15683,15774,15875"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\values-es-rUS\\values.xml",
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/c463364493ac3ff72667fb9129c6544f/res/values-es-rUS/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,24 +55,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\fcf1ce0dad8b80a2fe2375386a0d24ae\\res\\values-es-rUS\\values.xml",
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/43f967f4a614bdc5d956090aa321f03b/res/values-es-rUS/values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "204",
-                        "endOffsets": "455"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "267,380,492,572,696,819,947,1043,1137,1235,1326",
+                        "endColumns": "112,111,79,123,122,127,95,93,97,90,100",
+                        "endOffsets": "375,487,567,691,814,942,1038,1132,1230,1321,1422"
                     },
                     "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4354",
-                        "endColumns": "204",
-                        "endOffsets": "4554"
+                        "startLines": "134,135,136,137,138,139,140,141,142,143,144",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "14720,14833,14945,15025,15149,15272,15400,15496,15590,15688,15779",
+                        "endColumns": "112,111,79,123,122,127,95,93,97,90,100",
+                        "endOffsets": "14828,14940,15020,15144,15267,15395,15491,15585,15683,15774,15875"
                     }
                 },
                 {
-                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\values-es-rUS\\values-es-rUS.xml",
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/res/values-es-rUS/values-es-rUS.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -103,6 +86,23 @@
                         "startOffsets": "105,5979,6049,6145,6202,6258,6306,6437,6488,6551,6665,6727,6820,6945,7351,7444,7538,7681,7749,7938,8031,8125,8310,8369,8494,8745,9184,9291,9460,9570,9702,9780,9902,9984,10088,10167,10233,10292,10347,10402,10458,10515,10614,10717,10807,10919,10979,11034,11091,11221,11283,11353,11448,11514,11580,11651,11723,11807,11867,11947,12023,12079,12164,12239,12310,12381,12456,12548,12621,12760,12990,13064,13156,13241,13306,13405,13469,13552,13633,13721,13808,13863,13957,14043,14405,14482,14586",
                         "endColumns": "339,69,95,56,55,47,130,50,62,113,61,92,124,405,92,93,142,67,188,92,93,184,58,124,250,438,106,168,109,131,77,121,81,103,78,65,58,54,54,55,56,98,102,89,111,59,54,56,129,61,69,94,65,65,70,71,83,59,79,75,55,84,74,70,70,74,91,72,138,229,73,91,84,64,98,63,82,80,87,86,54,93,85,361,76,103,133",
                         "endOffsets": "440,6044,6140,6197,6253,6301,6432,6483,6546,6660,6722,6815,6940,7346,7439,7533,7676,7744,7933,8026,8120,8305,8364,8489,8740,9179,9286,9455,9565,9697,9775,9897,9979,10083,10162,10228,10287,10342,10397,10453,10510,10609,10712,10802,10914,10974,11029,11086,11216,11278,11348,11443,11509,11575,11646,11718,11802,11862,11942,12018,12074,12159,12234,12305,12376,12451,12543,12616,12755,12985,13059,13151,13236,13301,13400,13464,13547,13628,13716,13803,13858,13952,14038,14400,14477,14581,14715"
+                    }
+                },
+                {
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/4bda0a9eee541eeb44a8517e891372a5/res/values-es-rUS/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "204",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4354",
+                        "endColumns": "204",
+                        "endOffsets": "4554"
                     }
                 }
             ]
