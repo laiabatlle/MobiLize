@@ -354,23 +354,21 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/guardar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="@string/GuardarCambiosButton"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            android:background="@drawable/titleevent_bg_rounded_courners"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alturaLayout" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/GuardarCambiosButton"
+        android:textColor="@color/white"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parametrosPerfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

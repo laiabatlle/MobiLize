@@ -20,12 +20,12 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\254e94354214e93fe9893c2e99ed681b\\res\\drawable-mdpi-v4\\fab_bg_mini.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_browser_actions_context_menu_row.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\daa3301630f1af4c786dceadf94bcec5\\res\\layout\\browser_actions_context_menu_row.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -76,16 +76,16 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_hide_password.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_acceptreq.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_acceptreq.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_acceptreq.png.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_acceptreq.png"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_hide_password.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_mdtp_date_picker_dialog.xml.flat",
@@ -192,6 +192,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_progress.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_progress.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -224,20 +228,20 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_fab_bg_normal.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\254e94354214e93fe9893c2e99ed681b\\res\\drawable-xxxhdpi-v4\\fab_bg_normal.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_clock.png.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_clock.png"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fui_activity_register_phone.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\layout\\fui_activity_register_phone.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_clock.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_clock.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fui_check_email_layout.xml.flat",
@@ -300,12 +304,12 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\titleevent_bg_rounded_courners.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_unfriend.xml.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_unfriend.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_eventos.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\fragment_eventos.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_unfriend.xml.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\ic_unfriend.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -336,12 +340,12 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_progreso.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\fragment_progreso.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
@@ -372,20 +376,20 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\layout\\test_action_chip.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_fab_bg_normal.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\254e94354214e93fe9893c2e99ed681b\\res\\drawable-xhdpi-v4\\fab_bg_normal.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_in.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\anim\\abc_fade_in.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\layout\\test_action_chip.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_idiom.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_idiom.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_in.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -428,12 +432,12 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_unsubscrive_event.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_fui_slide_in_right.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\anim\\fui_slide_in_right.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_extended_fab_show_motion_spec.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\animator\\mtrl_extended_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_fui_slide_in_right.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\anim\\fui_slide_in_right.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
@@ -488,12 +492,12 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_track.xml.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_track.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material_anim.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_track.xml.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_track.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_unfriend.png.flat",
@@ -560,24 +564,24 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\prove.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_dialog.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\layout\\mtrl_alert_dialog.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_filled_background_color.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\color\\mtrl_filled_background_color.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_dialog.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\layout\\mtrl_alert_dialog.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_listausers_fragment.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\listausers_fragment.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\anim\\btn_radio_to_off_mtrl_ring_outer_animation.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -808,6 +812,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_gym.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_gym.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_calendar_view_day.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\5d0d72c3a3f3453fde1ab0ab05d837c4\\res\\layout\\calendar_view_day.xml"
     },
@@ -860,12 +868,12 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\ee069b07d9a0e59c8b5338a8dbc73f11\\res\\drawable\\mdtp_material_button_background.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fui_idp_button_github.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\layout\\fui_idp_button_github.xml"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_subscrive_event.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_subscrive_event.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_fui_idp_button_github.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\layout\\fui_idp_button_github.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
@@ -918,6 +926,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_bg_rounded_corners_red.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\button_bg_rounded_corners_red.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_entrenamiento.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_entrenamiento.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\raw_kneepushups.mp4.flat",
@@ -992,6 +1004,10 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_addfriend.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_progress.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_progress.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_normal.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
@@ -1000,32 +1016,32 @@
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_unsubscrive_event.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_subscrive_event.png.flat",
-        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_subscrive_event.png"
-    },
-    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fui_ic_mail_white_24dp.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\drawable\\fui_ic_mail_white_24dp.xml"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
-    },
-    {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_subscrive_event.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_subscrive_event.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_unfriend.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_unfriend.png"
     },
     {
-        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
-        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\drawable\\navigation_empty_icon.xml"
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
+        "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_out.xml.flat",
@@ -1110,6 +1126,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_textfield_search_material.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_entrenamiento.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_entrenamiento.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_text_color.xml.flat",
@@ -1460,6 +1480,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\ff00be28bce535e8f084d1d4be52f2d9\\res\\layout\\notification_template_media_custom.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_gym.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_gym.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_settings.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_settings.png"
     },
@@ -1490,6 +1514,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_edittext.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_calendar.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_calendar.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -1732,6 +1760,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\anim-v21\\mtrl_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_calendar.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_calendar.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
@@ -1888,6 +1920,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_gym.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_gym.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_ic_arrow_drop_up.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\drawable\\mtrl_ic_arrow_drop_up.xml"
     },
@@ -1922,6 +1958,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_navigation_item_icon_tint.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\color\\mtrl_navigation_item_icon_tint.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_calendar.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_calendar.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -2090,6 +2130,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mdtp_date_picker_selector.xml.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\ee069b07d9a0e59c8b5338a8dbc73f11\\res\\color\\mdtp_date_picker_selector.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_calendar.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_calendar.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -2632,6 +2676,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_calendar.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_calendar.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
@@ -3040,6 +3088,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\layout\\mtrl_calendar_year.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_entrenamiento.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_entrenamiento.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable_trainer.jpg.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable\\trainer.jpg"
     },
@@ -3062,6 +3114,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_access_time.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\drawable-v24\\ic_access_time.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_entrenamiento.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_entrenamiento.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_checkbox_themeable_attribute_color.xml.flat",
@@ -3260,6 +3316,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\5d0d72c3a3f3453fde1ab0ab05d837c4\\res\\drawable-xxhdpi-v4\\ic_arrow_left.png"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_gym.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-mdpi\\ic_gym.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_friendslist.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_friendslist.png"
     },
@@ -3270,6 +3330,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_create_a_event.png.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_create_a_event.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_progress.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_progress.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -3500,6 +3564,10 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\70fb95083027a960f221902ef619dfbe\\res\\layout-v21\\notification_action.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_gym.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-hdpi\\ic_gym.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -3552,8 +3620,16 @@
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\e17c0a53865e02cbd88aa4d4a6c56cc3\\res\\color\\material_on_background_emphasis_medium.xml"
     },
     {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_entrenamiento.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_entrenamiento.png"
+    },
+    {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\70fb95083027a960f221902ef619dfbe\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_progress.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_progress.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
@@ -3966,6 +4042,10 @@
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pop_up_rutina.xml.flat",
         "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\layout\\activity_pop_up_rutina.xml"
+    },
+    {
+        "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_progress.png.flat",
+        "source": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_progress.png"
     },
     {
         "merged": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",

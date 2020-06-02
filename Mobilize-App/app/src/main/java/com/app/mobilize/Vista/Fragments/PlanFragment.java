@@ -31,14 +31,6 @@ public class PlanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_plan, container, false);
-        bPlanes = view.findViewById(R.id.misplanes);
-
-        bPlanes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMisPlanes();
-            }
-        });
 
         ibAdelgazar = view.findViewById(R.id.bAdelgazar);
         ibEnForma = view.findViewById(R.id.bForma);
@@ -65,11 +57,6 @@ public class PlanFragment extends Fragment {
             }
         });
         return view;
-    }
-
-    public void openMisPlanes(){
-      //  Intent plans = new Intent(this, mis_planes.class);
-       // startActivity(plans);
     }
 
     public void tipusPlan(String tipus) {
