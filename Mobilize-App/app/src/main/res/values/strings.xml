@@ -168,6 +168,8 @@
     <string name="rb_peso">peso </string>
     <string name="rb_calorias">calorías </string>
     <string name="rb_pasos">pasos </string>
+    <string name="rb_mesActual">Mes Actual</string>
+    <string name="rb_mesAnterior">Mes Anterior</string>
     <string-array name="dias_semana">
         <item>dom</item>
         <item>lun</item>
@@ -268,5 +270,7 @@
     <string name="seleccione_su_plan">Seleccione su plan:</string>
     <string name="planEntrenamiento">Plan de entrenamiento</string>
     <string name="crearplan">Crear un plan</string>
+    <string name="progres_mensual">Progreso mensual</string>
+    <string name="temps_total">Tiempo total: </string>
 
 </resources>

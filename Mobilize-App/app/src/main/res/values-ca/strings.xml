@@ -251,6 +251,9 @@
     <string name="timeLeft">"Queda un dia per l'event "</string>
     <string name="calendar"> Calendari</string>
 
-
+    <string name="temps_total">Temps total: </string>
+    <string name="rb_mesActual">Mes Actual</string>
+    <string name="rb_mesAnterior">Mes Anterior</string>
+    <string name="progres_mensual">Progrés mensual</string>
 
 </resources>

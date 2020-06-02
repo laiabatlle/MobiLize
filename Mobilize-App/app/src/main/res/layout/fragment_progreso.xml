@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@color/gradStart"
+        android:background="@drawable/button_bg_rounded_corners"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,13 +38,18 @@
             android:orientation="horizontal"
             android:weightSum="100">
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10" />
+
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="50"
+                android:layout_weight="40"
                 android:lineSpacingExtra="0sp"
-                android:text="@string/ultima_semana"
+                android:text="@string/progres_mensual"
                 android:textAlignment="viewStart"
                 android:textAllCaps="true"
                 android:textColor="#000000"
@@ -54,7 +59,8 @@
                 android:id="@+id/tvTempsTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="50" />
+                android:layout_weight="50"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -128,6 +134,33 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="80" />
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMesActual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#139E03"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rbMesAnterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#139E03"
+                android:text="RadioButton" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -159,28 +192,6 @@
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
-            <RadioButton
-                android:id="@+id/rbSemanal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="#0C6C01"
-                android:text="@string/rb_semanal"
-                android:textAlignment="textStart"
-                android:textAllCaps="true"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/rbMensual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="#0C6C01"
-                android:text="@string/rb_mensual"
-                android:textAlignment="textStart"
-                android:textAllCaps="true"
-                android:textSize="12sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -194,17 +205,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-                <RadioButton
-                    android:id="@+id/rbPeso"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:buttonTint="#139E03"
-                    android:text="@string/rb_peso"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="true"
-                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/rbCalorias"
