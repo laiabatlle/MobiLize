@@ -133,7 +133,7 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
             initialDistance = getIntent().getDoubleExtra("initialDistance", -1 );
         }
         tipus = getIntent().getStringExtra("tipus");
-        email = getIntent().getStringExtra("email");
+        email = SaveSharedPreference.getEmail(this);
 
         TextView tvDisciplina = findViewById(R.id.tvDisciplina);
         if ( tipus.equals("running" ) ) {
