@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\5694784c613f0012211f4d41cb99cf67\AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\f9b16f720320a724d7f3c412650a3e29\AndroidManifest.xml:17:1-24:12
 MERGED from [com.bignerdranch.android:recyclerview-multiselect:0.2] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\e6b526dec83fd80337ec7418774464de\AndroidManifest.xml:2:1-11:12
@@ -89,22 +89,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\joanf\.gradle\ca
 MERGED from [androidx.print:print:1.0.0] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\0b28adca6ab0153b89ae91e036609da4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\6e2876905e81f1742317c28e2a841f89\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\1140061798a74b2720de7998478bafb8\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
-INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
+INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
 	package
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:4:5-31
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-184:12
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:1-185:12
 		INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:2:11-69
@@ -197,7 +197,7 @@ ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\
 	android:name
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:14:22-75
 application
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:16:5-182:19
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:16:5-183:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\5694784c613f0012211f4d41cb99cf67\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.3.1] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\5694784c613f0012211f4d41cb99cf67\AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\joanf\.gradle\caches\transforms-2\files-2.1\f9b16f720320a724d7f3c412650a3e29\AndroidManifest.xml:22:5-20
@@ -624,56 +624,60 @@ ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:162:13-52
 	android:name
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:160:19-64
+activity#com.app.mobilize.Vista.Activities.RankingActivity
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:163:9-70
+	android:name
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:163:19-67
 provider#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:164:9-167:40
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:165:9-168:40
 	android:authorities
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:166:13-95
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:167:13-95
 	android:exported
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:167:13-37
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:168:13-37
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:165:13-72
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:166:13-72
 service#com.app.mobilize.Vista.Activities.Reminder.ReminderAlarmService
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:169:9-171:40
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:170:9-172:40
 	android:exported
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:171:13-37
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:172:13-37
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:170:13-75
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:171:13-75
 receiver#com.app.mobilize.Vista.Activities.ReminderBroadcast
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:173:9-72
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:174:9-72
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:173:19-69
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:174:19-69
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmScheduler
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:174:9-78
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:175:9-78
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:174:19-75
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:175:19-75
 receiver#com.app.mobilize.Vista.Activities.AddAlertActivity
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:175:9-71
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:176:9-71
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:175:19-68
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:176:19-68
 receiver#com.app.mobilize.Vista.Activities.Reminder.AlarmManagerProvider
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:176:9-84
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:177:9-84
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:176:19-81
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:177:19-81
 receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:177:9-81
-	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:177:19-78
-receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderContract
 ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:178:9-81
 	android:name
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:178:19-78
-receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper
+receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderContract
 ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:179:9-81
 	android:name
 		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:179:19-78
+receiver#com.app.mobilize.Vista.Activities.Data.AlarmReminderDbHelper
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:180:9-81
+	android:name
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:180:19-78
 receiver#com.app.mobilize.Vista.Activities.AlarmCursorAdapter
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:180:9-73
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:181:9-73
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:180:19-70
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:181:19-70
 receiver#com.app.mobilize.Vista.Activities.AlertsActivity
-ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:181:9-69
+ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:182:9-69
 	android:name
-		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:181:19-66
+		ADDED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml:182:19-66
 uses-sdk
 INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\joanf\StudioProjects\PES_MobiLize-FAKE\Mobilize-App\app\src\main\AndroidManifest.xml
