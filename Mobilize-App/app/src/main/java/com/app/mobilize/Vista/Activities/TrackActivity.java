@@ -290,8 +290,6 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                             if ( ritme == -1 ) kcal = 0;
                             else kcal = calculateKcals.calculateRunningKcal(60,getRitme());
 
-                            makeToast("Ritmo -> " + ritme + "  kcal -> kcal");
-
                             Calendar calendar = Calendar.getInstance();
                             String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
                             int tipusAct = 0;
@@ -422,8 +420,6 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
                 double kcal;
                 if ( ritme == -1 ) kcal = 0;
                 else kcal = calculateKcals.calculateRunningKcal(60,getRitme());
-
-                makeToast("Ritmo -> " + ritme + "  kcal -> kcal");
 
                 Calendar calendar = Calendar.getInstance();
                 String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
