@@ -15,7 +15,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     String sqlCreate = "CREATE TABLE Rutines (nom TEXT primary key, info TEXT, nivell INTEGER, modalitat TEXT, exercicis TEXT)";
     String sqlCreate1 = "CREATE TABLE Exercicis (nom TEXT, modalitat TEXT, repeticions INTEGER, nivell INTEGER, kcal DOUBLE, musculs TEXT, tecnica TEXT, series INTEGER, kmh TEXT, durada_min TEXT, pendent BOOLEAN, punts INTEGER)";
     String sqlCreate2 = "CREATE TABLE Plannings (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, rutines TEXT)";
-    String sqlCreate3 = "CREATE TABLE PlanningActual (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, rutines TEXT)";
+       String sqlCreate3 = "CREATE TABLE PlanningActual (nom TEXT primary key, info TEXT, nivell INTEGER, dies INTEGER, modalitat TEXT, rutines TEXT, dataInici TEXT)";
 
     private ArrayList<Rutina> cjtRutines;
     private ArrayList<Exercici> cjtExercicis;
