@@ -281,5 +281,6 @@
     <string name="SelectRoutine">Seleccioni una o més rutines</string>
     <string name="EsborraPlaCorrecte">Pla eliminat amb èxit</string>
     <string name="returnInicio">Tornar al menú principal</string>
+    <string name="GoToRutina">Anar al pla</string>
 
 </resources>

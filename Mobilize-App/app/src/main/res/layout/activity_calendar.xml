@@ -24,6 +24,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,16 +63,16 @@
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-	<Button
+        <Button
             android:id="@+id/bGoToRutina"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GoToRutina" />
-
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:background="@drawable/titleevent_bg_rounded_courners"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/GoToRutina" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,7 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
 
         goToRutina = findViewById(R.id.bGoToRutina);
+        goToRutina.setVisibility(View.GONE);
         goToRutina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,8 +84,6 @@ public class CalendarActivity extends AppCompatActivity {
 
         Toast.makeText(this, dataInici, Toast.LENGTH_LONG).show();
 
-        Log.i("CalendarActivity", nom + " " + info + " " + rutines);
-
         ArrayList<String> rutinesPlanning = new ArrayList<>();
         String rutinaNom = "";
         for ( int i=0; i<rutines.length(); i++ )  {
@@ -108,21 +107,21 @@ public class CalendarActivity extends AppCompatActivity {
             else if ( count == 1 ) mes = mes + dataInici.charAt(i);
             else año = año + dataInici.charAt(i);
         }
-        calendar.set(Calendar.YEAR, Integer.valueOf(año));
-        calendar.set(Calendar.MONTH, Integer.valueOf(mes));
-        calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dia));
+        if(!dataInici.isEmpty()) {
+            calendar.set(Calendar.YEAR, Integer.valueOf(año));
+            calendar.set(Calendar.MONTH, Integer.valueOf(mes));
+            calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dia));
+        }
 
         BaseDeDades = admin.getWritableDatabase();
         for ( int i = 0; i<rutinesPlanning.size(); i++ ){
             calendar.add(Calendar.DAY_OF_MONTH, i);
-            Log.i("CalendarActivity", rutinesPlanning.get(i));
             String[] args = new String[] {rutinesPlanning.get(i)};
             Cursor fila2 = BaseDeDades.rawQuery("select info, modalitat from Rutines where nom = ?", args);
             while (fila2.moveToNext()) {
                 String infoR = fila2.getString(0);
                 String modalitat = fila2.getString(1);
 
-                Log.i("CalendarACTIVITY", infoR + "   " + String.valueOf(modalitat));
 
                 EventDay eventAux = null;
                 eventDescription eventDescr = null;
