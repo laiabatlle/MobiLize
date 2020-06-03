@@ -139,12 +139,7 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
 
         BaseDeDatos.close();
 
-
-
-        Intent intent = new Intent(view.getContext(),  NivellEntrenament.class);
-        startActivityForResult(intent, 0);
         this.finish();
-
 
         Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
 
@@ -177,37 +172,39 @@ public class PopUpRutina extends AppCompatActivity implements AdapterDatos.OnNot
 
 
     public void Modifica(View view) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-
         EditText ed1 = (EditText) findViewById(R.id.editText6);
         EditText ed2 = (EditText) findViewById(R.id.editText7);
 
-        String s = transformaArray(eaux);
+        if(String.valueOf(ed1.getText()).isEmpty()){
+            Toast.makeText(this, R.string.CreaRutinaIncorrecte, Toast.LENGTH_SHORT).show();
+        }
+        else{
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
+            SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
-        ContentValues registro = new ContentValues();
-        registro.put("nom", String.valueOf(ed1.getText()));
-        registro.put("info", String.valueOf(ed2.getText()));
-        registro.put("exercicis", s);
+            String s = transformaArray(eaux);
 
-        Rutina item = (Rutina) getIntent().getSerializableExtra("rutina");
+            if(s.isEmpty()){
+                Toast.makeText(this, R.string.SelectActivity, Toast.LENGTH_SHORT).show();
+            }
+            else {
+                ContentValues registro = new ContentValues();
+                registro.put("nom", String.valueOf(ed1.getText()));
+                registro.put("info", String.valueOf(ed2.getText()));
+                registro.put("exercicis", s);
 
-        String[] args = new String[] {item.getNom()};
-        BaseDeDatos.update("Rutines", registro, "nom=?", args);
+                Rutina item = (Rutina) getIntent().getSerializableExtra("rutina");
 
-
-        BaseDeDatos.close();
-
-        Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
-        startActivityForResult(intent, 0);
-        this.finish();
-
+                String[] args = new String[]{item.getNom()};
+                BaseDeDatos.update("Rutines", registro, "nom=?", args);
 
 
+                BaseDeDatos.close();
+                this.finish();
 
-
-        Toast.makeText(this, R.string.ModificaRutinaCorrecte, Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(this, R.string.ModificaRutinaCorrecte, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private String transformaArray(ArrayList<Exercici> eaux) {

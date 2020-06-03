@@ -44,6 +44,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -289,30 +290,6 @@ public class ProgresoFragment extends Fragment {
         startActivity(sigIntent);
     }
 
-    public void getActivitats(){
-        DocumentReference docRef = FirebaseFirestore.getInstance().collection("ActivitatsFinalitzades").document(user.getEmail());
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if ( task.isSuccessful() ) {
-                    DocumentSnapshot documentSnapshot = task.getResult();
-                    if ( documentSnapshot.getData() == null ) {
-                        Log.i("TASKFIREBASE1", "NULL");
-                    }
-                    else if ( documentSnapshot.getData().isEmpty() ) {
-                        Log.i("TASKFIREBASE1", "EMPTY");
-                    }
-                    else {
-                        Log.i("TASKFIREBASE1", "SUCCES");
-                        Object obj = documentSnapshot.getData();
-                        map = (Map<String, Map<String, String>>) obj;
-                        putActivitats();
-                    }
-                }
-            }
-        });
-    }
-
     private int mesData ( String data ) {
         int count = 0;
         String mesAux = "";
@@ -343,195 +320,164 @@ public class ProgresoFragment extends Fragment {
     public void putActivitats() {
 
         if(map != null) {
-            for ( int i=0; i<map.size(); i++ ) {
+            for (int i = 0; i < map.size(); i++) {
                 Map<String, String> mapAux = map.get(String.valueOf(i));
                 String tipus = mapAux.get("tipus");
                 String data = mapAux.get("data");
                 int mesAny = mesData(data);
                 boolean isAny = anyData(data);
                 assert tipus != null;
-                if ( tipus.equals("0") ) {
-                    if ( isAny ) {
-                        if ( mesAny == Calendar.getInstance().get(Calendar.MONTH)) {
+                if (tipus.equals("0")) {
+                    if (isAny) {
+                        if (mesAny == Calendar.getInstance().get(Calendar.MONTH)) {
                             minCyclingAct = minCyclingAct + Integer.parseInt(mapAux.get("temps"));
                             Log.i("ENTROIF", "ENTRO PRIMER IF");
                             Log.i("ENTROIF", String.valueOf(minCyclingAct));
-                        }
-                        else if  ( (mesAny+1) == Calendar.getInstance().get(Calendar.MONTH)) minCyclingAnt = minCyclingAnt + Integer.parseInt(mapAux.get("temps"));
+                        } else if ((mesAny + 1) == Calendar.getInstance().get(Calendar.MONTH))
+                            minCyclingAnt = minCyclingAnt + Integer.parseInt(mapAux.get("temps"));
 
-                        if ( mesAny == 1 ) {
+                        if (mesAny == 1) {
                             disGen += Float.parseFloat(mapAux.get("distancia"));
                             kcalGen = kcalGen + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 2 ) {
+                        } else if (mesAny == 2) {
                             disFeb += Float.parseFloat(mapAux.get("distancia"));
                             kcalFeb = kcalFeb + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 3 ) {
+                        } else if (mesAny == 3) {
                             disMarç = disMarç + Float.parseFloat(mapAux.get("distancia"));
                             kcalMarç = kcalMarç + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 4 ) {
+                        } else if (mesAny == 4) {
                             disAbril = disAbril + Float.parseFloat(mapAux.get("distancia"));
                             kcalAbril = kcalAbril + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 5 ) {
+                        } else if (mesAny == 5) {
                             disMaig = disMaig + Float.parseFloat(mapAux.get("distancia"));
                             kcalMaig = kcalMaig + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 6 ) {
+                        } else if (mesAny == 6) {
                             disJuny = disJuny + Float.parseFloat(mapAux.get("distancia"));
                             kcalJuny = kcalJuny + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 7 ) {
+                        } else if (mesAny == 7) {
                             disJul = disJul + Float.parseFloat(mapAux.get("distancia"));
                             kcalJul = kcalJul + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 8 ) {
+                        } else if (mesAny == 8) {
                             disAgo = disAgo + Float.parseFloat(mapAux.get("distancia"));
                             kcalAgo = kcalAgo + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 9 ) {
+                        } else if (mesAny == 9) {
                             disSept = disSept + Float.parseFloat(mapAux.get("distancia"));
                             kcalSept = kcalSept + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 10 ) {
+                        } else if (mesAny == 10) {
                             disOct = disOct + Float.parseFloat(mapAux.get("distancia"));
                             kcalOct = kcalOct + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 11 ) {
+                        } else if (mesAny == 11) {
                             disNov = disNov + Float.parseFloat(mapAux.get("distancia"));
                             kcalNov = kcalNov + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 12 ) {
+                        } else if (mesAny == 12) {
                             disDes = disDes + Float.parseFloat(mapAux.get("distancia"));
                             kcalDes = kcalDes + Float.parseFloat(mapAux.get("kcal"));
                         }
                     }
-                }
-                else if ( tipus.equals("1") ) {
-                    if ( isAny ) {
-                        if ( mesAny == Calendar.getInstance().get(Calendar.MONTH)) minRunningAct = minRunningAct + Integer.parseInt(mapAux.get("temps"));
-                        else if  ( (mesAny+1) == Calendar.getInstance().get(Calendar.MONTH)) minRunningAnt = minRunningAnt + Integer.parseInt(mapAux.get("temps"));
+                } else if (tipus.equals("1")) {
+                    if (isAny) {
+                        if (mesAny == Calendar.getInstance().get(Calendar.MONTH))
+                            minRunningAct = minRunningAct + Integer.parseInt(mapAux.get("temps"));
+                        else if ((mesAny + 1) == Calendar.getInstance().get(Calendar.MONTH))
+                            minRunningAnt = minRunningAnt + Integer.parseInt(mapAux.get("temps"));
 
-                        if ( mesAny == 1 ) {
+                        if (mesAny == 1) {
                             disGen += Float.parseFloat(mapAux.get("distancia"));
                             kcalGen = kcalGen + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 2 ) {
+                        } else if (mesAny == 2) {
                             disFeb += Float.parseFloat(mapAux.get("distancia"));
                             kcalFeb = kcalFeb + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 3 ) {
+                        } else if (mesAny == 3) {
                             disMarç = disMarç + Float.parseFloat(mapAux.get("distancia"));
                             kcalMarç = kcalMarç + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 4 ) {
+                        } else if (mesAny == 4) {
                             disAbril = disAbril + Float.parseFloat(mapAux.get("distancia"));
                             kcalAbril = kcalAbril + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 5 ) {
+                        } else if (mesAny == 5) {
                             disMaig = disMaig + Float.parseFloat(mapAux.get("distancia"));
                             kcalMaig = kcalMaig + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 6 ) {
+                        } else if (mesAny == 6) {
                             disJuny = disJuny + Float.parseFloat(mapAux.get("distancia"));
                             kcalJuny = kcalJuny + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 7 ) {
+                        } else if (mesAny == 7) {
                             disJul = disJul + Float.parseFloat(mapAux.get("distancia"));
                             kcalJul = kcalJul + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 8 ) {
+                        } else if (mesAny == 8) {
                             disAgo = disAgo + Float.parseFloat(mapAux.get("distancia"));
                             kcalAgo = kcalAgo + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 9 ) {
+                        } else if (mesAny == 9) {
                             disSept = disSept + Float.parseFloat(mapAux.get("distancia"));
                             kcalSept = kcalSept + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 10 ) {
+                        } else if (mesAny == 10) {
                             disOct = disOct + Float.parseFloat(mapAux.get("distancia"));
                             kcalOct = kcalOct + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 11 ) {
+                        } else if (mesAny == 11) {
                             disNov = disNov + Float.parseFloat(mapAux.get("distancia"));
                             kcalNov = kcalNov + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 12 ) {
+                        } else if (mesAny == 12) {
                             disDes = disDes + Float.parseFloat(mapAux.get("distancia"));
                             kcalDes = kcalDes + Float.parseFloat(mapAux.get("kcal"));
                         }
                     }
-                }
-                else if ( tipus.equals("2") ){
-                    if ( mesAny == Calendar.getInstance().get(Calendar.MONTH)) minWorkoutAct = minWorkoutAct + Integer.parseInt(mapAux.get("temps"));
-                    else if  ( (mesAny+1) == Calendar.getInstance().get(Calendar.MONTH)) minWorkoutAnt = minWorkoutAnt + Integer.parseInt(mapAux.get("temps"));
+                } else if (tipus.equals("2")) {
+                    if (mesAny == Calendar.getInstance().get(Calendar.MONTH))
+                        minWorkoutAct = minWorkoutAct + Integer.parseInt(mapAux.get("temps"));
+                    else if ((mesAny + 1) == Calendar.getInstance().get(Calendar.MONTH))
+                        minWorkoutAnt = minWorkoutAnt + Integer.parseInt(mapAux.get("temps"));
 
-                    if ( isAny ) {
-                        if ( mesAny == 1 ) {
+                    if (isAny) {
+                        if (mesAny == 1) {
                             kcalGen = kcalGen + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 2 ) {
+                        } else if (mesAny == 2) {
                             kcalFeb = kcalFeb + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 3 ) {
+                        } else if (mesAny == 3) {
                             kcalMarç = kcalMarç + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 4 ) {
+                        } else if (mesAny == 4) {
                             kcalAbril = kcalAbril + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 5 ) {
+                        } else if (mesAny == 5) {
                             kcalMaig = kcalMaig + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 6 ) {
+                        } else if (mesAny == 6) {
                             kcalJuny = kcalJuny + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 7 ) {
+                        } else if (mesAny == 7) {
                             kcalJul = kcalJul + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 8 ) {
+                        } else if (mesAny == 8) {
                             kcalAgo = kcalAgo + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 9 ) {
+                        } else if (mesAny == 9) {
                             kcalSept = kcalSept + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 10 ) {
+                        } else if (mesAny == 10) {
                             kcalOct = kcalOct + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 11 ) {
+                        } else if (mesAny == 11) {
                             kcalNov = kcalNov + Float.parseFloat(mapAux.get("kcal"));
-                        }
-                        else if ( mesAny == 12 ) {
+                        } else if (mesAny == 12) {
                             kcalDes = kcalDes + Float.parseFloat(mapAux.get("kcal"));
                         }
                     }
                 }
             }
-        }
 
-        minCyclingAnt = minCyclingAnt/60000;
-        minRunningAnt = minRunningAnt/60000;
-        minWorkoutAnt = minWorkoutAnt/60000;
+            minCyclingAnt = minCyclingAnt / 60000;
+            minRunningAnt = minRunningAnt / 60000;
+            minWorkoutAnt = minWorkoutAnt / 60000;
 
-        minTotalsAnt = minCyclingAnt + minRunningAnt + minWorkoutAnt;
+            minTotalsAnt = minCyclingAnt + minRunningAnt + minWorkoutAnt;
 
-        minCyclingAct = minCyclingAct/60000;
-        minRunningAct = minRunningAct/60000;
-        minWorkoutAct = minWorkoutAct/60000;
+            minCyclingAct = minCyclingAct / 60000;
+            minRunningAct = minRunningAct / 60000;
+            minWorkoutAct = minWorkoutAct / 60000;
 
-        minTotalsAct = minCyclingAct + minRunningAct + minWorkoutAct;
+            minTotalsAct = minCyclingAct + minRunningAct + minWorkoutAct;
 
-        tvWorkout.setText(getResources().getString(R.string.workout) + " " + String.valueOf(minWorkoutAct) + " min");
-        tvRunning.setText(getResources().getString(R.string.running) + " " + String.valueOf(minRunningAct) + " min");
-        tvCycling.setText(getResources().getString(R.string.cycling) + " " + String.valueOf(minCyclingAct) + " min");
-        tvTotal.setText(getResources().getString(R.string.temps_total) + " " + String.valueOf(minTotalsAct) + " min");
+            tvWorkout.setText(getResources().getString(R.string.workout) + " " + String.valueOf(minWorkoutAct) + " min");
+            tvRunning.setText(getResources().getString(R.string.running) + " " + String.valueOf(minRunningAct) + " min");
+            tvCycling.setText(getResources().getString(R.string.cycling) + " " + String.valueOf(minCyclingAct) + " min");
+            tvTotal.setText(getResources().getString(R.string.temps_total) + " " + String.valueOf(minTotalsAct) + " min");
 
 
-        if ( minTotalsAct != 0 ) {
-            pbWorkout.setProgress(minWorkoutAct * 100 / minTotalsAct);
-            pbCycling.setProgress(minCyclingAct * 100 / minTotalsAct);
-            pbRunning.setProgress(minRunningAct * 100 / minTotalsAct);
+            if (minTotalsAct != 0) {
+                pbWorkout.setProgress(minWorkoutAct * 100 / minTotalsAct);
+                pbCycling.setProgress(minCyclingAct * 100 / minTotalsAct);
+                pbRunning.setProgress(minRunningAct * 100 / minTotalsAct);
+            }
         }
     }
 

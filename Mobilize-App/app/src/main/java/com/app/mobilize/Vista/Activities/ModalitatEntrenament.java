@@ -20,9 +20,9 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
         Button bRunning, bCycling, bWorkout;
 
-        final Boolean facil = getIntent().getBooleanExtra("facil", false);
-        final Boolean mitja = getIntent().getBooleanExtra("mitja", false);
-        final Boolean dificil = getIntent().getBooleanExtra("dificil", false);
+        final boolean facil = getIntent().getBooleanExtra("facil", false);
+        final boolean mitja = getIntent().getBooleanExtra("mitja", false);
+        final boolean dificil = getIntent().getBooleanExtra("dificil", false);
 
 
         bRunning = findViewById(R.id.bRunning2);
@@ -46,7 +46,6 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "running");
                 startActivityForResult(intent, 0);
-                finish();
 
             }
         });
@@ -72,7 +71,6 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "cycling");
                 startActivityForResult(intent, 0);
-                finish();
 
             }
         });
@@ -97,10 +95,6 @@ public class ModalitatEntrenament extends AppCompatActivity {
 
                 intent.putExtra("modalitat", "workout");
                 startActivityForResult(intent, 0);
-                finish();
-
-
-
             }
         });
     }

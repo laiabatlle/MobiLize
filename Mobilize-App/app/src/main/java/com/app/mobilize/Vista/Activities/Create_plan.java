@@ -44,20 +44,64 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDades = admin.getWritableDatabase();
 
-        String[] args = new String[] {modalitat};
-
-
-        //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
-
-        Cursor fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
-
+        Cursor fila;
         Rutines = new ArrayList<>();
-        while (fila.moveToNext()) {
-            String nom = fila.getString(0);
-            String info = fila.getString(1);
-            String exercicis = fila.getString(2);
-            Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
-            Rutines.add(r);
+
+        if(modalitat.toLowerCase().contains("running")) {
+
+            String[] args = new String[] {"running"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
+        }
+
+        if(modalitat.toLowerCase().contains("cycling")) {
+
+            String[] args = new String[] {"cycling"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
+        }
+
+        if(modalitat.toLowerCase().contains("workout")) {
+
+            String[] args = new String[] {"workout"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
         }
 
 
@@ -108,35 +152,39 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
 
         String nom = nomedx.getText().toString();
         String info = infoedx.getText().toString();
+        if (nom.isEmpty()){
+            Toast.makeText(this, R.string.CreaPlaIncorrecte, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            String ruts = transformaArray(eaux);
+            if(ruts.isEmpty()){
+                Toast.makeText(this, R.string.SelectRoutine, Toast.LENGTH_SHORT).show();
+            }
+            else {
 
-        String ruts = transformaArray(eaux);
+                eaux.clear();
 
-        eaux.clear();
+                ContentValues registro = new ContentValues();
+                registro.put("nom", nom);
+                registro.put("info", info);
+                registro.put("nivell", dificultat);
+                registro.put("dies", dies);
+                registro.put("modalitat", modalitat);
+                registro.put("rutines", ruts);
 
-        ContentValues registro = new ContentValues();
-        registro.put("nom", nom);
-        registro.put("info", info);
-        registro.put("nivell", dificultat);
-        registro.put("dies", dies);
-        registro.put("modalitat", modalitat);
-        registro.put("rutines", ruts);
-
-        BaseDeDatos.insert("Plannings", null, registro);
+                BaseDeDatos.insert("Plannings", null, registro);
 
 
-        BaseDeDatos.close();
+                BaseDeDatos.close();
 
-        nomedx.setText("Nom");
-        infoedx.setText("Info");
+                nomedx.setText("...");
+                infoedx.setText("...");
 
+                this.finish();
 
-
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
-        this.finish();
-
-       // Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.CreaPlaCorrecte, Toast.LENGTH_SHORT).show();
+            }
+        }
 
     }
 

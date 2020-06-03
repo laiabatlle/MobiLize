@@ -65,11 +65,6 @@ public class Seleccionar_rutina extends AppCompatActivity  {
 
         RutinaListAdapter adapter = new RutinaListAdapter(this, R.layout.item, RutinaArrayList);
         lv.setAdapter(adapter);
-
-
-
-
-
     }
 
 
@@ -82,7 +77,14 @@ public class Seleccionar_rutina extends AppCompatActivity  {
         intent.putExtra("modalitat", modalitat);
         intent.putExtra("dificultat", dificultat);
         startActivityForResult(intent, 0);
-        this.finish();
+    }
+
+    public void onRestart(){
+        super.onRestart();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
     }
 
 

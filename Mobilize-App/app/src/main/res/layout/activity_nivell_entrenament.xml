@@ -6,24 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".NivellEntrenament">
 
-    <Button
+    <LinearLayout
         android:id="@+id/rutinaEntrenamiento3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button_bg_rounded_corners"
-        android:backgroundTint="#7713A319"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="@string/rutinaEntrenamiento"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/grad"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconoFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@mipmap/ic_gym" />
+
+        <LinearLayout
+            android:id="@+id/buttonslayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="1.5"
+                android:shadowRadius="1.8"
+                android:text="@string/rutinaEntrenamiento"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -57,16 +84,19 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="122dp"
-        android:layout_height="63dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
         android:text="@string/continua"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/titleevent_bg_rounded_courners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"/>
 
     <TextView
         android:id="@+id/textView9"

@@ -31,6 +31,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recplan"
+        android:scrollbars="vertical"
         android:layout_width="405dp"
         android:layout_height="409dp"
         android:layout_marginTop="40dp"
@@ -43,6 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Crear"
+        android:textColor="@color/white"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

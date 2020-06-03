@@ -27,7 +27,7 @@
     <string name="facil">Fàcil</string>
     <string name="mitjana">Mitjà</string>
     <string name="dificil">Difícil</string>
-    <string name="planning">PLANNING</string>
+    <string name="planning">Planning</string>
     <string name="nom">Nom:</string>
     <string name="descripcio">Descripció:</string>
     <string name="entrenamiento_libre">Entrenament lliure</string>
@@ -48,7 +48,7 @@
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina d\'entrenament</string>
-    <string name="escollirDificultat">Selecciona una dificultat!</string>
+    <string name="escollirDificultat">Selecciona una dificultat</string>
     <string name="logOut">Tancar sessió</string>
     <string name="delete">Eliminar compte</string>
     <string name="idiom">Idioma</string>
@@ -203,8 +203,9 @@
     <string name="elimina">Elimina</string>
     <string name="modifica">Modifica</string>
     <string name="ModificaRutinaCorrecte">Rutina modificada amb èxit</string>
-    <string name="EsborraRutinaCorrecte">Rutina esborrada amb èxit</string>
+    <string name="EsborraRutinaCorrecte">Rutina eliminada amb èxit</string>
     <string name="CreaRutinaCorrecte">Rutina creada amb èxit</string>
+    <string name="CreaPlaCorrecte">Pla creat amb éxito</string>
     <string name="otro">Un altre</string>
     <string name="masa_muscularPlan">PLANNING: Guanyar Múscul</string>
     <string name="adelgazarPlan">PLANNING: Aprimar</string>
@@ -249,7 +250,7 @@
     <string name="PrivateAccount">"Aquest compte és privat. Envia una sol·licitud d'amistat per poder veure més informació sobre "</string>
     <string name="NoFriends">"Actualment no tens amics, troba gent amb qui practicar esport i compartir els teus progressos."</string>
     <string name="timeLeft">"Queda un dia per l'event "</string>
-    <string name="calendar"> Calendari</string>
+    <string name="calendar">Calendari</string>
 
     <string name="temps_total">Temps total: </string>
     <string name="rb_mesActual">Mes Actual</string>
@@ -257,5 +258,26 @@
     <string name="progres_mensual">Progrés mensual</string>
     <string name="rank_friends">Amics</string>
     <string name="points">Punts</string>
+    <string name="send_message">Enviar missatge</string>
+    <string name="sèries">"sèries"</string>
+    <string name="repeticions">"repeticions"</string>
+    <string name="punts">"punts"</string>
+    <string name="minuts">"minuts"</string>
+    <string name="inclou_pendent">Ha d\'incluir pendent</string>
+    <string name="sense_pendent">No ha d\'incluir pendent</string>
+    <string name="completed">Completat</string>
+    <string name="track_it">Obrir el mapa</string>
+    <string name="crear_planning">Nou pla d\'entrenament</string>
+    <string name="nuevo_plan">Introdueix les dades del seu nou pla:</string>
+    <string name="Modifica">Modifica</string>
+    <string name="Elimina">Elimina</string>
+    <string name="Empieza">Comença</string>
+    <string name="seleccione_su_plan">Selecciona el teu pla:</string>
+    <string name="planEntrenamiento">Pla d\'entrenament</string>
+    <string name="crearplan">Crear un pla</string>
+    <string name="CreaRutinaIncorrecte">Introdueix un nom per la rutina</string>
+    <string name="SelectActivity">Seleccioni una o més activitats</string>
+    <string name="CreaPlaIncorrecte">Introdueix un nom pel pla</string>
+    <string name="SelectRoutine">Seleccioni una o més rutines</string>
 
 </resources>

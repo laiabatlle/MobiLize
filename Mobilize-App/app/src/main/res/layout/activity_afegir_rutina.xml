@@ -55,13 +55,12 @@
 
     <TextView
         android:id="@+id/textview10"
-        android:layout_width="389dp"
-        android:layout_height="77dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="@string/nueva_rutina"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="#121212"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +70,7 @@
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/nom_de_la_rutina"
         android:inputType="textCapSentences|textPersonName"
@@ -83,8 +83,8 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/informacio_de_la_rutina"
         android:inputType="textCapSentences|textPersonName"
@@ -112,22 +112,24 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="427dp"
-        android:layout_height="227dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:alpha=".8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button3"
         app:srcCompat="@drawable/rutina" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="350dp"
-        android:layout_height="159dp"
-        android:id = "@+id/Recyclerid"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Recyclerid"
+            android:scrollbars="vertical"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

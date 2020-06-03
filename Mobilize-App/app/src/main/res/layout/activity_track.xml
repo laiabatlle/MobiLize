@@ -24,7 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg_rounded_corners"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/titleevent_bg_rounded_courners"
             android:text="stop" />
 
         <Space
@@ -37,7 +40,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg_rounded_corners"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/titleevent_bg_rounded_courners"
             android:text="START" />
 
         <Space
@@ -50,7 +56,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/button_bg_rounded_corners"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/titleevent_bg_rounded_courners"
             android:text="finish" />
 
         <Space
