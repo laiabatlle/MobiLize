@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -101,6 +102,8 @@ public class AvancaRutina extends AppCompatActivity {
 
             ActivitatFinalitzada activitatFinalitazada = new ActivitatFinalitzada(data, email, tempsActivitat, 0, 2, kcaltotals);
             getMapFirebase(activitatFinalitazada);
+
+            FirebaseFirestore.getInstance().collection("Ranking").document(SaveSharedPreference.getEmail(this)).update("points", FieldValue.increment(puntstotals));
 
             /*Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya process
             intent.putExtra("puntstotals", puntstotals);

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -93,6 +94,7 @@ public class RankingActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         if (friendList.contains(document.getId()) || document.getId().equals(email)){
+                            Log.d("saaaaaaaa", document.getId());
                             Ranking u = new Ranking();
                             u.setUser(document.getData().get("user").toString());
                             u.setPoints((Long) document.getData().get("points"));
