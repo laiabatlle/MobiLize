@@ -102,31 +102,31 @@ public class AvancaRutina extends AppCompatActivity {
             ActivitatFinalitzada activitatFinalitazada = new ActivitatFinalitzada(data, email, tempsActivitat, 0, 2, kcaltotals);
             getMapFirebase(activitatFinalitazada);
 
-            Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya process
+            /*Intent intent = new Intent(this, NivellEntrenament.class);  //aqui haurem de passar cap a la pestanya process
             intent.putExtra("puntstotals", puntstotals);
             intent.putExtra("kcaltotals",kcaltotals);
-            startActivityForResult(intent, 0);
+            startActivityForResult(intent, 0);*/
+            this.finish();;
         }
 
         else {
             if (exercici.get(pos).getKmh() == null) {
-                Log.i("AvançaRutinaContinua", "Else IF");
                 Intent intent = new Intent(this, AvancaRutina.class);
                 intent.putParcelableArrayListExtra("exercici", exercici);
                 intent.putExtra("pos", pos);
                 intent.putExtra("puntstotals", puntstotals);
                 intent.putExtra("kcaltotals",kcaltotals);
                 startActivityForResult(intent, 0);
+                this.finish();
 
             } else {
-                Log.i("AvançaRutinaContinua", "ELSE ELSE");
                 Intent intent = new Intent(this, AvancaRutinaNoWorkout.class);
                 intent.putParcelableArrayListExtra("exercici", exercici);
                 intent.putExtra("pos", pos);
                 intent.putExtra("puntstotals", puntstotals);
                 intent.putExtra("kcaltotals",kcaltotals);
                 startActivityForResult(intent, 0);
-
+                this.finish();
             }
         }
     }

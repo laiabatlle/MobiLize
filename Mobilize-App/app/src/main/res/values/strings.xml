@@ -48,7 +48,7 @@
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina de entrenamiento</string>
-    <string name="escollirDificultat">Seleccione una dificultad!</string>
+    <string name="escollirDificultat">Seleccione una dificultad</string>
     <string name="logOut">Cerrar sesión</string>
     <string name="delete">Eliminar cuenta</string>
     <string name="idiom">Idioma</string>
@@ -206,8 +206,9 @@
     <string name="elimina">Elimina</string>
     <string name="modifica">Modifica</string>
     <string name="ModificaRutinaCorrecte">Rutina modificada con éxito</string>
-    <string name="EsborraRutinaCorrecte">Rutina borrada con éxito</string>
+    <string name="EsborraRutinaCorrecte">Rutina eliminada con éxito</string>
     <string name="CreaRutinaCorrecte">Rutina creada con éxito</string>
+    <string name="CreaPlaCorrecte">Plan creado con éxito</string>
     <string name="otro">Otro</string>
     <string name="masa_muscularPlan">PLANNING: Ganar Músculo</string>
     <string name="adelgazarPlan">PLANNING: Adelgazar</string>
@@ -273,5 +274,9 @@
     <string name="progres_mensual">Progreso mensual</string>
     <string name="temps_total">Tiempo total: </string>
     <string name="send_message">Enviar mensaje</string>
+    <string name="CreaRutinaIncorrecte">Introduce un nombre para la rutina</string>
+    <string name="SelectActivity">Seleccione una o más actividades</string>
+    <string name="CreaPlaIncorrecte">Introduce un nombre para el plan</string>
+    <string name="SelectRoutine">Seleccione una o más rutinas</string>
 
 </resources>

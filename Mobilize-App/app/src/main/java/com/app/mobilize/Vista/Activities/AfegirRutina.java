@@ -92,8 +92,6 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
 
     public void Registrar(View view) {
 
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         EditText nomedx = (EditText)findViewById(R.id.editText3);
         EditText infoedx = (EditText)findViewById(R.id.editText4);
@@ -103,36 +101,44 @@ public class AfegirRutina extends AppCompatActivity implements AdapterDatos.OnNo
         String nom = nomedx.getText().toString();
         String info = infoedx.getText().toString();
 
-        String exer = transformaArray(eaux);
+        if (nom.isEmpty()){
+            Toast.makeText(this, R.string.CreaRutinaIncorrecte, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
+            SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
-        eaux.clear();
+            String exer = transformaArray(eaux);
+            if(exer.isEmpty()){
+                Toast.makeText(this, R.string.SelectActivity, Toast.LENGTH_SHORT).show();
+            }
+            else {
 
-
-
-
-
-
-        ContentValues registro = new ContentValues();
-        registro.put("nom", nom);
-        registro.put("info", info);
-        registro.put("nivell", dificultat);
-        registro.put("modalitat", modalitat);
-        registro.put("exercicis", exer);
-
-        BaseDeDatos.insert("Rutines", null, registro);
+                eaux.clear();
 
 
-        BaseDeDatos.close();
+                ContentValues registro = new ContentValues();
+                registro.put("nom", nom);
+                registro.put("info", info);
+                registro.put("nivell", dificultat);
+                registro.put("modalitat", modalitat);
+                registro.put("exercicis", exer);
 
-        nomedx.setText("Nom");
-        infoedx.setText("Info");
+                BaseDeDatos.insert("Rutines", null, registro);
 
 
+                BaseDeDatos.close();
 
-        Intent intent = new Intent(view.getContext(), NivellEntrenament.class);
-        startActivityForResult(intent, 0);
-        this.finish();
-        Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
+                nomedx.setText("...");
+                infoedx.setText("...");
+
+
+                //Intent intent = new Intent(view.getContext(), Seleccionar_rutina.class);
+                //startActivityForResult(intent, 0);
+                this.finish();
+                Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
+            }
+        }
 
     }
 

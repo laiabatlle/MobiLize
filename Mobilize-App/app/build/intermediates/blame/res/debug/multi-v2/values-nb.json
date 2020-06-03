@@ -1,61 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/eric/PES_MobiLize/Mobilize-App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml",
+            "outputFile": "D:\\ALEX\\TREBALLS\\UNI\\Q8\\PES\\PES_MobiLize\\Mobilize-App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
             "map": [
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/4bda0a9eee541eeb44a8517e891372a5/res/values-nb/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "188",
-                        "endOffsets": "435"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4191",
-                        "endColumns": "188",
-                        "endOffsets": "4375"
-                    }
-                },
-                {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/43f967f4a614bdc5d956090aa321f03b/res/values-nb/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "263,374,489,570,688,807,930,1026,1113,1205,1290",
-                        "endColumns": "110,114,80,117,118,122,95,86,91,84,95",
-                        "endOffsets": "369,484,565,683,802,925,1021,1108,1200,1285,1381"
-                    },
-                    "to": {
-                        "startLines": "134,135,136,137,138,139,140,141,142,143,144",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "13976,14087,14202,14283,14401,14520,14643,14739,14826,14918,15003",
-                        "endColumns": "110,114,80,117,118,122,95,86,91,84,95",
-                        "endOffsets": "14082,14197,14278,14396,14515,14638,14734,14821,14913,14998,15094"
-                    }
-                },
-                {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/cf5f01d6012b860546c2703a67637760/res/values-nb/values-nb.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "146",
-                        "startColumns": "4",
-                        "startOffsets": "15178",
-                        "endColumns": "100",
-                        "endOffsets": "15274"
-                    }
-                },
-                {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/c463364493ac3ff72667fb9129c6544f/res/values-nb/values.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\582a271c9a0aee1bce527c978a6b0682\\res\\values-nb\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,7 +21,41 @@
                     }
                 },
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/c07109dfe3d8d67662f2b9e67b1af284/res/values-nb/values-nb.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\ee069b07d9a0e59c8b5338a8dbc73f11\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "263,374,489,570,688,807,930,1026,1113,1205,1290",
+                        "endColumns": "110,114,80,117,118,122,95,86,91,84,95",
+                        "endOffsets": "369,484,565,683,802,925,1021,1108,1200,1285,1381"
+                    },
+                    "to": {
+                        "startLines": "134,135,136,137,138,139,140,141,142,143,144",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "13976,14087,14202,14283,14401,14520,14643,14739,14826,14918,15003",
+                        "endColumns": "110,114,80,117,118,122,95,86,91,84,95",
+                        "endOffsets": "14082,14197,14278,14396,14515,14638,14734,14821,14913,14998,15094"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\70fb95083027a960f221902ef619dfbe\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "146",
+                        "startColumns": "4",
+                        "startOffsets": "15178",
+                        "endColumns": "100",
+                        "endOffsets": "15274"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\23e6ef51467248364acb26032462f6e5\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -89,7 +72,24 @@
                     }
                 },
                 {
-                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/b9bd46ab7756e31a2a0db5a170e5bef1/res/values-nb/values-nb.xml",
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\fcf1ce0dad8b80a2fe2375386a0d24ae\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "188",
+                        "endOffsets": "435"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4191",
+                        "endColumns": "188",
+                        "endOffsets": "4375"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\VSPC-BRIGTHWAVE2V5\\.gradle\\caches\\transforms-2\\files-2.1\\20b9220605f2879a9b70384287a297a1\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

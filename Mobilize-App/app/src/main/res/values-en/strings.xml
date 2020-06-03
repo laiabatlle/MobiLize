@@ -48,7 +48,7 @@
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Training routine</string>
-    <string name="escollirDificultat">Select a difficulty!</string>
+    <string name="escollirDificultat">Select a difficulty</string>
     <string name="logOut">Logout</string>
     <string name="delete">Delete account</string>
     <string name="idiom">Language</string>
@@ -205,6 +205,7 @@
     <string name="ModificaRutinaCorrecte">Routine successfully modified</string>
     <string name="EsborraRutinaCorrecte">Routine successfully deleted</string>
     <string name="CreaRutinaCorrecte">Routine successfully created</string>
+    <string name="CreaPlaCorrecte">Plan successfully created</string>
     <string name="otro">Other</string>
     <string name="masa_muscularPlan">PLANNING: Gain Muscle</string>
     <string name="adelgazarPlan">PLANNING: Lose weight</string>
@@ -271,4 +272,8 @@
     <string name="seleccione_su_plan">Select your plan:</string>
     <string name="planEntrenamiento">Training plan</string>
     <string name="crearplan">Create a plan</string>
+    <string name="CreaRutinaIncorrecte">Enter a name for the routine</string>
+    <string name="SelectActivity">Select one or more activities</string>
+    <string name="CreaPlaIncorrecte">Enter a name for the plan</string>
+    <string name="SelectRoutine">Select one or more routines</string>
 </resources>

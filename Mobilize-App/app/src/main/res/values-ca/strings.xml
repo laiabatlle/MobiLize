@@ -48,7 +48,7 @@
     <string name="kg">Kg</string>
     <string name="cm">cm</string>
     <string name="rutinaEntrenamiento">Rutina d\'entrenament</string>
-    <string name="escollirDificultat">Selecciona una dificultat!</string>
+    <string name="escollirDificultat">Selecciona una dificultat</string>
     <string name="logOut">Tancar sessió</string>
     <string name="delete">Eliminar compte</string>
     <string name="idiom">Idioma</string>
@@ -203,8 +203,9 @@
     <string name="elimina">Elimina</string>
     <string name="modifica">Modifica</string>
     <string name="ModificaRutinaCorrecte">Rutina modificada amb èxit</string>
-    <string name="EsborraRutinaCorrecte">Rutina esborrada amb èxit</string>
+    <string name="EsborraRutinaCorrecte">Rutina eliminada amb èxit</string>
     <string name="CreaRutinaCorrecte">Rutina creada amb èxit</string>
+    <string name="CreaPlaCorrecte">Pla creat amb éxito</string>
     <string name="otro">Un altre</string>
     <string name="masa_muscularPlan">PLANNING: Guanyar Múscul</string>
     <string name="adelgazarPlan">PLANNING: Aprimar</string>
@@ -272,5 +273,9 @@
     <string name="seleccione_su_plan">Selecciona el teu pla:</string>
     <string name="planEntrenamiento">Pla d\'entrenament</string>
     <string name="crearplan">Crear un pla</string>
+    <string name="CreaRutinaIncorrecte">Introdueix un nom per la rutina</string>
+    <string name="SelectActivity">Seleccioni una o més activitats</string>
+    <string name="CreaPlaIncorrecte">Introdueix un nom pel pla</string>
+    <string name="SelectRoutine">Seleccioni una o més rutines</string>
 
 </resources>

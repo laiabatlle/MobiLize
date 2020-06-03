@@ -93,6 +93,5 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
         intent.putExtra("dificultat", dificultat);
         intent.putExtra("dies", dies);
         startActivityForResult(intent, 0);
-        this.finish();
     }
 }

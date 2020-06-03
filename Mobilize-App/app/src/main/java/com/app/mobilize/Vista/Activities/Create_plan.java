@@ -108,35 +108,39 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
 
         String nom = nomedx.getText().toString();
         String info = infoedx.getText().toString();
+        if (nom.isEmpty()){
+            Toast.makeText(this, R.string.CreaPlaIncorrecte, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            String ruts = transformaArray(eaux);
+            if(ruts.isEmpty()){
+                Toast.makeText(this, R.string.SelectRoutine, Toast.LENGTH_SHORT).show();
+            }
+            else {
 
-        String ruts = transformaArray(eaux);
+                eaux.clear();
 
-        eaux.clear();
+                ContentValues registro = new ContentValues();
+                registro.put("nom", nom);
+                registro.put("info", info);
+                registro.put("nivell", dificultat);
+                registro.put("dies", dies);
+                registro.put("modalitat", modalitat);
+                registro.put("rutines", ruts);
 
-        ContentValues registro = new ContentValues();
-        registro.put("nom", nom);
-        registro.put("info", info);
-        registro.put("nivell", dificultat);
-        registro.put("dies", dies);
-        registro.put("modalitat", modalitat);
-        registro.put("rutines", ruts);
-
-        BaseDeDatos.insert("Plannings", null, registro);
+                BaseDeDatos.insert("Plannings", null, registro);
 
 
-        BaseDeDatos.close();
+                BaseDeDatos.close();
 
-        nomedx.setText("Nom");
-        infoedx.setText("Info");
+                nomedx.setText("...");
+                infoedx.setText("...");
 
+                this.finish();
 
-
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
-        this.finish();
-
-       // Toast.makeText(this, R.string.CreaRutinaCorrecte, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.CreaPlaCorrecte, Toast.LENGTH_SHORT).show();
+            }
+        }
 
     }
 
