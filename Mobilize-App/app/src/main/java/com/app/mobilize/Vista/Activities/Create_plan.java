@@ -44,20 +44,64 @@ public class Create_plan extends AppCompatActivity implements AdapterRutPlan.OnN
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDades = admin.getWritableDatabase();
 
-        String[] args = new String[] {modalitat};
-
-
-        //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
-
-        Cursor fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
-
+        Cursor fila;
         Rutines = new ArrayList<>();
-        while (fila.moveToNext()) {
-            String nom = fila.getString(0);
-            String info = fila.getString(1);
-            String exercicis = fila.getString(2);
-            Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
-            Rutines.add(r);
+
+        if(modalitat.toLowerCase().contains("running")) {
+
+            String[] args = new String[] {"running"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
+        }
+
+        if(modalitat.toLowerCase().contains("cycling")) {
+
+            String[] args = new String[] {"cycling"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
+        }
+
+        if(modalitat.toLowerCase().contains("workout")) {
+
+            String[] args = new String[] {"workout"};
+
+
+            //Cursor fila = BaseDeDades.rawQuery("select nom, info from Rutines  where nivell =" + dificultat + " and modalitat =" + modalitat ,  null);
+
+            fila = BaseDeDades.rawQuery("select nom, info, exercicis from Rutines where modalitat=? AND nivell =" + dificultat, args);
+
+
+            while (fila.moveToNext()) {
+                String nom = fila.getString(0);
+                String info = fila.getString(1);
+                String exercicis = fila.getString(2);
+                Rutina r = new Rutina(nom, info, dificultat, modalitat, exercicis);
+                Rutines.add(r);
+            }
         }
 
 
