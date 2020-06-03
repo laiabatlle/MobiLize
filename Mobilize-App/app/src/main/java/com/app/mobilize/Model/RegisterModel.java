@@ -51,7 +51,7 @@ public class RegisterModel implements RegisterInterface.Model {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             Map<String, Object> rank = new HashMap<>();
-                                            rank.put("user", email);
+                                            rank.put("user", username);
                                             rank.put("points", 0);
                                             db.collection("Ranking").document(email).set(rank).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override

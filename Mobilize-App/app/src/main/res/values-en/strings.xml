@@ -254,4 +254,6 @@
     <string name="temps_total">Total time: </string>
     <string name="rb_mesActual">Current Month</string>
     <string name="rb_mesAnterior">Last month</string>
+    <string name="rank_friends">Friends</string>
+    <string name="points">Points</string>
 </resources>

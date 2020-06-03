@@ -160,6 +160,7 @@
         <activity android:name=".Vista.Activities.ChatActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Vista.Activities.RankingActivity" />
 
         <provider
             android:name=".Vista.Activities.Data.AlarmReminderProvider"

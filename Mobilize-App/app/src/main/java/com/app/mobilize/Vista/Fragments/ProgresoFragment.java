@@ -24,6 +24,7 @@ import com.app.mobilize.Model.Usuari;
 import com.app.mobilize.R;
 import com.app.mobilize.Vista.Activities.ActivitatsUser;
 import com.app.mobilize.Vista.Activities.CalendarActivity;
+import com.app.mobilize.Vista.Activities.RankingActivity;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
@@ -55,7 +56,7 @@ public class ProgresoFragment extends Fragment {
     private ProgressBar pbWorkout, pbCycling, pbRunning;
     private RadioButton rbCalorias, rbPasos, rbMesActual, rbMesAnterior;
     private LineChart chart;
-    private Button activitatsFinalitzades, btCalendar;
+    private Button activitatsFinalitzades, btCalendar, bRanking;
 
     private float disGen, disFeb, disMarç, disAbril, disMaig, disJuny, disJul, disAgo, disSept, disOct, disNov, disDes;
     private float kcalGen, kcalFeb, kcalMarç, kcalAbril, kcalMaig, kcalJuny, kcalJul, kcalAgo, kcalSept, kcalOct, kcalNov, kcalDes;
@@ -110,6 +111,17 @@ public class ProgresoFragment extends Fragment {
 
         rbMesActual.setChecked(true);
         rbMesAnterior.setChecked(false);
+
+        bRanking = view.findViewById(R.id.bRanking);
+
+        bRanking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), RankingActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btCalendar = view.findViewById(R.id.bCalendar);
 
