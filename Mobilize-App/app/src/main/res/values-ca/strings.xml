@@ -279,5 +279,7 @@
     <string name="SelectActivity">Seleccioni una o més activitats</string>
     <string name="CreaPlaIncorrecte">Introdueix un nom pel pla</string>
     <string name="SelectRoutine">Seleccioni una o més rutines</string>
+    <string name="EsborraPlaCorrecte">Pla eliminat amb èxit</string>
+    <string name="returnInicio">Tornar al menú principal</string>
 
 </resources>

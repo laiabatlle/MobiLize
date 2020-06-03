@@ -87,5 +87,11 @@ public class Seleccionar_rutina extends AppCompatActivity  {
         overridePendingTransition(0, 0);
     }
 
+    public void ReturnInicio(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 
 }

@@ -36,8 +36,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center"
                 android:fontFamily="sans-serif-light"
+                android:gravity="center"
                 android:shadowColor="@color/black"
                 android:shadowDx="2"
                 android:shadowDy="1.5"
@@ -56,35 +56,54 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/seleccione_su_plan"
-        android:textSize="18sp"
-        android:textColor="#121212"
         android:layout_marginTop="20dp"
+        android:text="@string/seleccione_su_plan"
+        android:textColor="#121212"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/Recyclerid1"
-        app:layout_constraintTop_toBottomOf="@+id/plan1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plan1" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:gravity="center"
         android:onClick="CreatePla"
-        android:text="@string/crearplan"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
+        android:text="@string/crearplan"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/returnInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/returnInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/titleevent_bg_rounded_courners"
+        android:onClick="ReturnInicio"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/returnInicio"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Recyclerid1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Recyclerid1"
         android:layout_width="370dp"
-        android:layout_height="495dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView7" />

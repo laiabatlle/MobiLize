@@ -132,7 +132,9 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
         contentValues.put("rutines", rutines);
 
         BaseDeDatos.insert("PlanningActual", null, contentValues);
-       
+
+        Intent intent = new Intent(this, CalendarActivity.class);
+        startActivityForResult(intent, 0);
     }
 
     public void Elimina(View view) {
@@ -145,41 +147,43 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
 
         BaseDeDatos.close();
 
-
-
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
         this.finish();
 
-        //Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.EsborraPlaCorrecte, Toast.LENGTH_SHORT).show();
 
     }
 
     public void Modifica(View view) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"administracion",null,1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+
+        if(String.valueOf(tvnom.getText()).isEmpty()){
+            Toast.makeText(this, R.string.CreaPlaIncorrecte, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
+            SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
 
+            String s = transformaArray(eaux1);
 
-        String s = transformaArray(eaux1);
+            if(s.isEmpty()){
+                Toast.makeText(this, R.string.SelectRoutine, Toast.LENGTH_SHORT).show();
+            }
+            else {
 
-        ContentValues registro = new ContentValues();
-        registro.put("nom", String.valueOf(tvnom.getText()));
-        registro.put("info", String.valueOf(tvinfo.getText()));
-        registro.put("rutines", s);
+                ContentValues registro = new ContentValues();
+                registro.put("nom", String.valueOf(tvnom.getText()));
+                registro.put("info", String.valueOf(tvinfo.getText()));
+                registro.put("rutines", s);
 
-        String[] args = new String[] {nom};
-        BaseDeDatos.update("Plannings", registro, "nom=?", args);
+                String[] args = new String[]{nom};
+                BaseDeDatos.update("Plannings", registro, "nom=?", args);
 
 
-        BaseDeDatos.close();
+                BaseDeDatos.close();
 
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
-
-        this.finish();
+                this.finish();
+            }
+        }
 
 
 

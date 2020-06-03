@@ -280,5 +280,7 @@
     <string name="SelectActivity">Seleccione una o más actividades</string>
     <string name="CreaPlaIncorrecte">Introduce un nombre para el plan</string>
     <string name="SelectRoutine">Seleccione una o más rutinas</string>
+    <string name="EsborraPlaCorrecte">Plan eliminado con éxito</string>
+    <string name="returnInicio">Volver al menú principal</string>
 
 </resources>

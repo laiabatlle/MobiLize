@@ -77,18 +77,32 @@
         android:paddingEnd="15dp"
         android:textColor="@color/white"
         android:background="@drawable/titleevent_bg_rounded_courners"
+        app:layout_constraintBottom_toTopOf="@+id/returnInicio2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/returnInicio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:onClick="ReturnInicio"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/returnInicio"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Items"
-        app:layout_constraintVertical_bias="0.748" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/Items"
         android:layout_width="385dp"
-        android:layout_height="515dp"
-        android:layout_marginTop="14dp"
+        android:layout_height="455dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />

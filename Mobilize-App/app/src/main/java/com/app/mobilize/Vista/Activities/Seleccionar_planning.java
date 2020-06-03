@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.app.mobilize.R;
+import com.app.mobilize.Vista.Fragments.PlanFragment;
 import com.app.sqliteopenhelper.AdminSQLiteOpenHelper;
 import com.app.sqliteopenhelper.Planning;
 
@@ -89,9 +90,23 @@ public class Seleccionar_planning extends AppCompatActivity implements AdapterPl
 
     public void CreatePla(View view) {
         Intent intent = new Intent(this, Create_plan.class);
-       intent.putExtra("modalitat", modalitat);
+        intent.putExtra("modalitat", modalitat);
         intent.putExtra("dificultat", dificultat);
         intent.putExtra("dies", dies);
         startActivityForResult(intent, 0);
+    }
+
+    public void onRestart(){
+        super.onRestart();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
+    }
+
+    public void ReturnInicio(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }
