@@ -79,7 +79,7 @@ public class ActivitatsUser extends AppCompatActivity {
     }
 
     private void putActivitats( Map <String, Map<String, String>> map ) {
-        for ( int i=0; i<map.size(); i++ ) {
+        for ( int i=map.size() - 1; i >= 0; i-- ) {
             String data = map.get(String.valueOf(i)).get("data");
             String kcal = map.get(String.valueOf(i)).get("kcal");
             String email = map.get(String.valueOf(i)).get("email");

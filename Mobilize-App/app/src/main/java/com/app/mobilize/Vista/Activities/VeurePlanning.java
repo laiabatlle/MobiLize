@@ -155,9 +155,7 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
 
 
 
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
+
         this.finish();
 
         //Toast.makeText(this, R.string.EsborraRutinaCorrecte, Toast.LENGTH_SHORT).show();
@@ -183,9 +181,7 @@ public class VeurePlanning extends AppCompatActivity implements AdapterRutPlan.O
 
         BaseDeDatos.close();
 
-        Intent intent = new Intent(view.getContext(), TipusPlan.class);
-        intent.putExtra("tipus", "prova");
-        startActivityForResult(intent, 0);
+
 
         this.finish();
 

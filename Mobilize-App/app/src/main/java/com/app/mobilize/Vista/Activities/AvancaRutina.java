@@ -11,6 +11,7 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.app.mobilize.Model.ActivitatFinalitzada;
@@ -35,6 +36,7 @@ public class AvancaRutina extends AppCompatActivity {
     int pos;
     int puntstotals;
     double kcaltotals;
+    long tempsinici;
 
     String email;
     long time1;
@@ -43,8 +45,8 @@ public class AvancaRutina extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avanca_rutina);
-
-        time1 = SystemClock.elapsedRealtime();
+        tempsinici = getIntent().getLongExtra("tempsinicial",-1);
+       if(tempsinici == -1) tempsinici = SystemClock.elapsedRealtime();
 
         TextView tvnom = (TextView) findViewById(R.id.textView25);
         TextView tvmusculs = (TextView) findViewById(R.id.textView26);
@@ -86,7 +88,7 @@ public class AvancaRutina extends AppCompatActivity {
 
     public void Continua(View view) {
 
-        Log.i("AvançaRutinaContinua", String.valueOf(pos));
+
 
         pos = pos + 1;
 
@@ -94,7 +96,7 @@ public class AvancaRutina extends AppCompatActivity {
 
             Calendar calendar = Calendar.getInstance();
             String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
-            long tempsActivitat = time1 - SystemClock.elapsedRealtime(); // no agafa be el temps perque se'n va a una altre Activity
+            long tempsActivitat = SystemClock.elapsedRealtime() - tempsinici;  // no agafa be el temps perque se'n va a una altre Activity
 
             email = SaveSharedPreference.getEmail(this);
             Log.i("EmailRutina", email);
@@ -124,6 +126,8 @@ public class AvancaRutina extends AppCompatActivity {
             } else {
                 Intent intent = new Intent(this, AvancaRutinaNoWorkout.class);
                 intent.putParcelableArrayListExtra("exercici", exercici);
+                intent.putExtra("tempsinicial", tempsinici);
+
                 intent.putExtra("pos", pos);
                 intent.putExtra("puntstotals", puntstotals);
                 intent.putExtra("kcaltotals",kcaltotals);
