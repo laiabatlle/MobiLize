@@ -97,7 +97,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private void insertAllRutines () {
         cjtRutines = new ArrayList<>();
-        cjtRutines.add(new Rutina("Abdominals", "Abdominals per ...", 0, "workout", "Abdominals superiors,Pectorals,"));
+        cjtRutines.add(new Rutina("Workout fàcil", "Un conjunt d'exercicis de workout fàcil per a posar-te en forma", 0, "workout", "Abdominals Fàcil,Burpees Fàcil,Hyper Extension Fàcil,Incline Push-Ups Fàcil,Push-Ups Fàcil,Knee Push-Ups Fàcil,Mountain Climber Fàcil,Jumping Squats Fàcil,Squats Fàcil,Triceps Dips Fàcil,V-Up Fàcil,"));
+        cjtRutines.add(new Rutina("Workout normal", "Un conjunt d'exercicis de workout normal per a tonificar el teu cos", 1, "workout", "Abdominals Normal,Burpees Normal,Hyper Extension Normal,Incline Push-Ups Normal,Push-Ups Normal,Knee Push-Ups Normal,Mountain Climber Normal,Jumping Squats Normal,Squats Normal,Triceps Dips Normal,V-Up Normal,"));
+        cjtRutines.add(new Rutina("Workout difícil", "Un conjunt d'exercicis de workout difícil per a demostrar el que vals", 2, "workout", "Abdominals Difícil,Burpees Difícil,Hyper Extension Difícil,Incline Push-Ups Difícil,Push-Ups Difícil,Knee Push-Ups Difícil,Mountain Climber Difícil,Jumping Squats Difícil,Squats Difícil,Triceps Dips Difícil,V-Up Difícil,"));
+
         cjtRutines.add(new Rutina("Flexions", "Flexions per ...", 1, "workout","global"));
         cjtRutines.add(new Rutina("Flexions2", "Flexions per ...", 2, "running", "global"));
         cjtRutines.add(new Rutina("Flexions3", "Flexions per ...", 0, "workout",  "global"));
@@ -155,8 +158,30 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         cjtExercicis.add(new Exercici("V-Up Normal", null, 0, 0, false, "Abdominals", 20, 3, "vup", 1, "workout", 200));
         cjtExercicis.add(new Exercici("V-Up Difícil", null, 0, 0, false, "Abdominals", 30, 3, "vup", 2, "workout", 300));
 
-        cjtExercicis.add(new Exercici("Correr", "10", 120, 1000, true, null, 0, 0, null, 1, "running", 150));
-        cjtExercicis.add(new Exercici("Bicicleta", "20", 60, 2000, true, null, 0, 0, null, 2, "cycling", 200));
+        cjtExercicis.add(new Exercici("Correr Fàcil 1 km", "1", 120, 1000, true, null, 0, 0, null, 0, "running", 100));
+        cjtExercicis.add(new Exercici("Correr Fàcil 3 km", "3", 120, 1000, true, null, 0, 0, null, 0, "running", 125));
+        cjtExercicis.add(new Exercici("Correr Fàcil 5 km", "5", 120, 1000, true, null, 0, 0, null, 0, "running", 150));
+
+        cjtExercicis.add(new Exercici("Correr Normal 6 km", "6", 120, 1000, true, null, 0, 0, null, 1, "running", 200));
+        cjtExercicis.add(new Exercici("Correr Normal 8 km", "8", 120, 1000, true, null, 0, 0, null, 1, "running", 225));
+        cjtExercicis.add(new Exercici("Correr Normal 10 km", "10", 120, 1000, true, null, 0, 0, null, 1, "running", 250));
+
+        cjtExercicis.add(new Exercici("Correr Difícil 11 km", "11", 120, 1000, true, null, 0, 0, null, 2, "running", 300));
+        cjtExercicis.add(new Exercici("Correr Difícil 13 km", "13", 120, 1000, true, null, 0, 0, null, 2, "running", 325));
+        cjtExercicis.add(new Exercici("Correr Difícil 15 km", "15", 120, 1000, true, null, 0, 0, null, 2, "running", 350));
+
+        cjtExercicis.add(new Exercici("Bicicleta Fàcil 1 km", "1", 120, 1000, true, null, 0, 0, null, 0, "cycling", 100));
+        cjtExercicis.add(new Exercici("Bicicleta Fàcil 3 km", "3", 120, 1000, true, null, 0, 0, null, 0, "cycling", 125));
+        cjtExercicis.add(new Exercici("Bicicleta Fàcil 5 km", "5", 120, 1000, true, null, 0, 0, null, 0, "cycling", 150));
+
+        cjtExercicis.add(new Exercici("Bicicleta Normal 6 km", "6", 120, 1000, true, null, 0, 0, null, 1, "cycling", 200));
+        cjtExercicis.add(new Exercici("Bicicleta Normal 8 km", "8", 120, 1000, true, null, 0, 0, null, 1, "cycling", 225));
+        cjtExercicis.add(new Exercici("Bicicleta Normal 10 km", "10", 120, 1000, true, null, 0, 0, null, 1, "cycling", 250));
+
+        cjtExercicis.add(new Exercici("Bicicleta Difícil 11 km", "11", 120, 1000, true, null, 0, 0, null, 2, "cycling", 300));
+        cjtExercicis.add(new Exercici("Bicicleta Difícil 13 km", "13", 120, 1000, true, null, 0, 0, null, 2, "cycling", 325));
+        cjtExercicis.add(new Exercici("Bicicleta Difícil 15 km", "15", 120, 1000, true, null, 0, 0, null, 2, "cycling", 350));
+
 
 
     }
