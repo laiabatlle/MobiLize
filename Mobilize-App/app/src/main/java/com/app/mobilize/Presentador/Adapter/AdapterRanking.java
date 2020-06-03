@@ -42,20 +42,46 @@ public class AdapterRanking extends RecyclerView.Adapter<AdapterRanking.viewhold
     @Override
     public void onBindViewHolder(@NonNull final viewholderRanking holder, int position) {
         final Ranking rank = rankList.get(position);
+        rank.setPosition(position+1);
         if (position == 0){
             holder.imagePosition.setImageResource(R.mipmap.ic_pos1);
             holder.position.setVisibility(View.INVISIBLE);
             holder.rankLayout.setBackgroundColor(Color.parseColor("#CFB53B"));
-        } else if (position == 1){
-            holder.imagePosition.setImageResource(R.mipmap.ic_pos2);
-            holder.position.setVisibility(View.INVISIBLE);
-            holder.rankLayout.setBackgroundColor(Color.parseColor("#DBE4EB"));
-        } else if (position == 2){
-            holder.imagePosition.setImageResource(R.mipmap.ic_pos3);
-            holder.position.setVisibility(View.INVISIBLE);
-            holder.rankLayout.setBackgroundColor(Color.parseColor("#B08D57"));
         }
-        holder.position.setText(String.valueOf(position+1));
+        else {
+            final Ranking rank2 = rankList.get(position-1);
+            if(rank2.getPoints().equals(rank.getPoints())){
+                holder.position.setText(String.valueOf(rank2.getPosition()));
+                holder.user.setText(rank.getUser());
+                holder.points.setText(rank.getPoints().toString());
+                rank.setPosition(rank2.getPosition());
+                if(rank.getPosition() == 1){
+                    holder.imagePosition.setImageResource(R.mipmap.ic_pos1);
+                    holder.position.setVisibility(View.INVISIBLE);
+                    holder.rankLayout.setBackgroundColor(Color.parseColor("#CFB53B"));
+                }
+                else if(rank.getPosition() == 2){
+                    holder.imagePosition.setImageResource(R.mipmap.ic_pos2);
+                    holder.position.setVisibility(View.INVISIBLE);
+                    holder.rankLayout.setBackgroundColor(Color.parseColor("#DBE4EB"));
+                }
+                else if(rank.getPosition() == 3){
+                    holder.imagePosition.setImageResource(R.mipmap.ic_pos3);
+                    holder.position.setVisibility(View.INVISIBLE);
+                    holder.rankLayout.setBackgroundColor(Color.parseColor("#B08D57"));
+                }
+            }
+            else if (position == 1){
+                holder.imagePosition.setImageResource(R.mipmap.ic_pos2);
+                holder.position.setVisibility(View.INVISIBLE);
+                holder.rankLayout.setBackgroundColor(Color.parseColor("#DBE4EB"));
+            } else if (position == 2){
+                holder.imagePosition.setImageResource(R.mipmap.ic_pos3);
+                holder.position.setVisibility(View.INVISIBLE);
+                holder.rankLayout.setBackgroundColor(Color.parseColor("#B08D57"));
+            }
+        }
+        holder.position.setText(String.valueOf(rank.getPosition()));
         holder.user.setText(rank.getUser());
         holder.points.setText(rank.getPoints().toString());
     }
