@@ -43,9 +43,6 @@ public class MyService extends Service {
             Log.i(TAG, "onLocationChanged: " + location);
             mLastLocation.set(location);
             sendDataToActivity(location);
-
-            Toast.makeText(context ,"locationChanged", Toast.LENGTH_LONG).show();
-
         }
 
         @Override
