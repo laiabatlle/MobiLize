@@ -82,8 +82,6 @@ public class CalendarActivity extends AppCompatActivity {
         }
         BaseDeDades.close();
 
-        Toast.makeText(this, dataInici, Toast.LENGTH_LONG).show();
-
         ArrayList<String> rutinesPlanning = new ArrayList<>();
         String rutinaNom = "";
         for ( int i=0; i<rutines.length(); i++ )  {
