@@ -91,7 +91,6 @@ public class AvancaRutina extends AppCompatActivity {
         pos = pos + 1;
 
         if (exercici.size() == pos) {
-            Log.i("AvançaRutinaContinua", "First IF");
 
             Calendar calendar = Calendar.getInstance();
             String data = String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)) + "/" + String.valueOf(calendar.get(Calendar.MONTH)) + "/" + String.valueOf(calendar.get(Calendar.YEAR));
