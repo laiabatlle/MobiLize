@@ -52,36 +52,21 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonActivitats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:textColor="@color/white"
-        android:background="@drawable/titleevent_bg_rounded_courners"
-        android:text="@string/actFin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miprogreso"/>
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonActivitats">
+        app:layout_constraintTop_toBottomOf="@+id/miprogreso">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -97,6 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="40"
+                android:textStyle="bold"
                 android:lineSpacingExtra="0sp"
                 android:text="@string/progres_mensual"
                 android:textAlignment="viewStart"
@@ -191,7 +177,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
             <RadioButton
                 android:id="@+id/rbMesActual"
@@ -216,7 +203,7 @@
         android:id="@+id/linearLayout7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -227,6 +214,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -234,12 +222,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="@string/seguimiento"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -247,6 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="153dp"
             android:layout_weight="1"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -298,16 +288,42 @@
 
     <Button
         android:id="@+id/bCalendar"
-        android:layout_width="wrap_content"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
         android:background="@drawable/titleevent_bg_rounded_courners"
         android:text="@string/calendar"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <Button
+        android:id="@+id/bRanking"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:paddingStart="45dp"
+        android:paddingEnd="45dp"
+        android:text="Ranking"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <Button
+        android:id="@+id/buttonActivitats"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/titleevent_bg_rounded_courners"
+        android:text="@string/actFin"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bCalendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

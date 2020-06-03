@@ -255,6 +255,8 @@
     <string name="temps_total">Total time: </string>
     <string name="rb_mesActual">Current Month</string>
     <string name="rb_mesAnterior">Last month</string>
+    <string name="rank_friends">Friends</string>
+    <string name="points">Points</string>
     <string name="send_message">Send message</string>
     <string name="sèries">"series"</string>
     <string name="repeticions">"repetitions"</string>

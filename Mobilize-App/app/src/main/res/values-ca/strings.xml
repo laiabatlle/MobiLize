@@ -256,6 +256,8 @@
     <string name="rb_mesActual">Mes Actual</string>
     <string name="rb_mesAnterior">Mes Anterior</string>
     <string name="progres_mensual">Progrés mensual</string>
+    <string name="rank_friends">Amics</string>
+    <string name="points">Punts</string>
     <string name="send_message">Enviar missatge</string>
     <string name="sèries">"sèries"</string>
     <string name="repeticions">"repeticions"</string>

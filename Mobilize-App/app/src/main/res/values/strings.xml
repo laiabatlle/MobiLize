@@ -273,6 +273,8 @@
     <string name="crearplan">Crear un plan</string>
     <string name="progres_mensual">Progreso mensual</string>
     <string name="temps_total">Tiempo total: </string>
+    <string name="rank_friends">Amigos</string>
+    <string name="points">Puntos</string>
     <string name="send_message">Enviar mensaje</string>
     <string name="CreaRutinaIncorrecte">Introduce un nombre para la rutina</string>
     <string name="SelectActivity">Seleccione una o más actividades</string>

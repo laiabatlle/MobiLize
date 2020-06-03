@@ -138,7 +138,7 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface.V
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     SaveSharedPreference.setEmail(LoginActivity.this, user.getEmail());
                                                     Map<String, Object> rank = new HashMap<>();
-                                                    rank.put("user", email);
+                                                    rank.put("user", user.getDisplayName());
                                                     rank.put("points", 0);
                                                     db.collection("Ranking").document(user.getEmail()).set(rank);
                                                     Intent sig = new Intent(LoginActivity.this, MainActivity.class);
