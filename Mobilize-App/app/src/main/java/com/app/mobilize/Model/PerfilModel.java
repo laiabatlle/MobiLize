@@ -6,11 +6,13 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.app.mobilize.Presentador.Interface.PerfilInterface;
+import com.app.mobilize.Vista.Activities.SaveSharedPreference;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -58,6 +60,7 @@ public class PerfilModel implements PerfilInterface.Model {
 
     @Override
     public void doGuardarCambios(String username, String email, String dateNaixement, String gendre, String weight, String height, String image/*, String privacity*/) {
+        FirebaseFirestore.getInstance().collection("Ranking").document(email).update("user", username);
         user_ref.document(email).update("weight", weight);
         user_ref.document(email).update("username", username);
         user_ref.document(email).update("height", height);
