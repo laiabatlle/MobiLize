@@ -107,16 +107,24 @@ public class CalendarActivity extends AppCompatActivity {
             else if ( count == 1 ) mes = mes + dataInici.charAt(i);
             else año = año + dataInici.charAt(i);
         }
-        if(!dataInici.isEmpty()) {
+
+
+
+       if(!dataInici.isEmpty()) {
             calendar.set(Calendar.YEAR, Integer.valueOf(año));
             calendar.set(Calendar.MONTH, Integer.valueOf(mes));
             calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dia));
         }
 
+       int descans = 0;
         BaseDeDades = admin.getWritableDatabase();
-        for ( int i = 0; i<rutinesPlanning.size(); i++ ){
-            calendar.add(Calendar.DAY_OF_MONTH, i);
+        for ( int i = 0; i < rutinesPlanning.size(); i++ ){
+            if( i%6 == 5) descans++;
+            calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_MONTH, i+descans);
             String[] args = new String[] {rutinesPlanning.get(i)};
+
+
             Cursor fila2 = BaseDeDades.rawQuery("select info, modalitat from Rutines where nom = ?", args);
             while (fila2.moveToNext()) {
                 String infoR = fila2.getString(0);
@@ -128,12 +136,13 @@ public class CalendarActivity extends AppCompatActivity {
                 if (modalitat.equals("workout")) {
                     eventAux = new EventDay(calendar, R.drawable.gimnasio, Color.parseColor("#228B22"));
                      eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
+
                 }
                 else if (modalitat.equals("cycling")) {
                      eventAux = new EventDay(calendar, R.drawable.bicicleta, Color.parseColor("#228B22"));
                      eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
                 }
-                else if (modalitat.equals("running")){
+                else {
                      eventAux = new EventDay(calendar, R.drawable.funcionamiento, Color.parseColor("#228B22"));
                      eventDescr = new eventDescription(eventAux, rutinesPlanning.get(i), infoR);
                 }
