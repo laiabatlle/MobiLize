@@ -282,6 +282,6 @@
     <string name="SelectRoutine">Seleccione una o más rutinas</string>
     <string name="EsborraPlaCorrecte">Plan eliminado con éxito</string>
     <string name="returnInicio">Volver al menú principal</string>
-    <string name="GoToRutina">Ir al plan</string>
+    <string name="GoToRutina">Empieza</string>
 
 </resources>
