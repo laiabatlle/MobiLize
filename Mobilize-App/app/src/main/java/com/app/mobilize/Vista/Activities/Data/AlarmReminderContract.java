@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
 
 public class AlarmReminderContract {
 
-    private AlarmReminderContract() {}
+    public AlarmReminderContract() {}
 
     public static final String CONTENT_AUTHORITY = "com.app.mobilize.Vista.Activities.Data.AlarmReminderProvider";
 

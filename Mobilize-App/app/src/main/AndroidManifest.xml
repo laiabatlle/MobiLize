@@ -177,8 +177,6 @@
         <receiver android:name=".Vista.Activities.Reminder.AlarmManagerProvider" />
         <receiver android:name=".Vista.Activities.Data.AlarmReminderProvider" />
         <receiver android:name=".Vista.Activities.Data.AlarmReminderContract" />
-        <receiver android:name=".Vista.Activities.Data.AlarmReminderDbHelper" />
-        <receiver android:name=".Vista.Activities.AlarmCursorAdapter" />
         <receiver android:name=".Vista.Activities.AlertsActivity" />
     </application>
 

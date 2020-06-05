@@ -22,6 +22,7 @@ public class AlarmCursorAdapter extends CursorAdapter {
     private TextDrawable mDrawableBuilder;
     private Context context;
 
+
     public AlarmCursorAdapter(Context context, Cursor c) {
         super(context, c, 0 /* flags */);
         this.context = context;
